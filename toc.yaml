@@ -1,0 +1,61 @@
+#  Name your file `toc.yaml`
+#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+---
+toc:
+  properties:
+    subcollection: quantum-computing
+    category: compute
+    audience: service
+    href: /docs/quantum-computing
+    console-page: /quantum
+    product-page: https://www.ibm.com/quantum-computing
+    path: quantum-computing
+    label: Quantum Services
+
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - overview.md
+      - create-config-instance.md
+      - access.md
+
+
+
+  - navgroup:
+      id: howto
+      topics:
+      - create-program.md
+      - program.md
+      - run_job.md
+      - vqe.md
+
+#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
+#  Links to your command line reference docs should be included in the Reference navigation group. For link help see https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav#toc-yaml-properties
+  - navgroup:
+      id: reference
+      topics:
+      - link:
+          label: API reference
+          href: https://{DomainName}/apidocs/quantum-computing
+      - sample-programs.md
+
+  - navgroup:
+      id: help
+      topics:
+      - support.md
+      - topicgroup:
+          label: Communities
+          topics:
+          - link:
+              label: Qiskit Slack
+              href: http://ibm.co/joinqiskitslack
+          - link:
+              label: IBM Quantum Stack Exchange
+              href: https://quantumcomputing.stackexchange.com/questions/tagged/ibm-q-experience
+          - link:
+              label: Qiskit Stack Exchange
+              href: https://quantumcomputing.stackexchange.com/questions/tagged/qiskit
+      - release-notes.md
