@@ -17,7 +17,7 @@ completion-time: 10m
 {{site.data.keyword.attribute-definition-list}}
 
 # Example: Run a job and view results with VQE
-{: #vqe}
+{: #vqe-example}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="20m"}
 
