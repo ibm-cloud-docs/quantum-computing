@@ -1,0 +1,30 @@
+{
+"title": "Quantum Services",
+"lastupdated": "2021-10-13",
+"introduction": "Learn how to use IBM Quantum Services.",
+"section_devtools": {
+"api": "/apidocs/quantum-computing",
+},
+"section_recommended": [
+{
+"title": "Quantum Services overview",
+"description": "Learn about Quantum Services and the Qiskit Runtime architecture.",
+"href": "/docs/quantum-computing?topic=quantum-computing-overview"
+},
+{
+"title": "Creating and configuring a Quantum Service instance",
+"description": "Learn how to set up an IBM Quantum service instance and invite users.",
+"href": "/docs/quantum-computing?topic=quantum-computing-gettingstarted"
+},
+{
+"title": "Create a quantum program",
+"description": "Learn how to create a quantum program.",
+"href": "/docs/quantum-computing?topic=quantum-computing-create-program"
+},
+{
+"title": "Example: Run a job and view results with VQE",
+"description": "This topic is a detailed walkthrough of using a quantum service instance to run a VQE job.",
+"href": "/docs/quantum-computing?topic=quantum-computing-vqe"
+}
+],
+}
