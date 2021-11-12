@@ -28,23 +28,17 @@ This tutorial walks you through the steps to generate the HTTP header that is ne
 
 1. Find and copy your API key. From the [{{site.data.keyword.cloud_notm}} API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key. You might need to use light theme to see your entries.  Your key will look something like this: `poJraWQiOiIyMDIxMTAzMDE1MTQiLCJhbGciiuJSUzI1NiJ9.eyJpYW1fdWQiOiJJQk1pZC0xMTAwMDBCS1VWIiwiaWQiOiJJQk1pZC0xMTAwMDBCS1VWIiwicmVhbG1pZCI6IklCTWlkIiwianRpIjoiMjgzMDE3MWItYmY1MC00ZGEyLWE4MjAtMjFmNGVjYWQ0NDE0IiwiaWRlbnRkj`
 
-2. Generate your IAM access token. Use the [Create an IAM access token for a user or service ID using an API key](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apikey){: external} method. For example:
-   ```curl
-      curl -X POST 'https://iam.test.cloud.ibm.com/identity/token' -H 'Content-Type: application/x-www-form-urlencoded' -d 'grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=MY_APIKEY'
-   ```
-
 3. Find your Cloud Resource Name (CRN). From the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com){: external}, scroll to Resource summary, click "Services and software", then click the row that contains your quantum service instance (not the name of the instance). In the pane that opens, click the icon to copy your CRN. For example:
    ```text
-      crn:v1:staging:public:quantum-computing:global:a/7aca585718d0487bbd174c097e032b27:a2ee9c4f-7a00-4886-ae1c-7f62814a19f9::
+      crn:v1:bluemix:public:quantum-computing:us-east:a/b947c1c5a9378d64aed96696e4d76e8e:a3a7f181-35aa-42c8-94d6-7c8ed6e1a94b::
    ```
-
 
 4. Use the following request to interface with the service:
 
    ```curl
       curl --location --request GET 'https://us-east.quantum-computing.cloud.ibm.com/programs' \
-      --header 'Authorization: Bearer <IAM-access-token>'
-      --header 'crn: <crn>'
+      --header 'Service-CRN: <crn>'
+      --header 'Authorization: apikey <IAM-API-key>'
    ```
 
 5. Optionally install Qiskit: `pip install qiskit`. You need it installed if you are going to modify programs or to work with program results. For more detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. You  need to keep this package updated.
