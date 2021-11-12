@@ -58,6 +58,9 @@ The following sample programs are publicly available. For more information about
 1. Use the [Run a job API](/apidocs/quantum-computing#create-job){: external} to run your job. Optionally, use [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/create_job){: external} to run the job. You must specify the program ID and can optionally supply parameters. Any other input is ignored. Note the job ID that is returned. You need this information to check the status and view results.
 2. Run the [List job details API](/apidocs/quantum-computing#get-job-details-jid){: external}, manually or by using [Swagger](https://us-east.quantum-computing.test.ibm.com/openapi/#/Jobs/get_job_details_jid){: external} to check the job's status. After completion, you can view the results. Alternatively, you can view the job results as it runs by using the [get the job results stream API](/apidocs/quantum-computing#get-stream-job-logs-jid){: external} ([Swagger link](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/get_interim_results_jid){: external}).
 
+The amount of time the job runs is either maximum simulator time usage (3 hours) or the program cost, whichever is smaller. If your job does not complete before that limit is reached, it is automatically cancelled.  You will receive a notification and the List job details API will return  a status of 'cancelled - ran too long'.
+ {: note}
+
 ## View the results
 {: #view-results}
 {: step}
