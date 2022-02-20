@@ -25,11 +25,11 @@ This tutorial walks you through the steps to set up an IBM Quantum service insta
 
 
 1.  [Create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external} for the organization.
-
 2.  From the [user management page](https://cloud.ibm.com/iam/overview){: external}, invite users to join the account.
 
    The users must have {{site.data.keyword.cloud_notm}} accounts before they can be invited.
    {: note}
+
 3.  Create a quantum service instance:
       1. From the [{{site.data.keyword.quantum_long_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
           - **Lite**: Free simulators-only plan to help you get started with Qiskit Runtime. Learn to use Qiskit Runtime using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
