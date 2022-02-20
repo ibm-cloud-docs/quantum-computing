@@ -20,9 +20,6 @@ completion-time: 10m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
-This product is currently only available internally.  Get notified about {{site.data.keyword.quantum_long_notm}} public experimental release by filling out [this form](https://airtable.com/shrRpebS4aD3XeDhA){: external}.
-{: note}
-
 This tutorial walks you through the steps to set up an IBM Quantum service instance and invite users.
 {: shortdesc}
 
@@ -33,10 +30,10 @@ This tutorial walks you through the steps to set up an IBM Quantum service insta
 
    The users must have {{site.data.keyword.cloud_notm}} accounts before they can be invited.
    {: note}
-
-
 3.  Create a quantum service instance:
-      1. From the [{{site.data.keyword.quantum_long_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the **Free** service plan.
+      1. From the [{{site.data.keyword.quantum_long_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
+          - **Lite**: Free simulators-only plan to help you get started with Qiskit Runtime. Learn to use Qiskit Runtime using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
+          - **Standard**: A pay-as-you-go model for accessing IBM quantum systems. Build your own programs and leverage all the benefits of Qiskit Runtime by running on real quantum hardware.
       2. After completing the required information, click **Create**.
 4. From the [{{site.data.keyword.cloud_notm}} console](/iam/overview){: external}, click Manage > Access (IAM) to create an IAM access policy, ideally an access group policy, to give users access to the service instance. Optionally use resource groups, access groups, tags, and so on, to manage resources and access to them.
 
@@ -60,7 +57,6 @@ quantum-computing.job.delete | Delete jobs | Manager, Writer
 {: #next-steps}
 
 - Learn how to [access your {{site.data.keyword.quantum_long_notm}} instance](/docs/quantum-computing?topic=quantum-computing-access).
-- Learn how to [create and upload a program](/docs/quantum-computing?topic=quantum-computing-program).
 - Learn how to [submit a job](/docs/quantum-computing?topic=quantum-computing-run_job).
 - View the [API reference](/apidocs/quantum-computing){: external}.
 - Learn about IBM Quantum:
