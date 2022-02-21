@@ -47,12 +47,12 @@ Estimator lets you define your jobs by using the following inputs to calculate e
 These inputs can also be inspected by running the following commands:
 
   ```Python
-  from qiskit_ibm_runtime import IBMRuntimeService
+   from qiskit_ibm_runtime import IBMRuntimeService
 
-  service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN or Service Name>)
+   service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN or Service Name>)
 
-  program = service.program("estimator")
-  print(program)
+   program = service.program("estimator")
+   print(program)
   ```
   {: note}
 
@@ -83,33 +83,33 @@ These inputs can also be inspected by running the following commands:
 
    H1 = PauliSumOp.from_list(
     [
-        ("II", -1.052373245772859),
-        ("IZ", 0.39793742484318045),
-        ("ZI", -0.39793742484318045),
-        ("ZZ", -0.01128010425623538),
-        ("XX", 0.18093119978423156),
+      ("II", -1.052373245772859),
+      ("IZ", 0.39793742484318045),
+      ("ZI", -0.39793742484318045),
+      ("ZZ", -0.01128010425623538),
+      ("XX", 0.18093119978423156),
     ]
-    )
-    H2 = PauliSumOp.from_list([("IZ", 1)])
-    H3 = PauliSumOp.from_list([("ZI", 1), ("ZZ", 1)])
+   )
+   H2 = PauliSumOp.from_list([("IZ", 1)])
+   H3 = PauliSumOp.from_list([("ZI", 1), ("ZZ", 1)])
 
-    # Define some input parameters:
+   # Define some input parameters:
 
-    θ1 = [0, 1, 1, 2, 3, 5]
-    θ2 = [1, 2, 3, 4, 5, 6]
-    θ3 = [0, 1, 1, 2, 2, 6, 3, 4]
+   θ1 = [0, 1, 1, 2, 3, 5]
+   θ2 = [1, 2, 3, 4, 5, 6]
+   θ3 = [0, 1, 1, 2, 2, 6, 3, 4]
 
-    program_inputs =  {
+   program_inputs =  {
       'circuits': [psi1, psi2],
       'observables': [H1, H2, H3],
       'parameters': [θ1, θ2, θ3]
-    }
-    job = service.run(program_id="estimator",
-                  inputs=program_inputs
-                 )
-    print(f"job id: {job.job_id}")
-    result = job.result()
-    print(result)
+   }
+   job = service.run(program_id="estimator",
+      inputs=program_inputs
+   )
+   print(f"job id: {job.job_id}")
+   result = job.result()
+   print(result)
 
    ```
 
@@ -127,26 +127,26 @@ Different ways to leverage grouping:
 {: #one-parm-one-group}
 
  ```python
- from qiskit_ibm_runtime import IBMRuntimeService
+   from qiskit_ibm_runtime import IBMRuntimeService
 
- service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN>)
+   service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN>)
 
 
-  # calculate [ <psi1|H1|psi1> ]
-  # transpile circuits and cache for [(0, 0)]
-  program_inputs =  {
+   # calculate [ <psi1|H1|psi1> ]
+   # transpile circuits and cache for [(0, 0)]
+   program_inputs =  {
       'circuits': [psi1, psi2],
       'observables': [H1, H2, H3],
       'parameters': [θ1],
       'grouping': (0,0),
       'shots' : 1024
-    }
-    job = service.run(program_id="estimator",
-                  inputs=program_inputs
-                 )
-    print(f"job id: {job.job_id}")
-    H1_result = job.result()
-    print("H1", H1_result)
+   }
+   job = service.run(program_id="estimator",
+      inputs=program_inputs
+   )
+   print(f"job id: {job.job_id}")
+   H1_result = job.result()
+   print("H1", H1_result)
 
  ```
 
@@ -154,21 +154,21 @@ Different ways to leverage grouping:
 {: #one-parm-m-group}
 
  ```python
-  # calculate [ <psi1|H2|psi1>, <psi1|H3|psi1> ]
-  # transpile circuits and cache for [(0, 1), (0, 2)]
-    program_inputs =  {
+   # calculate [ <psi1|H2|psi1>, <psi1|H3|psi1> ]
+   # transpile circuits and cache for [(0, 1), (0, 2)]
+   program_inputs =  {
       'circuits': [psi1, psi2],
       'observables': [H1, H2, H3],
       'parameters': [θ1],
       'grouping': [(0,1),(0,2)],
       'shots' : 1024
-    }
-    job = service.run(program_id="estimator",
-                  inputs=program_inputs
-                 )
-    print(f"job id: {job.job_id}")
-    H23_result = job.result()
-    print("H2 and H3", H23_result)
+   }
+   job = service.run(program_id="estimator",
+      inputs=program_inputs
+   )
+   print(f"job id: {job.job_id}")
+   H23_result = job.result()
+   print("H2 and H3", H23_result)
  ```
 
 #### Example: Multiple parameters, multiple groups
@@ -176,17 +176,17 @@ Different ways to leverage grouping:
 
 ```python
    # calculate [ <psi1|H1|psi1>, <psi1|H1|psi1>, <psi2|H3|psi2> ]
-   rogram_inputs =  {
+   program_inputs =  {
       'circuits': [psi1, psi2],
       'observables': [H1, H2, H3],
       'parameters': [θ1, θ1, θ3],
       'grouping': [(0,0),(1,2)],
       'shots' : 1024
-    }
-    job = service.run(program_id="estimator",
-                  inputs=program_inputs
-                 )
-    print(f"job id: {job.job_id}")
-    H13_result = job.result()
-    print("H1 and H3", H13_result)
+   }
+   job = service.run(program_id="estimator",
+      inputs=program_inputs
+   )
+   print(f"job id: {job.job_id}")
+   H13_result = job.result()
+   print("H1 and H3", H13_result)
  ```
