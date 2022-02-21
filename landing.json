@@ -1,30 +1,47 @@
+
 {
-"title": "Quantum Services",
-"lastupdated": "2021-10-13",
+"title": "Quantum Services docs",
+"lastupdated": "2022-01-18",
 "introduction": "Learn how to use IBM Quantum Services.",
 "section_devtools": {
-"api": "/apidocs/quantum-computing",
+    "api": "/apidocs/quantum-computing"
 },
 "section_recommended": [
-{
-"title": "Quantum Services overview",
-"description": "Learn about Quantum Services and the Qiskit Runtime architecture.",
-"href": "/docs/quantum-computing?topic=quantum-computing-overview"
-},
-{
-"title": "Creating and configuring a Quantum Service instance",
-"description": "Learn how to set up an IBM Quantum service instance and invite users.",
-"href": "/docs/quantum-computing?topic=quantum-computing-gettingstarted"
-},
-{
-"title": "Create a quantum program",
-"description": "Learn how to create a quantum program.",
-"href": "/docs/quantum-computing?topic=quantum-computing-create-program"
-},
-{
-"title": "Example: Run a job and view results with VQE",
-"description": "This topic is a detailed walkthrough of using a quantum service instance to run a VQE job.",
-"href": "/docs/quantum-computing?topic=quantum-computing-vqe"
-}
+    {
+        "title": "Quantum Services overview",
+        "description": "Learn about Quantum Services and the Qiskit Runtime architecture.",
+        "href": "/docs/quantum-computing?topic=quantum-computing-overview"
+        },
+        {
+        "title": "Creating and configuring a Quantum Service instance",
+        "description": "Learn how to set up an IBM Quantum service instance and invite users.",
+        "href": "/docs/quantum-computing?topic=quantum-computing-gettingstarted"
+        },
+        {
+        "title": "Primitive programs",
+        "description": "Learn about primitive programs.",
+        "href": "/docs/quantum-computing?topic=quantum-computing-primitive-programs"
+        },
+        {
+        "title": "Qiskit Runtime API",
+        "description": "Learn how to use the Qiskit Runtime API.",
+        "href": "https://qiskit.org/documentation/partners/qiskit_runtime/apidocs/ibm-runtime"
+        }
+
 ],
+"section_learn": {
+    "developer": "https://developer.ibm.com/depmodels/quantum-computing/",
+    "training": "https://qiskit.org/textbook/preface",
+    "community": "https://ibm-cloudplatform.slack.com/archives/C1KEB2FE2"
+},
+"section_updates": {
+    "view_more": "/docs/overview?topic=overview-whatsnew",
+    "tiles": [
+    {
+        "date": "31 January 2022",
+        "title": "Initial release",
+        "description": "Qiskit Runtime is released publicly as an Experimental service."
+    }
+    ]
+}
 }
