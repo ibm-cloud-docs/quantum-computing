@@ -32,7 +32,7 @@ The Estimator primitive lets you efficiently calculate and interpret expectation
 ## Before you begin
 {: #example-estimator-byb}
 
-1. Follow the steps in [Creating and configuring a Quantum Service instance](/docs/quantum-computing?topic=quantum-computing-create-config-instance) and [Get ready to work with your Quantum Service instance](/docs/quantum-computing?topic=quantum-computing-access) to get your Quantum Service instance ready to use.
+1. Follow the steps in [Creating and configuring a Quantum Service instance](/docs/quantum-computing?topic=quantum-computing-gettingstarted) and [Get ready to work with your Quantum Service instance](/docs/quantum-computing?topic=quantum-computing-access) to get your Quantum Service instance ready to use.
 
 2. You'll need at least one circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
