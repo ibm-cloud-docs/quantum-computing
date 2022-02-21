@@ -25,7 +25,6 @@ This tutorial walks you through the steps to set up a Qiskit Runtime service ins
 
 ## Creating and configuring a Qiskit Runtime service instance
 {: #create-configure}
-{: step}
 
 1. [Create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external} for the organization.
 2. From the [user management page](https://cloud.ibm.com/iam/overview){: external}, invite users to join the account.
@@ -60,7 +59,6 @@ quantum-computing.job.delete | Delete jobs | Manager, Writer
 
 ## Get ready to work with your Quantum Service instance
 {: #access}
-{: toc-content-type="tutorial"step}
 
 Next, you will find your account credentials and authenticate with the service.
 
