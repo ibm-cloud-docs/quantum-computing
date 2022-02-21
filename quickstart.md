@@ -64,14 +64,13 @@ Next, you will find your account credentials and authenticate with the service.
 
 
 1. Install these packages.  They let you create circuits and work with primitive programs via Qiskit Runtime. For detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. You need to keep these packages updated:
+
   ```Python
       pip install qiskit
       pip install qiskit-ibm-runtime
   ```    
-4. Install Qiskit Runtime: `pip install qiskit-ibm-runtime`.
 
 1. Find and copy your API key. From the [{{site.data.keyword.cloud_notm}} API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key. Your key will look something like this: `I9sxojrwurPrMWqNR_wc4rztMgVqE1HUmsfACMyw_G9n`
-
 3. Find your Cloud Resource Name (CRN) or service instance name.
   - To find your CRN, from the {{site.data.keyword.cloud_notm}} console [Resource list page](https://cloud.ibm.com/resources){: external}, expand the "Services and software" section and look for your instance. Then click the row that contains your quantum service instance (don't click the name of the instance). In the pane that opens, click the icon to copy your CRN. For example:
 
@@ -94,7 +93,6 @@ Next, you will find your account credentials and authenticate with the service.
    ```
 
     To update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials.  For more information about managing your account see the [account management tutorial](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/tutorials/04_account_management.html){: external}.
-
 
 ## Next steps
 {: #next-steps}
