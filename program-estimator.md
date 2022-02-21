@@ -16,7 +16,7 @@ completion-time: 10m
 {{site.data.keyword.attribute-definition-list}}
 
 # Estimator primitive
-{: #primitive-estimator}
+{: #program-estimator}
 {: toc-content-type="reference"}
 {: toc-completion-time="10m"}
 

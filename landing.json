@@ -13,14 +13,9 @@
         "href": "/docs/quantum-computing?topic=quantum-computing-overview"
         },
         {
-        "title": "Creating and configuring a Quantum Service instance",
-        "description": "Learn how to set up an IBM Quantum service instance and invite users.",
-        "href": "/docs/quantum-computing?topic=quantum-computing-gettingstarted"
-        },
-        {
-        "title": "Primitive programs",
-        "description": "Learn about primitive programs.",
-        "href": "/docs/quantum-computing?topic=quantum-computing-primitive-programs"
+        "title": "Qiskit Runtime quick start guide",
+        "description": "Use this tutorial to create an instance and run your first job.",
+        "href": "/docs/quantum-computing?topic=quantum-computing-quickstart"
         },
         {
         "title": "Qiskit Runtime API",

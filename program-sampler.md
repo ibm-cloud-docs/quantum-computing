@@ -16,7 +16,7 @@ completion-time: 10m
 {{site.data.keyword.attribute-definition-list}}
 
 # Sampler primitive
-{: #primitive-sampler}
+{: #program-sampler}
 {: toc-content-type="reference"}
 {: toc-completion-time="10m"}
 
