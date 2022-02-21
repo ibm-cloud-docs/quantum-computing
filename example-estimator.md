@@ -69,6 +69,8 @@ These inputs can also be inspected by running the following commands:
    ```Python
    from qiskit.test.reference_circuits import ReferenceCircuits
    from qiskit_ibm_runtime import IBMRuntimeService
+   from qiskit.circuit.library import EfficientSU2
+   from qiskit.opflow.primitive_ops import PauliSumOp
 
    service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN or Service Name>)
 
