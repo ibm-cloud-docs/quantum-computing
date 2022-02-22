@@ -61,8 +61,7 @@ These inputs can also be inspected by running the following commands:
 * The **observables** you want applied to the circuits.
 * The **parameter** inputs to evaluate the circuits.
 * Optional: The **groupings** of circuits and observables.
-* Optional: The **backend** to use.  If one is not specified, the first available device will be selected.
-* Optional: How many **shots** to run.
+* Optional: Other **run options**, such as how many **shots** to run.
 
 ### Example of preparing the required inputs:
 
@@ -103,7 +102,11 @@ These inputs can also be inspected by running the following commands:
       'circuits': [psi1, psi2],
       'observables': [H1, H2, H3],
       'parameters': [θ1, θ2, θ3]
+      'run_options': {
+        'shots': 1024
+      }
    }
+   options = {"backend_name": "ibm_canberra"}
    job = service.run(program_id="estimator",
       inputs=program_inputs
    )
@@ -116,6 +119,8 @@ These inputs can also be inspected by running the following commands:
 ### Optional Inputs:
 
 For a given parameter input for your circuit, you can use these optional parameters that allow you to optimize your job execution.
+
+The **backend** lets you optionally specify the backend to run on.  If you do not specify one, the least busy backend is used.
 
 The *grouping* input allows you to define which observable to measure for which circuit, in the format `(circuit_n, observable_m)`, where the `m<sup>th</sup>` observable you specified is measured for the `n<sup>th</sup>` circuit in the list. Using the inputs defined in the previous example, the group `(0,1)` evaluates the observable `H2` using the circuit `psi1` for some input `θ`.
 
@@ -139,8 +144,8 @@ Different ways to leverage grouping:
       'observables': [H1, H2, H3],
       'parameters': [θ1],
       'grouping': (0,0),
-      'shots' : 1024
    }
+   options = {"backend_name": "ibm_canberra"}
    job = service.run(program_id="estimator",
       inputs=program_inputs
    )
@@ -161,7 +166,6 @@ Different ways to leverage grouping:
       'observables': [H1, H2, H3],
       'parameters': [θ1],
       'grouping': [(0,1),(0,2)],
-      'shots' : 1024
    }
    job = service.run(program_id="estimator",
       inputs=program_inputs
@@ -181,7 +185,6 @@ Different ways to leverage grouping:
       'observables': [H1, H2, H3],
       'parameters': [θ1, θ1, θ3],
       'grouping': [(0,0),(1,2)],
-      'shots' : 1024
    }
    job = service.run(program_id="estimator",
       inputs=program_inputs
