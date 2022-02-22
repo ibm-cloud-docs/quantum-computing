@@ -14,7 +14,7 @@ completion-time: 25m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Qiskit Runtime quick start guide
+# Quick start guide
 {: #quickstart}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="25m"}
@@ -23,7 +23,7 @@ This tutorial walks you through the steps to set up a Qiskit Runtime service ins
 {: shortdesc}
 
 
-## Creating and configuring a Qiskit Runtime service instance
+## Creating a service instance
 {: #create-configure}
 
 1. [Create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external} for the organization.
@@ -37,12 +37,15 @@ This tutorial walks you through the steps to set up a Qiskit Runtime service ins
       - **Lite**: Free simulators-only plan to help you get started with Qiskit Runtime. Learn to use Qiskit Runtime using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
       - **Standard**: A pay-as-you-go model for accessing IBM quantum systems. Build your own programs and leverage all the benefits of Qiskit Runtime by running on real quantum hardware.
    2. After completing the required information, click **Create**.
-4. From the [{{site.data.keyword.cloud_notm}} console](/iam/overview){: external}, click Manage > Access (IAM) to create an IAM access policy, ideally an access group policy, to give users access to the service instance. Optionally use resource groups, access groups, tags, and so on, to manage resources and access to them.
+
+## Manage access to the service instance
+{: #manage-access}
+
+From the [{{site.data.keyword.cloud_notm}} console](/iam/overview){: external}, click Manage > Access (IAM) to create an IAM access policy, ideally an access group policy, to give users access to the service instance. Optionally use resource groups, access groups, tags, and so on, to manage resources and access to them.
 
 For more information about roles, including details about program level roles and instructions to work with access groups, see the [IAM access documentation](https://cloud.ibm.com/docs/account?topic=account-userroles){: external}.
 
 ### Access roles
-{: #access-roles}
 
 Following are the roles you can assign to access groups:
 
@@ -57,11 +60,8 @@ quantum-computing.job.read | View job results and logs | Manager, Reader
 quantum-computing.job.delete | Delete jobs | Manager, Writer
 {: caption="Table 1. Access roles to grant for managing, writing, and reading" caption-side="bottom"}
 
-## Get ready to work with your Quantum Service instance
-{: #access}
-
-Next, you will find your account credentials and authenticate with the service.
-
+## Install Qiskit packages
+{: #install-packages}
 
 1. Install these packages.  They let you create circuits and work with primitive programs via Qiskit Runtime. For detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. You need to keep these packages updated:
 
@@ -69,6 +69,11 @@ Next, you will find your account credentials and authenticate with the service.
       pip install qiskit
       pip install qiskit-ibm-runtime
      ```    
+
+## Find your access credentials
+{: #find-credentials}
+
+Next, you will find your account credentials and authenticate with the service.
 
 1. Find and copy your API key. From the [{{site.data.keyword.cloud_notm}} API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key. Your key will look something like this: `I9sxojrwurPrMWqNR_wc4rztMgVqE1HUmsfACMyw_G9n`
 3. Find your Cloud Resource Name (CRN) or service instance name.
@@ -79,9 +84,13 @@ Next, you will find your account credentials and authenticate with the service.
    ```
 
    - To find your servce instance name, from the {{site.data.keyword.cloud_notm}} console [Resource list page](https://cloud.ibm.com/resources){: external}, expand the "Services and software" section and look for your instance.  The service instance name is in the **Name** column.
-5. Call  `IBMRuntimeService` with your IBM Cloud API key and the CRN or Service name.
 
-   You can use the name of your service instance instead of the CRN.  You can also optionally save your credentials on disk (in the $HOME/.qiskit/qiskit-ibm.json file). By doing so, you only need to use IBMRuntimeService() in the future to initialize your account. If you don't save your credentials to disk, you have to run this command every time you start a new session.
+## Authenticate to the service
+{: #authentication}
+
+Call  `IBMRuntimeService` with your IBM Cloud API key and the CRN or Service name.
+
+You can use the name of your service instance instead of the CRN.  You can also optionally save your credentials on disk (in the $HOME/.qiskit/qiskit-ibm.json file). By doing so, you only need to use IBMRuntimeService() in the future to initialize your account. If you don't save your credentials to disk, you have to run this command every time you start a new session.
 
    ```python
      from qiskit_ibm_runtime import IBMRuntimeService
@@ -96,14 +105,12 @@ Next, you will find your account credentials and authenticate with the service.
 
 ## Create a circuit
 {: #create-circuit}
-{: step}
 
-You'll need a circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
+You'll need one or more circuits to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
 
-## Choose a program
+## Choose a program to run
 {: #choose-program}
-{: step}
 
 The list of available programs is on the [Programs page](cloud.ibm.com/quantum/programs){: external}.  Choose the program you want to run and note its ID.  You need this information to run the job.
 
@@ -116,7 +123,6 @@ The following programs are publicly available. For more information about these 
 
 ## Run the job
 {: #run-job-step}
-{: step}
 
 You will use the Qiskit Runtime IBMRuntimeService.run() method, which takes the following parameters:
 
@@ -150,7 +156,6 @@ To ensure fairness, there is a maximum execution time for each Qiskit Runtime jo
 {: note}
 
 ## (Optional) Return the job status
-{: step}
 {: #return-status}
 
 Follow up the Qiskit Runtime IBMRuntimeService.run() method by running a RuntimeJob method. The run() method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program.

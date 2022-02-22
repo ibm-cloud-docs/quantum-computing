@@ -20,7 +20,6 @@ toc:
       topics:
       - overview.md
       - quickstart.md
-      - access.md
 
   - navgroup:
       id: howto
