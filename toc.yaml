@@ -27,7 +27,6 @@ toc:
       topics:
       - example-estimator.md
       - example-sampler.md
-      - run_job.md
       - results.md
       - at-events.md
 
