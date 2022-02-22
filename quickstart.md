@@ -15,7 +15,7 @@ completion-time: 25m
 {{site.data.keyword.attribute-definition-list}}
 
 # Qiskit Runtime quick start guide
-{: #create-configure}
+{: #quickstart-guide}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="25m"}
 
