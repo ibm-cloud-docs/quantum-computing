@@ -65,8 +65,8 @@ With our first set of primitive programs, we enable capabilities that allow user
 ## Available primitives
 {: #available-primitives}
 
-* Estimator: Allows users to efficiently calculate and interpret expectation values of quantum operators required for many algorithms. Users specify a list of circuits and observables, then tell the program how to selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input.
-* Sampler: Allows users to more accurately contextualize counts. It takes a user circuit as an input and generates an error mitigated readout of quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference. 
+* **Estimator**: Allows users to efficiently calculate and interpret expectation values of quantum operators required for many algorithms. Users specify a list of circuits and observables, then tell the program how to selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input.
+* **Sampler**: Allows users to more accurately contextualize counts. It takes a user circuit as an input and generates an error mitigated readout of quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference. 
 
 ## How to use primitives
 {: #how-to-use-primitives}

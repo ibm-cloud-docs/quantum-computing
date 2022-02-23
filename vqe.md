@@ -43,14 +43,14 @@ For authentication, you need to gather some information and use it to set up an 
 
 - From the [{{site.data.keyword.cloud_notm}} API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key. You might need to use light theme to see your entries. Copy this key. For example:
 
-  ```text
+```text
    poJraWQiOiIyMDIxMTAzMDE1MTQiLCJhbGciiuJSUzI1NiJ9.eyJpYW1fdWQiOiJJQk1pZC0xMTAwMDBCS1VWIiwiaWQiOiJJQk1pZC0xMTAwMDBCS1VWIiwicmVhbG1pZCI6IklCTWlkIiwianRpIjoiMjgzMDE3MWItYmY1MC00ZGEyLWE4MjAtMjFmNGVjYWQ0NDE0IiwiaWRlbnRkj
-  ```
+```
 
 - Find your Cloud Resource Name (CRN). From the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com){: external}, scroll to Resource summary, click "Services and software", then click the row that contains your quantum service instance (not the name of the instance). In the pane that opens, click the icon to copy your CRN. For example:
-  ```text
+```text
       crn:v1:staging:public:quantum-computing:global:a/7aca585718d0487bbd174c097e032b27:a2ee9c4f-7a00-4886-ae1c-7f62814a19f9::
-  ```
+```
 Run the following command.
 
 ```python
@@ -507,7 +507,7 @@ json_results.json()
    1636007807.6657026,
    1636007807.80229,
    1636007807.9354544]}}
-  ```
+```
 </details>
 
 ### Deserialize and review the results
@@ -526,7 +526,7 @@ print(results)
 
 <details>
   <summary>Click to view the output</summary>
- ```console
+```console
 {'optimizer_evals': None, 'optimizer_time': 8.136704444885254, 'optimal_value': -0.9999992908781012, 'optimal_point': array([ 1.87721751e+00, -1.10679649e+00,  2.17180795e+00,  1.26729269e+00,
         2.05764454e+00,  4.94433917e-01,  7.56525848e-01,  3.12580785e+00,
        -1.31980573e-02, -1.41778542e+00, -4.71371574e-01,  3.03332318e+00,
@@ -681,7 +681,7 @@ print(results)
         2.05764454e+00,  4.94433917e-01,  7.56525848e-01,  3.12580785e+00,
        -1.31980573e-02, -1.41778542e+00, -4.71371574e-01,  3.03332318e+00,
        -1.39525751e+00,  1.51411227e+00,  2.88237036e+00, -2.29233482e-04])], 'time': [1636007801.0262072, 1636007801.1605518, 1636007801.2937593, 1636007801.4255233, 1636007801.5622387, 1636007801.7041235, 1636007801.8368134, 1636007801.9708939, 1636007802.109165, 1636007802.2377322, 1636007802.3886397, 1636007802.5447168, 1636007802.6858206, 1636007802.8297653, 1636007802.9756196, 1636007803.1414769, 1636007803.2811599, 1636007803.42134, 1636007803.5536666, 1636007803.6891356, 1636007803.826577, 1636007803.957428, 1636007804.0986683, 1636007804.245034, 1636007804.3832169, 1636007804.5140903, 1636007804.6503701, 1636007804.805907, 1636007804.9407132, 1636007805.0926185, 1636007805.235045, 1636007805.3718216, 1636007805.5151682, 1636007805.6586647, 1636007805.8063796, 1636007805.9533746, 1636007806.0958285, 1636007806.240817, 1636007806.378122, 1636007806.5221386, 1636007806.662343, 1636007806.8254557, 1636007806.9702716, 1636007807.116078, 1636007807.253287, 1636007807.3884866, 1636007807.5258465, 1636007807.6657026, 1636007807.80229, 1636007807.9354544]}}
-      ```
+```
        </details>
 
 You can also print a subset of the results:

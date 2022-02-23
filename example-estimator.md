@@ -47,14 +47,14 @@ Estimator lets you define your jobs by using the following inputs to calculate e
 
 These inputs can also be inspected by running the following commands:
 
- ```Python
+```Python
    from qiskit_ibm_runtime import IBMRuntimeService
 
    service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN or Service Name>)
 
    program = service.program("estimator")
    print(program)
- ```
+```
   {: codeblock}
 
 
@@ -66,7 +66,7 @@ These inputs can also be inspected by running the following commands:
 
 ### Example of preparing the required inputs:
 
-  ```Python
+```Python
    from qiskit.test.reference_circuits import ReferenceCircuits
    from qiskit_ibm_runtime import IBMRuntimeService
    from qiskit.circuit.library import EfficientSU2
@@ -115,7 +115,7 @@ These inputs can also be inspected by running the following commands:
    result = job.result()
    print(result)
 
-  ```
+```
   {: codeblock}
 
 ### Prepare optional Inputs:

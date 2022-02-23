@@ -116,7 +116,7 @@ def main(backend, user_messenger, **kwargs) -> Any:
         user_messenger.publish({"iteration": it, "counts": result.get_counts()})
 
     return "All done!"
- ```
+```
 
 
 ## Next steps
