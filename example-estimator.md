@@ -29,7 +29,7 @@ Learn how to set up and use the Estimator primitive program.
 The Estimator primitive lets you efficiently calculate and interpret expectation values of quantum operators required for many algorithms. You can specify a list of circuits and observables, then selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input.  
 
 
-## Before you begin
+## Prepare the environment
 {: #example-estimator-byb}
 {: step}
 

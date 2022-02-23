@@ -29,7 +29,7 @@ Learn how to set up and use the Sampler primitive program.
 The Sampler primitive lets you more accurately contextualize counts. It takes a user circuit as an input and generates an error mitigated readout of quasiprobabilities. This enables you to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.  
 
 
-## Before you begin
+## Prepare the environment
 {: #example-sampler-byb}
 {: step}
 
