@@ -34,7 +34,6 @@ The Sampler primitive lets you more accurately contextualize counts. It takes a 
 {: step}
 
 1. Follow the steps in the [quick start guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your Quantum Service instance ready to use.
-
 2. You'll need at least one circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
 
@@ -49,20 +48,20 @@ The sample takes in
 Example:
 
 ```Python
-   from qiskit import QuantumCircuit
-   from qiskit_ibm_runtime import IBMRuntimeService
+from qiskit import QuantumCircuit
+from qiskit_ibm_runtime import IBMRuntimeService
 
-   bell = QuantumCircuit(2, 2)
-   bell.h(0)
-   bell.cx(0, 1)
-   bell.measure(0, 0)
-   bell.measure(1, 1)
+bell = QuantumCircuit(2, 2)
+bell.h(0)
+bell.cx(0, 1)
+bell.measure(0, 0)
+bell.measure(1, 1)
 
-   program_inputs =  {
-    'circuits': [bell],
-    'run_options': {
-      'shots': 1024
- }
+program_inputs =  {
+'circuits': [bell],
+'run_options': {
+  'shots': 1024
+}
 }
 ```
 
@@ -75,9 +74,9 @@ Specify other program options, such as the **backend name**.  If one is not spec
 Example:
 
 ```Python
- options = {
-    'backend_name': "ibmq_qasm_simulator"
- }
+options = {
+'backend_name': "ibmq_qasm_simulator"
+}
 
 ```
 
@@ -88,11 +87,10 @@ Example:
 Run the job; specifying your previously defined inputs and options:
 
 ```Python
-     job = service.run(program_id="sampler",
-             inputs=program_inputs,
-             options=options
-            )
-
+job = service.run(program_id="sampler",
+     inputs=program_inputs,
+     options=options
+    )
 ```
 
 ## Get results
@@ -102,7 +100,7 @@ Run the job; specifying your previously defined inputs and options:
 Request the outputs you are interested in. You will need the job ID if you want to troubleshoot or look up the results again later.
 
 ```Python
-     print(f"job id: {job.job_id}")
-     bell_result = job.result()
-     print("bell results", bell_result)
+print(f"job id: {job.job_id}")
+bell_result = job.result()
+print("bell results", bell_result)
 ```
