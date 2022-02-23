@@ -36,6 +36,7 @@ toc:
       topics:
       - program-estimator.md
       - program-sampler.md
+      - program-hello-world.md
       - link:
           label: API reference
           href: https://{DomainName}/apidocs/quantum-computing
