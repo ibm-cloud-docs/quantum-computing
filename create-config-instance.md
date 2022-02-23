@@ -58,8 +58,6 @@ quantum-computing.job.delete | Delete jobs | Manager, Writer
 ## Next steps
 {: #next-steps}
 
-- Learn how to [access your {{site.data.keyword.quantum_long_notm}} instance](/docs/quantum-computing?topic=quantum-computing-access).
-- Learn how to [submit a job](/docs/quantum-computing?topic=quantum-computing-run_job).
 - View the [API reference](/apidocs/quantum-computing){: external}.
 - Learn about IBM Quantum:
     - [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}

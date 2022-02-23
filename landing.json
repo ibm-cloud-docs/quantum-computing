@@ -18,10 +18,6 @@
         "href": "/docs/quantum-computing?topic=quantum-computing-quickstart"
         },
         {
-        "title": "Qiskit Runtime API",
-        "description": "Learn how to use the Qiskit Runtime API.",
-        "href": "https://qiskit.org/documentation/partners/qiskit_ibm_runtime/apidocs/ibm-runtime.html"
-        }
 
 ],
 "section_learn": {

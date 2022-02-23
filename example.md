@@ -16,24 +16,22 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Example: Run a job and view results with VQE
-{: #vqe-example}
+# Example: Run a program
+{: #example}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="20m"}
 
-In this example, we walk through all steps necessary to run the Variational Quantum Eigensolver (VQE) sample program.  The steps to run other sample programs are similar.  VQE is a central algorithm in many applications such as quantum chemistry or optimization. This tutorial shows you how to run the VQE as a Qiskit Runtime program. We first prepare the input parameters, such as the Hamiltonian and ansatz, and then test VQE locally, upload it to {{site.data.keyword.quantum_long_notm}}, then run it remotely.
-{: shortdesc}
+In this example, we walk through all steps necessary to run the Estimator primitive.  It runs the circuit then  returns results for processing.  
+
 
 ## Before you begin
-{: #before-vqe}
+{: #before-example}
 
 Perform the following before you begin:
 
-- Familiarize yourself with the VQE program.  
+- Familiarize yourself with the Estimator primitive as described in the [Estimator](/docs/quantum-computing?topic=quantum-computing-estimator) topic.  
 - Install Qiskit: `pip install qiskit`. For more detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}.
 
-Unless otherwise stated, this tutorial uses a Python environment.
-{: note}
 
 ## Obtain credentials
 {: #obtain-credentials}
@@ -44,7 +42,7 @@ For authentication, you need to gather some information and use it to set up an 
 - From the [{{site.data.keyword.cloud_notm}} API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key. You might need to use light theme to see your entries. Copy this key. For example:
 
    ```text
-   poJraWQiOiIyMDIxMTAzMDE1MTQiLCJhbGciiuJSUzI1NiJ9.eyJpYW1fdWQiOiJJQk1pZC0xMTAwMDBCS1VWIiwiaWQiOiJJQk1pZC0xMTAwMDBCS1VWIiwicmVhbG1pZCI6IklCTWlkIiwianRpIjoiMjgzMDE3MWItYmY1MC00ZGEyLWE4MjAtMjFmNGVjYWQ0NDE0IiwiaWRlbnRkj
+   I9sxojrwurPrMWqNR_wc4rztMgVqE1HUmsfACMyw_G9n
    ```
 
 - Find your Cloud Resource Name (CRN). From the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com){: external}, scroll to Resource summary, click "Services and software", then click the row that contains your quantum service instance (not the name of the instance). In the pane that opens, click the icon to copy your CRN. For example:
@@ -699,6 +697,8 @@ Target: -1
 ## Related information
 {: #related}
 
+- [Sampler primitive](/docs/quantum-computing?topic=quantum-computing-program-sampler)
+- [Estimator primitive](/docs/quantum-computing?topic=quantum-computing-program-estimator)
 - [API reference](/apidocs/quantum-computing){: external}
 - Learn about IBM Quantum:
     - [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}

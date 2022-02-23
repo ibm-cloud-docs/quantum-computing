@@ -91,10 +91,8 @@ Primitives work like any other program.  You generate one or more circuits by us
 {: #next-steps}
 
 - Use the [Quick start guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to create an instance and run your first job.
-- Use [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.
-- Learn how to [submit a job](/docs/quantum-computing?topic=quantum-computing-run_job).
-- View the [Qiskit Runtime API reference](https://qiskit.org/documentation/partners/qiskit_runtime/apidocs/ibm-runtime.html){: external}
-- View the [Quantum Computing API reference](/apidocs/quantum-computing){: external}.
+- Use Qiskit [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.
+- View the [Quantum Computing API reference](/apidocs/quantum-computing){: external} to understand how to use cURL commands to work with your cloud service intance.
 - Learn about IBM Quantum:
     - [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}
     - [Qiskit](https://qiskit.org/){: external}

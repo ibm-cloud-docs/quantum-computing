@@ -74,9 +74,3 @@ Leave this tab selected if you use curl.
 
     To update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials.  For more information about managing your account see the [account management tutorial](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/tutorials/04_account_management.html){: external}.
     {: python}
-
-## Next steps
-{: #next-steps}
-
-Learn about [primitive programs](/docs/quantum-computing?topic=quantum-computing-primitives).
-Learn how to [submit a job](/docs/quantum-computing?topic=quantum-computing-run_job).
