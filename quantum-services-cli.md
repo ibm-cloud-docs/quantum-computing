@@ -33,9 +33,9 @@ The {{site.data.keyword.cloud}} Quantum Computing command-line interface (CLI) a
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 * Install the Quantum Computing CLI by running the following command:
 
-   ```sh
+  ```sh
    ibmcloud plugin install <cli-plugin>
-   ```
+  ```
    {: pre}
 
    

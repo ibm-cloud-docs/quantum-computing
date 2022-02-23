@@ -47,15 +47,15 @@ Estimator lets you define your jobs by using the following inputs to calculate e
 
 These inputs can also be inspected by running the following commands:
 
-  ```Python
+ ```Python
    from qiskit_ibm_runtime import IBMRuntimeService
 
    service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN or Service Name>)
 
    program = service.program("estimator")
    print(program)
-  ```
-  {: note}
+ ```
+  {: codeblock}
 
 
 * The **circuits** you want to investigate.
@@ -66,7 +66,7 @@ These inputs can also be inspected by running the following commands:
 
 ### Example of preparing the required inputs:
 
-   ```Python
+  ```Python
    from qiskit.test.reference_circuits import ReferenceCircuits
    from qiskit_ibm_runtime import IBMRuntimeService
    from qiskit.circuit.library import EfficientSU2
@@ -115,7 +115,8 @@ These inputs can also be inspected by running the following commands:
    result = job.result()
    print(result)
 
-   ```
+  ```
+  {: codeblock}
 
 ### Prepare optional Inputs:
 {: #estimator-optional}
@@ -133,7 +134,7 @@ Different ways to leverage grouping:
 
 #### Example: One parameter, one group
 
- ```python
+```python
    from qiskit_ibm_runtime import IBMRuntimeService
 
    service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN>)
@@ -155,11 +156,12 @@ Different ways to leverage grouping:
    H1_result = job.result()
    print("H1", H1_result)
 
- ```
+```
+{: codeblock}
 
 #### Example: One parameter, multiple groups
 
- ```python
+```python
    # calculate [ <psi1|H2|psi1>, <psi1|H3|psi1> ]
    # transpile circuits and cache for [(0, 1), (0, 2)]
    program_inputs =  {
@@ -174,7 +176,8 @@ Different ways to leverage grouping:
    print(f"job id: {job.job_id}")
    H23_result = job.result()
    print("H2 and H3", H23_result)
- ```
+```
+{: codeblock}
 
 #### Example: Multiple parameters, multiple groups
 
@@ -192,4 +195,5 @@ Different ways to leverage grouping:
    print(f"job id: {job.job_id}")
    H13_result = job.result()
    print("H1 and H3", H13_result)
- ```
+```
+{: codeblock}

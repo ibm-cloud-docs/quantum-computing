@@ -48,7 +48,7 @@ The sample takes in
 
 Example:
 
-   ```Python
+  ```Python
    from qiskit import QuantumCircuit
    from qiskit_ibm_runtime import IBMRuntimeService
 
@@ -64,7 +64,7 @@ Example:
       'shots': 1024
  }
 }
-   ```
+  ```
 
 ##Program options    
 {: #sampler-options}

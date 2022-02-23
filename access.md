@@ -45,30 +45,30 @@ Leave this tab selected if you use curl.
 
 3. **Optional**{: python} Find your Cloud Resource Name (CRN). From the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com){: external}, scroll to Resource summary, click "Services and software", then click the row that contains your quantum service instance (not the name of the instance). In the pane that opens, click the icon to copy your CRN. For example:
 
-   ```text
+  ```text
       crn:v1:bluemix:public:quantum-computing:us-east:a/b947c1c5a9378d64aed96696e4d76e8e:a3a7f181-35aa-42c8-94d6-7c8ed6e1a94b::
-   ```
+  ```
 
 5. Call  `IBMRuntimeService` with your IBM Cloud API key and the CRN.
 
    If using Python, you can use the name of your service instance instead of the CRN.  You can also optionally save your credentials on disk (in the $HOME/.qiskit/qiskit-ibm.json file). By doing so, you only need to use IBMRuntimeService() in the future to initialize your account. If you don't save your credentials to disk, you have to run this command every time you start a new session.
 
-   ```
+  ```
    from qiskit_ibm_runtime import IBMRuntimeService
 
    # Save account to disk.
    IBMRuntimeService.save_account(auth="cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN or Service Name>)
 
    service = IBMRuntimeService()
-   ```
+  ```
    {: codeblock}
    {: python}
 
-   ```
+  ```
    curl --location --request GET 'https://us-east.quantum-computing.cloud.ibm.com/programs' \
    --header 'Service-CRN: <crn>'
    --header 'Authorization: apikey <IAM-API-key>'
-   ```
+  ```
    {: pre}
    {: curl}
 

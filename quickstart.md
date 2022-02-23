@@ -23,7 +23,7 @@ This tutorial walks you through the steps to set up a Qiskit Runtime service ins
 {: shortdesc}
 
 
-## Creating a service instance
+## Create a service instance
 {: #create-configure}
 
 1. [Create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external} for the organization.
@@ -65,10 +65,10 @@ quantum-computing.job.delete | Delete jobs | Manager, Writer
 
 1. Install these packages.  They let you create circuits and work with primitive programs via Qiskit Runtime. For detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. You need to keep these packages updated:
 
-     ```Python
+    ```Python
       pip install qiskit
       pip install qiskit-ibm-runtime
-     ```    
+    ```    
 
 ## Find your access credentials
 {: #find-credentials}
@@ -79,9 +79,9 @@ Next, you will find your account credentials and authenticate with the service.
 3. Find your Cloud Resource Name (CRN) or service instance name.
   - To find your CRN, from the {{site.data.keyword.cloud_notm}} console [Resource list page](https://cloud.ibm.com/resources){: external}, expand the "Services and software" section and look for your instance. Then click the row that contains your quantum service instance (don't click the name of the instance). In the pane that opens, click the icon to copy your CRN. For example:
 
-   ```text
+  ```text
       crn:v1:bluemix:public:quantum-computing:us-east:a/b947c1c5a9378d64aed96696e4d76e8e:a3a7f181-35aa-42c8-94d6-7c8ed6e1a94b::
-   ```
+  ```
 
    - To find your service instance name, from the {{site.data.keyword.cloud_notm}} console [Resource list page](https://cloud.ibm.com/resources){: external}, expand the "Services and software" section and look for your instance.  The service instance name is in the **Name** column.
 
@@ -92,14 +92,14 @@ Call  `IBMRuntimeService` with your IBM Cloud API key and the CRN or Service nam
 
 You can use the name of your service instance instead of the CRN.  You can also optionally save your credentials on disk (in the $HOME/.qiskit/qiskit-ibm.json file). By doing so, you only need to use IBMRuntimeService() in the future to initialize your account. If you don't save your credentials to disk, you have to run this command every time you start a new session.
 
-   ```python
+  ```python
      from qiskit_ibm_runtime import IBMRuntimeService
 
      # Save account to disk.
      IBMRuntimeService.save_account(auth="cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN or Service instance name>)
 
      service = IBMRuntimeService()
-   ```
+  ```
 
 To update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials.  For more information about managing your account see the [account management tutorial](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/tutorials/04_account_management.html){: external}.
 
@@ -137,7 +137,7 @@ You will use the Qiskit Runtime IBMRuntimeService.run() method, which takes the 
 
 In the following example, we will submit a circuit to the Sampler program.
 
-  ```python
+ ```python
   from qiskit.test.reference_circuits import ReferenceCircuits
   from qiskit_ibm_runtime import IBMRuntimeService
 
@@ -152,7 +152,7 @@ In the following example, we will submit a circuit to the Sampler program.
       inputs=program_inputs)
   print(f"job ID: {job.job_id}")
   result = job.result()
-  ```
+ ```
 
 If you do not specify the device, the job is sent to the least busy device that you have access to.
 
@@ -169,9 +169,9 @@ Follow up the Qiskit Runtime IBMRuntimeService.run() method by running a Runtime
 
 There are several RuntimeJob methods to choose from, including job.status():
 
-  ```python
+ ```python
   job.status()
-  ```
+ ```
 You can also return the job status by using the [List job details](/apidocs/quantum-computing#get-job-details-jid){: external} API directly or in [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Programs/get-job-details-jid){: external}.
 
 ## Next steps

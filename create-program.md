@@ -27,7 +27,7 @@ A runtime program is a piece of Python code that lives in the cloud and can be i
 
 Create the Python program by following this template. It can also be found in the [qiskit-ibmq-provider repository.](https://github.com/Qiskit/qiskit-ibmq-provider/blob/master/qiskit/providers/ibmq/runtime/program/program_template.py){: external}  The `main()` method is the entry point of a runtime program. It takes backend and user_messenger parameters (injected for you by the system) that can be used to send circuits to the backend and messages to the user, respectively. Any other custom parameters specified when you run the program are injected as kwargs.
 
- ```Python
+```Python
 """Runtime program template.
 
 The ``main()`` method is the entry point of a runtime program. It takes
@@ -74,7 +74,7 @@ user_messenger is an instance of UserMessenger and has a publish() method that c
 ### Example
 {: #example-runtime-program-create-program}
 
- ```Python
+```Python
 """A sample runtime program that submits random circuits for user-specified iterations."""
 
 import random
@@ -116,7 +116,7 @@ def main(backend, user_messenger, **kwargs) -> Any:
         user_messenger.publish({"iteration": it, "counts": result.get_counts()})
 
     return "All done!"
-  ```
+ ```
 
 
 ## Next steps
