@@ -64,6 +64,7 @@ program_inputs =  {
 }
 }
 ```
+{: codeblock}
 
 ##Program options    
 {: #sampler-options}
@@ -79,6 +80,7 @@ options = {
 }
 
 ```
+{: codeblock}
 
 ## Run the job
 {: #sampler-run}
@@ -88,10 +90,11 @@ Run the job; specifying your previously defined inputs and options:
 
 ```Python
 job = service.run(program_id="sampler",
-     inputs=program_inputs,
-     options=options
+inputs=program_inputs,
+options=options
     )
 ```
+{: codeblock}
 
 ## Get results
 {: #sampler-results}
@@ -104,3 +107,4 @@ print(f"job id: {job.job_id}")
 bell_result = job.result()
 print("bell results", bell_result)
 ```
+{: codeblock}

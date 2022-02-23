@@ -183,6 +183,4 @@ You can also return the job status by using the [List job details](/apidocs/quan
 {: #next-steps}
 
 - View the [API reference](/apidocs/quantum-computing){: external}.
-- Learn about IBM Quantum:
-    - [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}
-    - [Qiskit](https://qiskit.org/){: external}
+- Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}
