@@ -31,6 +31,7 @@ The Sampler primitive lets you more accurately contextualize counts. It takes a 
 
 ## Before you begin
 {: #example-sampler-byb}
+{: step}
 
 1. Follow the steps in the [quick start guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your Quantum Service instance ready to use.
 

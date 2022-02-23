@@ -73,7 +73,7 @@ With our first set of primitive programs, we enable capabilities that allow user
 
 Primitives work like any other program.  You generate one or more circuits by using Qiskit, then send those circuits, along with any other configuration values to the primitive. The primitive takes care of sending the circuits to the quantum system, error mitigation, processing the circuits, then returning results.  For full details and examples, refer to the topics about each primitive.
 
-For examples of using primitives, see [Estimator](/docs/quantum-computing?topic=quantum-computing-estimator) or  [Sampler](/docs/quantum-computing?topic=quantum-computing-sampler). 
+For examples of using primitives, see [Estimator](/docs/quantum-computing?topic=quantum-computing-estimator) or  [Sampler](/docs/quantum-computing?topic=quantum-computing-sampler).
 
 
 ## Next steps
@@ -81,7 +81,7 @@ For examples of using primitives, see [Estimator](/docs/quantum-computing?topic=
 
 - Use the [Quick start guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to create an instance and run your first job.
 - Use Qiskit [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.
-- View the [Quantum Computing API reference](/apidocs/quantum-computing){: external} to understand how to use cURL commands to work with your cloud service intance.
+- View the [Quantum Computing API reference](/apidocs/quantum-computing){: external} to understand how to use cURL commands to work with your cloud service instance.
 - Learn about IBM Quantum:
     - [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}
     - [Qiskit](https://qiskit.org/){: external}
