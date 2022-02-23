@@ -125,7 +125,7 @@ For a given parameter input for your circuit, you can use these optional paramet
 
 The **backend** lets you optionally specify the backend to run on.  If you do not specify one, the least busy backend is used.
 
-The *grouping* input allows you to define which observable to measure for which circuit, in the format `(circuit_n, observable_m)`, where the `m<sup>th</sup>` observable you specified is measured for the `n<sup>th</sup>` circuit in the list. Using the inputs defined in the previous example, the group `(0,1)` evaluates the observable `H2` using the circuit `psi1` for some input `θ`.
+The *grouping* input allows you to define which observable to measure for which circuit, in the format `(circuit_n, observable_m)`, where the m<sup>th</sup> observable you specified is measured for the n<sup>th</sup> circuit in the list. Using the inputs defined in the previous example, the group `(0,1)` evaluates the observable `H2` using the circuit `psi1` for some input `θ`.
 
 This, when coupled with the shots input, lets you manage the tradeoff between speed and accuracy for calculating an expectation value for each observable over a range of parameters.
 
