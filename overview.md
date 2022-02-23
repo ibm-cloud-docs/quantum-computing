@@ -50,19 +50,6 @@ Receive intermediate results as your execution runs. (Future functionality)
 
 You can work with this service by using our Qiskit Runtime library Python commands (preferred) or by using curl to access the Quantum Cloud Runtime API directly. You should use the method that is most familiar to you, but if you don't have a specific reason for using curl, Python  is typically easier.
 
-In this documentation, when there are multiple ways to perform a task, there will be a table where you can choose which information to display.  The text and code samples update dynamically depending on your choice. Choosing an option in one table updates the content in the entire page. The following table is an example of what you might see:
-
-```
-Leave this tab selected if you use Python.
-```
-{: codeblock}
-{: python}
-
-```
-Leave this tab selected if you use curl.
-```
-{: pre}
-{: curl}
 
 ## Overview of primitive programs
 {: #primitive-programs}
@@ -85,6 +72,8 @@ With our first set of primitive programs, we enable capabilities that allow user
 {: #how-to-use-primitives}
 
 Primitives work like any other program.  You generate one or more circuits by using Qiskit, then send those circuits, along with any other configuration values to the primitive. The primitive takes care of sending the circuits to the quantum system, error mitigation, processing the circuits, then returning results.  For full details and examples, refer to the topics about each primitive.
+
+For examples of using primitives, see [Estimator](/docs/quantum-computing?topic=quantum-computing-estimator) or  [Sampler](/docs/quantum-computing?topic=quantum-computing-sampler). 
 
 
 ## Next steps

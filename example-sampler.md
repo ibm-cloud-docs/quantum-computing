@@ -32,21 +32,20 @@ The Sampler primitive lets you more accurately contextualize counts. It takes a 
 ## Before you begin
 {: #example-sampler-byb}
 
-1. Follow the steps in [Creating and configuring a Quantum Service instance](/docs/quantum-computing?topic=quantum-computing-gettingstarted) and [Get ready to work with your Quantum Service instance](/docs/quantum-computing?topic=quantum-computing-access) to get your Quantum Service instance ready to use.
+1. Follow the steps in the [quick start guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your Quantum Service instance ready to use.
 
 2. You'll need at least one circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
 
-## Inputs for Sampler
+## Specify program inputs
 {: #sampler-inputs}
 {: step}
 
 The sample takes in
 * The **circuits** you want to investigate.
-* The **parameter** inputs to evaluate the circuits.
-* (optional) The **backend** to use.  If one is not specified, the least busy backend that you have access to is used.
+* Other **run options**, such as **parameter** inputs to evaluate the circuits and how many **shots** to run each circuit.
 
-For example:
+Example:
 
    ```Python
    from qiskit import QuantumCircuit
@@ -58,30 +57,51 @@ For example:
    bell.measure(0, 0)
    bell.measure(1, 1)
 
-
-   θ = [0, 1, 1, 2, 3, 5]
+   program_inputs =  {
+    'circuits': [bell],
+    'run_options': {
+      'shots': 1024
+ }
+}
    ```
 
-## Run a sampler job
+##Program options    
+{: #sampler-options}
+{: step}
 
+Specify other program options, such as the **backend name**.  If one is not specified, the least busy backend is used.
+
+Example:
 
 ```Python
-     from qiskit_ibm_runtime import IBMRuntimeService
+ options = {
+    'backend_name': "ibmq_qasm_simulator"
+ }
 
-     service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN>)
+```
 
-     program_inputs =  {
-     'circuits': [bell],
-     'parameters': [θ],
-     'shots' : 1024,
-     'backend': "ibm_canberra"
-   }
+## Run the job
+{: #sampler-run}
+{: step}
 
-   job = service.run(program_id="sampler",
-                 inputs=program_inputs
-                )
-   print(f"job id: {job.job_id}")
-   bell_result = job.result()
-   print("bell results", bell_result)
+Run the job; specifying your previously defined inputs and options:
 
+```Python
+     job = service.run(program_id="sampler",
+             inputs=program_inputs,
+             options=options
+            )
+
+```
+
+## Get results
+{: #sampler-results}
+{: step}
+
+Request the outputs you are interested in. You will need the job ID if you want to troubleshoot or look up the results again later.
+
+```Python
+     print(f"job id: {job.job_id}")
+     bell_result = job.result()
+     print("bell results", bell_result)
 ```
