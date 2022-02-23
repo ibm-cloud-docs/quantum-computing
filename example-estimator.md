@@ -67,56 +67,55 @@ These inputs can also be inspected by running the following commands:
 ### Example of preparing the required inputs:
 
 ```Python
-   from qiskit.test.reference_circuits import ReferenceCircuits
-   from qiskit_ibm_runtime import IBMRuntimeService
-   from qiskit.circuit.library import EfficientSU2
-   from qiskit.opflow.primitive_ops import PauliSumOp
+from qiskit.test.reference_circuits import ReferenceCircuits
+from qiskit_ibm_runtime import IBMRuntimeService
+from qiskit.circuit.library import EfficientSU2
+from qiskit.opflow.primitive_ops import PauliSumOp
 
-   service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN or Service Name>)
+service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN or Service Name>)
 
-   # Define the circuits
+# Define the circuits
 
-   psi1 = ReferenceCircuits.bell()
-   psi2 = EfficientSU2
+psi1 = ReferenceCircuits.bell()
+psi2 = EfficientSU2
 
-   # Define the observables
+# Define the observables
 
-   H1 = PauliSumOp.from_list(
-    [
-      ("II", -1.052373245772859),
-      ("IZ", 0.39793742484318045),
-      ("ZI", -0.39793742484318045),
-      ("ZZ", -0.01128010425623538),
-      ("XX", 0.18093119978423156),
-    ]
-   )
-   H2 = PauliSumOp.from_list([("IZ", 1)])
-   H3 = PauliSumOp.from_list([("ZI", 1), ("ZZ", 1)])
+H1 = PauliSumOp.from_list(
+[
+("II", -1.052373245772859),
+("IZ", 0.39793742484318045),
+("ZI", -0.39793742484318045),
+("ZZ", -0.01128010425623538),
+("XX", 0.18093119978423156),
+]
+)
+H2 = PauliSumOp.from_list([("IZ", 1)])
+H3 = PauliSumOp.from_list([("ZI", 1), ("ZZ", 1)])
 
-   # Define some input parameters:
+# Define some input parameters:
 
-   θ1 = [0, 1, 1, 2, 3, 5]
-   θ2 = [1, 2, 3, 4, 5, 6]
-   θ3 = [0, 1, 1, 2, 2, 6, 3, 4]
+θ1 = [0, 1, 1, 2, 3, 5]
+θ2 = [1, 2, 3, 4, 5, 6]
+θ3 = [0, 1, 1, 2, 2, 6, 3, 4]
 
-   program_inputs =  {
-      'circuits': [psi1, psi2],
-      'observables': [H1, H2, H3],
-      'parameters': [θ1, θ2, θ3]
-      'run_options': {
-        'shots': 1024
-      }
-   }
-   options = {"backend_name": "ibm_canberra"}
-   job = service.run(program_id="estimator",
-      inputs=program_inputs
-   )
-   print(f"job id: {job.job_id}")
-   result = job.result()
-   print(result)
-
+program_inputs =  {
+  'circuits': [psi1, psi2],
+  'observables': [H1, H2, H3],
+  'parameters': [θ1, θ2, θ3]
+  'run_options': {
+    'shots': 1024
+  }
+}
+options = {"backend_name": "ibm_canberra"}
+job = service.run(program_id="estimator",
+  inputs=program_inputs
+)
+print(f"job id: {job.job_id}")
+result = job.result()
+print(result)
 ```
-  {: codeblock}
+{: codeblock}
 
 ### Prepare optional Inputs:
 {: #estimator-optional}
@@ -135,65 +134,63 @@ Different ways to leverage grouping:
 #### Example: One parameter, one group
 
 ```python
-   from qiskit_ibm_runtime import IBMRuntimeService
+from qiskit_ibm_runtime import IBMRuntimeService
 
-   service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN>)
+service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN>)
 
-
-   # calculate [ <psi1|H1|psi1> ]
-   # transpile circuits and cache for [(0, 0)]
-   program_inputs =  {
-      'circuits': [psi1, psi2],
-      'observables': [H1, H2, H3],
-      'parameters': [θ1],
-      'grouping': (0,0),
-   }
-   options = {"backend_name": "ibm_canberra"}
-   job = service.run(program_id="estimator",
-      inputs=program_inputs
-   )
-   print(f"job id: {job.job_id}")
-   H1_result = job.result()
-   print("H1", H1_result)
-
+# calculate [ <psi1|H1|psi1> ]
+# transpile circuits and cache for [(0, 0)]
+program_inputs =  {
+  'circuits': [psi1, psi2],
+  'observables': [H1, H2, H3],
+  'parameters': [θ1],
+  'grouping': (0,0),
+}
+options = {"backend_name": "ibm_canberra"}
+job = service.run(program_id="estimator",
+  inputs=program_inputs
+)
+print(f"job id: {job.job_id}")
+H1_result = job.result()
+print("H1", H1_result)
 ```
 {: codeblock}
 
 #### Example: One parameter, multiple groups
 
 ```python
-   # calculate [ <psi1|H2|psi1>, <psi1|H3|psi1> ]
-   # transpile circuits and cache for [(0, 1), (0, 2)]
-   program_inputs =  {
-      'circuits': [psi1, psi2],
-      'observables': [H1, H2, H3],
-      'parameters': [θ1],
-      'grouping': [(0,1),(0,2)],
-   }
-   job = service.run(program_id="estimator",
-      inputs=program_inputs
-   )
-   print(f"job id: {job.job_id}")
-   H23_result = job.result()
-   print("H2 and H3", H23_result)
+# calculate [ <psi1|H2|psi1>, <psi1|H3|psi1> ]
+# transpile circuits and cache for [(0, 1), (0, 2)]
+program_inputs =  {
+  'circuits': [psi1, psi2],
+  'observables': [H1, H2, H3],
+  'parameters': [θ1],
+  'grouping': [(0,1),(0,2)],
+}
+job = service.run(program_id="estimator",
+  inputs=program_inputs
+)
+print(f"job id: {job.job_id}")
+H23_result = job.result()
+print("H2 and H3", H23_result)
 ```
 {: codeblock}
 
 #### Example: Multiple parameters, multiple groups
 
 ```python
-   # calculate [ <psi1|H1|psi1>, <psi1|H1|psi1>, <psi2|H3|psi2> ]
-   program_inputs =  {
-      'circuits': [psi1, psi2],
-      'observables': [H1, H2, H3],
-      'parameters': [θ1, θ1, θ3],
-      'grouping': [(0,0),(1,2)],
-   }
-   job = service.run(program_id="estimator",
-      inputs=program_inputs
-   )
-   print(f"job id: {job.job_id}")
-   H13_result = job.result()
-   print("H1 and H3", H13_result)
+# calculate [ <psi1|H1|psi1>, <psi1|H1|psi1>, <psi2|H3|psi2> ]
+program_inputs =  {
+  'circuits': [psi1, psi2],
+  'observables': [H1, H2, H3],
+  'parameters': [θ1, θ1, θ3],
+  'grouping': [(0,0),(1,2)],
+}
+job = service.run(program_id="estimator",
+  inputs=program_inputs
+)
+print(f"job id: {job.job_id}")
+H13_result = job.result()
+print("H1 and H3", H13_result)
 ```
 {: codeblock}
