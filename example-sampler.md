@@ -92,7 +92,7 @@ Run the job; specifying your previously defined inputs and options:
 job = service.run(program_id="sampler",
 inputs=program_inputs,
 options=options
-    )
+)
 ```
 {: codeblock}
 
