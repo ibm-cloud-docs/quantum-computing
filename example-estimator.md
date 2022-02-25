@@ -135,5 +135,5 @@ Output:
 ```text
 Job ID: c8bf512ss066rcv2mlu0
 {'values': array([-1.30777957]), 'variances': array([0.29598401])}
-Shots: 115
+Shots: 1000
 ```
