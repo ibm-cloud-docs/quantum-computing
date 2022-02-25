@@ -108,18 +108,6 @@ program_inputs =  {
   }
 }
 options = {"backend_name": "ibm_canberra"}
-job = service.run(program_id="estimator",
-  inputs=program_inputs
-)
-print(f"job id: {job.job_id}")
-result = job.result()
-print(result)
-```
-{: codeblock}
-
-```text
-Job ID: c8bf512ss066rcv2mlu0
-{'values': array([-1.30777957]), 'variances': array([0.29598401])}
 ```
 
 ### Prepare optional Inputs:
@@ -199,3 +187,24 @@ H13_result = job.result()
 print("H1 and H3", H13_result)
 ```
 {: codeblock}
+
+## Run the job
+
+After preparing all of the input parameters, submit the job.  The values and variances are returned; along with the actual number of shots run:
+Example:
+
+```Python
+job = service.run(program_id="estimator",
+  inputs=program_inputs
+)
+print(f"job id: {job.job_id}")
+result = job.result()
+print(result)
+```
+{: codeblock}
+
+```text
+Job ID: c8bf512ss066rcv2mlu0
+{'values': array([-1.30777957]), 'variances': array([0.29598401])}
+Shots: 115
+```
