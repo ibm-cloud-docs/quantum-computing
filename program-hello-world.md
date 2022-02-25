@@ -15,7 +15,7 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Work with the Hello World program
+# Hello World program
 {: #program-hello-world}
 {: toc-content-type="reference"}
 {: toc-completion-time="10m"}

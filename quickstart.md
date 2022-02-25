@@ -107,6 +107,34 @@ To update your saved credentials, run `save_account` again, passing in `overwrit
 
 For instructions to use the cloud Quantum Qiskit API, see the [authentication](/apidocs/quantum-computing#authentication){: external} section in the API documentation.
 
+## Test your setup
+{: #test-setup}
+
+Run the Hello World program to ensure that your environment is set up properly:
+
+```Python
+from qiskit.test.reference_circuits import ReferenceCircuits
+from qiskit_ibm_runtime import IBMRuntimeService
+
+service = IBMRuntimeService()
+program_inputs = {'iterations': 1}
+options = {"backend_name": "ibmq_qasm_simulator"}
+job = service.run(program_id="hello-world",
+                  options=options,
+                  inputs=program_inputs
+                 )
+print(f"job id: {job.job_id}")
+result = job.result()
+print(result)
+```
+{: codeblock}
+
+Result:
+
+```text
+All done!
+```
+
 ## Create a circuit
 {: #create-circuit}
 
