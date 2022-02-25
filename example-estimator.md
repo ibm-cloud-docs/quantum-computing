@@ -68,47 +68,32 @@ These inputs can also be inspected by running the following commands:
 ### Example of preparing the required inputs:
 
 ```Python
-from qiskit.test.reference_circuits import ReferenceCircuits
+from qiskit.opflow import PauliSumOp
+from qiskit.circuit.library import RealAmplitudes
 from qiskit_ibm_runtime import IBMRuntimeService
-from qiskit.circuit.library import EfficientSU2
-from qiskit.opflow.primitive_ops import PauliSumOp
 
-service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN or Service Name>)
+service = IBMRuntimeService(auth="cloud", token="token", instance="crn:v1:staging:public:quantum-computing:us-east:a/78d9efd23fdb4894837f663626efb044:7d4e1dd0-b3e1-415b-b601-5fc8b38dd8b2::", url="https://test.cloud.ibm.com")
 
-# Define the circuits
-
-psi1 = ReferenceCircuits.bell()
-psi2 = EfficientSU2
-
-# Define the observables
-
-H1 = PauliSumOp.from_list(
-[
-("II", -1.052373245772859),
-("IZ", 0.39793742484318045),
-("ZI", -0.39793742484318045),
-("ZZ", -0.01128010425623538),
-("XX", 0.18093119978423156),
-]
+observable = PauliSumOp.from_list(
+    [
+        ("II", -1.052373245772859),
+        ("IZ", 0.39793742484318045),
+        ("ZI", -0.39793742484318045),
+        ("ZZ", -0.01128010425623538),
+        ("XX", 0.18093119978423156),
+    ]
 )
-H2 = PauliSumOp.from_list([("IZ", 1)])
-H3 = PauliSumOp.from_list([("ZI", 1), ("ZZ", 1)])
+ansatz = RealAmplitudes(num_qubits=2, reps=2)
+parameters = [0, 1, 1, 2, 3, 5]
+run_options = {"shots": 1000}
 
-# Define some input parameters:
 
-θ1 = [0, 1, 1, 2, 3, 5]
-θ2 = [1, 2, 3, 4, 5, 6]
-θ3 = [0, 1, 1, 2, 2, 6, 3, 4]
-
-program_inputs =  {
-  'circuits': [psi1, psi2],
-  'observables': [H1, H2, H3],
-  'parameters': [θ1, θ2, θ3]
-  'run_options': {
-    'shots': 1024
-  }
+program_inputs = {
+    "circuits": ansatz,
+    "observables": observable,
+    "parameters": parameters,
+    "run_options": run_options
 }
-options = {"backend_name": "ibm_canberra"}
 ```
 
 ### Prepare optional Inputs:
@@ -123,69 +108,8 @@ The *grouping* input allows you to define which observable to measure for which 
 
 This, when coupled with the shots input, lets you manage the tradeoff between speed and accuracy for calculating an expectation value for each observable over a range of parameters.
 
-Different ways to leverage grouping:
-
-#### Example: One parameter, one group
-
-```python
-from qiskit_ibm_runtime import IBMRuntimeService
-
-service = IBMRuntimeService(auth="cloud", instance=<IBM Cloud CRN>)
-
-# calculate [ <psi1|H1|psi1> ]
-# transpile circuits and cache for [(0, 0)]
-program_inputs =  {
-  'circuits': [psi1, psi2],
-  'observables': [H1, H2, H3],
-  'parameters': [θ1],
-  'grouping': (0,0),
-}
-options = {"backend_name": "ibm_canberra"}
-job = service.run(program_id="estimator",
-  inputs=program_inputs
-)
-print(f"job id: {job.job_id}")
-H1_result = job.result()
-print("H1", H1_result)
-```
-{: codeblock}
-
-#### Example: One parameter, multiple groups
-
-```python
-# calculate [ <psi1|H2|psi1>, <psi1|H3|psi1> ]
-# transpile circuits and cache for [(0, 1), (0, 2)]
-program_inputs =  {
-  'circuits': [psi1, psi2],
-  'observables': [H1, H2, H3],
-  'parameters': [θ1],
-  'grouping': [(0,1),(0,2)],
-}
-job = service.run(program_id="estimator",
-  inputs=program_inputs
-)
-print(f"job id: {job.job_id}")
-H23_result = job.result()
-print("H2 and H3", H23_result)
-```
-{: codeblock}
-
-#### Example: Multiple parameters, multiple groups
-
-```python
-# calculate [ <psi1|H1|psi1>, <psi1|H1|psi1>, <psi2|H3|psi2> ]
-program_inputs =  {
-  'circuits': [psi1, psi2],
-  'observables': [H1, H2, H3],
-  'parameters': [θ1, θ1, θ3],
-  'grouping': [(0,0),(1,2)],
-}
-job = service.run(program_id="estimator",
-  inputs=program_inputs
-)
-print(f"job id: {job.job_id}")
-H13_result = job.result()
-print("H1 and H3", H13_result)
+```Python
+options = {"backend_name": "ibmq_qasm_simulator"}
 ```
 {: codeblock}
 
@@ -195,14 +119,18 @@ After preparing all of the input parameters, submit the job.  The values and var
 Example:
 
 ```Python
+options = {"backend_name": "ibmq_qasm_simulator"}
+
 job = service.run(program_id="estimator",
-  inputs=program_inputs
-)
-print(f"job id: {job.job_id}")
-result = job.result()
-print(result)
+                       options=options,
+                       inputs=program_inputs,
+                       )
+print(f"Job ID: {job.job_id}")
+print(job.result())
 ```
 {: codeblock}
+
+Output:
 
 ```text
 Job ID: c8bf512ss066rcv2mlu0
