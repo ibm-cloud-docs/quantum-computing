@@ -19,28 +19,30 @@ toc:
       id: learn
       topics:
       - overview.md
-      - create-config-instance.md
-      - access.md
-
-
+      - quickstart.md
 
   - navgroup:
       id: howto
       topics:
-      - create-program.md
-      - program.md
-      - run_job.md
-      - vqe.md
+      - example-estimator.md
+      - example-sampler.md
+      - results.md
+      - at-events.md
 
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group. For link help see https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav#toc-yaml-properties
   - navgroup:
       id: reference
       topics:
+      - program-estimator.md
+      - program-sampler.md
+      - program-hello-world.md
       - link:
           label: API reference
           href: https://{DomainName}/apidocs/quantum-computing
-      - sample-programs.md
+      - link:
+          label: Qiskit API reference
+          href: https://github.com/Qiskit/qiskit-tutorials
 
   - navgroup:
       id: help

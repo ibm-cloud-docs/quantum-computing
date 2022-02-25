@@ -15,9 +15,6 @@ subcollection: quantum-computing
 # Getting help
 {: #support}
 
-This product is currently only available internally.  Get notified about {{site.data.keyword.quantum_long_notm}} public experimental release by filling out [this form](https://airtable.com/shrRpebS4aD3XeDhA){: external}.
-{: note}
-
 If you have problems or questions when using {{site.data.keyword.quantum_long_notm}} (Experimental), you can go directly to the [{{site.data.keyword.Bluemix}} Support page](https://www.ibm.com/cloud/support){: external} to review common FAQs, view cloud status, or post questions on Stack Overflow. You can also open a support case for help with your quantum resources.
 {: shortdesc}
 

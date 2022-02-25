@@ -20,33 +20,106 @@ completion-time: 10m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
-This product is currently only available internally.  Get notified about {{site.data.keyword.quantum_long_notm}} public experimental release by filling out [this form](https://airtable.com/shrRpebS4aD3XeDhA){: external}.
-{: note}
-
-This tutorial walks you through the steps to generate the HTTP header that is needed to access your Quantum Service instance and optionally install Qiskit. In order to generate your HTTP header, you need several identifying pieces of information to pass to the instance.
+This tutorial walks you through the steps to create a quantum runtime program to run a job on an IBM quantum computer.
 {: shortdesc}
 
-1. Find and copy your API key. From the [{{site.data.keyword.cloud_notm}} API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key. You might need to use light theme to see your entries.  Your key will look something like this: `poJraWQiOiIyMDIxMTAzMDE1MTQiLCJhbGciiuJSUzI1NiJ9.eyJpYW1fdWQiOiJJQk1pZC0xMTAwMDBCS1VWIiwiaWQiOiJJQk1pZC0xMTAwMDBCS1VWIiwicmVhbG1pZCI6IklCTWlkIiwianRpIjoiMjgzMDE3MWItYmY1MC00ZGEyLWE4MjAtMjFmNGVjYWQ0NDE0IiwiaWRlbnRkj`
+A runtime program is a piece of Python code that lives in the cloud and can be invoked by yourself other authorized users (if it is made public).
 
-3. Find your Cloud Resource Name (CRN). From the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com){: external}, scroll to Resource summary, click "Services and software", then click the row that contains your quantum service instance (not the name of the instance). In the pane that opens, click the icon to copy your CRN. For example:
-   ```text
-      crn:v1:bluemix:public:quantum-computing:us-east:a/b947c1c5a9378d64aed96696e4d76e8e:a3a7f181-35aa-42c8-94d6-7c8ed6e1a94b::
-   ```
+Create the Python program by following this template. It can also be found in the [qiskit-ibmq-provider repository.](https://github.com/Qiskit/qiskit-ibmq-provider/blob/master/qiskit/providers/ibmq/runtime/program/program_template.py){: external}  The `main()` method is the entry point of a runtime program. It takes backend and user_messenger parameters (injected for you by the system) that can be used to send circuits to the backend and messages to the user, respectively. Any other custom parameters specified when you run the program are injected as kwargs.
 
-4. Use the following request to interface with the service:
+```Python
+"""Runtime program template.
 
-   ```curl
-      curl --location --request GET 'https://us-east.quantum-computing.cloud.ibm.com/programs' \
-      --header 'Service-CRN: <crn>'
-      --header 'Authorization: apikey <IAM-API-key>'
-   ```
+The ``main()`` method is the entry point of a runtime program. It takes
+backend and user_messenger parameters (injected for you by the system)
+that can be used to send circuits to the backend and messages to the user,
+respectively. Any other custom parameters specified when you run the program
+are injected as kwargs.
+"""
 
-5. Optionally install Qiskit: `pip install qiskit`. You need it installed if you are going to modify programs or to work with program results. For more detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. You  need to keep this package updated.
+def program(backend, user_messenger, **kwargs):
+   """Function that does classical-quantum calculation."""
+   # UserMessenger can be used to publish interim results.
+   user_messenger.publish("This is an interim result.")
+   return "final result"
 
+def main(backend, user_messenger, **kwargs):
+   """This is the main entry point of a runtime program.
+
+   The name of this method must not change. It also must have ``backend``
+   and ``user_messenger`` as the first two positional arguments.
+
+   Args:
+       backend: Backend for the circuits to run on.
+       user_messenger: Used to communicate with the program user.
+       kwargs: User inputs.
+
+   Returns:
+       The final result of the runtime program.
+   """
+   # Massage the input if necessary.
+   result = program(backend, user_messenger, **kwargs)
+   # Final results can be directly returned
+   return result  
+```
+
+ {{site.data.keyword.quantum_long_notm}} uses the latest version of Qiskit.
+{: note}
+
+ Each runtime program must have a main() function, which serves as the entry point to the program. This function must have user_messenger as the first positional argument:
+
+user_messenger is an instance of UserMessenger and has a publish() method that can be used to send interim and final results to the program user. This method takes a parameter final that indicates whether it's a final result. However, it is recommended to return the final result directly from the main() function. Currently, only final results are stored after a program execution finishes.
+
+
+### Example
+{: #example-runtime-program-create-program}
+
+```Python
+"""A sample runtime program that submits random circuits for user-specified iterations."""
+
+import random
+from typing import Any
+
+from qiskit import transpile
+from qiskit.circuit.random import random_circuit
+
+
+def prepare_circuits(backend):
+    """Generate a random circuit.
+
+    Args:
+        backend: Backend used for transpilation.
+
+    Returns:
+        qiskit.QuantumCircuit: Generated circuit.
+    """
+    circuit = random_circuit(num_qubits=5, depth=4, measure=True, seed=random.randint(0, 1000))
+    return transpile(circuit, backend)
+
+
+def main(backend, user_messenger, **kwargs) -> Any:
+    """Main entry point of the program.
+
+    Args:
+        backend: Backend to submit the circuits to.
+        user_messenger: Used to communicate with the
+            program consumer.
+        kwargs: User inputs.
+
+    Returns:
+        Final result of the program.
+    """
+    iterations = kwargs.pop("iterations", 5)
+    for it in range(iterations):
+        qc = prepare_circuits(backend)
+        result = backend.run(qc).result()
+        user_messenger.publish({"iteration": it, "counts": result.get_counts()})
+
+    return "All done!"
+```
 
 
 ## Next steps
 {: #next-steps}
 
 Learn how to [upload a program](/docs/quantum-computing?topic=quantum-computing-program).
-Learn how to [submit a job](/docs/quantum-computing?topic=quantum-computing-run_job).
