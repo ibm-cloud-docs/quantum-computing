@@ -29,6 +29,11 @@
     "view_more": "/docs/overview?topic=overview-whatsnew",
     "tiles": [
     {
+      "date": "25 February 2022",
+      "title": "Release of Experimental 2",
+      "description": "Initial release of primitive programs.",
+    },
+    {
         "date": "31 January 2022",
         "title": "Initial release",
         "description": "Qiskit Runtime is released publicly as an Experimental service."
