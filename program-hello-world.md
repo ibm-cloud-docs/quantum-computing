@@ -20,5 +20,30 @@ completion-time: 10m
 {: toc-content-type="reference"}
 {: toc-completion-time="10m"}
 
-The Hello World program is currently not available on {{site.data.keyword.quantum_long_notm}}.
+Run the Hello World program to ensure that your environment is set up properly.
 {: shortdesc}
+
+Input:
+
+```Python
+from qiskit.test.reference_circuits import ReferenceCircuits
+from qiskit_ibm_runtime import IBMRuntimeService
+
+service = IBMRuntimeService()
+program_inputs = {'iterations': 1}
+options = {"backend_name": "ibmq_qasm_simulator"}
+job = service.run(program_id="hello-world",
+                  options=options,
+                  inputs=program_inputs
+                 )
+print(f"job id: {job.job_id}")
+result = job.result()
+print(result)
+```
+{: codeblock}
+
+Result:
+
+```text
+All done!
+```
