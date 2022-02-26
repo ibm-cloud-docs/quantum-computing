@@ -72,7 +72,7 @@ from qiskit.opflow import PauliSumOp
 from qiskit.circuit.library import RealAmplitudes
 from qiskit_ibm_runtime import IBMRuntimeService
 
-service = IBMRuntimeService(auth="cloud", token="token", instance="crn:v1:staging:public:quantum-computing:us-east:a/78d9efd23fdb4894837f663626efb044:7d4e1dd0-b3e1-415b-b601-5fc8b38dd8b2::", url="https://test.cloud.ibm.com")
+service = IBMRuntimeService(auth="cloud", token="token", instance="crn:v1:staging:public:quantum-computing:us-east:a/78d9efd23fdb4894837f663626efb744:7d4e1bd0-b3e1-415b-b601-5fc8b38de8b2::", url="https://cloud.ibm.com")
 
 observable = PauliSumOp.from_list(
     [
