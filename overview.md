@@ -1,5 +1,3 @@
----
-
 copyright:
   years: 2021
 lastupdated: "2021-11-05"
@@ -71,7 +69,7 @@ With our first set of primitive programs, we enable capabilities that allow user
 ## How to use primitives
 {: #how-to-use-primitives}
 
-Primitives work like any other program.  You generate one or more circuits by using Qiskit, then send those circuits, along with any other configuration values to the primitive. The primitive takes care of sending the circuits to the quantum system, error mitigation, processing the circuits, then returning results.  For full details and examples, refer to the topics about each primitive.
+Primitive program interfaces vary based on result type. Once you have identified the appropriate primitive for your program, you can use Qiskit to prepare inputs, such as circuits, observables (for Estimator), and customizable options that allow you optimize your job.  For full details and examples, refer to the topics about each primitive:
 
 For examples of using primitives, see [Estimator](/docs/quantum-computing?topic=quantum-computing-example-estimator) or  [Sampler](/docs/quantum-computing?topic=quantum-computing-example-sampler).
 
