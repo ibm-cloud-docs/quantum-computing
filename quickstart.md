@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2021
+  years: 2021, 2022
 lastupdated: "2021-11-05"
 
 keywords: quantum, Qiskit, runtime, near time compute
