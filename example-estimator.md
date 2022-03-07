@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2021
+  years: 2021, 2022
 lastupdated: "2022-02-15"
 
 keywords: quantum, Qiskit, runtime, near time compute, estimator, primitive
@@ -119,8 +119,6 @@ After preparing all of the input parameters, submit the job.  The values and var
 Example:
 
 ```Python
-options = {"backend_name": "ibmq_qasm_simulator"}
-
 job = service.run(program_id="estimator",
                        options=options,
                        inputs=program_inputs,

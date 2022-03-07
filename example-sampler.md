@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2021
+  years: 2021, 2022
 lastupdated: "2022-02-15"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive

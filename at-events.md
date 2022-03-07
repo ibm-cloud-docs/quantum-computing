@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2021
+  years: 2021, 2022
 lastupdated: "2021-11-05"
 
 keywords: activity tracker for quantum computing, quantum computing events, quantum computing security, audit logs for quantum computing, viewing quantum computing events, quantum computing events
