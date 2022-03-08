@@ -14,7 +14,8 @@ completion-time: 10m
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
+{{site.data.keyword.attribute-definition-list\}\}
+
 
 # Example: Run a job and view results with VQE
 {: #vqe-example}

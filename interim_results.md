@@ -13,7 +13,8 @@ completion-time: 10m
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
+{{site.data.keyword.attribute-definition-list\}\}
+
 
 # View interim job results
 {: #view-interim}

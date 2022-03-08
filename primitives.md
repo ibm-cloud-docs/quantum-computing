@@ -11,7 +11,8 @@ subcollection: quantum-computing
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
+{{site.data.keyword.attribute-definition-list\}\}
+
 
 # Primitive programs
 {: #primitive-programs}
