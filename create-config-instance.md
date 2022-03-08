@@ -13,7 +13,7 @@ completion-time: 10m
 
 ---
 
-{{site.data.keyword.attribute-definition-list\}\}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Creating and configuring a Quantum Service instance

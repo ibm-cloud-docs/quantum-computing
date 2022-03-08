@@ -10,7 +10,7 @@ keywords: quantum computing CLI, quantum computing command line , quantum comput
 
 ---
 
-{{site.data.keyword.attribute-definition-list\}\}
+{{site.data.keyword.attribute-definition-list}}
 
 
 

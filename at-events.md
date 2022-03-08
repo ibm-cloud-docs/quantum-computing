@@ -13,7 +13,7 @@ completion-time: 10m
 
 ---
 
-{{site.data.keyword.attribute-definition-list\}\}
+{{site.data.keyword.attribute-definition-list}}
 
 
 _Include your AT events file in a Logging and monitoring topic group in the How to nav group in your toc file._
