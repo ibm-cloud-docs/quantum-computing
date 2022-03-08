@@ -12,7 +12,7 @@ content-type: tutorial
 completion-time: 25m
 ---
 
-{{site.data.keyword.attribute-definition-list\}\}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Quick start guide

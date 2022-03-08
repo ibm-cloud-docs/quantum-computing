@@ -13,7 +13,7 @@ completion-time: 10m
 
 ---
 
-{{site.data.keyword.attribute-definition-list\}\}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Run a job using a Qiskit runtime program
