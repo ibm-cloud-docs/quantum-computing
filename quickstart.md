@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2021-11-05"
+lastupdated: "2022-03-07"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -155,6 +155,20 @@ The following programs are publicly available. For more information about these 
 
 You can also view all available programs by using the [List programs](/apidocs/quantum-computing#list-programs){: external} API directly or in [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Programs/list_programs){: external}.
 
+
+## Choose a backend
+{: #choose-backend}
+
+Before running a job, you can optionally choose a backend (a physical quantum system or a simulator) to run on.  If you do not specify one, the job is sent to the least busy device that you have access to.
+
+The Standard plan only allows access to physical quantum systems, while the Lite plan only allows access to simulators.
+{: #note}
+
+To find your available backends, run `service.backends()` in Qiskit and note the name of the backend you want to use.  For full details, including available options, see the [Qiskit Runtime API documentation](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/stubs/qiskit_ibm_runtime.IBMRuntimeService.backends.html#qiskit_ibm_runtime.IBMRuntimeService.backends).
+
+You can also view your available backends by using the [List your devices](/apidocs/quantum-computing#list-devices){: external} API directly or in [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Programs/list-devices){: external}.
+
+
 ## Run the job
 {: #run-job-step}
 
@@ -162,7 +176,10 @@ You will use the Qiskit Runtime IBMRuntimeService.run() method, which takes the 
 
 - program_id: ID of the program to run.
 - inputs: Program input parameters. These input values are passed to the runtime program and are dependent on the parameters defined for the program.
-- options: Runtime options. These options control the execution environment. Currently, the only available option is backend_name, which is optional. If you do not specify a backend, the job is sent to the least busy device that you have access to.
+- options: Runtime options. These options control the execution environment. The current  available options are backend_name and log_level, which are optional.
+
+  If you do not specify a backend, the job is sent to the least busy device that you have access to. For full details about the available options, see the [API guide](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/stubs/qiskit_ibm_runtime.RuntimeOptions.html#qiskit_ibm_runtime.RuntimeOptions){: external}.
+
 - result_decoder: Optional class used to decode the job result.
 
 In the following example, we will submit a circuit to the Sampler program.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-03-07"
 
 keywords: quantum, Qiskit, runtime, near time compute, estimator, primitive
 
@@ -26,7 +26,7 @@ Learn how to set up and use the Estimator primitive program.
 ## Overview
 {: #estimator-overview}
 
-The Estimator primitive lets you efficiently calculate and interpret expectation values of quantum operators required for many algorithms. You can specify a list of circuits and observables, then selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input.  
+The Estimator primitive lets you efficiently calculate and interpret expectation values of quantum operators required for many algorithms. You can specify a list of circuits and observables, then evaluate expectation values and variances for a given parameter input.  
 
 
 ## Prepare the environment
@@ -61,9 +61,11 @@ These inputs can also be inspected by running the following commands:
 
 * The **circuits** you want to investigate.
 * The **observables** you want applied to the circuits.
-* The **parameter** inputs to evaluate the circuits.
-* Optional: The **groupings** of circuits and observables.
-* Optional: Other **run options**, such as how many **shots** to run.
+* The **parameters** input to evaluate the circuits.
+* Optional: Other **run_options**, such as how many **shots** to run.
+* Optional: **transpile_options** A collection of kwargs passed to transpile.
+* Optional: Specify that the backend should **skip_transpilation** of circuits.
+
 
 ### Example of preparing the required inputs:
 
@@ -104,10 +106,6 @@ For a given parameter input for your circuit, you can use these optional paramet
 
 The **backend** lets you optionally specify the backend to run on.  If you do not specify one, the least busy backend is used.
 
-The *grouping* input allows you to define which observable to measure for which circuit, in the format `(circuit_n, observable_m)`, where the m<sup>th</sup> observable you specified is measured for the n<sup>th</sup> circuit in the list. Using the inputs defined in the previous example, the group `(0,1)` evaluates the observable `H2` using the circuit `psi1` for some input `θ`.
-
-This, when coupled with the shots input, lets you manage the tradeoff between speed and accuracy for calculating an expectation value for each observable over a range of parameters.
-
 ```Python
 options = {"backend_name": "ibmq_qasm_simulator"}
 ```
@@ -131,7 +129,5 @@ print(job.result())
 Output:
 
 ```text
-Job ID: c8bf512ss066rcv2mlu0
-{'values': array([-1.30777957]), 'variances': array([0.29598401])}
-Shots: 1000
+{'values': array([-1.30777957]), 'variances': array([0.29598401]), 'shots': 1000}
 ```
