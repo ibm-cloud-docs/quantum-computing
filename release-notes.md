@@ -8,7 +8,8 @@ subcollection: quantum-computing
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
+{{site.data.keyword.attribute-definition-list\}\}
+
 
 # Release notes
 {: #release-notes}

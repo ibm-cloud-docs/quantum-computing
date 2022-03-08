@@ -42,7 +42,7 @@ toc:
           href: https://{DomainName}/apidocs/quantum-computing
       - link:
           label: Qiskit API reference
-          href: https://github.com/Qiskit/qiskit-tutorials
+          href: https://qiskit.org/documentation/partners/qiskit_ibm_runtime/apidocs/ibm-runtime.html
 
   - navgroup:
       id: help

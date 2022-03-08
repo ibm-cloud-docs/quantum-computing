@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-02-15"
+lastupdated: "2022-03-07"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -13,7 +13,8 @@ completion-time: 10m
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
+{{site.data.keyword.attribute-definition-list\}\}
+
 
 # Get started with the Sampler primitive
 {: #example-sampler}
@@ -36,14 +37,15 @@ The Sampler primitive lets you more accurately contextualize counts. It takes a 
 1. Follow the steps in the [quick start guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your Quantum Service instance ready to use.
 2. You'll need at least one circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
-
 ## Specify program inputs
 {: #sampler-inputs}
 {: step}
 
-The sample takes in
+The Sampler takes in
 * The **circuits** you want to investigate.
-* Other **run options**, such as **parameter** inputs to evaluate the circuits and how many **shots** to run each circuit.
+* The **parameters** input to evaluate the circuits.
+* Optional: Other **run_options**, such as how many **shots** to run.
+* Optional: **transpile_options** A collection of kwargs passed to transpile.
 
 Example:
 
@@ -66,7 +68,7 @@ program_inputs =  {
 ```
 {: codeblock}
 
-##Program options    
+## Program options    
 {: #sampler-options}
 {: step}
 

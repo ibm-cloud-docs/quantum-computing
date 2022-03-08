@@ -13,7 +13,8 @@ completion-time: 10m
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
+{{site.data.keyword.attribute-definition-list\}\}
+
 
 # Upload a quantum program
 {: #program}

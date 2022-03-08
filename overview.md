@@ -1,6 +1,8 @@
+---
+
 copyright:
-  years: 2021
-lastupdated: "2021-11-05"
+  years: 2021, 2022
+lastupdated: "2022-03-01"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -9,7 +11,9 @@ subcollection: quantum-computing
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
+
+{{site.data.keyword.attribute-definition-list\}\}
+
 
 # Quantum Services overview
 {: #overview}
