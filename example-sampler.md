@@ -45,7 +45,6 @@ The Sampler takes in:
 * The **circuits** you want to investigate.
 * The **parameters** input to evaluate the circuits.
 * Optional: Other **run_options**, such as how many **shots** to run.
-* Optional: **transpile_options** A collection of kwargs passed to transpile. The list of available transpilation options are in the [Estimator reference](/docs/quantum-computing?topic=quantum-computing-program-sampler).
 * Optional: The instruction to **skip_transpilation**.
 
 Example:
