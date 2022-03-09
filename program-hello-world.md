@@ -24,6 +24,8 @@ completion-time: 10m
 Run the Hello World program to ensure that your environment is set up properly.
 {: shortdesc}
 
+The maximum execution time is 600 seconds (10 minutes).
+
 Input:
 
 ```Python
