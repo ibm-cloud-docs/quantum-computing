@@ -57,7 +57,7 @@ service = IBMRuntimeService()
 program = service.program("estimator")
 print(program)
 ```
-  {: codeblock}
+{: codeblock}
 
 
 * The **circuits** you want to investigate.
@@ -67,6 +67,7 @@ print(program)
 
 
 ### Example of preparing the required inputs:
+{: #example-preparing-inputs}
 
 ```Python
 from qiskit.opflow import PauliSumOp
@@ -112,6 +113,7 @@ options = {"backend_name": "ibmq_qasm_simulator"}
 {: codeblock}
 
 ## Run the job
+{: #run-the-job-estimator}
 
 After preparing all of the input parameters, submit the job.  The values and variances are returned; along with the actual number of shots run:
 Example:

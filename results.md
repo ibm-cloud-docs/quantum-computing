@@ -48,7 +48,6 @@ You can optionally run the [List job details API](/apidocs/quantum-computing#get
 Follow up the Qiskit Runtime IBMRuntimeService.run() method by running `job.result()`.
 
 Alternatively, run the [list job results API](/apidocs/quantum-computing#get-job-results-jid){: external} ([Swagger link](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/get_job_results_jid){: external}).
-{: curl}
 
 ## Next steps
 {: #next-steps}

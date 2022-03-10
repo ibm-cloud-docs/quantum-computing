@@ -8,7 +8,7 @@ keywords: quantum, Qiskit, runtime, near time compute
 
 subcollection: quantum-computing
 
-content-type: tutorial
+content-type: reference
 completion-time: 10m
 
 ---
