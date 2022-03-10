@@ -17,8 +17,13 @@ subcollection: quantum-computing
 The following versions of {{site.data.keyword.quantum_short}} have been released. The information includes new features and changes for each version of the product and any known limitations.
 {: shortdesc}
 
-## Version 1.2.0 (February 2022)
-{: #1.2.0}
+## Version 1.1.2 (March 2022)
+{: #1.1.2}
+
+Initial release of sessions.
+
+## Version 1.1.1 (February 2022)
+{: #1.1.1}
 
 Initial release of primitive programs.
 

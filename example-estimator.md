@@ -49,10 +49,10 @@ Estimator lets you define your jobs by using the following inputs to calculate e
 These inputs can also be inspected by running the following commands:
 
 ```Python
-from qiskit_ibm_runtime import IBMRuntimeService
+from qiskit import QuantumCircuit
+from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler, IBMEstimator
 
-IBMRuntimeService.save_account(auth="cloud", token=<API Token>, instance=<IBM Cloud CRN or Service Name>)
-service = IBMRuntimeService()
+service = IBMRuntimeService(auth="cloud", token="<API Token>", instance="<IBM Cloud CRN or Service Name>")
 
 program = service.program("estimator")
 print(program)
