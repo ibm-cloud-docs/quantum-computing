@@ -55,8 +55,11 @@ The Sampler takes in:
 Example:
 
 ```Python
+from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler, IBMEstimator
 from qiskit import QuantumCircuit
 from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler, IBMEstimator
+
+service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
 
 sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator", skip_transpilation=False)
 
@@ -97,8 +100,11 @@ SamplerResult(quasi_dists=[{'00': 0.4873046875, '11': 0.5126953125}], metadata=[
 In this example, we specify three circuits, but they have no parameters:
 
 ```Python
+from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler, IBMEstimator
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import RealAmplitudes
+
+service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
 
 sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
 
@@ -129,8 +135,11 @@ In this example, we run multiple parameterized circuits. When it is run, this li
 In our example, the parameter labelled `theta` is sent to the first circuit, `theta2` is sent to the first circuit, and `theta3` is sent to the second circuit.
 
 ```Python
+from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler, IBMEstimator
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import RealAmplitudes
+
+service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
 
 sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
 
