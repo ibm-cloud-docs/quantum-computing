@@ -35,50 +35,45 @@ The maximum execution time is 18000 seconds (5 hours).
 {: #estimator-parameters}
 
 - **Input parameters**:
-   - **circuits**:
-      - **Description**: A QuantumCircuit or list of QuantumCircuits. The circuits can be parameterized.
-      - **Required**: True
-   - **observables**: Properties of the system or function being evaluated.  Currently must be opflow `PauliSumOp` (primitive is SparsePauliOp) or quantum_info operator, `BaseOperator`, which is compatible with SparsePauliOp.
-   - **parameters**:
-      - **Description**: Optional input for parameterized circuits.
-      - **Required**: False
-   - **run-options**:
-      - **Description**: Various run options, such as the number of **shots** (how many times to run each circuit).
-      - **Required**: False
-   - **Example**
-
-      ```Python
-      observable = PauliSumOp.from_list(
-         [
-             ("II", -1.052373245772859),
-             ("IZ", 0.39793742484318045),
-             ("ZI", -0.39793742484318045),
-             ("ZZ", -0.01128010425623538),
-             ("XX", 0.18093119978423156),
-         ]
-      )
-      ansatz = RealAmplitudes(num_qubits=2, reps=2)
-      parameters = [0, 1, 1, 2, 3, 5]
-      run_options = {"shots": 1000}
-
-      program_inputs = {
-             "circuits": ansatz,
-             "observables": observable,
-             "parameters": parameters,
-             "run_options": run_options
-      }
-      ```
-      {: codeblock}
-
-- **options**:
-   - **Description**: Various options, such as the name of the **backend** to run the program on.
-   - **Required**: False.  If no backend is specified, the program will be run on the next available backend that you have access to.
-   - **Example**:
-
-      ```Python
-      options = {"backend_name": "ibmq_qasm_simulator"}
-      ```
-      {: codeblock}
+    - **run_options**:
+        - **Type**: object
+        - **Description**: A collection of key-value pairs identifying the execution options, such as shots.
+        - **Required**: False
+    - **circuit_indices**:
+        - **Type**: array
+        - **Description**: Indexes of the circuits to evaluate.
+        - **Required**: False
+    - **parameter_values**
+        - **Type**: array
+        - **Description**: Concrete parameters to be bound.
+        - **Required**: False
+    - **skip_transpilation**:
+        - **Description**: Skip circuit transpilation. The default value is False.
+        - **Required**: False.   
+    - **circuits**:
+        - **Description**: A QuantumCircuit or list of QuantumCircuits. The circuits can be parameterized.
+        - **Required**: True
+    - **parameters**
+        - **Type**: array
+        - **Description**: Parameters of the quantum circuits.
+        - **Required**: False  
+    - **observables:**
+        - **Type**: ['object', 'array']
+        - **Description**: The Hamiltonians to be evaluated.
+        - **Required**: False
+    - **observable_indices**:
+        - **Type**: array
+        - **Description**: A list of observable indices. It should have the same length as circuit_indices and parameter_values.
+        - **Required**: False      
+- **Returns**:
+   - **metadata**:
+        - **Type**: array
+        - **Description**: Additional metadata.  
+        - **Required**: False
+   - **value**:
+       - **Description**: Estimated expectation values. This is a numpy array. The i<sup>th</sup> element is calculated using the circuit and observable indexed by the i<sup>th</sup> circuit_indices and i<sup>th</sup> observable_indices, and bound with i<sup>th</sup> parameter_values.
+       - **Type**: array
+       - **Required**: False
 
 ## Output values
 {: #estimator-parameters-read}
