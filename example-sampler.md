@@ -84,8 +84,8 @@ Run the job; specifying your previously defined inputs and options. In this simp
 
 ```Python
 # executes a Bell circuit
-with sampler_factory(circuits=[bell], parameters=[[]]) as sampler:
-    result = sampler(circuit_indices=[0], parameter_values=[[]], shots=1024)
+with sampler_factory(circuits=[bell]) as sampler:
+    result = sampler(shots=1024)
     print(result)
 ```
 {: codeblock}
@@ -114,8 +114,8 @@ bell.cx(0, 1)
 bell.measure_all()
 
 # executes three Bell circuits
-with sampler_factory(circuits=[bell]*3, parameters=[[]]*3) as sampler:
-    result = sampler(circuit_indices=[0, 1, 2], parameter_values=[[]]*3)
+with sampler_factory(circuits=[bell]*3) as sampler:
+    result = sampler()
     print(result))
 ```
 {: codeblock}
