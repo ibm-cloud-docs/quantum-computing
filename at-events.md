@@ -4,7 +4,7 @@ copyright:
   years: 2021, 2022
 lastupdated: "2021-11-05"
 
-keywords: activity tracker for quantum computing, quantum computing events, quantum computing security, audit logs for quantum computing, viewing quantum computing events, quantum computing events
+keywords: activity tracker for Qiskit Runtime, Qiskit Runtime events, Qiskit Runtime security, audit logs for Qiskit Runtime, viewing Qiskit Runtime events, Qiskit Runtime events
 
 subcollection: quantum-computing
 
@@ -16,10 +16,10 @@ completion-time: 10m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Auditing events for Quantum Computing
+# Auditing events for Qiskit Runtime
 {: #at_events}
 
-As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with the Quantum Computing service in {{site.data.keyword.cloud_notm}}.
+As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with the Qiskit Runtime service in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 {{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
@@ -28,7 +28,7 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 ## List of data events
 {: #at_actions_data}
 
-The following table lists the quantum computing actions that generate an event:
+The following table lists the Qiskit Runtime actions that generate an event:
 
 | Action                           | Description                        |
 |----------------------------------|------------------------------------|

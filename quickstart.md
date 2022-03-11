@@ -20,7 +20,7 @@ completion-time: 25m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="25m"}
 
-This tutorial walks you through the steps to set up a Qiskit Runtime service instance, log into your service instance, and run your first job on a quantum computer.
+This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit_runtime_notm}} service instance, log into your service instance, and run your first job on a quantum computer.
 {: shortdesc}
 
 
@@ -33,10 +33,10 @@ This tutorial walks you through the steps to set up a Qiskit Runtime service ins
    The users must have {{site.data.keyword.cloud_notm}} accounts before they can be invited.
    {: note}
 
-3. Create a Qiskit Runtime service instance:
+3. Create a {{site.data.keyword.qiskit_runtime_notm}} service instance:
    1. From the [{{site.data.keyword.quantum_long_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
-      - **Lite**: Free simulators-only plan to help you get started with Qiskit Runtime. Learn to use Qiskit Runtime using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
-      - **Standard**: A pay-as-you-go model for accessing IBM quantum systems. Build your own programs and leverage all the benefits of Qiskit Runtime by running on real quantum hardware.
+      - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
+      - **Standard**: A pay-as-you-go model for accessing IBM quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
    2. After completing the required information, click **Create**.
 
 ## Manage access to the service instance
@@ -65,7 +65,7 @@ quantum-computing.job.delete | Delete jobs | Manager, Writer
 ## Install Qiskit packages
 {: #install-packages}
 
-1. Install these packages.  They let you create circuits and work with primitive programs via Qiskit Runtime. For detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. You need to keep these packages updated:
+1. Install these packages.  They let you create circuits and work with primitive programs via {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. You need to keep these packages updated:
 
 ```Python
 pip install qiskit
@@ -174,7 +174,7 @@ You can also view your available backends by using the [List your devices](/apid
 ## Run the job
 {: #run-job-step}
 
-You will use the Qiskit Runtime IBMRuntimeService.run() method, which takes the following parameters:
+You will use the {{site.data.keyword.qiskit_runtime_notm}} IBMRuntimeService.run() method, which takes the following parameters:
 
 - program_id: ID of the program to run.
 - inputs: Program input parameters. These input values are passed to the runtime program and are dependent on the parameters defined for the program.
@@ -206,7 +206,7 @@ result = job.result()
 
 If you do not specify the device, the job is sent to the least busy device that you have access to.
 
-To ensure fairness, there is a maximum execution time for each Qiskit Runtime job. If a job exceeds this time limit, it is forcibly terminated. The maximum execution time is the smaller of the system limit and the `max_execution_time` defined by the program. The system limit is 3 hours for jobs running on a simulator and 8 hours for jobs running on a physical system.
+To ensure fairness, there is a maximum execution time for each {{site.data.keyword.qiskit_runtime_notm}} job. If a job exceeds this time limit, it is forcibly terminated. The maximum execution time is the smaller of the system limit and the `max_execution_time` defined by the program. The system limit is 3 hours for jobs running on a simulator and 8 hours for jobs running on a physical system.
 {: note}
 
 You can also run a job by using the [Create job](/apidocs/quantum-computing#create-job){: external} API directly or in [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Programs/create-job){: external}.
@@ -215,7 +215,7 @@ You can also run a job by using the [Create job](/apidocs/quantum-computing#crea
 ## (Optional) Return the job status
 {: #return-status}
 
-Follow up the Qiskit Runtime IBMRuntimeService.run() method by running a RuntimeJob method. The run() method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program.
+Follow up the {{site.data.keyword.qiskit_runtime_notm}} IBMRuntimeService.run() method by running a RuntimeJob method. The run() method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program.
 
 There are several RuntimeJob methods to choose from, including job.status():
 

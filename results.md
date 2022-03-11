@@ -34,7 +34,7 @@ Run your job and note the job ID.
 
 After the job completes, you can view the results.
 
-Immediately after running the job, follow up the Qiskit Runtime IBMRuntimeService.run() method by running `job.status()`.
+Immediately after running the job, follow up the {{site.data.keyword.qiskit_runtime_notm}} IBMRuntimeService.run() method by running `job.status()`.
 
 If you ran other jobs since running the job you want to investigate, run `job = service.job(job_id)` then run `job.status()`.
 
@@ -45,7 +45,7 @@ You can optionally run the [List job details API](/apidocs/quantum-computing#get
 {: #view-results}
 
 
-Follow up the Qiskit Runtime IBMRuntimeService.run() method by running `job.result()`.
+Follow up the {{site.data.keyword.qiskit_runtime_notm}} IBMRuntimeService.run() method by running `job.result()`.
 
 Alternatively, run the [list job results API](/apidocs/quantum-computing#get-job-results-jid){: external} ([Swagger link](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/get_job_results_jid){: external}).
 
