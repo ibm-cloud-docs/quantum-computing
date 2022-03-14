@@ -109,7 +109,7 @@ psi1_H23_result = estimator(circuit_indices=[0, 0], observable_indices=[1, 2], p
 print(psi1_H23_result)
 
 # calculate [ <psi2(theta2)|H2|psi2(theta2)> ]
-# Note that you don't need to specify "circuit_indices", "observable_indices", or "parameter_values", as long as they are specified in that order.
+# Note that you don't need to specify the labels "circuit_indices", "observable_indices", or "parameter_values", as long as they are specified in that order.
 psi2_H2_result = estimator([1], [1], [theta2])
 print(psi2_H2_result)
 

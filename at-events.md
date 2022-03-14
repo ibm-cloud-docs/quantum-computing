@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2021-11-05"
+lastupdated: "2022-03-14"
 
 keywords: activity tracker for Qiskit Runtime, Qiskit Runtime events, Qiskit Runtime security, audit logs for Qiskit Runtime, viewing Qiskit Runtime events, Qiskit Runtime events
 
@@ -40,7 +40,6 @@ The following table lists the Qiskit Runtime actions that generate an event:
 | `quantum-computing.job.read` | An event is generated when job information is returned. This includes listing jobs, job details, job results, job interim results, or job logs.      |
 | `quantum-computing.job.delete` | An event is generated when a job is deleted.     |
 | `quantum-computing.job.cancel` | An event is generated when a job is cancelled.     |
-
 {: caption="Table 2. Actions that generate data events" caption-side="bottom"}
 
 

@@ -42,7 +42,7 @@ The maximum execution time is 18000 seconds (5 hours).
     - **circuit_indices**:
         - **Type**: array
         - **Description**: Indexes of the circuits to evaluate.
-        - **Required**: False
+        - **Required**: True
     - **parameter_values**
         - **Type**: array
         - **Description**: Concrete parameters to be bound.
@@ -63,8 +63,8 @@ The maximum execution time is 18000 seconds (5 hours).
         - **Required**: False
     - **observable_indices**:
         - **Type**: array
-        - **Description**: A list of observable indices. It should have the same length as circuit_indices and parameter_values.
-        - **Required**: False      
+        - **Description**: A list of observable indices. It must have the same length as circuit_indices and parameter_values.
+        - **Required**: True      
 - **Returns**:
    - **metadata**:
         - **Type**: array
@@ -102,6 +102,7 @@ The maximum execution time is 18000 seconds (5 hours).
    print(psi1_H1_result)
 
    # calculate [ <psi1(theta1)|H2|psi1(theta1)>, <psi1(theta1)|H3|psi1(theta1)> ]
+   # note that specifying the labels 'circuit_indices', 'observable_indices', and 'parameter_values' is optional, as long as the values are specified in that order.
    psi1_H23_result = estimator([0, 0], [1, 2], [theta1]*2)
    print(psi1_H23_result)
 
