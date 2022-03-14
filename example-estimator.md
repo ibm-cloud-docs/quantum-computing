@@ -59,8 +59,11 @@ The Sampler takes in:
 Example:
 
 ```Python
+from qiskit_ibm_runtime import IBMRuntimeService, IBMEstimator
 from qiskit.circuit.library import RealAmplitudes
 from qiskit.quantum_info import SparsePauliOp
+
+service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
 
 estimator_factory = IBMEstimator(service=service, backend="ibmq_qasm_simulator")
 
@@ -100,28 +103,28 @@ with estimator_factory(
     theta2 = [0, 1, 1, 2, 3, 5, 8, 13]
     theta3 = [1, 2, 3, 4, 5, 6]
 
-# calculate [ <psi1(theta1)|H1|psi1(theta1)> ]
-psi1_H1_result = estimator(circuit_indices=[0], observable_indices=[0], parameter_values=[theta1])
-print(psi1_H1_result)
+    # calculate [ <psi1(theta1)|H1|psi1(theta1)> ]
+    psi1_H1_result = estimator(circuit_indices=[0], observable_indices=[0], parameter_values=[theta1])
+    print(psi1_H1_result)
 
-# calculate [ <psi1(theta1)|H2|psi1(theta1)>, <psi1(theta1)|H3|psi1(theta1)> ]
-psi1_H23_result = estimator(circuit_indices=[0, 0], observable_indices=[1, 2], parameter_values=[theta1]*2)
-print(psi1_H23_result)
+    # calculate [ <psi1(theta1)|H2|psi1(theta1)>, <psi1(theta1)|H3|psi1(theta1)> ]
+    psi1_H23_result = estimator(circuit_indices=[0, 0], observable_indices=[1, 2], parameter_values=[theta1]*2)
+    print(psi1_H23_result)
 
-# calculate [ <psi2(theta2)|H2|psi2(theta2)> ]
-# Note that you don't need to specify the labels "circuit_indices", "observable_indices", or "parameter_values", as long as they are specified in that order.
-psi2_H2_result = estimator([1], [1], [theta2])
-print(psi2_H2_result)
+    # calculate [ <psi2(theta2)|H2|psi2(theta2)> ]
+    # Note that you don't need to specify the labels "circuit_indices", "observable_indices", or "parameter_values", as long as they are specified in that order.
+    psi2_H2_result = estimator([1], [1], [theta2])
+    print(psi2_H2_result)
 
-# calculate [ <psi1(theta1)|H1|psi1(theta1)>, <psi1(theta3)|H1|psi1(theta3)> ]
-psi1_H1_result2 = estimator([0, 0], [0, 0], [theta1, theta3])
-print(psi1_H1_result2)
+    # calculate [ <psi1(theta1)|H1|psi1(theta1)>, <psi1(theta3)|H1|psi1(theta3)> ]
+    psi1_H1_result2 = estimator([0, 0], [0, 0], [theta1, theta3])
+    print(psi1_H1_result2)
 
-# calculate [ <psi1(theta1)|H1|psi1(theta1)>,
-#             <psi2(theta2)|H2|psi2(theta2)>,
-#             <psi1(theta3)|H3|psi1(theta3)> ]
-psi12_H23_result = estimator([0, 1, 0], [0, 1, 2], [theta1, theta2, theta3])
-print(psi12_H23_result)
+    # calculate [ <psi1(theta1)|H1|psi1(theta1)>,
+    #             <psi2(theta2)|H2|psi2(theta2)>,
+    #             <psi1(theta3)|H3|psi1(theta3)> ]
+    psi12_H23_result = estimator([0, 1, 0], [0, 1, 2], [theta1, theta2, theta3])
+    print(psi12_H23_result)
 ```
 
 The results align with the parameter - circuit - observable tuples specified previously.  For example, the first result: `EstimatorResult(values=array([1.55273438]), metadata=[{'variance': 8.897655487060547, 'shots': 1024}])` is the output of the parameter labelled `theta1` and observable `H1` being sent to the first circuit.
