@@ -94,7 +94,7 @@ SamplerResult(quasi_dists=[{'00': 0.4873046875, '11': 0.5126953125}], metadata=[
 ```
 
 ## Multiple circuit example
-{: example2-sampler}
+{: #example2-sampler}
 
 In this example, we specify three circuits, but they have no parameters:
 
@@ -127,7 +127,7 @@ SamplerResult(quasi_dists=[{'00': 0.458984375, '11': 0.541015625}, {'11': 0.4960
 
 
 ## Multiple parameterized circuits example
-{: mult-parm-example-sampler}
+{: #mult-parm-example-sampler}
 
 In this example, we run multiple parameterized circuits. When it is run, this line `result = sampler(circuit_indices=[0, 0, 1], parameter_values=[theta1, theta2, theta3])` specifies which parameter to send to each circuit.  
 
@@ -159,7 +159,7 @@ with sampler_factory(circuits=[pqc, pqc2]) as sampler:
 {: codeblock}
 
 ### Result
-{: example3-result-sampler}
+{: #example3-result-sampler}
 
 The results align with the parameter - circuit pairs specified previously.  For example, the first result (`{'11': 0.42578125, '00': 0.14453125, '10': 0.0888671875, '01': 0.3408203125}`) is the output of the parameter labelled `theta` being sent to the first circuit.
 

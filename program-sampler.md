@@ -88,8 +88,8 @@ with sampler_factory(circuits=[bell], parameters=[[]]) as sampler:
     result = sampler(circuit_indices=[0], parameter_values=[[]], shots=1024)
     print(result)
 ```
-{:codeblock}
+{: codeblock}
 
 ```text
 SamplerResult(quasi_dists=[{'00': 0.4873046875, '11': 0.5126953125}], metadata=[{'header_metadata': None, 'shots': 1024}])
-  ```
+```

@@ -47,7 +47,7 @@ From the [{{site.data.keyword.cloud_notm}} console](/iam/overview){: external}, 
 For more information about roles, including details about program level roles and instructions to work with access groups, see the [IAM access documentation](https://cloud.ibm.com/docs/account?topic=account-userroles){: external}.
 
 ### Access roles
-{: access-roles}
+{: #access-roles}
 
 Following are the roles you can assign to access groups:
 
@@ -79,7 +79,7 @@ pip install qiskit-ibm-runtime
 Next, you will find your account credentials and authenticate with the service.
 
 1. Find and copy your API key. From the [{{site.data.keyword.cloud_notm}} API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key. Your key will look something like this: `I9sxojrwurPrMWqNR_wc4rztMgVqE1HUmsfACMyw_G9n`
-3. Find your Cloud Resource Name (CRN) or service instance name.
+2. Find your Cloud Resource Name (CRN) or service instance name.
    - To find your CRN, from the {{site.data.keyword.cloud_notm}} console [Resource list page](https://cloud.ibm.com/resources){: external}, expand the "Services and software" section and look for your instance. Then click the row that contains your quantum service instance (don't click the name of the instance). In the pane that opens, click the icon to copy your CRN. For example:
 
       ```text

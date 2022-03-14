@@ -124,7 +124,7 @@ psi12_H23_result = estimator([0, 1, 0], [0, 1, 2], [theta1, theta2, theta3])
 print(psi12_H23_result)
 ```
 
-The results align with the parameter - circuit - observable tuples specified previously.  For example, the first result: `EstimatorResult(values=array([1.55273438]), metadata=[{'variance': 8.897655487060547, 'shots': 1024}]) ` is the output of the parameter labelled `theta1` and observable `H1` being sent to the first circuit.
+The results align with the parameter - circuit - observable tuples specified previously.  For example, the first result: `EstimatorResult(values=array([1.55273438]), metadata=[{'variance': 8.897655487060547, 'shots': 1024}])` is the output of the parameter labelled `theta1` and observable `H1` being sent to the first circuit.
 
 Output:
 ```text
