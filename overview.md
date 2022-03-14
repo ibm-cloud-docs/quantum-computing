@@ -21,7 +21,7 @@ subcollection: quantum-computing
 Get a glimpse of the quantum computing future with our world-leading {{site.data.keyword.qiskit_runtime_notm}}, a new architecture that delivers significant performance enhancements to program execution. Our physical systems and simulators (cloud-based classical emulators of quantum systems) now enable you to experience frictionless quantum computing; that is, the ability to execute quantum programs in an environment where the classical computer is physically closer to the quantum computer.  Test programs and algorithms, and develop new models with our cloud-based quantum runtime for drastically improved capacity and higher performance today.
 {: shortdesc}
 
-Because this service is in Experimental phase, many functions are not yet available and are still under development. This includes some of the functions outlined in the following diagram.
+Because this service is in Beta phase, many functions are not yet available and are still under development. This includes some of the functions outlined in the following diagram.
 {: note}
 
 
