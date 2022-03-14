@@ -55,13 +55,12 @@ The Sampler takes in:
 Example:
 
 ```Python
-from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler, IBMEstimator
+from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
 from qiskit import QuantumCircuit
-from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler, IBMEstimator
 
 service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
 
-sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator", skip_transpilation=False)
+sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
 
 bell = QuantumCircuit(2)
 bell.h(0)
@@ -74,7 +73,7 @@ bell.measure_all()
 {: #rw-session-sampler-example}
 {: #step}
 
-Running a job and returning the results are done by writing to and reading from the session. After the results are returned, the session is automatically closed.
+Running a job and returning the results are done by writing to and reading from the session. The session closes when the code exits the `with` block.
 
 ### Run the job & print results
 {: #sampler-run}
@@ -100,7 +99,7 @@ SamplerResult(quasi_dists=[{'00': 0.4873046875, '11': 0.5126953125}], metadata=[
 In this example, we specify three circuits, but they have no parameters:
 
 ```Python
-from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler, IBMEstimator
+from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import RealAmplitudes
 
@@ -135,7 +134,7 @@ In this example, we run multiple parameterized circuits. When it is run, this li
 In our example, the parameter labelled `theta` is sent to the first circuit, `theta2` is sent to the first circuit, and `theta3` is sent to the second circuit.
 
 ```Python
-from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler, IBMEstimator
+from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import RealAmplitudes
 
@@ -143,7 +142,7 @@ service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cl
 
 sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
 
-# parametrized circuit
+# parameterized circuit
 pqc = RealAmplitudes(num_qubits=2, reps=2)
 pqc.measure_all()
 pqc2 = RealAmplitudes(num_qubits=2, reps=3)
@@ -155,12 +154,7 @@ theta3 = [0, 1, 2, 3, 4, 5, 6, 7]
 
 with sampler_factory(circuits=[pqc, pqc2]) as sampler:
     result = sampler(circuit_indices=[0, 0, 1], parameter_values=[theta1, theta2, theta3])
-    # result of pqc(theta1)
-    print([q.binary_probabilities() for q in result.quasi_dists[0]])
-    # result of pqc(theta2)
-    print([q.binary_probabilities() for q in result.quasi_dists[1]])
-    # result of pqc2(theta3)
-    print([q.binary_probabilities() for q in result.quasi_dists[2]])
+    print(result)
 ```
 {: codeblock}
 

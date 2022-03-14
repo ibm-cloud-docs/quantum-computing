@@ -17,18 +17,18 @@ subcollection: quantum-computing
 The following versions of {{site.data.keyword.quantum_short}} have been released. The information includes new features and changes for each version of the product and any known limitations.
 {: shortdesc}
 
-## Version 1.1.2 (March 2022)
-{: #1.1.2}
+## Version 0.2.0 (March 2022)
+{: #0.2.0}
 
 Initial release of sessions.
 
-## Version 1.1.1 (February 2022)
-{: #1.1.1}
+## Version 0.1.0 (February 2022)
+{: #0.1.0}
 
 Initial release of primitive programs.
 
-## Version 1.1.0 (January 2022)
-{: #1.1.0}
+## Version 0.0.0 (January 2022)
+{: #0.0.0}
 
 You can run jobs on both physical quantum devices, as well as quantum device simulators.
 New API endpoints have been added to allow you to view device information.
