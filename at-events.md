@@ -19,6 +19,7 @@ completion-time: 10m
 # Auditing events for Qiskit Runtime
 {: #at_events}
 {: toc-content-type="tutorial"}
+{: toc-completion-time="10m"}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with the Qiskit Runtime service in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
