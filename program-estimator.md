@@ -80,6 +80,10 @@ The maximum execution time is 18000 seconds (5 hours).
    ```python
    from qiskit.circuit.library import RealAmplitudes
    from qiskit.quantum_info import SparsePauliOp
+   from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
+   from qiskit import QuantumCircuit
+
+   service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
 
    estimator_factory = IBMEstimator(service=service, backend="ibmq_qasm_simulator")
 
