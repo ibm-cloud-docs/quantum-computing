@@ -27,7 +27,7 @@ Quantum Services
     {: .topicgroup}
     Developer community
         [Qiskit Slack](http://ibm.co/joinqiskitslack)
-        [IBM Quantum Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/ibm-q-experience)
+        [IBM Quantum Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/ibm-quantum-services)
         [Qiskit Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/qiskit)
 
 {: .topicgroup}
