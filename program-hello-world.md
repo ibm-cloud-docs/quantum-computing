@@ -18,8 +18,6 @@ completion-time: 10m
 
 # Hello World program
 {: #program-hello-world}
-{: toc-content-type="reference"}
-{: toc-completion-time="10m"}
 
 Run the Hello World program to ensure that your environment is set up properly.
 {: shortdesc}

@@ -18,8 +18,6 @@ completion-time: 10m
 
 # Sampler primitive
 {: #program-sampler}
-{: toc-content-type="reference"}
-{: toc-completion-time="10m"}
 
 Learn how to use the Sampler primitive.
 {: shortdesc}
