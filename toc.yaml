@@ -49,6 +49,7 @@ toc:
   - navgroup:
       id: help
       topics:
+      - faqs.md
       - support.md
       - topicgroup:
           label: Communities
