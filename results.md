@@ -8,7 +8,7 @@ keywords: quantum, Qiskit, runtime, near time compute
 
 subcollection: quantum-computing
 
-content-type: tutorial
+content-type: howto
 completion-time: 10m
 
 ---
@@ -18,7 +18,7 @@ completion-time: 10m
 
 # View final job results
 {: #view-final}
-{: toc-content-type="tutorial"}
+{: toc-content-type="howto"}
 {: toc-completion-time="10m"}
 
 This tutorial describes how to review final results after running a job. For an example of running a job, see [Get started with the Estimator primitive](/docs/quantum-computing?topic=quantum-computing-example-estimator) or [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-sampler).

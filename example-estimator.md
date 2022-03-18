@@ -42,7 +42,7 @@ The Estimator primitive lets you efficiently calculate and interpret expectation
 
 ## Start a session
 {: #start-session-estimator-example}
-{: #step}
+{: step}
 
 When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
 
@@ -79,7 +79,7 @@ H3 = SparsePauliOp.from_list([("ZI", 1), ("ZZ", 1)])
 
 ## Write to & read from a session
 {: #rw-session-estimator-example}
-{: #step}
+{: step}
 
 Running a job and returning the results are done by writing to and reading from the session. After the results are returned, the session is automatically closed.
 

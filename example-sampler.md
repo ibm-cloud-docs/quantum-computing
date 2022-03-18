@@ -39,7 +39,7 @@ The Sampler primitive lets you more accurately contextualize counts. It takes a 
 
 ## Start a session
 {: #start-session-sampler-example}
-{: #step}
+{: step}
 
 When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
 
@@ -72,7 +72,7 @@ bell.measure_all()
 
 ## Write to & read from a session
 {: #rw-session-sampler-example}
-{: #step}
+{: step}
 
 Running a job and returning the results are done by writing to and reading from the session. The session closes when the code exits the `with` block.
 

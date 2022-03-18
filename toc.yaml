@@ -23,10 +23,14 @@ toc:
       - quickstart.md
 
   - navgroup:
-      id: howto
+      id: tutorial
       topics:
       - example-estimator.md
       - example-sampler.md
+
+  - navgroup:
+      id: howto
+      topics:
       - results.md
       - at-events.md
 

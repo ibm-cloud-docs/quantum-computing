@@ -8,7 +8,7 @@ keywords: activity tracker for Qiskit Runtime, Qiskit Runtime events, Qiskit Run
 
 subcollection: quantum-computing
 
-content-type: tutorial
+content-type: howto
 completion-time: 10m
 
 ---
@@ -18,7 +18,7 @@ completion-time: 10m
 
 # Auditing events for Qiskit Runtime
 {: #at_events}
-{: toc-content-type="tutorial"}
+{: toc-content-type="howto"}
 {: toc-completion-time="10m"}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with the Qiskit Runtime service in {{site.data.keyword.cloud_notm}}.
