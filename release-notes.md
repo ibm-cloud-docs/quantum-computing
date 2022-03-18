@@ -14,7 +14,7 @@ subcollection: quantum-computing
 # Release notes
 {: #release-notes}
 
-The following versions of {{site.data.keyword.quantum_short}} have been released. The information includes new features and changes for each version of the product and any known limitations.
+The following versions of {{site.data.keyword.qiskit_runtime_notm}} have been released. The information includes new features and changes for each version of the product and any known limitations.
 {: shortdesc}
 
 ## Version 0.2.0 (March 2022)
@@ -38,4 +38,4 @@ If you do not specify a device for your job to run on, the job will be sent to t
 ## Version 1.0.0 (November 2021)
 {: #1.0.0}
 
-{{site.data.keyword.quantum_long}} is now available for internal-only users.
+{{site.data.keyword.qiskit_runtime_notm}} is now available for internal-only users.

@@ -16,11 +16,11 @@ subcollection: quantum-computing
 # Getting help
 {: #support}
 
-If you have problems or questions when using {{site.data.keyword.quantum_long_notm}} (Experimental), you can go directly to the [{{site.data.keyword.Bluemix}} Support page](https://www.ibm.com/cloud/support){: external} to review common FAQs, view cloud status, or post questions on Stack Overflow. You can also open a support case for help with your quantum resources.
+If you have problems or questions when using {{site.data.keyword.qiskit_runtime_notm}} (Beta), you can go directly to the [{{site.data.keyword.Bluemix}} Support page](https://www.ibm.com/cloud/support){: external} to view cloud status or post questions on Stack Overflow. You can also open a support case for help with your quantum resources.
 {: shortdesc}
 
 * You can check the status of the {{site.data.keyword.Bluemix_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
-* You can review [Stack Overflow](https://stackoverflow.com/search?q=ibm-cloud){: external} to see whether other users ran into the same problem. When using the forum to ask a question, tag your question with "ibm-cloud" and "quantum" so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
+* You can review [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to see whether other users ran into the same problem. When using the forum to ask a question, tag your question with "ibm-cloud" and "quantum" so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 
 For help with Qiskit or quantum in general, access one of our Slack communities:
 
