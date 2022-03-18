@@ -26,6 +26,7 @@ This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit
 
 ## Create a service instance
 {: #create-configure}
+{: step}
 
 1. [Create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external} for the organization.
 2. From the [user management page](https://cloud.ibm.com/iam/overview){: external}, invite users to join the account.
@@ -34,13 +35,14 @@ This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit
    {: note}
 
 3. Create a {{site.data.keyword.qiskit_runtime_notm}} service instance:
-   1. From the [{{site.data.keyword.quantum_long_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
+   1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
       - **Standard**: A pay-as-you-go model for accessing IBM quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
    2. After completing the required information, click **Create**.
 
 ## Manage access to the service instance
 {: #manage-access}
+{: step}
 
 From the [{{site.data.keyword.cloud_notm}} console](/iam/overview){: external}, click Manage > Access (IAM) to create an IAM access policy, ideally an access group policy, to give users access to the service instance. Optionally use resource groups, access groups, tags, and so on, to manage resources and access to them.
 
@@ -64,6 +66,7 @@ quantum-computing.job.delete | Delete jobs | Manager, Writer
 
 ## Install Qiskit packages
 {: #install-packages}
+{: step}
 
 Install these packages.  They let you create circuits and work with primitive programs via {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. You need to keep these packages updated:
 
@@ -75,6 +78,7 @@ pip install qiskit-ibm-runtime
 
 ## Find your access credentials
 {: #find-credentials}
+{: step}
 
 Next, you will find your account credentials and authenticate with the service.
 
@@ -89,6 +93,7 @@ Next, you will find your account credentials and authenticate with the service.
 
 ## Authenticate to the service
 {: #authentication}
+{: step}
 
 Call  `IBMRuntimeService` with your IBM Cloud API key and the CRN or Service name. You can also optionally save your credentials on disk (in the $HOME/.qiskit/qiskit-ibm.json file). By doing so, you only need to use `IBMRuntimeService()` in the future to initialize your account. If you don't save your credentials to disk, you have to run this command every time you start a new session.
 
@@ -108,6 +113,7 @@ For instructions to use the cloud Quantum Qiskit API, see the [authentication](/
 
 ## Test your setup
 {: #test-setup}
+{: step}
 
 Run the Hello World program to ensure that your environment is set up properly:
 
@@ -136,12 +142,14 @@ All done!
 
 ## Create a circuit
 {: #create-circuit}
+{: step}
 
 You'll need one or more circuits to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
 
 ## Choose a program to run
 {: #choose-program}
+{: step}
 
 The list of available programs is on the {{site.data.keyword.cloud_notm}} console quantum [Programs page](https://cloud.ibm.com/quantum/programs){: external}. The following programs are publicly available. For more information about these programs, including the required input parameters, see the [Estimator](/docs/quantum-computing?topic=quantum-computing-program-estimator) or [Sampler](/docs/quantum-computing?topic=quantum-computing-program-sampler) topic.
 
@@ -158,6 +166,7 @@ You can also view all available programs by using the [List programs](/apidocs/q
 
 ## Choose a backend
 {: #choose-backend}
+{: step}
 
 Before running a job, you can optionally choose a backend (a physical quantum system or a simulator) to run on.  If you do not specify one, the job is sent to the least busy device that you have access to.
 
@@ -171,6 +180,7 @@ You can also view your available backends by using the [List your devices](/apid
 
 ## Run the job
 {: #run-job-step}
+{: step}
 
 You will use the {{site.data.keyword.qiskit_runtime_notm}} IBMRuntimeService.run() method, which takes the following parameters:
 
@@ -212,6 +222,7 @@ You can also run a job by using the [Create job](/apidocs/quantum-computing#crea
 
 ## (Optional) View the job status
 {: #return-status}
+{: step}
 
 Follow up the {{site.data.keyword.qiskit_runtime_notm}} IBMRuntimeService.run() method by running a RuntimeJob method. The run() method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program.
 

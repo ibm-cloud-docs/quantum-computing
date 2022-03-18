@@ -45,6 +45,7 @@ When you start a session, it caches the data you send so it doesn't have to be t
 
 ### Specify program inputs
 {: #sampler-inputs}
+{: step}
 
 The Sampler takes in:
 * The **circuits** you want to investigate.
