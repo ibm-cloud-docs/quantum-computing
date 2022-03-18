@@ -67,7 +67,7 @@ The maximum execution time is 18000 seconds (5 hours).
         - **Description**: Additional metadata.  
         - **Required**: False
    - **value**:
-       - **Description**: Estimated expectation values. This is a numpy array. The i^th^ element is calculated using the circuit and observable indexed by the i^th^ circuit_indices and i^th^ observable_indices, and bound with i^th^ parameter_values.
+       - **Description**: Estimated expectation values. This is a numpy array. The i{sup}th{/sup} element is calculated using the circuit and observable indexed by the i{sup}th{/sup} circuit_indices and i{sup}th{/sup} observable_indices, and bound with i{sup}th{/sup} parameter_values.
        - **Type**: array
        - **Required**: False
 - **Example**:

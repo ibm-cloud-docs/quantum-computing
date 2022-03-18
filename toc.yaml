@@ -5,6 +5,7 @@
 toc:
   properties:
     subcollection: quantum-computing
+    service-name: quantum-computing
     category: compute
     audience: service
     release-level: beta
@@ -21,6 +22,8 @@ toc:
       topics:
       - overview.md
       - quickstart.md
+      - topic: release-notes.md
+        navtitle: Release notes
 
   - navgroup:
       id: tutorial
@@ -67,4 +70,3 @@ toc:
           - link:
               label: Qiskit Stack Exchange
               href: https://quantumcomputing.stackexchange.com/questions/tagged/qiskit
-      - release-notes.md
