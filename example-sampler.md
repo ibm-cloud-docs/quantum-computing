@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-07"
+lastupdated: "2022-03-21"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -102,7 +102,6 @@ In this example, we specify three circuits, but they have no parameters:
 ```Python
 from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
 from qiskit import QuantumCircuit
-from qiskit.circuit.library import RealAmplitudes
 
 service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
 
