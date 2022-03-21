@@ -28,8 +28,8 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - example-estimator.md
       - example-sampler.md
+      - example-estimator.md
 
   - navgroup:
       id: howto
@@ -42,8 +42,8 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - program-estimator.md
       - program-sampler.md
+      - program-estimator.md
       - program-hello-world.md
       
       - link:
