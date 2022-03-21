@@ -2,14 +2,11 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-07"
+lastupdated: "2022-03-21"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
 subcollection: quantum-computing
-
-content-type: tutorial
-completion-time: 10m
 
 ---
 
@@ -18,8 +15,7 @@ completion-time: 10m
 
 # Estimator primitive
 {: #program-estimator}
-{: toc-content-type="reference"}
-{: toc-completion-time="10m"}
+
 
 Understand the input and output for the Estimator primitive.
 {: shortdesc}
@@ -35,66 +31,101 @@ The maximum execution time is 18000 seconds (5 hours).
 {: #estimator-parameters}
 
 - **Input parameters**:
-   - **circuits**:
-      - **Description**: A QuantumCircuit or list of QuantumCircuits. The circuits can be parameterized.
-      - **Required**: True
-   - **observables**: Properties of the system or function being evaluated.  Currently must be opflow `PauliSumOp` (primitive is SparsePauliOp) or quantum_info operator, `BaseOperator`, which is compatible with SparsePauliOp.
-   - **parameters**:
-      - **Description**: Optional input for parameterized circuits.
-      - **Required**: False
-   - **run-options**:
-      - **Description**: Various run options, such as the number of **shots** (how many times to run each circuit).
-      - **Required**: False
-   - **Example**
-
-      ```Python
-      observable = PauliSumOp.from_list(
-         [
-             ("II", -1.052373245772859),
-             ("IZ", 0.39793742484318045),
-             ("ZI", -0.39793742484318045),
-             ("ZZ", -0.01128010425623538),
-             ("XX", 0.18093119978423156),
-         ]
-      )
-      ansatz = RealAmplitudes(num_qubits=2, reps=2)
-      parameters = [0, 1, 1, 2, 3, 5]
-      run_options = {"shots": 1000}
-
-      program_inputs = {
-             "circuits": ansatz,
-             "observables": observable,
-             "parameters": parameters,
-             "run_options": run_options
-      }
-      ```
-      {: codeblock}
-
-- **options**:
-   - **Description**: Various options, such as the name of the **backend** to run the program on.
-   - **Required**: False.  If no backend is specified, the program will be run on the next available backend that you have access to.
-   - **Example**:
-
-      ```Python
-      options = {"backend_name": "ibmq_qasm_simulator"}
-      ```
-      {: codeblock}
-
-## Output values
-{: #estimator-parameters-read}
-
-- **values**:  
-   - **Description**: Quasiprobabilities for each circuit.
-   - **Type**: list
-- **variances**:  
-   - **Description**: Variances for each circuit.
-   - **Type**: list
-- **shots**:  
-   - **Description**: The number of shots that were run.
-   - **Type**: integer
+    - **run_options**:
+        - **Type**: object
+        - **Description**: A collection of key-value pairs identifying the execution options, such as shots.
+        - **Required**: False
+    - **circuit_indices**:
+        - **Type**: array
+        - **Description**: Indexes of the circuits to evaluate.
+        - **Required**: True
+    - **parameter_values**
+        - **Type**: array
+        - **Description**: Concrete parameters to be bound.
+        - **Required**: False
+    - **skip_transpilation**:
+        - **Description**: Skip circuit transpilation. The default value is False.
+        - **Required**: False.   
+    - **circuits**:
+        - **Description**: A QuantumCircuit or list of QuantumCircuits. The circuits can be parameterized.
+        - **Required**: True
+    - **parameters**
+        - **Type**: array
+        - **Description**: Parameters of the quantum circuits.
+        - **Required**: False  
+    - **observables:**
+        - **Type**: ['object', 'array']
+        - **Description**: The Hamiltonians to be evaluated.
+        - **Required**: False
+    - **observable_indices**:
+        - **Type**: array
+        - **Description**: A list of observable indices. It must have the same length as circuit_indices and parameter_values.
+        - **Required**: True      
+- **Returns**:
+   - **metadata**:
+        - **Type**: array
+        - **Description**: Additional metadata.  
+        - **Required**: False
+   - **value**:
+       - **Description**: Estimated expectation values. This is a numpy array. The i{sup}th{/sup} element is calculated using the circuit and observable indexed by the i{sup}th{/sup} circuit_indices and i{sup}th{/sup} observable_indices, and bound with i{sup}th{/sup} parameter_values.
+       - **Type**: array
+       - **Required**: False
 - **Example**:
 
    ```python
-   EstimatorArrayResult(values=array([-1.27506899, -0.59895964]), variances=array([0.30091147, 0.22917904]))
-   shots: 1000
+   from qiskit.circuit.library import RealAmplitudes
+   from qiskit.quantum_info import SparsePauliOp
+   from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
+   from qiskit import QuantumCircuit
+
+   service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
+
+   estimator_factory = IBMEstimator(service=service, backend="ibmq_qasm_simulator")
+
+   psi1 = RealAmplitudes(num_qubits=2, reps=2)
+   psi2 = RealAmplitudes(num_qubits=2, reps=3)
+
+   H1 = SparsePauliOp.from_list([("II", 1), ("IZ", 2), ("XI", 3)])
+   H2 = SparsePauliOp.from_list([("IZ", 1)])
+   H3 = SparsePauliOp.from_list([("ZI", 1), ("ZZ", 1)])
+
+   with estimator_factory(
+      circuits=[psi1, psi2],
+      observables=[H1, H2, H3],
+   ) as estimator:
+      theta1 = [0, 1, 1, 2, 3, 5]
+      theta2 = [0, 1, 1, 2, 3, 5, 8, 13]
+      theta3 = [1, 2, 3, 4, 5, 6]
+
+   # calculate [ <psi1(theta1)|H1|psi1(theta1)> ]
+   psi1_H1_result = estimator(circuit_indices=[0], observable_indices=[0], parameter_values=[theta1])
+   print(psi1_H1_result)
+
+   # calculate [ <psi1(theta1)|H2|psi1(theta1)>, <psi1(theta1)|H3|psi1(theta1)> ]
+   # note that specifying the labels 'circuit_indices', 'observable_indices', and 'parameter_values' is optional, as long as the values are specified in that order.
+   psi1_H23_result = estimator([0, 0], [1, 2], [theta1]*2)
+   print(psi1_H23_result)
+
+   # calculate [ <psi2(theta2)|H2|psi2(theta2)> ]
+   psi2_H2_result = estimator([1], [1], [theta2])
+   print(psi2_H2_result)
+
+   # calculate [ <psi1(theta1)|H1|psi1(theta1)>, <psi1(theta3)|H1|psi1(theta3)> ]
+   psi1_H1_result2 = estimator([0, 0], [0, 0], [theta1, theta3])
+   print(psi1_H1_result2)
+
+   # calculate [ <psi1(theta1)|H1|psi1(theta1)>,
+   #             <psi2(theta2)|H2|psi2(theta2)>,
+   #             <psi1(theta3)|H3|psi1(theta3)> ]
+   psi12_H23_result = estimator([0, 1, 0], [0, 1, 2], [theta1, theta2, theta3])
+   print(psi12_H23_result)
    ```
+
+Output:
+```text
+EstimatorResult(values=array([1.55273438]), metadata=[{'variance': 8.897655487060547, 'shots': 1024}])
+EstimatorResult(values=array([-0.55664062, 0.07421875]), metadata=[{'variance': 0.6901512145996094, 'shots': 1024}, {'variance': 1.9938812255859375, 'shots': 1024}])
+EstimatorResult(values=array([0.19921875]), metadata=[{'variance': 0.9603118896484375, 'shots': 1024}])
+EstimatorResult(values=array([1.515625 , 0.97460938]), metadata=[{'variance': 9.603851318359375, 'shots': 1024}, {'variance': 11.997127532958984, 'shots': 1024}])
+EstimatorResult(values=array([ 1.55078125, 0.13085938, -1.04101562]), metadata=[{'variance': 9.120590209960938, 'shots': 1024}, {'variance': 0.9828758239746094, 'shots': 1024}, {'variance': 1.2807121276855469, 'shots': 1024}])
+```
