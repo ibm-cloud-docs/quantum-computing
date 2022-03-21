@@ -24,7 +24,6 @@ The maximum execution time is 600 seconds (10 minutes).
 Input:
 
 ```Python
-from qiskit.test.reference_circuits import ReferenceCircuits
 from qiskit_ibm_runtime import IBMRuntimeService
 
 service = IBMRuntimeService()
