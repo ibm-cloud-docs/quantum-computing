@@ -15,7 +15,7 @@ completion-time: 25m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Quick start guide
+# Getting started
 {: #quickstart}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="25m"}
