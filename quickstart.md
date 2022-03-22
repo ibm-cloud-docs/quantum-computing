@@ -195,20 +195,21 @@ You will use the {{site.data.keyword.qiskit_runtime_notm}} IBMRuntimeService.run
 In the following example, we will submit a circuit to the Sampler program.
 
 ```python
-from qiskit.test.reference_circuits import ReferenceCircuits
-from qiskit_ibm_runtime import IBMRuntimeService
+from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
+from qiskit import QuantumCircuit
 
-service = IBMRuntimeService()
-program_inputs = {
-    'circuits': ReferenceCircuits.bell()
-}
-options = {'backend_name': 'ibmq_qasm_simulator'}
-job = service.run(
-      program_id="sampler",
-      options=options,
-      inputs=program_inputs)
-print(f"job ID: {job.job_id}")
-result = job.result()
+service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
+
+sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
+
+bell = QuantumCircuit(2)
+bell.h(0)
+bell.cx(0, 1)
+bell.measure_all()
+
+with sampler_factory(circuits=bell) as sampler:
+    result = sampler(circuit_indices=[0], shots=1024)
+    print(result)
 ```
 {: codeblock}
 
