@@ -28,7 +28,7 @@ This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit
 {: #create-configure}
 {: step}
 
-If you already created your {{site.data.keyword.qiskit_runtime_notm}} service instance, skip to the next section.
+If you already created your {{site.data.keyword.qiskit_runtime_notm}} service instance, skip to the next step.
 
 1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
@@ -57,14 +57,10 @@ pip install qiskit-ibm-runtime
 
 Next, you will find your account credentials and authenticate with the service.
 
-1. Find and copy your API key. From the [{{site.data.keyword.cloud_notm}} API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key. Your key will look something like this: `I9sxojrwurPrMWqNR_wc4rztMgVqE1HUmsfACMyw_G9n`
+1. Find and copy your API key. From the [API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key.
 2. Find your service instance name or Cloud Resource Name (CRN).
-   - To find your service instance name, open the {{site.data.keyword.cloud_notm}} console [Instances page](https://cloud.ibm.com/quantum/instances){: external} and find your instance.  The service instance name is in the **Name** column.
-   - To find your CRN, open the {{site.data.keyword.cloud_notm}} console [Instances page](https://cloud.ibm.com/quantum/instances){: external} and click your instance. In the page that opens, click the icon to copy your CRN. For example:
-
-      ```text
-      crn:v1:bluemix:public:quantum-computing:us-east:a/b947c1c5a9378d64aed96696e4d76e8e:a3a7f181-35aa-42c8-94d6-7c8ed6e1a94b::
-      ```
+   - To find your service instance name, open the [Instances page](https://cloud.ibm.com/quantum/instances){: external} and find your instance.  The service instance name is in the **Name** column.
+   - To find your CRN, open the [Instances page](https://cloud.ibm.com/quantum/instances){: external} and click your instance. In the page that opens, click the icon to copy your CRN.
 
 ## Authenticate to the service
 {: #authentication}
@@ -79,7 +75,7 @@ If you save your credentials to disk, you only need to use `IBMRuntimeService()`
 from qiskit_ibm_runtime import IBMRuntimeService
 
 # Save account to disk.
-IBMRuntimeService.save_account(auth="cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN or Service instance name>)
+IBMRuntimeService.save_account(auth="cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN or Service instance name>")
 
 service = IBMRuntimeService()
 ```
@@ -93,7 +89,10 @@ For instructions to use the cloud Quantum Qiskit API, see the [authentication](/
 {: #test-setup}
 {: step}
 
-Run the Hello World program to ensure that your environment is set up properly:
+Run the Hello World program to ensure that your environment is set up properly.
+
+If you did not save your credentials to disk, specify `IBMRuntimeService.save_account(auth="cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN or Service instance name>)
+` instead of `IBMRuntimeService()` in the following code.
 
 ```Python
 from qiskit.test.reference_circuits import ReferenceCircuits
@@ -118,106 +117,16 @@ Result:
 All done!
 ```
 
-## Optional: Create a circuit
-{: #create-circuit}
-{: step}
-
-You'll need one or more circuits to submit to the program. If you don't know how to use Qiskit to create circuits, start with the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
-
-If you just want to get started running programs, all of our examples have circuits created for you, so you don't need to create your own.
-{: note}
-
-
 ## Choose a program to run
 {: #choose-program}
 {: step}
 
-The list of available programs is on the {{site.data.keyword.cloud_notm}} console quantum [Programs page](https://cloud.ibm.com/quantum/programs){: external}. The following programs are publicly available. For more information about these programs, including the required input parameters, see the [Sampler](/docs/quantum-computing?topic=quantum-computing-program-sampler) or [Estimator](/docs/quantum-computing?topic=quantum-computing-program-estimator) topic.
+Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview) to interface with quantum computers. The following programs are publicly available. Choose the appropriate link to continue learning how to run a program.
 
-- **Sampler**:  
+- **[Sampler](/docs/quantum-computing?topic=quantum-computing-example-sampler)**:  
        Sample distributions generated by given circuits executed on the target backend.
-- **Estimator**:  
+- **[Estimator](/docs/quantum-computing?topic=quantum-computing-example-estimator)**:  
        Returns an observable expectation value generated by given circuits executed on the target backend.
-- **Hello-world**:
-       Verifies that your environment is set up correctly.
-
-
-You can also view all available programs by using the [List programs](/apidocs/quantum-computing#list-programs){: external} API directly or in [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Programs/list_programs){: external}.
-
-
-## Optional: Choose a backend
-{: #choose-backend}
-{: step}
-
-Before running a job, you can optionally choose a backend (a physical quantum system or a simulator) to run on.  If you do not specify one, the job is sent to the least busy device that you have access to.
-
-The Standard plan only allows access to physical quantum systems, while the Lite plan only allows access to simulators.
-{: #note}
-
-To find your available backends, run `service.backends()` in Qiskit and note the name of the backend you want to use.  For full details, including available options, see the [Qiskit Runtime API documentation](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/stubs/qiskit_ibm_runtime.IBMRuntimeService.backends.html#qiskit_ibm_runtime.IBMRuntimeService.backends).
-
-You can also view your available backends by using the [List your devices](/apidocs/quantum-computing#list-devices){: external} API directly or in [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Programs/list-devices){: external}.
-
-
-## Run the job
-{: #run-job-step}
-{: step}
-
-You will use the {{site.data.keyword.qiskit_runtime_notm}} IBMRuntimeService.run() method, which takes the following parameters:
-
-- program_id: ID of the program to run.
-- inputs: Program input parameters. These input values are passed to the runtime program and are dependent on the parameters defined for the program.
-- options: Runtime options. These options control the execution environment. The current  available options are backend_name and log_level, which are optional.
-
-   If you do not specify a backend, the job is sent to the least busy device that you have access to. For full details about the available options, see the [API guide](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/stubs/qiskit_ibm_runtime.RuntimeOptions.html#qiskit_ibm_runtime.RuntimeOptions){: external}.
-
-- result_decoder: Optional class used to decode the job result.
-
-In the following example, we will submit a circuit to the Sampler program.
-
-```python
-from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
-from qiskit import QuantumCircuit
-
-service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
-
-sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
-
-bell = QuantumCircuit(2)
-bell.h(0)
-bell.cx(0, 1)
-bell.measure_all()
-
-with sampler_factory(circuits=bell) as sampler:
-    result = sampler(circuit_indices=[0], shots=1024)
-    print(result)
-```
-{: codeblock}
-
-If you do not specify the device, the job is sent to the least busy device that you have access to.
-
-To ensure fairness, there is a maximum execution time for each {{site.data.keyword.qiskit_runtime_notm}} job. If a job exceeds this time limit, it is forcibly terminated. The maximum execution time is the smaller of the system limit and the `max_execution_time` defined by the program. The system limit is 3 hours for jobs running on a simulator and 8 hours for jobs running on a physical system.
-{: note}
-
-You can also run a job by using the [Create job](/apidocs/quantum-computing#create-job){: external} API directly or in [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Programs/create-job){: external}.
-
-
-## Optional: View the job status
-{: #return-status}
-{: step}
-
-Follow up the {{site.data.keyword.qiskit_runtime_notm}} IBMRuntimeService.run() method by running a RuntimeJob method. The run() method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program.
-
-There are several RuntimeJob methods to choose from, including job.status():
-
-```python
-job.status()
-```
-{: codeblock}
-
-Jobs are also listed on the Jobs page for your quantum service instance.  From the {{site.data.keyword.cloud_notm}} console quantum [Instances page](https://cloud.ibm.com/quantum/instances){: external}, open your quantum service instance, then click the Jobs tab.  To see the current status of your job, click the refresh arrow in the upper right corner.
-
-You can also return the job status by using the [List job details](/apidocs/quantum-computing#get-job-details-jid){: external} API directly or in [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Programs/get-job-details-jid){: external}.
 
 ## Next steps
 {: #next-steps}

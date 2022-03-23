@@ -34,11 +34,11 @@ The Estimator primitive lets you efficiently calculate and interpret expectation
 {: #example-estimator-byb}
 {: step}
 
-1. Follow the steps in the [quick start guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your quantum service instance ready to use.
+1. Follow the steps in the [getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your quantum service instance ready to use.
 
 2. You'll need at least one circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
-3. Create a list of observables. Observables let you define the properties of the circuit that are relevant to your problem and enable you to efficiently measure their expectation value. For simplicity, you can use the [PauliSumOp class](https://qiskit.org/documentation/stubs/qiskit.opflow.primitive_ops.html#module-qiskit.opflow.primitive_ops) in Qiskit to define them.
+3. Create a list of observables. Observables let you define the properties of the circuit that are relevant to your problem and enable you to efficiently measure their expectation value. For simplicity, you can use the [PauliSumOp class](https://qiskit.org/documentation/stubs/qiskit.opflow.primitive_ops.html#module-qiskit.opflow.primitive_ops){: external} in Qiskit to define them.
 
 ## Start a session
 {: #start-session-estimator-example}
@@ -54,7 +54,7 @@ The Sampler takes in:
 * The **circuits** you want to investigate.
 * The **parameters** input to evaluate the circuits.
 * The **observables** (Hamiltonians) to be evaluated.
-* Optional: The **backend** to run on. If one is not specified, the least busy backend is used.
+* Optional: The **backend** to run on. If one is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a backend](/docs/quantum-computing?topic=quantum-computing-choose-backend).
 * Optional: The instruction to **skip_transpilation**.
 
 Example:

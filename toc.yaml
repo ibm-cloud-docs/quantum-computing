@@ -34,6 +34,8 @@ toc:
   - navgroup:
       id: howto
       topics:
+      - choose-backend.md
+      - run_job.md
       - results.md
       - admin.md
       - at-events.md

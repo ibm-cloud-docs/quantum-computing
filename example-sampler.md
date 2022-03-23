@@ -50,7 +50,7 @@ When you start a session, it caches the data you send so it doesn't have to be t
 The Sampler takes in:
 * The **circuits** you want to investigate.
 * The **parameters** input to evaluate the circuits.
-* Optional: The **backend** to run on. If one is not specified, the least busy backend is used.
+* Optional: The **backend** to run on. If one is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a backend](/docs/quantum-computing?topic=quantum-computing-choose-backend).
 * Optional: The instruction to **skip_transpilation**.
 
 Example:

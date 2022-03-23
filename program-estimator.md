@@ -75,10 +75,9 @@ The maximum execution time is 18000 seconds (5 hours).
 {: #estimator-example-code}
 
    ```python
+   from qiskit_ibm_runtime import IBMRuntimeService, IBMEstimator
    from qiskit.circuit.library import RealAmplitudes
    from qiskit.quantum_info import SparsePauliOp
-   from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
-   from qiskit import QuantumCircuit
 
    service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
 
@@ -90,37 +89,36 @@ The maximum execution time is 18000 seconds (5 hours).
    H1 = SparsePauliOp.from_list([("II", 1), ("IZ", 2), ("XI", 3)])
    H2 = SparsePauliOp.from_list([("IZ", 1)])
    H3 = SparsePauliOp.from_list([("ZI", 1), ("ZZ", 1)])
+with estimator_factory(
+    circuits=[psi1, psi2],
+    observables=[H1, H2, H3],
+) as estimator:
+    theta1 = [0, 1, 1, 2, 3, 5]
+    theta2 = [0, 1, 1, 2, 3, 5, 8, 13]
+    theta3 = [1, 2, 3, 4, 5, 6]
 
-   with estimator_factory(
-      circuits=[psi1, psi2],
-      observables=[H1, H2, H3],
-   ) as estimator:
-      theta1 = [0, 1, 1, 2, 3, 5]
-      theta2 = [0, 1, 1, 2, 3, 5, 8, 13]
-      theta3 = [1, 2, 3, 4, 5, 6]
+    # calculate [ <psi1(theta1)|H1|psi1(theta1)> ]
+    psi1_H1_result = estimator(circuit_indices=[0], observable_indices=[0], parameter_values=[theta1])
+    print(psi1_H1_result)
 
-   # calculate [ <psi1(theta1)|H1|psi1(theta1)> ]
-   psi1_H1_result = estimator(circuit_indices=[0], observable_indices=[0], parameter_values=[theta1])
-   print(psi1_H1_result)
+    # calculate [ <psi1(theta1)|H2|psi1(theta1)>, <psi1(theta1)|H3|psi1(theta1)> ]
+    psi1_H23_result = estimator(circuit_indices=[0, 0], observable_indices=[1, 2], parameter_values=[theta1]*2)
+    print(psi1_H23_result)
 
-   # calculate [ <psi1(theta1)|H2|psi1(theta1)>, <psi1(theta1)|H3|psi1(theta1)> ]
-   # note that specifying the labels 'circuit_indices', 'observable_indices', and 'parameter_values' is optional, as long as the values are specified in that order.
-   psi1_H23_result = estimator([0, 0], [1, 2], [theta1]*2)
-   print(psi1_H23_result)
+    # calculate [ <psi2(theta2)|H2|psi2(theta2)> ]
+    # Note that you don't need to specify the labels "circuit_indices", "observable_indices", or "parameter_values", as long as they are specified in that order.
+    psi2_H2_result = estimator([1], [1], [theta2])
+    print(psi2_H2_result)
 
-   # calculate [ <psi2(theta2)|H2|psi2(theta2)> ]
-   psi2_H2_result = estimator([1], [1], [theta2])
-   print(psi2_H2_result)
+    # calculate [ <psi1(theta1)|H1|psi1(theta1)>, <psi1(theta3)|H1|psi1(theta3)> ]
+    psi1_H1_result2 = estimator([0, 0], [0, 0], [theta1, theta3])
+    print(psi1_H1_result2)
 
-   # calculate [ <psi1(theta1)|H1|psi1(theta1)>, <psi1(theta3)|H1|psi1(theta3)> ]
-   psi1_H1_result2 = estimator([0, 0], [0, 0], [theta1, theta3])
-   print(psi1_H1_result2)
-
-   # calculate [ <psi1(theta1)|H1|psi1(theta1)>,
-   #             <psi2(theta2)|H2|psi2(theta2)>,
-   #             <psi1(theta3)|H3|psi1(theta3)> ]
-   psi12_H23_result = estimator([0, 1, 0], [0, 1, 2], [theta1, theta2, theta3])
-   print(psi12_H23_result)
+    # calculate [ <psi1(theta1)|H1|psi1(theta1)>,
+    #             <psi2(theta2)|H2|psi2(theta2)>,
+    #             <psi1(theta3)|H3|psi1(theta3)> ]
+    psi12_H23_result = estimator([0, 1, 0], [0, 1, 2], [theta1, theta2, theta3])
+    print(psi12_H23_result)
    ```
 {: codeblock}
 
@@ -137,5 +135,5 @@ EstimatorResult(values=array([ 1.55078125, 0.13085938, -1.04101562]), metadata=[
 {: #next-steps}
 
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to create an instance and run your first job.
-- Review [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-estimator) for a step-by-step example of using this primitive. 
+- Review [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-estimator) for a step-by-step example of using this primitive.
 - Use Qiskit [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.
