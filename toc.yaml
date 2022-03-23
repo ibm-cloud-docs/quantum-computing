@@ -35,6 +35,7 @@ toc:
       id: howto
       topics:
       - results.md
+      - admin.md
       - at-events.md
 
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.

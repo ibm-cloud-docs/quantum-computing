@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-07"
+lastupdated: "2022-03-21"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -70,7 +70,9 @@ The maximum execution time is 18000 seconds (5 hours).
        - **Description**: Estimated expectation values. This is a numpy array. The i{sup}th{/sup} element is calculated using the circuit and observable indexed by the i{sup}th{/sup} circuit_indices and i{sup}th{/sup} observable_indices, and bound with i{sup}th{/sup} parameter_values.
        - **Type**: array
        - **Required**: False
-- **Example**:
+
+## Example
+{: #estimator-example-code}
 
    ```python
    from qiskit.circuit.library import RealAmplitudes
@@ -120,6 +122,7 @@ The maximum execution time is 18000 seconds (5 hours).
    psi12_H23_result = estimator([0, 1, 0], [0, 1, 2], [theta1, theta2, theta3])
    print(psi12_H23_result)
    ```
+{: codeblock}
 
 Output:
 ```text
@@ -129,3 +132,10 @@ EstimatorResult(values=array([0.19921875]), metadata=[{'variance': 0.96031188964
 EstimatorResult(values=array([1.515625 , 0.97460938]), metadata=[{'variance': 9.603851318359375, 'shots': 1024}, {'variance': 11.997127532958984, 'shots': 1024}])
 EstimatorResult(values=array([ 1.55078125, 0.13085938, -1.04101562]), metadata=[{'variance': 9.120590209960938, 'shots': 1024}, {'variance': 0.9828758239746094, 'shots': 1024}, {'variance': 1.2807121276855469, 'shots': 1024}])
 ```
+
+## Next steps
+{: #next-steps}
+
+- Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to create an instance and run your first job.
+- Review [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-estimator) for a step-by-step example of using this primitive. 
+- Use Qiskit [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.

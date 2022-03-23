@@ -44,7 +44,7 @@ For examples of using primitives, see [Sampler](/docs/quantum-computing?topic=qu
 ## Next steps
 {: #next-steps}
 
-- Use the [Quick start guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to create an instance and run your first job.
+- Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to create an instance and run your first job.
 - Use Qiskit [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.
 - View the [Qiskit Runtime API reference](/apidocs/quantum-computing){: external} to understand how to use cURL commands to work with your cloud service instance.
 - Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}
