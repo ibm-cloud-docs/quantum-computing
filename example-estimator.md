@@ -38,7 +38,7 @@ The Estimator primitive lets you efficiently calculate and interpret expectation
 
 2. You'll need at least one circuit to submit to the program. Our examples all have circuits in them, but if you want to submit your own circuit, you can use Qiskit to create one. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
-3. Create a list of observables. Observables let you define the properties of the circuit that are relevant to your problem and enable you to efficiently measure their expectation value. For simplicity, you can use the [PauliSumOp class](https://qiskit.org/documentation/stubs/qiskit.opflow.primitive_ops.html#module-qiskit.opflow.primitive_ops){: external} in Qiskit to define them, as illustrated in the example below. 
+3. Create a list of observables. Observables let you define the properties of the circuit that are relevant to your problem and enable you to efficiently measure their expectation value. For simplicity, you can use the [PauliSumOp class](https://qiskit.org/documentation/stubs/qiskit.opflow.primitive_ops.html#module-qiskit.opflow.primitive_ops){: external} in Qiskit to define them, as illustrated in the example below.
 
 ## Start a session
 {: #start-session-estimator-example}
@@ -50,7 +50,7 @@ When you start a session, it caches the data you send so it doesn't have to be t
 {: #estimator-inputs}
 {: step}
 
-The Sampler takes in:
+The Estimator takes in:
 * The **circuits** you want to investigate.
 * The **parameters** input to evaluate the circuits.
 * The **observables** (Hamiltonians) to be evaluated.
