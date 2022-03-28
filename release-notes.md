@@ -17,11 +17,11 @@ subcollection: quantum-computing
 Use these release notes to learn about the latest updates to {{site.data.keyword.qiskit_runtime_notm}}.
 {: shortdesc}
 
-## 31 March 2022
+## 12 April 2022
 {: #0.2.0}
 {: release-note}
 
-Initial release of sessions.
+Qiskit Runtime achieves Beta maturity in IBM Cloud, and introduces pay-as-you-go for the standard plan.
 
 ## 15 February 2022
 {: #0.1.0}
