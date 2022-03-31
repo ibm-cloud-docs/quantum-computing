@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-03-31"
 
 keywords: security and compliance for *service_name*, security for *service_name*, compliance for *service_name*,
 
@@ -12,7 +12,7 @@ subcollection: # Your subcollection value
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Managing security with Qiskit Runtime
+# Manage security with Qiskit Runtime
 {: #manage-security-compliance-qiskit-runtime}
 
 

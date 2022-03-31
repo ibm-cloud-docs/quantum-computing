@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-14"
+lastupdated: "2022-03-31"
 
 keywords: activity tracker for Qiskit Runtime, Qiskit Runtime events, Qiskit Runtime security, audit logs for Qiskit Runtime, viewing Qiskit Runtime events, Qiskit Runtime events
 
@@ -16,7 +16,7 @@ completion-time: 10m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Auditing events for Qiskit Runtime
+# Audit events for Qiskit Runtime
 {: #at_events}
 {: toc-content-type="howto"}
 {: toc-completion-time="10m"}

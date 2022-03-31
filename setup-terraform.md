@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-28"
+lastupdated: "2022-03-31"
 
 keywords: quantum, Qiskit, runtime, near time compute, terraform
 
@@ -16,7 +16,7 @@ completion-time: 10m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Setting up Terraform for Qiskit Runtime
+# Set up Terraform for Qiskit Runtime
 {: #setup-terraform}
 {: toc-content-type="howto"}
 {: toc-completion-time="10m"}
