@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-07"
+lastupdated: "2022-03-31"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -66,7 +66,18 @@ Next, you will find your account credentials and authenticate with the service.
 {: #authentication}
 {: step}
 
-To authenticate to the service, call  `IBMRuntimeService` with your IBM Cloud API key and the CRN or Service name. You can also optionally save your credentials on disk (in the $HOME/.qiskit/qiskit-ibm.json file).  If you don't save your credentials to disk, you have to run this command every time you start a new session.
+To authenticate to the service, call  `IBMRuntimeService` with your IBM Cloud API key and the CRN or Service name:
+
+```python
+from qiskit_ibm_runtime import IBMRuntimeService
+
+IBMRuntimeService(auth="cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN or Service instance name>")
+
+```
+{: codeblock}
+
+
+Instead, you can optionally save your credentials to disk (in the $HOME/.qiskit/qiskit-ibm.json file).  If you don't save your credentials to disk, you have to run the previous command every time you start a new session.
 
 If you save your credentials to disk, you only need to use `IBMRuntimeService()` in the future to initialize your account.
 {: note}
