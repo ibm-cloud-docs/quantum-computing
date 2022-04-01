@@ -53,6 +53,7 @@ toc:
       - program-sampler.md
       - program-estimator.md
       - program-hello-world.md
+      - cost.md
       
       - link:
           label: API reference
