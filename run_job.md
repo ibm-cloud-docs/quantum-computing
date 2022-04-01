@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2021-11-05"
+lastupdated: "2022-04-01"
 
-keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status 
+keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status
 
 subcollection: quantum-computing
 
@@ -37,16 +37,13 @@ You'll need a circuit to submit to the program. To learn how to create circuits 
 
 
 You will use the Qiskit Runtime IBMRuntimeService.run() method, which takes the following parameters:
-{: python}
 
 - program_id: ID of the program to run.
 - inputs: Program input parameters. These input values are passed to the runtime program and are dependent on the parameters defined for the program.
 - options: Runtime options. These options control the execution environment. Currently, the only available option is backend_name, which is optional. If you do not specify a backend, the job is sent to the least busy device that you have access to.
 - result_decoder: Optional class used to decode the job result.
-{: python}
 
 In the following example, we will submit a circuit to the Sampler program.
-{: python}
 
 Use the [Run a job API](/apidocs/quantum-computing#create-job){: external}. Optionally, use [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/create_job){: external}. You must specify the program ID and can optionally supply parameters and the device to run on. Any other input is ignored. Note the job ID that is returned. You need this information to check the status and view results.
 
@@ -56,10 +53,10 @@ To ensure fairness, there is a maximum execution time for each Qiskit Runtime jo
 {: note}
 
 ## (Optional) Return the job status
+{: #return-status}
 {: step}
 
 Follow up the Qiskit Runtime IBMRuntimeService.run() method by running a RuntimeJob method. The run() method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program.
-{: python}
 
 There are several RuntimeJob methods to choose from, including job.status():
 

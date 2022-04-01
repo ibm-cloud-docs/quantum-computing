@@ -102,8 +102,8 @@ For instructions to use the cloud Quantum Qiskit API, see the [authentication](/
 
 Run the Hello World program to ensure that your environment is set up properly.
 
-If you did not save your credentials to disk, specify `IBMRuntimeService.save_account(channel="ibm_cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN or Service instance name>)
-` instead of `IBMRuntimeService()` in the following code.
+If you did not save your credentials to disk, specify `IBMRuntimeService(channel="ibm_cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN or Service instance name>)`
+instead of `IBMRuntimeService()` in the following code.
 
 ```Python
 from qiskit.test.reference_circuits import ReferenceCircuits

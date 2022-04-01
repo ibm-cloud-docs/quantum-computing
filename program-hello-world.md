@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2021-11-05"
+lastupdated: "2022-04-01"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -45,7 +45,7 @@ Result:
 All done!
 ```
 
-You can view the code for this program in the (Qiskit repository)[https://github.com/Qiskit/qiskit-ibm-runtime/tree/main/program_source/hello_world].
+You can view the code for this program in the [Qiskit repository]([https://github.com/Qiskit/qiskit-ibm-runtime/tree/main/program_source/hello_world).
 
 ## Next steps
 {: #next-steps}

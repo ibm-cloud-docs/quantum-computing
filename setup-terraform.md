@@ -2,14 +2,13 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-31"
+lastupdated: "2022-04-01"
 
 keywords: quantum, Qiskit, runtime, near time compute, terraform
 
 subcollection: quantum-computing
 
 content-type: howto
-completion-time: 10m
 
 ---
 
@@ -19,7 +18,6 @@ completion-time: 10m
 # Set up Terraform for Qiskit Runtime
 {: #setup-terraform}
 {: toc-content-type="howto"}
-{: toc-completion-time="10m"}
 
 If you use Terraform to manage your infrastructure, the [IBM Cloud provider for Terraform]( https://cloud.ibm.com/docs/terraform?topic=terraform-getting-started) supports provisioning Qiskit Runtime service instances. The generic “ibm_resource_instance” resource is used for that. The following parameters have to be specified:
 {: shortdesc}
@@ -58,10 +56,18 @@ After the job completes, you can view the results.
      {: codeblock}
 
 Change the name of the service instance (parameter “name”) and the plan (parameter “plan”) according to your requirements.
-2. 	Create a Terraform execution plan.
-terraform plan
+2. 	Create a Terraform execution plan.  
+    ```terraform
+    terraform plan
+    ```
+    {: codeblock}
+
 3.	Remove the namespace and re-create it with a new name. Note that this process might take a few minutes to complete.
-terraform apply
+    ```terraform
+    terraform apply
+    ```
+    {: codeblock}
+
 4.	Verify on the [Instances page](https://cloud.ibm.com/quantum/instances){: external} that your service instance has been created.
 
 Qiskit Runtime service instances are IAM managed resources. Access can be shaped through terraform using IAM user policies. See [ibm_iam_user_policy](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_user_policy){: external} for more details and examples.

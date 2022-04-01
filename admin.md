@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-14"
+lastupdated: "2022-04-01"
 
 keywords: Qiskit Runtime accounts, Qiskit Runtime users, Qiskit Runtime administration
 
@@ -19,7 +19,6 @@ completion-time: 10m
 # Create a service instance for an organization
 {: #create-configure}
 {: toc-content-type="howto"}
-{: toc-completion-time="10m"}
 
 1. [Create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external} for the organization.
 2. From the [user management page](https://cloud.ibm.com/iam/overview){: external}, invite users to join the account.
