@@ -15,7 +15,7 @@
         "title": "Qiskit Runtime quick start guide",
         "description": "Use this tutorial to create an instance and run your first job.",
         "href": "/docs/quantum-computing?topic=quantum-computing-quickstart"
-      },
+      }
     ],
     "section_learn": {
       "developer": "https://developer.ibm.com/depmodels/quantum-computing/",
@@ -26,6 +26,11 @@
       "view_more": "/docs/overview?topic=overview-whatsnew",
       "tiles": [
         {
+          "date": "12 April 2022",
+          "title": "Release of Beta update",
+          "description": "Update available primitive programs and add Standard plan."
+        },
+        {
           "date": "25 February 2022",
           "title": "Release of Experimental update",
           "description": "Initial release of primitive programs."
@@ -34,7 +39,7 @@
           "date": "31 January 2022",
           "title": "Initial release",
           "description": "Qiskit Runtime is released as an Experimental service."
-        },
+        }
       ]
     }
   }
