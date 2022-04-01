@@ -3,7 +3,7 @@
     "lastupdated": "2022-01-18",
     "introduction": "Learn how to use Qiskit Runtime on IBM Cloud.",
     "section_devtools": {
-      "api": "/apidocs/quantum-computing",
+      "api": "/apidocs/quantum-computing"
     },
     "section_recommended": [
       {
