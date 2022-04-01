@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-31"
+lastupdated: "2022-04-01"
 
 keywords: quantum, Qiskit, runtime, near time compute, standard plan, pay-as-you-go
 
@@ -22,6 +22,9 @@ Learn how to determine cost when using the Standard plan.
 ## Pricing plan overview
 {: #pricing-overview}
 
+The Standard plan charges you per _runtime second_. The following diagram illustrates how job cost is calculated. 
+
+![This diagram shows that everything before the program starts (such as queuing) is free.  The Once the job starts, it costs $1.60 per second.](images/Runtime_Accounting_Diagram.png "Runtime second accounting"){: caption="Figure 1. Runtime second accounting" caption-side="bottom"}
 
 ## Next steps
 {: #next-steps}

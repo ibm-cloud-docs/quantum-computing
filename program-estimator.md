@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-21"
+lastupdated: "2022-04-01"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -79,7 +79,7 @@ The maximum execution time is 18000 seconds (5 hours).
    from qiskit.circuit.library import RealAmplitudes
    from qiskit.quantum_info import SparsePauliOp
 
-   service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
+   service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
 
    estimator_factory = IBMEstimator(service=service, backend="ibmq_qasm_simulator")
 
