@@ -74,7 +74,7 @@ Whether accessing it through {{site.data.keyword.cloud}} or directly through IBM
 {: #faq-plans}
 {: faq}
 
-Currently there are two plans. The Lite plan allows the user to access only Quantum simulators  and is free of charge. Pay-as-you-go access to IBM Quantum hardware is provided with the Standard plan. The Standard plan does not allow access to quantum simulators.
+Currently there are two plans. The Lite plan allows the user to access only quantum simulators  and is free of charge. Pay-as-you-go access to IBM Quantum hardware is provided with the Standard plan. The Standard plan does not allow access to quantum simulators.
 
 ##	What is the cost of the {{site.data.keyword.qiskit_runtime_notm}} Standard plan?
 {: #faq-pricing}
@@ -93,7 +93,7 @@ For this service, one second is one second of execution time when the Qiskit pro
 {: #faq-Lite}
 {: faq}
 
-Yes, but the Lite plan only provides you access to IBM Quantum simulators. To use IBM Quantum systems, you need to upgrade to an IBM pay-as-you-go cloud account and use the Standard plan.
+Yes, but the Lite plan only lets you access quantum simulators. To use IBM Quantum systems, you need to upgrade to an IBM pay-as-you-go cloud account and use the Standard plan.
 
 
 ## Currently two quantum systems are accessible with Qiskit Runtime. Will there be more systems and systems with more qubits available in the future?
