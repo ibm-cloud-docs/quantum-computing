@@ -2,14 +2,13 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-04"
 
 keywords: Qiskit Runtime backend, Qiskit Runtime device, Qiskit Runtime simulator, Qiskit Runtime systems
 
 subcollection: quantum-computing
 
 content-type: howto
-completion-time: 10m
 
 ---
 
@@ -18,7 +17,6 @@ completion-time: 10m
 
 # Choose a backend
 {: #choose-backend}
-{: toc-content-type="howto"}
 
 Before running a job, you can optionally choose a backend (a physical quantum system or a simulator) to run on.  If you do not specify one, the job is sent to the least busy device that you have access to.
 

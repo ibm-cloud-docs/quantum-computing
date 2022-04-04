@@ -2,14 +2,13 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-04"
 
 keywords: activity tracker for Qiskit Runtime, Qiskit Runtime events, Qiskit Runtime security, audit logs for Qiskit Runtime, viewing Qiskit Runtime events, Qiskit Runtime events
 
 subcollection: quantum-computing
 
 content-type: howto
-completion-time: 10m
 
 ---
 
@@ -18,7 +17,6 @@ completion-time: 10m
 
 # Audit events for Qiskit Runtime
 {: #at_events}
-{: toc-content-type="howto"}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with the Qiskit Runtime service in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}

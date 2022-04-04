@@ -56,12 +56,14 @@ After the job completes, you can view the results.
 
 Change the name of the service instance (parameter “name”) and the plan (parameter “plan”) according to your requirements.
 2. Create a Terraform execution plan.  
+
    ```terraform
    terraform plan
    ```
    {: codeblock}
 
 3. Remove the namespace and re-create it with a new name. Note that this process might take a few minutes to complete.
+
    ```terraform
    terraform apply
    ```

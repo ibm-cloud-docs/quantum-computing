@@ -35,7 +35,8 @@ If you already created your {{site.data.keyword.qiskit_runtime_notm}} service in
       - **Standard**: A pay-as-you-go model for accessing IBM quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware. For more information, see the [Qiskit Runtime Standard plan](/docs/quantum-computing?topic=quantum-computing-cost) topic.
 
 If you want to access physical devices as well as simulators, you will need to set up one instance with the Lite plan and one instance with the Standard plan.
-{: note}      
+{: note}
+     
 2. After completing the required information, click **Create**.
 
 ## Install Qiskit packages
