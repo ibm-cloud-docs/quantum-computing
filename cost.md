@@ -26,6 +26,7 @@ The Standard plan charges you per _runtime second_. The following diagram illust
 
 ![This diagram shows that everything before the program starts (such as queuing) is free.  The Once the job starts, it costs $1.60 per second.](images/Runtime_Accounting_Diagram.png "Runtime second accounting"){: caption="Figure 1. Runtime second accounting" caption-side="bottom"}
 
+
 ## How to see what you're being charged
 {: #pricing-bill}
 
