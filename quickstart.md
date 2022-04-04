@@ -47,52 +47,53 @@ If you already created your {{site.data.keyword.qiskit_runtime_notm}} service in
 {: #install-packages}
 {: step}
 
-Install these packages.  They let you create circuits and work with primitive programs via {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. You need to keep these packages updated:
+Install these packages.  They let you create circuits and work with primitive programs via {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. Make sure to check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) to ensure that you always have the latest version:
 
 ```Python
+# Installs the Qiskit meta-package for circuit creation.
 pip install qiskit
 ```
 {: codeblock}
 
 ```Python
+# Installs the Qiskit Runtime package, which is needed to interact with the Qiskit Runtime primitives on IBM Cloud.
 pip install qiskit-ibm-runtime
 ```
 {: codeblock}
-
-## Find your access credentials
-{: #find-credentials}
-{: step}
-
-Next, you will find your account credentials and authenticate with the service.
-
-1. Find and copy your API key. From the [API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key.
-2. Find your Cloud Resource Name (CRN). Open the [Instances page](https://cloud.ibm.com/quantum/instances){: external} and click your instance. In the page that opens, click the icon to copy your CRN.
 
 ## Authenticate to the service
 {: #authentication}
 {: step}
 
-To authenticate to the service, call  `IBMRuntimeService` with your IBM Cloud API key and the CRN or Service name:
+To authenticate to the service, call `IBMRuntimeService` with your IBM Cloud API key and the CRN:
 
 ```python
 from qiskit_ibm_runtime import IBMRuntimeService
 
-IBMRuntimeService(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN or Service instance name>")
-
+IBMRuntimeService(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>")
 ```
 {: codeblock}
 
+### Find your access credentials
+{: #find-credentials}
 
-Instead, you can optionally save your credentials to disk (in the $HOME/.qiskit/qiskit-ibm.json file).  If you don't save your credentials to disk, you have to run the previous command every time you start a new session.
+1. Find and copy your API key. From the [API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key.
+2. Find your Cloud Resource Name (CRN). Open the [Instances page](https://cloud.ibm.com/quantum/instances){: external} and click your instance. In the page that opens, click the icon to copy your CRN.
+
+
+## Optionally save your credentials to disk
+{: #save-to-disk}
+{: step}
+
+Optionally save your credentials to disk (in the `$HOME/.qiskit/qiskit-ibm.json` file). If you don't save your credentials to disk, you have to specify your credentials every time you start a new session.
 
 If you save your credentials to disk, you only need to use `IBMRuntimeService()` in the future to initialize your account.
-{: note}
 
 ```python
 from qiskit_ibm_runtime import IBMRuntimeService
 
 # Save account to disk.
-IBMRuntimeService.save_account(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN or Service instance name>")
+IBMRuntimeService.save_account(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>")
 
 service = IBMRuntimeService()
 ```
@@ -108,7 +109,7 @@ For instructions to use the cloud Quantum Qiskit API, see the [authentication](/
 
 Run the Hello World program to ensure that your environment is set up properly.
 
-If you did not save your credentials to disk, specify `IBMRuntimeService(channel="ibm_cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN or Service instance name>)`
+If you did not save your credentials to disk, specify `IBMRuntimeService(channel="ibm_cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN>)`
 instead of `IBMRuntimeService()` in the following code.
 
 ```Python

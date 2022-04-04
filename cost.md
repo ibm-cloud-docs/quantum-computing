@@ -26,6 +26,10 @@ The Standard plan charges you per _runtime second_. The following diagram illust
 
 ![This diagram shows that everything before the program starts (such as queuing) is free.  The Once the job starts, it costs $1.60 per second.](images/Runtime_Accounting_Diagram.png "Runtime second accounting"){: caption="Figure 1. Runtime second accounting" caption-side="bottom"}
 
+## Time limits on programs
+{: #time-limits}
+
+The maximum execution time for the Sampler primitive is 10000 seconds (2.78 hours). The maximum execution time for the Estimator primitive is 18000 seconds (5 hours).
 
 ## How to see what you're being charged
 {: #pricing-bill}
