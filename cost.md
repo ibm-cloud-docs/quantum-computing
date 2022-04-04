@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-04"
 
 keywords: quantum, Qiskit, runtime, near time compute, standard plan, pay-as-you-go
 
@@ -22,13 +22,16 @@ Learn how to determine cost when using the Standard plan.
 ## Pricing plan overview
 {: #pricing-overview}
 
-The Standard plan charges you per _runtime second_. The following diagram illustrates how job cost is calculated. 
+The Standard plan charges you per _runtime second_. The following diagram illustrates how job cost is calculated.  For this service, one second is one second of execution time when the Qiskit program is running, whether on a quantum processor or accompanying classical cluster.
 
 ![This diagram shows that everything before the program starts (such as queuing) is free.  The Once the job starts, it costs $1.60 per second.](images/Runtime_Accounting_Diagram.png "Runtime second accounting"){: caption="Figure 1. Runtime second accounting" caption-side="bottom"}
 
-## Next steps
-{: #next-steps}
+## How to see what you're being charged
+{: #pricing-bill}
 
-- Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to create an instance and run your first job.
-- Review [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-sampler) for a step-by-step example of using this primitive.
-- Use Qiskit [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.
+You will receive a monthly invoice that provides details about your resource charges. You can check how much you've spent at any time on the [IBM Cloud Billing and usage page](https://cloud.ibm.com/billing).
+
+## Set up spending notifications
+{: #pricing-notifications}
+
+You can set up spending notifications to get notified when your account or a particular service reaches a specific spending threshold that you set. For information, see the [IBM Cloud account type decscription](https://cloud.ibm.com/docs/account?topic=account-accounts). Note that {{site.data.keyword.cloud}} spending notifications trigger only _after_ cost has surpassed the specified limit.
