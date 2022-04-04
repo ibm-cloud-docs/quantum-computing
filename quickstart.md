@@ -28,7 +28,10 @@ This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit
 {: #create-configure}
 {: step}
 
-If you already created your {{site.data.keyword.qiskit_runtime_notm}} service instance, skip to the next step.
+If you already created your {{site.data.keyword.qiskit_runtime_notm}} service instance, skip to the next step.  To determine whether you already have an instance check your (IBM Cloud Instances page)[https://cloud.ibm.com/quantum/instances]. If you have one or more instances listed, you can skip ahead to [Install Qiskit packages](#install-packages).
+
+![This image shows an Instances page with two instances.](images/instances.png "Instances page with two instances"){: caption="Figure 1. Instances page showing multiple instances" caption-side="bottom"}
+
 
 1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
 
