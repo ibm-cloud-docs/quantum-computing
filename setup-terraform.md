@@ -54,7 +54,7 @@ After the job completes, you can view the results.
    ```
    {: codeblock}
 
-Change the name of the service instance (parameter “name”) and the plan (parameter “plan”) according to your requirements.
+   Change the name of the service instance (parameter “name”) and the plan (parameter “plan”) according to your requirements.
 2. Create a Terraform execution plan.  
 
    ```terraform

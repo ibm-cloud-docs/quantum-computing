@@ -31,12 +31,13 @@ This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit
 If you already created your {{site.data.keyword.qiskit_runtime_notm}} service instance, skip to the next step.
 
 1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
+
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
       - **Standard**: A pay-as-you-go model for accessing IBM quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware. For more information, see the [Qiskit Runtime Standard plan](/docs/quantum-computing?topic=quantum-computing-cost) topic.
 
-If you want to access physical devices as well as simulators, you will need to set up one instance with the Lite plan and one instance with the Standard plan.
-{: note}
-     
+      If you want to access physical devices as well as simulators, you will need to set up one instance with the Lite plan and one instance with the Standard plan.
+      {: note}
+
 2. After completing the required information, click **Create**.
 
 ## Install Qiskit packages
