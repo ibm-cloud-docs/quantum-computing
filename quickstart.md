@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-04"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -58,9 +58,7 @@ pip install qiskit-ibm-runtime
 Next, you will find your account credentials and authenticate with the service.
 
 1. Find and copy your API key. From the [API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key.
-2. Find your service instance name or Cloud Resource Name (CRN).
-   - To find your service instance name, open the [Instances page](https://cloud.ibm.com/quantum/instances){: external} and find your instance.  The service instance name is in the **Name** column.
-   - To find your CRN, open the [Instances page](https://cloud.ibm.com/quantum/instances){: external} and click your instance. In the page that opens, click the icon to copy your CRN.
+2. Find your Cloud Resource Name (CRN). Open the [Instances page](https://cloud.ibm.com/quantum/instances){: external} and click your instance. In the page that opens, click the icon to copy your CRN.
 
 ## Authenticate to the service
 {: #authentication}

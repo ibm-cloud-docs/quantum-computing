@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-04"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -59,7 +59,7 @@ Example:
 from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
 from qiskit import QuantumCircuit
 
-service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
+service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
 
 sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
 
@@ -103,7 +103,7 @@ In this example, we specify three circuits, but they have no parameters:
 from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
 from qiskit import QuantumCircuit
 
-service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
+service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
 
 sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
 
@@ -138,7 +138,7 @@ from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import RealAmplitudes
 
-service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
+service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
 
 sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
 
