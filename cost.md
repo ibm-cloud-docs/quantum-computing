@@ -22,7 +22,7 @@ Learn how to determine cost when using the Standard plan.
 ## Pricing plan overview
 {: #pricing-overview}
 
-The Standard plan charges you per _runtime second_. The following diagram illustrates how job cost is calculated.  For this service, one second is one second of execution time when the Qiskit program is running, whether on a quantum processor or accompanying classical cluster.
+The Standard plan charges you per _runtime second_. The following diagram illustrates how job cost is calculated. For this service, one second is one second of execution time when the Qiskit program is running, whether on a quantum processor or accompanying classical cluster.
 
 ![This diagram shows that everything before the program starts (such as queuing) is free.  The Once the job starts, it costs $1.60 per second.](images/Runtime_Accounting_Diagram.png "Runtime second accounting"){: caption="Figure 1. Runtime second accounting" caption-side="bottom"}
 
@@ -36,7 +36,7 @@ The maximum execution time for the Sampler primitive is 10000 seconds (2.78 hour
 
 The time your job takes (and therefore, its cost) depends on how many iterations your call has and how many shots are run in each iteration.  Thus, you can limit your cost by running only as many iterations and shots as you need.
 
-One way to determine how many iterations and shots you need is to first run the job on a simulator via an instance on the Lite plan. 
+One way to determine how many iterations and shots you need is to first run the job on a simulator via an instance on the Lite plan.
 
 ## How to see what you're being charged
 {: #pricing-bill}
