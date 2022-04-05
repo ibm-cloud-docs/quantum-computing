@@ -82,7 +82,7 @@ bell.cx(0, 1)
 bell.measure_all()
 
 # executes a Bell circuit
-with Sampler(circuits=bell, options={ "backend": str | ibmq_qasm_simulator }) as sampler:
+with Sampler(circuits=bell, service=service, options={ "backend": "ibmq_qasm_simulator" }) as sampler:
     result = sampler(circuit_indices=[0], shots=1024)
     print(result)
 ```

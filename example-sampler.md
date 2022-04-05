@@ -89,7 +89,7 @@ As you will see in later examples, if we had specified multiple circuits, such a
 
 ```Python
 # executes a Bell circuit
-with Sampler(circuits=bell, options={ "backend": str | ibmq_qasm_simulator }) as sampler:
+with Sampler(circuits=bell, service=service, options={ "backend": "ibmq_qasm_simulator" }) as sampler:
     result = sampler(circuit_indices=[0], shots=1024)
     print(result)
 ```
@@ -116,7 +116,7 @@ bell.cx(0, 1)
 bell.measure_all()
 
 # executes three Bell circuits
-with Sampler(circuits=[bell]*3, options={ "backend": str | ibmq_qasm_simulator }) as sampler:
+with Sampler(circuits=[bell]*3, service=service, options={ "backend": "ibmq_qasm_simulator" }) as sampler:
     result = sampler(circuit_indices=[0, 1, 2])
     print(result)
 ```
@@ -153,7 +153,7 @@ theta1 = [0, 1, 1, 2, 3, 5]
 theta2 = [1, 2, 3, 4, 5, 6]
 theta3 = [0, 1, 2, 3, 4, 5, 6, 7]
 
-with Sampler(circuits=[pqc, pqc2], options={ "backend": str | ibmq_qasm_simulator }) as sampler:
+with Sampler(circuits=[pqc, pqc2], service=service, options={ "backend": "ibmq_qasm_simulator" }) as sampler:
     result = sampler(circuit_indices=[0, 0, 1], parameter_values=[theta1, theta2, theta3])
     print(result)
 ```
