@@ -13,7 +13,7 @@ subcollection: quantum-computing
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Qiskit Runtime Standard plan
+# Qiskit Runtime Standard plan pricing
 {: #cost}
 
 Learn how to determine cost when using the Standard plan.
@@ -30,6 +30,8 @@ The Standard plan charges you per _runtime second_. The following diagram illust
 {: #time-limits}
 
 The maximum execution time for the Sampler primitive is 10000 seconds (2.78 hours). The maximum execution time for the Estimator primitive is 18000 seconds (5 hours).
+
+Additionally, the system limit on the job execution time is 3 hours for a job running on a simulator and 8 hours for a job running on a physical system.
 
 ## How to limit your cost
 {: #limit-cost}
