@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-04-05"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -60,7 +60,10 @@ The maximum execution time is 18000 seconds (5 hours).
     - **observable_indices**:
         - **Type**: array
         - **Description**: A list of observable indices. It must have the same length as circuit_indices and parameter_values.
-        - **Required**: True      
+        - **Required**: True   
+    - **options**        
+        - **Description**: Additional parameters, such as the backend to use.
+        - **Required**: False   
 - **Returns**:
    - **metadata**:
         - **Type**: array
@@ -75,13 +78,11 @@ The maximum execution time is 18000 seconds (5 hours).
 {: #estimator-example-code}
 
    ```python
-   from qiskit_ibm_runtime import IBMRuntimeService, IBMEstimator
+   from qiskit_ibm_runtime import QiskitRuntimeService, Estimator
    from qiskit.circuit.library import RealAmplitudes
    from qiskit.quantum_info import SparsePauliOp
 
-   service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
-
-   estimator_factory = IBMEstimator(service=service, backend="ibmq_qasm_simulator")
+   service = QiskitRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
 
    psi1 = RealAmplitudes(num_qubits=2, reps=2)
    psi2 = RealAmplitudes(num_qubits=2, reps=3)
@@ -89,9 +90,10 @@ The maximum execution time is 18000 seconds (5 hours).
    H1 = SparsePauliOp.from_list([("II", 1), ("IZ", 2), ("XI", 3)])
    H2 = SparsePauliOp.from_list([("IZ", 1)])
    H3 = SparsePauliOp.from_list([("ZI", 1), ("ZZ", 1)])
-with estimator_factory(
+with Estimator(
     circuits=[psi1, psi2],
     observables=[H1, H2, H3],
+    options={ "backend": str | ibmq_qasm_simulator },
 ) as estimator:
     theta1 = [0, 1, 1, 2, 3, 5]
     theta2 = [0, 1, 1, 2, 3, 5, 8, 13]

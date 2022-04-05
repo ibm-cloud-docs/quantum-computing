@@ -56,12 +56,10 @@ The Sampler takes in:
 Example:
 
 ```Python
-from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
+from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
 from qiskit import QuantumCircuit
 
-service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
-
-sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
+service = QiskitRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
 
 bell = QuantumCircuit(2)
 bell.h(0)
@@ -91,7 +89,7 @@ As you will see in later examples, if we had specified multiple circuits, such a
 
 ```Python
 # executes a Bell circuit
-with sampler_factory(circuits=bell) as sampler:
+with Sampler(circuits=bell, options={ "backend": str | ibmq_qasm_simulator }) as sampler:
     result = sampler(circuit_indices=[0], shots=1024)
     print(result)
 ```
@@ -107,12 +105,10 @@ SamplerResult(quasi_dists=[{'00': 0.4873046875, '11': 0.5126953125}], metadata=[
 In this example, we specify three circuits, but they have no parameters:
 
 ```Python
-from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
+from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
 from qiskit import QuantumCircuit
 
-service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
-
-sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
+service = QiskitRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
 
 bell = QuantumCircuit(2)
 bell.h(0)
@@ -120,7 +116,7 @@ bell.cx(0, 1)
 bell.measure_all()
 
 # executes three Bell circuits
-with sampler_factory(circuits=[bell]*3) as sampler:
+with Sampler(circuits=[bell]*3, options={ "backend": str | ibmq_qasm_simulator }) as sampler:
     result = sampler(circuit_indices=[0, 1, 2])
     print(result)
 ```
@@ -141,13 +137,11 @@ In this example, we run multiple parameterized circuits. When it is run, this li
 In our example, the parameter labelled `theta` is sent to the first circuit, `theta2` is sent to the first circuit, and `theta3` is sent to the second circuit.
 
 ```Python
-from qiskit_ibm_runtime import IBMRuntimeService, IBMSampler
+from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import RealAmplitudes
 
-service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
-
-sampler_factory = IBMSampler(service=service, backend="ibmq_qasm_simulator")
+service = QiskitRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
 
 # parameterized circuit
 pqc = RealAmplitudes(num_qubits=2, reps=2)
@@ -159,7 +153,7 @@ theta1 = [0, 1, 1, 2, 3, 5]
 theta2 = [1, 2, 3, 4, 5, 6]
 theta3 = [0, 1, 2, 3, 4, 5, 6, 7]
 
-with sampler_factory(circuits=[pqc, pqc2]) as sampler:
+with Sampler(circuits=[pqc, pqc2], options={ "backend": str | ibmq_qasm_simulator }) as sampler:
     result = sampler(circuit_indices=[0, 0, 1], parameter_values=[theta1, theta2, theta3])
     print(result)
 ```

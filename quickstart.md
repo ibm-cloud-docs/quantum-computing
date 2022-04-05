@@ -68,7 +68,7 @@ pip install qiskit-ibm-runtime
 To authenticate to the service, call `IBMRuntimeService` with your IBM Cloud API key and the CRN:
 
 ```python
-from qiskit_ibm_runtime import IBMRuntimeService
+from qiskit_ibm_runtime import QiskitRuntimeService
 
 IBMRuntimeService(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>")
 ```
@@ -90,12 +90,12 @@ Optionally save your credentials to disk (in the `$HOME/.qiskit/qiskit-ibm.json`
 If you save your credentials to disk, you can use `IBMRuntimeService()` in the future to initialize your account.
 
 ```python
-from qiskit_ibm_runtime import IBMRuntimeService
+from qiskit_ibm_runtime import QiskitRuntimeService
 
 # Save account to disk.
 IBMRuntimeService.save_account(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>")
 
-service = IBMRuntimeService()
+service = QiskitRuntimeService()
 ```
 {: codeblock}
 
@@ -113,9 +113,9 @@ If you did not save your credentials to disk, specify `IBMRuntimeService(channel
 instead of `IBMRuntimeService()` in the following code.
 
 ```Python
-from qiskit_ibm_runtime import IBMRuntimeService
+from qiskit_ibm_runtime import QiskitRuntimeService
 
-service = IBMRuntimeService()
+service = QiskitRuntimeService()
 program_inputs = {'iterations': 1}
 options = {"backend_name": "ibmq_qasm_simulator"}
 job = service.run(program_id="hello-world",

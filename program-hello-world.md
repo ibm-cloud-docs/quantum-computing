@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-04-05"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -24,9 +24,9 @@ The maximum execution time is 600 seconds (10 minutes).
 Input:
 
 ```Python
-from qiskit_ibm_runtime import IBMRuntimeService
+from qiskit_ibm_runtime import QiskitRuntimeService
 
-service = IBMRuntimeService()
+service = QiskitRuntimeService()
 program_inputs = {'iterations': 1}
 options = {"backend_name": "ibmq_qasm_simulator"}
 job = service.run(program_id="hello-world",

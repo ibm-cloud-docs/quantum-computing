@@ -60,13 +60,11 @@ The Estimator takes in:
 Example:
 
 ```Python
-from qiskit_ibm_runtime import IBMRuntimeService, IBMEstimator
+from qiskit_ibm_runtime import QiskitRuntimeService, Estimator
 from qiskit.circuit.library import RealAmplitudes
 from qiskit.quantum_info import SparsePauliOp
 
-service = IBMRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
-
-estimator_factory = IBMEstimator(service=service, backend="ibmq_qasm_simulator")
+service = QiskitRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
 
 psi1 = RealAmplitudes(num_qubits=2, reps=2)
 psi2 = RealAmplitudes(num_qubits=2, reps=3)
@@ -96,9 +94,10 @@ For example, this line `psi1_H23_result = estimator(circuit_indices=[0, 0], obse
 
 
 ```Python
-with estimator_factory(
+with Estimator(
     circuits=[psi1, psi2],
     observables=[H1, H2, H3],
+    options={ "backend": str | ibmq_qasm_simulator }
 ) as estimator:
     theta1 = [0, 1, 1, 2, 3, 5]
     theta2 = [0, 1, 1, 2, 3, 5, 8, 13]
