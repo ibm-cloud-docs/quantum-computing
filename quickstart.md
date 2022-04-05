@@ -65,12 +65,12 @@ pip install qiskit-ibm-runtime
 {: #authentication}
 {: step}
 
-To authenticate to the service, call `IBMRuntimeService` with your IBM Cloud API key and the CRN:
+To authenticate to the service, call `QiskitRuntimeService` with your IBM Cloud API key and the CRN:
 
 ```python
 from qiskit_ibm_runtime import QiskitRuntimeService
 
-IBMRuntimeService(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>")
+QiskitRuntimeService(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>")
 ```
 {: codeblock}
 
@@ -87,13 +87,13 @@ IBMRuntimeService(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<I
 
 Optionally save your credentials to disk (in the `$HOME/.qiskit/qiskit-ibm.json` file). If you don't save your credentials to disk, you have to specify your credentials every time you start a new session.
 
-If you save your credentials to disk, you can use `IBMRuntimeService()` in the future to initialize your account.
+If you save your credentials to disk, you can use `QiskitRuntimeService()` in the future to initialize your account.
 
 ```python
 from qiskit_ibm_runtime import QiskitRuntimeService
 
 # Save account to disk.
-IBMRuntimeService.save_account(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>")
+QiskitRuntimeService.save_account(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>")
 
 service = QiskitRuntimeService()
 ```
@@ -109,8 +109,8 @@ For instructions to use the cloud Quantum Qiskit API, see the [authentication](/
 
 Run the Hello World program to ensure that your environment is set up properly.
 
-If you did not save your credentials to disk, specify `IBMRuntimeService(channel="ibm_cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN>)`
-instead of `IBMRuntimeService()` in the following code.
+If you did not save your credentials to disk, specify `QiskitRuntimeService(channel="ibm_cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN>)`
+instead of `QiskitRuntimeService()` in the following code.
 
 ```Python
 from qiskit_ibm_runtime import QiskitRuntimeService

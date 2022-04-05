@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-04-05"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -31,7 +31,7 @@ Run your job and note the job ID.
 
 After the job completes, you can view the results.
 
-Immediately after running the job, follow up the {{site.data.keyword.qiskit_runtime_notm}} IBMRuntimeService.run() method by running `job.status()`.
+Immediately after running the job, follow up the {{site.data.keyword.qiskit_runtime_notm}} QiskitRuntimeService.run() method by running `job.status()`.
 
 If you ran other jobs since running the job you want to investigate, run `job = service.job(job_id)` then run `job.status()`.
 
@@ -44,7 +44,7 @@ You can optionally run the [List job details API](/apidocs/quantum-computing#get
 {: #view-results}
 
 
-Follow up the {{site.data.keyword.qiskit_runtime_notm}} IBMRuntimeService.run() method by running `job.result()`.
+Follow up the {{site.data.keyword.qiskit_runtime_notm}} QiskitRuntimeService.run() method by running `job.result()`.
 
 After the job has completed, you can click the job on the Jobs page to view the result.
 

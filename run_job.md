@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-04-05"
 
 keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status
 
@@ -33,7 +33,7 @@ You'll need a circuit to submit to the program. To learn how to create circuits 
 {: step}
 
 
-You will use the Qiskit Runtime IBMRuntimeService.run() method, which takes the following parameters:
+You will use the Qiskit Runtime QiskitRuntimeService.run() method, which takes the following parameters:
 
 - program_id: ID of the program to run.
 - inputs: Program input parameters. These input values are passed to the runtime program and are dependent on the parameters defined for the program.
@@ -53,7 +53,7 @@ To ensure fairness, there is a maximum execution time for each Qiskit Runtime jo
 {: #return-status}
 {: step}
 
-Follow up the Qiskit Runtime IBMRuntimeService.run() method by running a RuntimeJob method. The run() method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program.
+Follow up the Qiskit Runtime QiskitRuntimeService.run() method by running a RuntimeJob method. The run() method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program.
 
 There are several RuntimeJob methods to choose from, including job.status():
 
