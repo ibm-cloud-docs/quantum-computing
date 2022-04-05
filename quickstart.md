@@ -131,7 +131,7 @@ print(result)
 Result:
 
 ```text
-All done!
+Hello world!
 ```
 
 ## Choose a program to run
