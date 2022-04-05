@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-04-05"
 
 keywords: quantum, Qiskit, runtime, near time compute, standard plan, pay-as-you-go
 
@@ -30,6 +30,13 @@ The Standard plan charges you per _runtime second_. The following diagram illust
 {: #time-limits}
 
 The maximum execution time for the Sampler primitive is 10000 seconds (2.78 hours). The maximum execution time for the Estimator primitive is 18000 seconds (5 hours).
+
+## How to limit your cost
+{: #limit-cost}
+
+The time your job takes (and therefore, its cost) depends on how many iterations your call has and how many shots are run in each iteration.  Thus, you can limit your cost by running only as many iterations and shots as you need.
+
+One way to determine how many iterations and shots you need is to first run the job on a simulator via an instance on the Lite plan. 
 
 ## How to see what you're being charged
 {: #pricing-bill}

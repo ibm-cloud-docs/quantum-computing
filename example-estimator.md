@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-04-05"
 
 keywords: quantum, Qiskit, runtime, near time compute, estimator, primitive
 
@@ -44,7 +44,7 @@ The Estimator primitive lets you efficiently calculate and interpret expectation
 {: #start-session-estimator-example}
 {: step}
 
-When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
+With Qiskit runtime primitives, we introduce the concept of a session or a factory that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
 
 ### Specify program inputs
 {: #estimator-inputs}

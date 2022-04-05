@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-04-05"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -47,7 +47,7 @@ If you already created your {{site.data.keyword.qiskit_runtime_notm}} service in
 {: #install-packages}
 {: step}
 
-Install these packages.  They let you create circuits and work with primitive programs via {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. Make sure to check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) to ensure that you always have the latest version:
+Install the following packages to your development environment.  They let you create circuits and work with primitive programs via {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook.](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. Make sure to periodically check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) to ensure that you always have the latest version.
 
 ```Python
 # Installs the Qiskit meta-package for circuit creation.
@@ -77,8 +77,8 @@ IBMRuntimeService(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<I
 ### Find your access credentials
 {: #find-credentials}
 
-1. Find and copy your API key. From the [API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key.
-2. Find your Cloud Resource Name (CRN). Open the [Instances page](https://cloud.ibm.com/quantum/instances){: external} and click your instance. In the page that opens, click the icon to copy your CRN.
+1. Find your API key. From the [API keys page](https://cloud.ibm.com/iam/apikeys){: external}, view or create your API key, then copy it to a secure location so you can use it for authentication.
+2. Find your Cloud Resource Name (CRN). Open the [Instances page](https://cloud.ibm.com/quantum/instances){: external} and click your instance. In the page that opens, click the icon to copy your CRN. Save it to in a secure location so you can use it for authentication.
 
 
 ## Optionally save your credentials to disk
@@ -87,7 +87,7 @@ IBMRuntimeService(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<I
 
 Optionally save your credentials to disk (in the `$HOME/.qiskit/qiskit-ibm.json` file). If you don't save your credentials to disk, you have to specify your credentials every time you start a new session.
 
-If you save your credentials to disk, you only need to use `IBMRuntimeService()` in the future to initialize your account.
+If you save your credentials to disk, you can use `IBMRuntimeService()` in the future to initialize your account.
 
 ```python
 from qiskit_ibm_runtime import IBMRuntimeService
@@ -113,7 +113,6 @@ If you did not save your credentials to disk, specify `IBMRuntimeService(channel
 instead of `IBMRuntimeService()` in the following code.
 
 ```Python
-from qiskit.test.reference_circuits import ReferenceCircuits
 from qiskit_ibm_runtime import IBMRuntimeService
 
 service = IBMRuntimeService()
@@ -142,9 +141,9 @@ All done!
 Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview) to interface with quantum computers. The following programs are publicly available. Choose the appropriate link to continue learning how to run a program.
 
 - **[Sampler](/docs/quantum-computing?topic=quantum-computing-example-sampler)**:  
-       Allows users to more accurately contextualize counts. It takes a user circuit as an input and allows them to generate an error mitigated readout of quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.
+       Allows a user to specify a circuit as an input and then generate an error mitigated readout of quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.
 - **[Estimator](/docs/quantum-computing?topic=quantum-computing-example-estimator)**:  
-       Allows users to efficiently calculate and interpret expectation values of quantum operators required for many algorithms. It allows users to specify a list of circuits and observables and provides the capability to selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input. 
+       Allows users to specify a list of circuits and observables and provides the ability to selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators required for many algorithms. 
 
 ## Next steps
 {: #next-steps}

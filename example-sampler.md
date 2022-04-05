@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-04-05"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -41,7 +41,7 @@ The Sampler primitive lets you more accurately contextualize counts. It takes a 
 {: #start-session-sampler-example}
 {: step}
 
-When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
+With Qiskit runtime primitives, we introduce the concept of a session or a factory that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
 
 ### Specify program inputs
 {: #sampler-inputs}
@@ -81,6 +81,13 @@ Running a job and returning the results are done by writing to and reading from 
 {: step}
 
 Run the job; specifying your previously defined inputs and options. In this simple example, there is only one circuit and it does not have parameters.
+
+In each call, you will use `circuit_indices` to specify which circuit to run and, if applicable,  `parameter_values` specifies which parameter to use with the specified circuit.
+
+In this example, we specified one circuit, `circuits=bell`, and we asked for the result for running the first (and only) circuit: `circuit_indices=[0]`.
+
+As you will see in later examples, if we had specified multiple circuits, such as `circuits=[pqc, pqc2]`, you could specify `circuit_indices=[1]` to run the `pqc2` circuit.
+
 
 ```Python
 # executes a Bell circuit

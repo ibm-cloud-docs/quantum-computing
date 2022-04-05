@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-04-05"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -23,34 +23,34 @@ content-type: faq
 
 
 
-FAQs for {{site.data.keyword.qiskit_runtime_notm}} might include questions about xxx or xxx. To find all FAQs for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/faqs).
+To find all FAQs for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/faqs).
 {: shortdesc}
 
 
 
-## What are {{site.data.keyword.qiskit_runtime_notm}} Services?
+## What is {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #what-are-runtimes}
 {: faq}
 
-{{site.data.keyword.qiskit_runtime_notm}} Services are a runtime environment through the IBM Cloud that provides access to the IBM Quantum processors and simulators. They allow users to run quantum programs, which require specialized quantum hardware coupled closely with traditional  “classical”, computer hardware.
+{{site.data.keyword.qiskit_runtime_notm}} service is a runtime environment through the IBM Cloud that provides access to the IBM Quantum processors and simulators. They allow users to run quantum programs, which require specialized quantum hardware coupled closely with traditional  “classical”, computer hardware.
 
-## Why is IBM launching {{site.data.keyword.qiskit_runtime_notm}} Services?
+## Why is IBM launching {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #faq-why-runtime}
 {: faq}
 
- 	IBM has made quantum computers available through the cloud since 2016. In 2022, IBM integrates with {{site.data.keyword.cloud}} accounts to offer {{site.data.keyword.qiskit_runtime_notm}} API access, allowing for smoother customer experience and the ability to combine {{site.data.keyword.qiskit_runtime_notm}} with other kinds of cloud compute resources for their particular workflow or application.  
+IBM has made quantum computers available through the cloud since 2016. In 2022, IBM integrates with {{site.data.keyword.cloud}} accounts to offer {{site.data.keyword.qiskit_runtime_notm}} API access, allowing for smoother customer experience and the ability to combine {{site.data.keyword.qiskit_runtime_notm}} with other kinds of cloud compute resources for their particular workflow or application.  
 
-## What can {{site.data.keyword.qiskit_runtime_notm}} Services *not* do?
+## What can {{site.data.keyword.qiskit_runtime_notm}} service *not* do?
 {: #faq-runtime-not}
 {: faq}
 
-{{site.data.keyword.qiskit_runtime_notm}} services provides access to IBM Quantum systems. Today’s quantum systems are somewhat constrained in the size of problems they can address due to available scale and quantum volume. Nonetheless, these systems can already be used to solve small problems and to explore this new and exciting field.  
+{{site.data.keyword.qiskit_runtime_notm}} service provides access to IBM Quantum systems. Today’s quantum systems are somewhat constrained in the size of problems they can address due to available scale and quantum volume. Nonetheless, these systems can already be used to solve small problems and to explore this new and exciting field.  
 
-## What skills are required to use {{site.data.keyword.qiskit_runtime_notm}} Services?
+## What skills are required to use the {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #faq-skills}
 {: faq}
 
-{{site.data.keyword.qiskit_runtime_notm}} services are meant to be accessible to anyone comfortable with Python. Use of {{site.data.keyword.qiskit_runtime_notm}} primitives requires expressing a problem as quantum circuits. The Qiskit application modules can facilitate this task for various application domains such as optimization, chemistry, finance, and machine learning. Creation of novel {{site.data.keyword.qiskit_runtime_notm}} programs requires additional knowledge of the Qiskit SDK.
+The {{site.data.keyword.qiskit_runtime_notm}} service is meant to be accessible to anyone comfortable with Python. Use of {{site.data.keyword.qiskit_runtime_notm}} primitives requires expressing a problem as quantum circuits. The Qiskit application modules can facilitate this task for various application domains such as optimization, chemistry, finance, and machine learning. Creation of novel {{site.data.keyword.qiskit_runtime_notm}} programs requires additional knowledge of the Qiskit SDK.
 
 ##	What are the benefits of using Qiskit Runtime?
 {: #faq-benefits}
@@ -64,7 +64,7 @@ FAQs for {{site.data.keyword.qiskit_runtime_notm}} might include questions about
 
 The {{site.data.keyword.qiskit_runtime_notm}} primitives define abstract interfaces for common tasks found in quantum applications. In particular, the Sampler primitive allows a developer to investigate a non-classical quasi-probability distribution produced by the output of a quantum circuit. The Estimator primitive allows a developer to measure quantum observables on the output of quantum circuits.
 
-##	How is the {{site.data.keyword.qiskit_runtime_notm}} services offering different from IBM Quantum Experience?
+##	How is the {{site.data.keyword.qiskit_runtime_notm}} service offering different from IBM Quantum Experience?
 {: #faq-iqx}
 {: faq}
 
