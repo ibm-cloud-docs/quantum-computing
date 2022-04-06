@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-05"
+lastupdated: "2022-04-06"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -57,6 +57,12 @@ The {{site.data.keyword.qiskit_runtime_notm}} service is meant to be accessible 
 {: faq}
 
 {{site.data.keyword.qiskit_runtime_notm}} provide access to industry-leading quantum hardware, closely coupled with IBM Cloud resources to enable optimized computing. Qiskit Runtime enables clients to experiment, learn, and prepare for a quantum-accelerated future.
+
+##	What counties cannot use Qiskit Runtime?
+{: #faq-countries}
+{: faq}
+
+{{site.data.keyword.qiskit_runtime_notm}} (beta) is unavailable from the following countries: Armenia, Azerbaijan, Belarus, Cambodia, China (including Hong Kong), Cuba, Georgia, Iraq, Iran, Kazakhstan, Kyrgyzstan, Laos, Libya, Macao, Moldova, Mongolia, Myanmar (Burma), North Korea, Russia, Sudan, Syria, Tajikistan, Turkmenistan, Ukraine, Uzbekistan, Venezuela, Vietnam, and Yemen.
 
 ##	What are {{site.data.keyword.qiskit_runtime_notm}} primitives?
 {: #faq-primitive}
