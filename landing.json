@@ -1,6 +1,6 @@
 {
-    "title": "Quantum Services docs",
-    "lastupdated": "2022-01-18",
+    "title": "Qiskit Runtime Service docs",
+    "lastupdated": "2022-04-06",
     "introduction": "Learn how to use Qiskit Runtime on IBM Cloud.",
     "section_devtools": {
       "api": "/apidocs/quantum-computing"
