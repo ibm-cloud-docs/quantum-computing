@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-05"
+lastupdated: "2022-03-01"
 
 keywords: quantum, Qiskit, runtime, near time compute, primitive programs
 
@@ -32,8 +32,8 @@ Introducing Sampler and Estimator:
 ## Available primitives
 {: #available-primitives}
 
-* **Sampler**: Allows a user to input a circuit and then generate an error mitigated readout of quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference. 
-* **Estimator**: Allows users to specify a list of circuits and observables and provides the ability to selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators required for many algorithms. 
+* **Sampler**: Allows a user to input a circuit and then generate an error-mitigated readout of quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference. 
+* **Estimator**: Allows a user to specify a list of circuits and observables and provides the ability to selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators required for many algorithms. 
 
 ## How to use primitives
 {: #how-to-use-primitives}
@@ -50,4 +50,4 @@ Primitive program interfaces vary based on the type of task you want to execute 
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to create an instance and run your first job.
 - Use Qiskit [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.
 - View the [Qiskit Runtime API reference](/apidocs/quantum-computing){: external} to understand how to use cURL commands to work with your cloud service instance.
-- Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}
+- Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}.

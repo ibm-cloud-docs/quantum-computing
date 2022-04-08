@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-05"
+lastupdated: "2022-04-08"
 
 keywords: quantum, Qiskit, runtime, near time compute, estimator, primitive
 
@@ -44,7 +44,7 @@ The Estimator primitive lets you efficiently calculate and interpret expectation
 {: #start-session-estimator-example}
 {: step}
 
-With Qiskit runtime primitives, we introduce the concept of a session or a factory that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
+With Qiskit Runtime primitives, we introduce the concept of a session or a factory that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
 
 ### Specify program inputs
 {: #estimator-inputs}
@@ -85,7 +85,7 @@ Running a job and returning the results are done by writing to and reading from 
 {: #estimator-run}
 {: step}
 
-Run the job; specifying your previously defined inputs and options.  Use `circuit_indices`, `observable_indices`, and `parameter_values` to use a specific parameter and observable with the specified circuit.
+run the job, specifying your previously defined inputs and options.  Use `circuit_indices`, `observable_indices`, and `parameter_values` to use a specific parameter and observable with the specified circuit.
 
 For example, this line `psi1_H23_result = estimator(circuit_indices=[0, 0], observable_indices=[1, 2], parameter_values=[theta1]*2)` specifies the following:
 
@@ -129,7 +129,7 @@ with Estimator(
 ```
 {: codeblock}
 
-The results align with the parameter - circuit - observable tuples specified previously.  For example, the first result: `EstimatorResult(values=array([1.55273438]), metadata=[{'variance': 8.897655487060547, 'shots': 1024}])` is the output of the parameter labelled `theta1` and observable `H1` being sent to the first circuit.
+The results align with the parameter - circuit - observable tuples specified previously.  For example, the first result: `EstimatorResult(values=array([1.55273438]), metadata=[{'variance': 8.897655487060547, 'shots': 1024}])` is the output of the parameter labeled `theta1` and observable `H1` being sent to the first circuit.
 
 Output:
 ```text

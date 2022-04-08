@@ -12,7 +12,7 @@
         "href": "/docs/quantum-computing?topic=quantum-computing-overview"
       },
       {
-        "title": "Qiskit Runtime quick start guide",
+        "title": "Qiskit Runtime getting started guide",
         "description": "Use this tutorial to create an instance and run your first job.",
         "href": "/docs/quantum-computing?topic=quantum-computing-quickstart"
       }

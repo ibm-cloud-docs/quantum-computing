@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-05"
+lastupdated: "2021-11-05"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -54,4 +54,4 @@ Alternatively, run the [list job results API](/apidocs/quantum-computing#get-job
 {: #next-steps}
 
 - View the [API reference](/apidocs/quantum-computing/quantum-computing){: external}.
-- Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}
+- Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}.

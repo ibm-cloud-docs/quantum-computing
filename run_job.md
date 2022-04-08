@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-05"
+lastupdated: "2021-11-05"
 
 keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status
 
@@ -18,7 +18,7 @@ content-type: howto
 # Run a job
 {: #run_job}
 
-This tutorial walks you through the steps to use a program to run a job on an IBM quantum computer, and return the job status.
+This tutorial walks you through the steps to use a program to run a job on an IBM Quantum computer, and return the job status.
 {: shortdesc}
 
 

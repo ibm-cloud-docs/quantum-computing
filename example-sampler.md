@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-05"
+lastupdated: "2022-04-08"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -27,21 +27,21 @@ Learn how to set up and use the Sampler primitive program.
 ## Overview
 {: #sampler-overview}
 
-The Sampler primitive lets you more accurately contextualize counts. It takes a user circuit as an input and generates an error mitigated readout of quasiprobabilities. This enables you to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.  
+The Sampler primitive lets you more accurately contextualize counts. It takes a user circuit as an input and generates an error-mitigated readout of quasiprobabilities. This enables you to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.  
 
 
 ## Prepare the environment
 {: #example-sampler-byb}
 {: step}
 
-1. Follow the steps in the [quick start guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your Quantum Service instance ready to use.
+1. Follow the steps in the [getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your Quantum Service instance ready to use.
 2. You'll need at least one circuit to submit to the program. Our examples all have circuits in them, but if you want to submit your own circuit, you can use Qiskit to create one. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
 ## Start a session
 {: #start-session-sampler-example}
 {: step}
 
-With Qiskit runtime primitives, we introduce the concept of a session or a factory that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
+With Qiskit Runtime primitives, we introduce the concept of a session or a factory that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
 
 ### Specify program inputs
 {: #sampler-inputs}
@@ -78,7 +78,7 @@ Running a job and returning the results are done by writing to and reading from 
 {: #sampler-run}
 {: step}
 
-Run the job; specifying your previously defined inputs and options. In this simple example, there is only one circuit and it does not have parameters.
+run the job, specifying your previously defined inputs and options. In this simple example, there is only one circuit and it does not have parameters.
 
 In each call, you will use `circuit_indices` to specify which circuit to run and, if applicable,  `parameter_values` specifies which parameter to use with the specified circuit.
 
@@ -134,7 +134,7 @@ SamplerResult(quasi_dists=[{'00': 0.458984375, '11': 0.541015625}, {'11': 0.4960
 
 In this example, we run multiple parameterized circuits. When it is run, this line `result = sampler(circuit_indices=[0, 0, 1], parameter_values=[theta1, theta2, theta3])` specifies which parameter to send to each circuit.  
 
-In our example, the parameter labelled `theta` is sent to the first circuit, `theta2` is sent to the first circuit, and `theta3` is sent to the second circuit.
+In our example, the parameter labeled `theta` is sent to the first circuit, `theta2` is sent to the first circuit, and `theta3` is sent to the second circuit.
 
 ```Python
 from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
@@ -162,7 +162,7 @@ with Sampler(circuits=[pqc, pqc2], service=service, options={ "backend": "ibmq_q
 ### Result
 {: #example3-result-sampler}
 
-The results align with the parameter - circuit pairs specified previously.  For example, the first result (`{'11': 0.42578125, '00': 0.14453125, '10': 0.0888671875, '01': 0.3408203125}`) is the output of the parameter labelled `theta` being sent to the first circuit.
+The results align with the parameter - circuit pairs specified previously.  For example, the first result (`{'11': 0.42578125, '00': 0.14453125, '10': 0.0888671875, '01': 0.3408203125}`) is the output of the parameter labeled `theta` being sent to the first circuit.
 
 ```text
 SamplerResult(quasi_dists=[{'11': 0.42578125, '00': 0.14453125, '10': 0.0888671875, '01': 0.3408203125}, {'01': 0.025390625, '11': 0.3046875, '00': 0.0615234375, '10': 0.6083984375}, {'11': 0.0224609375, '00': 0.171875, '10': 0.095703125, '01': 0.7099609375}], metadata=[{'header_metadata': None, 'shots': 1024}, {'header_metadata': None, 'shots': 1024}, {'header_metadata': None, 'shots': 1024}])
