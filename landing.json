@@ -1,21 +1,21 @@
 {
-    "title": "Quantum Services docs",
-    "lastupdated": "2022-01-18",
+    "title": "Qiskit Runtime Service docs",
+    "lastupdated": "2022-04-06",
     "introduction": "Learn how to use Qiskit Runtime on IBM Cloud.",
     "section_devtools": {
-      "api": "/apidocs/quantum-computing",
+      "api": "/apidocs/quantum-computing"
     },
     "section_recommended": [
       {
         "title": "Qiskit Runtime overview",
-        "description": "Learn about the Qiskit Runtime architecture and how to use it on IBM Cloud.",
+        "description": "Learn about Qiskit Runtime architecture and how to use it on IBM Cloud.",
         "href": "/docs/quantum-computing?topic=quantum-computing-overview"
       },
       {
-        "title": "Qiskit Runtime quick start guide",
+        "title": "Qiskit Runtime getting started guide",
         "description": "Use this tutorial to create an instance and run your first job.",
         "href": "/docs/quantum-computing?topic=quantum-computing-quickstart"
-      },
+      }
     ],
     "section_learn": {
       "developer": "https://developer.ibm.com/depmodels/quantum-computing/",
@@ -26,6 +26,11 @@
       "view_more": "/docs/overview?topic=overview-whatsnew",
       "tiles": [
         {
+          "date": "12 April 2022",
+          "title": "Release of Beta update",
+          "description": "Update available primitive programs and add Standard plan."
+        },
+        {
           "date": "25 February 2022",
           "title": "Release of Experimental update",
           "description": "Initial release of primitive programs."
@@ -34,7 +39,7 @@
           "date": "31 January 2022",
           "title": "Initial release",
           "description": "Qiskit Runtime is released as an Experimental service."
-        },
+        }
       ]
     }
   }

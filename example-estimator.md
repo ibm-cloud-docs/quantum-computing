@@ -34,39 +34,37 @@ The Estimator primitive lets you efficiently calculate and interpret expectation
 {: #example-estimator-byb}
 {: step}
 
-1. Follow the steps in the [quick start guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your quantum service instance ready to use.
+1. Follow the steps in the [getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your quantum service instance ready to use.
 
-2. You'll need at least one circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
+2. You'll need at least one circuit to submit to the program. Our examples all have circuits in them, but if you want to submit your own circuit, you can use Qiskit to create one. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
-3. Create a list of observables. Observables let you define the properties of the circuit that are relevant to your problem and enable you to efficiently measure their expectation value. For simplicity, you can use the [PauliSumOp class](https://qiskit.org/documentation/stubs/qiskit.opflow.primitive_ops.html#module-qiskit.opflow.primitive_ops) in Qiskit to define them.
+3. Create a list of observables. Observables let you define the properties of the circuit that are relevant to your problem and enable you to efficiently measure their expectation value. For simplicity, you can use the [PauliSumOp class](https://qiskit.org/documentation/stubs/qiskit.opflow.primitive_ops.html#module-qiskit.opflow.primitive_ops){: external} in Qiskit to define them, as illustrated in the example below.
 
 ## Start a session
 {: #start-session-estimator-example}
 {: step}
 
-When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
+With Qiskit Runtime primitives, we introduce the concept of a session or a factory that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
 
 ### Specify program inputs
 {: #estimator-inputs}
 {: step}
 
-The Sampler takes in:
+The Estimator takes in:
 * The **circuits** you want to investigate.
 * The **parameters** input to evaluate the circuits.
 * The **observables** (Hamiltonians) to be evaluated.
-* Optional: The **backend** to run on. If one is not specified, the least busy backend is used.
+* Optional: The **backend** to run on. If one is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a backend](/docs/quantum-computing?topic=quantum-computing-choose-backend).
 * Optional: The instruction to **skip_transpilation**.
 
 Example:
 
 ```Python
-from qiskit_ibm_runtime import IBMRuntimeService, IBMEstimator
+from qiskit_ibm_runtime import QiskitRuntimeService, Estimator
 from qiskit.circuit.library import RealAmplitudes
 from qiskit.quantum_info import SparsePauliOp
 
-service = IBMRuntimeService(auth="cloud", token="<api-token>", instance="<IBM Cloud CRN or Service Name>")
-
-estimator_factory = IBMEstimator(service=service, backend="ibmq_qasm_simulator")
+service = QiskitRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
 
 psi1 = RealAmplitudes(num_qubits=2, reps=2)
 psi2 = RealAmplitudes(num_qubits=2, reps=3)
@@ -87,7 +85,7 @@ Running a job and returning the results are done by writing to and reading from 
 {: #estimator-run}
 {: step}
 
-Run the job; specifying your previously defined inputs and options.  Use `circuit_indices`, `observable_indices`, and `parameter_values` to use a specific parameter and observable with the specified circuit.
+run the job, specifying your previously defined inputs and options.  Use `circuit_indices`, `observable_indices`, and `parameter_values` to use a specific parameter and observable with the specified circuit.
 
 For example, this line `psi1_H23_result = estimator(circuit_indices=[0, 0], observable_indices=[1, 2], parameter_values=[theta1]*2)` specifies the following:
 
@@ -96,9 +94,11 @@ For example, this line `psi1_H23_result = estimator(circuit_indices=[0, 0], obse
 
 
 ```Python
-with estimator_factory(
+with Estimator(
     circuits=[psi1, psi2],
     observables=[H1, H2, H3],
+    service=service, 
+    options={ "backend": "ibmq_qasm_simulator" }
 ) as estimator:
     theta1 = [0, 1, 1, 2, 3, 5]
     theta2 = [0, 1, 1, 2, 3, 5, 8, 13]
@@ -127,8 +127,9 @@ with estimator_factory(
     psi12_H23_result = estimator([0, 1, 0], [0, 1, 2], [theta1, theta2, theta3])
     print(psi12_H23_result)
 ```
+{: codeblock}
 
-The results align with the parameter - circuit - observable tuples specified previously.  For example, the first result: `EstimatorResult(values=array([1.55273438]), metadata=[{'variance': 8.897655487060547, 'shots': 1024}])` is the output of the parameter labelled `theta1` and observable `H1` being sent to the first circuit.
+The results align with the parameter - circuit - observable tuples specified previously.  For example, the first result: `EstimatorResult(values=array([1.55273438]), metadata=[{'variance': 8.897655487060547, 'shots': 1024}])` is the output of the parameter labeled `theta1` and observable `H1` being sent to the first circuit.
 
 Output:
 ```text
