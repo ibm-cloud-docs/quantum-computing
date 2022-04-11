@@ -70,7 +70,7 @@ To authenticate to the service, call `QiskitRuntimeService` with your IBM Cloud 
 ```python
 from qiskit_ibm_runtime import QiskitRuntimeService
 
-QiskitRuntimeService(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>")
+service = QiskitRuntimeService(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>")
 ```
 {: codeblock}
 
