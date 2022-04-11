@@ -55,7 +55,7 @@ toc:
       - program-estimator.md
       - program-hello-world.md
       - cost.md
-      <test>- /quantum-computing-cli-plugin/quantum-computing-cli-plugin-quantum-computing-cli</test>
+      - /quantum-computing-cli-plugin/quantum-computing-cli-plugin-quantum-computing-cli
       - link:
           label: API reference
           href: https://{DomainName}/apidocs/quantum-computing
