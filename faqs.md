@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-06"
+lastupdated: "2022-04-11"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -50,19 +50,13 @@ IBM has made quantum computers available through the cloud since 2016. In 2022, 
 {: #faq-skills}
 {: faq}
 
-The {{site.data.keyword.qiskit_runtime_notm}} service is meant to be accessible to anyone comfortable with Python. Use of {{site.data.keyword.qiskit_runtime_notm}} primitives requires expressing a problem as quantum circuits. The Qiskit application modules can facilitate this task for various application domains such as optimization, chemistry, finance, and machine learning. Creation of novel {{site.data.keyword.qiskit_runtime_notm}} programs requires additional knowledge of the Qiskit SDK.
+The {{site.data.keyword.qiskit_runtime_notm}} service is meant to be accessible to anyone comfortable with Python. Use of {{site.data.keyword.qiskit_runtime_notm}} primitives requires expressing a problem as quantum circuits. The Qiskit application modules can facilitate this task for various application domains such as optimization, chemistry, finance, and machine learning. Creation of novel {{site.data.keyword.qiskit_runtime_notm}} programs requires additional knowledge of the Qiskit backend interface.
 
 ##	What are the benefits of using Qiskit Runtime?
 {: #faq-benefits}
 {: faq}
 
-{{site.data.keyword.qiskit_runtime_notm}} provide access to industry-leading quantum hardware, closely coupled with IBM Cloud resources to enable optimized computing. Qiskit Runtime enables clients to experiment, learn, and prepare for a quantum-accelerated future.
-
-##	What counties cannot use Qiskit Runtime?
-{: #faq-countries}
-{: faq}
-
-{{site.data.keyword.qiskit_runtime_notm}} (beta) is unavailable from the following countries: Armenia, Azerbaijan, Belarus, Cambodia, China (including Hong Kong), Cuba, Georgia, Iraq, Iran, Kazakhstan, Kyrgyzstan, Laos, Libya, Macao, Moldova, Mongolia, Myanmar (Burma), North Korea, Russia, Sudan, Syria, Tajikistan, Turkmenistan, Ukraine, Uzbekistan, Venezuela, Vietnam, and Yemen.
+{{site.data.keyword.qiskit_runtime_notm}} provides access to industry-leading quantum hardware, closely coupled with IBM Cloud resources to enable optimized computing. Qiskit Runtime enables clients to experiment, learn, and prepare for a quantum-accelerated future.
 
 ##	What are {{site.data.keyword.qiskit_runtime_notm}} primitives?
 {: #faq-primitive}
@@ -80,7 +74,7 @@ Whether accessing it through {{site.data.keyword.cloud}} or directly through IBM
 {: #faq-plans}
 {: faq}
 
-Currently there are two plans. The Lite plan allows the user to access only quantum simulators  and is free of charge. Pay-as-you-go access to IBM Quantum hardware is provided with the Standard plan. The Standard plan does not allow access to quantum simulators.
+Currently there are two plans. The Lite plan allows the user to access only quantum simulators  and is free of charge. Pay-as-you-go access to IBM Quantum hardware is provided with the Standard plan. The Standard plan does not allow access to quantum simulators. For more information, see [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost).
 
 ##	What is the cost of the {{site.data.keyword.qiskit_runtime_notm}} Standard plan?
 {: #faq-pricing}
@@ -100,6 +94,20 @@ For this service, one second is one second of execution time when the Qiskit pro
 {: faq}
 
 Yes, but the Lite plan only lets you access quantum simulators. To use IBM Quantum systems, you need to upgrade to an IBM pay-as-you-go cloud account and use the Standard plan.
+
+##	Do I get a monthly bill and what does it look like for {{site.data.keyword.qiskit_runtime_notm}} with {{site.data.keyword.cloud}}?
+{: #faq-bill}
+{: faq}
+
+You will receive a monthly invoice that provides details about your resource charges. You can check how much you've spent at any time on the [IBM Cloud Billing and usage page](https://cloud.ibm.com/billing).
+
+You can set up spending notifications to get notified when your account or a particular service reaches a specific spending threshold that you set. For information, see the [IBM Cloud account **Type** decscription](https://cloud.ibm.com/docs/account?topic=account-accounts). Note that {{site.data.keyword.cloud}} spending notifications trigger only _after_ cost has surpassed the specified limit.
+
+##	Are there countries from which the Qiskit Runtime service is not available?
+{: #faq-countries}
+{: faq}
+
+{{site.data.keyword.qiskit_runtime_notm}} (beta) is unavailable from the following countries (as of April 2022): Armenia, Azerbaijan, Belarus, Cambodia, China (including Hong Kong), Cuba, Georgia, Iraq, Iran, Kazakhstan, Kyrgyzstan, Laos, Libya, Macao, Moldova, Mongolia, Myanmar (Burma), North Korea, Russia, Sudan, Syria, Tajikistan, Turkmenistan, Ukraine, Uzbekistan, Venezuela, Vietnam, and Yemen.
 
 
 ## Currently two quantum systems are accessible with Qiskit Runtime. Will there be more systems and systems with more qubits available in the future?
@@ -160,6 +168,13 @@ We will continue to evaluate the use of quantum hardware and expand the set of p
 {: faq}
 
 The service can be deployed in just minutes and can be used immediately after it appears in the {{site.data.keyword.cloud}} account resource list.
+
+## How can I access IBM Quantum systems after the Qiskit Runtime service is deployed in IBM Cloud?
+{: #faq-access-systems}
+{: faq}
+
+ Make sure to use the Standard plan when deploying a service instance of Qiskit Runtime, as described in the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart).
+
 
 ## What programing languages can I use to program against the primitives?
 {: #faq-languages}
