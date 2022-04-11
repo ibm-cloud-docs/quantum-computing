@@ -14,9 +14,36 @@ subcollection: quantum-computing
 
 {{site.data.keyword.attribute-definition-list}}
 
+# Qiskit Runtime overview
+{: #overview}
+
+Get a glimpse of the quantum computing future with our world-leading {{site.data.keyword.qiskit_runtime_notm}}, a new architecture that delivers significant performance enhancements to program execution. Our physical systems and simulators (cloud-based classical emulators of quantum systems) now enable you to experience frictionless quantum computing; that is, the ability to execute quantum programs in an environment where the classical computer is physically closer to the quantum computer.  Test programs and algorithms, and develop new models with our cloud-based quantum runtime for drastically improved capacity and higher performance today.
+{: shortdesc}
+
+Because this service is in Beta phase, many functions are not yet available and are still under development. This includes some of the functions outlined in the following diagram.
+{: note}
+
+
+![A user is shown running the Qiskit program via APIs that control the Qiskit Runtime Manager.](images/Qiskit_Runtime_architecture.png "Qiskit Runtime architecture diagram"){: caption="Figure 1. Diagram of Qiskit Runtime's architecture" caption-side="bottom"}
+
+
+## Why use Qiskit Runtime?
+{: #why}
+
+Run your experiments with an improved architecture
+:   For variational algorithms such as VQE, the loops between classical and quantum computation will happen with a low-latency connection to the quantum device.
+
+Use primitives to get started quickly
+:   Primitive programs provide a simplified interface for building and customizing applications. You can submit circuits and return shot counts, pre-shot readouts, or observable expectation values. (Some primitives are future functions.)
+
+Upload and iterate
+:   Upload your own Qiskit quantum program and run it with different inputs and configurations each time. (Future functionality)
+
+Receive intermediate results
+:   Receive intermediate results as your execution runs. (Future functionality)
 
 # Overview of primitive programs
-{: #overview}
+{: #primitive-programs}
 
 
 With Qiskit Runtime, we are introducing a new set of interfaces, in the form of primitive programs, to expand on how users run jobs on quantum computers.

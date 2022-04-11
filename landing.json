@@ -8,7 +8,7 @@
     "section_recommended": [
       {
         "title": "Qiskit Runtime overview",
-        "description": "Learn about the Qiskit Runtime architecture and how to use it on IBM Cloud.",
+        "description": "Learn about Qiskit Runtime architecture and how to use it on IBM Cloud.",
         "href": "/docs/quantum-computing?topic=quantum-computing-overview"
       },
       {
