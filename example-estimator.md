@@ -44,7 +44,7 @@ The Estimator primitive lets you efficiently calculate and interpret expectation
 {: #start-session-estimator-example}
 {: step}
 
-With Qiskit Runtime primitives, we introduce the concept of a session or a factory that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
+With Qiskit Runtime primitives, we introduce the concept of a session that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the quantum data center on each iteration.
 
 ### Specify program inputs
 {: #estimator-inputs}
@@ -97,7 +97,7 @@ For example, this line `psi1_H23_result = estimator(circuit_indices=[0, 0], obse
 with Estimator(
     circuits=[psi1, psi2],
     observables=[H1, H2, H3],
-    service=service, 
+    service=service,
     options={ "backend": "ibmq_qasm_simulator" }
 ) as estimator:
     theta1 = [0, 1, 1, 2, 3, 5]
