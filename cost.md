@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-11"
+lastupdated: "2022-04-14"
 
 keywords: quantum, Qiskit, runtime, near time compute, standard plan, pay-as-you-go, lite plan
 
@@ -24,7 +24,7 @@ The Qiskit Runtime service offers these plans for running quantum programs:
 ## Lite plans
 {: #lite-plan-details}
 
-This is a free plan that gives you access to quantm simulators to help you get started with Qiskit Runtime. It does not include access to IBM Quantum systems. The following simulators are included in this plan:
+This is a free plan that gives you access to quantum simulators to help you get started with Qiskit Runtime. It does not include access to IBM Quantum systems. The following simulators are included in this plan:
 
 
 - **ibmq_qasm_simulator**: A general-purpose simulator for simulating quantum circuits both ideally and subject to noise modeling. The simulation method is automatically selected based on the input circuits and parameters.
@@ -76,4 +76,4 @@ You will receive a monthly invoice that provides details about your resource cha
 ## Set up spending notifications
 {: #pricing-notifications}
 
-You can set up spending notifications to get notified when your account or a particular service reaches a specific spending threshold that you set. For information, see the [IBM Cloud account **Type** decscription](https://cloud.ibm.com/docs/account?topic=account-accounts). Note that {{site.data.keyword.cloud}} spending notifications trigger only _after_ cost has surpassed the specified limit.
+You can set up spending notifications to get notified when your account or a particular service reaches a specific spending threshold that you set. For information, see the [IBM Cloud account **Type** description](https://cloud.ibm.com/docs/account?topic=account-accounts). Note that {{site.data.keyword.cloud}} spending notifications trigger only _after_ cost has surpassed the specified limit.
