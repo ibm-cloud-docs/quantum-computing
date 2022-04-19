@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-19"
 
 keywords: quantum, Qiskit, runtime, near time compute, estimator, primitive
 
@@ -97,7 +97,7 @@ For example, this line `psi1_H23_result = estimator(circuit_indices=[0, 0], obse
 with Estimator(
     circuits=[psi1, psi2],
     observables=[H1, H2, H3],
-    service=service, 
+    service=service,
     options={ "backend": "ibmq_qasm_simulator" }
 ) as estimator:
     theta1 = [0, 1, 1, 2, 3, 5]
