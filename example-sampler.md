@@ -27,7 +27,7 @@ Learn how to set up and use the Sampler primitive program.
 ## Overview
 {: #sampler-overview}
 
-The Sampler primitive lets you more accurately contextualize counts. It takes a user circuit as an input and generates an error-mitigated readout of quasiprobabilities. This enables you to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.  
+The Sampler primitive lets you more accurately contextualize counts. It takes a user circuit as an input and generates    -quasiprobabilities. This enables you to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.  
 
 
 ## Prepare the environment
@@ -41,7 +41,7 @@ The Sampler primitive lets you more accurately contextualize counts. It takes a 
 {: #start-session-sampler-example}
 {: step}
 
-With Qiskit Runtime primitives, we introduce the concept of a session that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
+With Qiskit Runtime primitives, we introduce the concept of a session that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the quantum data center on each iteration.
 
 ### Specify program inputs
 {: #sampler-inputs}

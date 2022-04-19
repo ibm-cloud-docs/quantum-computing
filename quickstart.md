@@ -141,7 +141,7 @@ Hello world!
 Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview) to interface with quantum computers. The following programs are publicly available. Choose the appropriate link to continue learning how to run a program.
 
 - **[Sampler](/docs/quantum-computing?topic=quantum-computing-example-sampler)**:  
-       Allows a user to specify a circuit as an input and then generate an error-mitigated readout of quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.
+       Allows a user to specify a circuit as an input and then generate    -quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.
 - **[Estimator](/docs/quantum-computing?topic=quantum-computing-example-estimator)**:  
        Allows a user to specify a list of circuits and observables and provides the ability to selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators required for many algorithms. 
 
