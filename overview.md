@@ -59,7 +59,7 @@ Introducing Sampler and Estimator:
 ## Available primitives
 {: #available-primitives}
 
-* **Sampler**: Allows a user to input a circuit and then generate an error-mitigated readout of quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference. 
+* **Sampler**: Allows a user to input a circuit and then generate quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference. 
 * **Estimator**: Allows a user to specify a list of circuits and observables and provides the ability to selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators required for many algorithms. 
 
 ## How to use primitives
