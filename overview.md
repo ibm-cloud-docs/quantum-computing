@@ -30,16 +30,16 @@ Because this service is in Beta phase, many functions are not yet available and 
 ## Why use Qiskit Runtime?
 {: #why}
 
-**Run your experiments with an improved architecture**
+Run your experiments with an improved architecture
 :   For variational algorithms such as VQE, the loops between classical and quantum computation will happen with a low-latency connection to the quantum device.
 
-**Use primitives to get started quickly**
+Use primitives to get started quickly
 :   Primitive programs provide a simplified interface for building and customizing applications. You can submit circuits and return shot counts, pre-shot readouts, or observable expectation values. (Some primitives are future functions.)
 
-**Upload and iterate**
+Upload and iterate
 :   Upload your own Qiskit quantum program and run it with different inputs and configurations each time. (Future functionality)
 
-**Receive intermediate results**
+Receive intermediate results
 :   Receive intermediate results as your execution runs. (Future functionality)
 
 # Overview of primitive programs
