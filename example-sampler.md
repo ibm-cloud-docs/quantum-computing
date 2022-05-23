@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-21"
+lastupdated: "2022-05-23"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -49,8 +49,10 @@ With Qiskit Runtime primitives, we introduce the concept of a session that allow
 
 The Sampler takes in:
 * The **circuits** you want to investigate.
+* The **service** to use.
+
 * The **parameters** input to evaluate the circuits.
-* Optional: The **backend** to run on. If one is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a backend](/docs/quantum-computing?topic=quantum-computing-choose-backend).
+* Optional: **options**, such as the backend to run on.  If a backend is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a backend](/docs/quantum-computing?topic=quantum-computing-choose-backend).
 * Optional: The instruction to **skip_transpilation**.
 
 Example:
@@ -89,7 +91,7 @@ As you will see in later examples, if we had specified multiple circuits, such a
 
 ```Python
 # executes a Bell circuit
-with Sampler(circuits=bell, service=service, options={ "backend": "ibmq_qasm_simulator" }) as sampler:
+with Sampler(circuits=bell, service=service, options={ "backend": "" }) as sampler:
     result = sampler(circuit_indices=[0], shots=1024)
     print(result)
 ```

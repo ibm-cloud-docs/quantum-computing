@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2020, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-04-04"
 
 keywords: security and compliance for *service_name*, security for *service_name*, compliance for *service_name*,
 
@@ -15,12 +15,10 @@ subcollection: # Your subcollection value
 # Manage security with Qiskit Runtime
 {: #manage-security-compliance-qiskit-runtime}
 
-<!-- Name this file `manage-scc.md` and place it in the "Enhancing security" topic group. -->
 
 Qiskit Runtime is integrated with the {{site.data.keyword.compliance_short}} to help you manage security and compliance for your organization.
 {: shortdesc}
 
-<!--Add the following sections as your service onboards to the Security and Compliance Center. You might have only monitoring or you might also have configuration enforcement. Also, if you only have one of the options, be sure to remove the bulleted list and write the following section as a sentence.-->
 
 With the {{site.data.keyword.compliance_short}}, you can:
 

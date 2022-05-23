@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-18"
+lastupdated: "2022-04-14"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -12,21 +12,19 @@ content-type: faq
 
 ---
 
-<!-- keywords values above are place holders. Actual values should be pulled from the FAQ questions. -->
+
 
 {{site.data.keyword.attribute-definition-list}}
 
-<!-- You must add the faq content type in your attribute definitions AND to each FAQ H2. This will ensure that the FAQ entry is pulled into the FAQ library or chatbots. -->
+
 
 # FAQs for Qiskit Runtime
 {: #qiskit-runtime-faqs}
 
-<!-- The title of your H1 should be FAQs for _service-name_, where _service-name_ is the non-trademarked short version keyref. Include your service name as a search keyword at the top of your Markdown file. See the example keywords above. -->
 
 To find all FAQs for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/faqs).
 {: shortdesc}
 
-<!-- where the first xxx is the long name of your service and the following xxx are pulled from your popular FAQs -->
 
 ## What is {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #what-are-runtimes}

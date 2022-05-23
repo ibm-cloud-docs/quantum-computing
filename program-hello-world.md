@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2021-11-05"
+lastupdated: "2022-05-23"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -28,7 +28,7 @@ from qiskit_ibm_runtime import QiskitRuntimeService
 
 service = QiskitRuntimeService()
 program_inputs = {'iterations': 1}
-options = {"backend_name": "ibmq_qasm_simulator"}
+options = {"backend_name": ""}
 job = service.run(program_id="hello-world",
                   options=options,
                   inputs=program_inputs
