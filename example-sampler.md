@@ -49,8 +49,10 @@ With Qiskit Runtime primitives, we introduce the concept of a session that allow
 
 The Sampler takes in:
 * The **circuits** you want to investigate.
+* The **service** to use.
+
 * The **parameters** input to evaluate the circuits.
-* Optional: The **backend** to run on. If one is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a backend](/docs/quantum-computing?topic=quantum-computing-choose-backend).
+* Optional: **options**, such as the backend to run on.  If a backend is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a backend](/docs/quantum-computing?topic=quantum-computing-choose-backend).
 * Optional: The instruction to **skip_transpilation**.
 
 Example:

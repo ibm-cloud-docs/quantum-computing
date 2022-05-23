@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-19"
+lastupdated: "2022-05-23"
 
 keywords: quantum, Qiskit, runtime, near time compute, estimator, primitive
 
@@ -52,9 +52,9 @@ With Qiskit Runtime primitives, we introduce the concept of a session or a facto
 
 The Estimator takes in:
 * The **circuits** you want to investigate.
-* The **parameters** input to evaluate the circuits.
+* The **service** to use.
 * The **observables** (Hamiltonians) to be evaluated.
-* Optional: The **backend** to run on. If one is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a backend](/docs/quantum-computing?topic=quantum-computing-choose-backend).
+* Optional: **options**, such as the backend to run on. If a backend is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a backend](/docs/quantum-computing?topic=quantum-computing-choose-backend).
 * Optional: The instruction to **skip_transpilation**.
 
 Example:
@@ -74,12 +74,6 @@ H2 = SparsePauliOp.from_list([("IZ", 1)])
 H3 = SparsePauliOp.from_list([("ZI", 1), ("ZZ", 1)])
 ```
 {: codeblock}
-
-## Write to & read from a session
-{: #rw-session-estimator-example}
-{: step}
-
-Running a job and returning the results are done by writing to and reading from the session. After the results are returned, the session is automatically closed.
 
 ### Run the job & print results
 {: #estimator-run}
