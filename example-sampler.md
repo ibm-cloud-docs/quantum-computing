@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-19"
+lastupdated: "2022-05-23"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -89,7 +89,7 @@ As you will see in later examples, if we had specified multiple circuits, such a
 
 ```Python
 # executes a Bell circuit
-with Sampler(circuits=bell, service=service, options={ "backend": "ibmq_qasm_simulator" }) as sampler:
+with Sampler(circuits=bell, service=service, options={ "backend": "" }) as sampler:
     result = sampler(circuit_indices=[0], shots=1024)
     print(result)
 ```
