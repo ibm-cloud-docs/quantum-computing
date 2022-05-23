@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "..\\example-language-translator-data\\language-translator-data"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}

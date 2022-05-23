@@ -16,10 +16,8 @@ subcollection: # Your subcollection value
 {: #manage-security-compliance-qiskit-runtime}
 
 
-
 Qiskit Runtime is integrated with the {{site.data.keyword.compliance_short}} to help you manage security and compliance for your organization.
 {: shortdesc}
-
 
 
 With the {{site.data.keyword.compliance_short}}, you can:

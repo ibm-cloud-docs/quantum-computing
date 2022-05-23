@@ -42,8 +42,7 @@ Upload and iterate
 Receive intermediate results
 :   Receive intermediate results as your execution runs. (Future functionality)
 
-## Overview of primitive programs
-{: #primitive-programs}
+With Qiskit Runtime, we are introducing a new set of interfaces, in the form of primitive programs, to expand on how users run jobs on quantum computers.
 
 
 With Qiskit Runtime, we are introducing a new set of interfaces, in the form of primitive programs, to expand on how users run jobs on quantum computers.

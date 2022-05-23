@@ -16,17 +16,14 @@ subcollection: quantum-computing
 {: #mng-data}
 
 
-
 To ensure that you can securely manage your data when you use Qiskit Runtime, it is important to know exactly what data is stored and encrypted and how you can delete any stored data.
 {: shortdesc}
-
 
 
 ## Protecting your sensitive data in Qiskit Runtime
 {: #data-encryption}
 
 The data that you store in {{site.data.keyword.cloud_notm}} is encrypted at rest by using a randomly generated key.
-
 
 
 
