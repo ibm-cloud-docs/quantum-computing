@@ -2,7 +2,8 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-23"
+lastupdated: "2022-05-25"
+
 
 keywords: quantum, Qiskit, runtime, near time compute, standard plan, pay-as-you-go, lite plan
 
@@ -17,7 +18,7 @@ subcollection: quantum-computing
 {: #cost}
 
 The Qiskit Runtime service offers these plans for running quantum programs:
-- Lite Plan: Simulator access plan
+- Lite Plan: Simulator access plan (free)
 - Standard Plan: Quantum hardware access plan
 {: shortdesc}
 
@@ -76,4 +77,8 @@ You will receive a monthly invoice that provides details about your resource cha
 ## Set up spending notifications
 {: #pricing-notifications}
 
-You can set up spending notifications to get notified when your account or a particular service reaches a specific spending threshold that you set. For information, see the [IBM Cloud account **Type** description](https://cloud.ibm.com/docs/account?topic=account-accounts). Note that {{site.data.keyword.cloud}} spending notifications trigger only _after_ cost has surpassed the specified limit.
+You can set up spending notifications to get notified when your account or a particular service reaches a specific spending threshold that you set. For information, see the [IBM Cloud account **Type** description](https://cloud.ibm.com/docs/account?topic=account-accounts). Note that {{site.data.keyword.cloud}} spending notifications must be used in conjunction with other methods of cost management for several reasons:
+
+  - The notifications trigger only _after_ cost has surpassed the specified limit.
+  - Cost is submitted to the billing system hourly. Thus, there could be a long delay between the job being run and the spending notification being sent.
+  - The billing system can take multiple days to get information to the invoicing system, which could cause further delay in notifications.  For more information about how the IBM Cloud billing system works, see [Setting spending notifications](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-spending).
