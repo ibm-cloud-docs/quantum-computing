@@ -111,7 +111,7 @@ For instructions to use the cloud Quantum Qiskit API, see the [authentication](/
 
 Run the Hello World program to ensure that your environment is set up properly.
 
-If you are using the Standard plan, running Hello World incurs a cost. 
+If you are using the Standard plan, running Hello World incurs a cost. See [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) for cost information.
 {: note}
 
 If you did not save your credentials to disk, specify `QiskitRuntimeService(channel="ibm_cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN>)`

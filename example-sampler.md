@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-23"
+lastupdated: "2022-05-26"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -27,8 +27,10 @@ Learn how to set up and use the Sampler primitive program.
 ## Overview
 {: #sampler-overview}
 
-The Sampler primitive lets you more accurately contextualize counts. It takes a user circuit as an input and generates    -quasiprobabilities. This enables you to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.  
+The Sampler primitive lets you more accurately contextualize counts. It takes a user circuit as an input and generates quasiprobabilities. This enables you to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.  
 
+If you are using the Standard plan, running Sampler incurs a cost. See [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) for cost information.
+{: note}
 
 ## Prepare the environment
 {: #example-sampler-byb}

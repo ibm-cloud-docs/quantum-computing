@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-23"
+lastupdated: "2022-05-26"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -17,7 +17,16 @@ subcollection: quantum-computing
 {: #program-hello-world}
 
 Run the Hello World program to ensure that your environment is set up properly.
+
 {: shortdesc}
+
+## Cost implications
+{: #cost-hello}
+
+If you are using the Standard plan, running Hello World incurs a cost. See [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) for cost information.
+
+## Program details
+{: #details-hello}
 
 The maximum execution time is 600 seconds (10 minutes).
 
