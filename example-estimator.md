@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-23"
+lastupdated: "2022-05-26"
 
 keywords: quantum, Qiskit, runtime, near time compute, estimator, primitive
 
@@ -29,6 +29,8 @@ Learn how to set up and use the Estimator primitive program.
 
 The Estimator primitive lets you efficiently calculate and interpret expectation values of quantum operators required for many algorithms. You can specify a list of circuits and observables, then evaluate expectation values and variances for a given parameter input.  
 
+If you are using the Standard plan, running Estimator incurs a cost. See [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) for cost information.
+{: note}
 
 ## Prepare the environment
 {: #example-estimator-byb}
@@ -44,7 +46,7 @@ The Estimator primitive lets you efficiently calculate and interpret expectation
 {: #start-session-estimator-example}
 {: step}
 
-With Qiskit Runtime primitives, we introduce the concept of a session that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the quantum data center on each iteration.
+With Qiskit Runtime primitives, we introduce the concept of a session or a factory that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration.
 
 ### Specify program inputs
 {: #estimator-inputs}

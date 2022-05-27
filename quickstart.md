@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-23"
+lastupdated: "2022-05-26"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -110,6 +110,9 @@ For instructions to use the cloud Quantum Qiskit API, see the [authentication](/
 {: step}
 
 Run the Hello World program to ensure that your environment is set up properly.
+
+If you are using the Standard plan, running Hello World incurs a cost. See [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) for cost information.
+{: note}
 
 If you did not save your credentials to disk, specify `QiskitRuntimeService(channel="ibm_cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN>)`
 instead of `QiskitRuntimeService()` in the following code.
