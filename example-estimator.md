@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-26"
+lastupdated: "2022-04-19"
 
 keywords: quantum, Qiskit, runtime, near time compute, estimator, primitive
 
@@ -56,7 +56,7 @@ The Estimator takes in:
 * The **circuits** you want to investigate.
 * The **service** to use.
 * The **observables** (Hamiltonians) to be evaluated.
-* Optional: **options**, such as the backend to run on. If a backend is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a backend](/docs/quantum-computing?topic=quantum-computing-choose-backend).
+* Optional: **options**, such as the backend to run on. If a backend is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a system or simulator](/docs/quantum-computing?topic=quantum-computing-choose-backend).
 * Optional: The instruction to **skip_transpilation**.
 
 Example:

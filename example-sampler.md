@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-26"
+lastupdated: "2022-05-23"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -54,7 +54,7 @@ The Sampler takes in:
 * The **service** to use.
 
 * The **parameters** input to evaluate the circuits.
-* Optional: **options**, such as the backend to run on.  If a backend is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a backend](/docs/quantum-computing?topic=quantum-computing-choose-backend).
+* Optional: **options**, such as the backend to run on.  If a backend is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a system or simulator](/docs/quantum-computing?topic=quantum-computing-choose-backend).
 * Optional: The instruction to **skip_transpilation**.
 
 Example:
