@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-06"
+lastupdated: "2022-07-05"
 
 keywords: quantum, Qiskit, runtime, near time compute, estimator, primitive
 
@@ -81,7 +81,7 @@ H3 = SparsePauliOp.from_list([("ZI", 1), ("ZZ", 1)])
 {: #estimator-run}
 {: step}
 
-run the job, specifying your previously defined inputs and options.  Use `circuit_indices`, `observable_indices`, and `parameter_values` to use a specific parameter and observable with the specified circuit.
+Run the job, specifying your previously defined inputs and options.  Use `circuit_indices`, `observable_indices`, and `parameter_values` to use a specific parameter and observable with the specified circuit.
 
 For example, this line `psi1_H23_result = estimator(circuit_indices=[0, 0], observable_indices=[1, 2], parameter_values=[theta1]*2)` specifies the following:
 
