@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-06-06"
+lastupdated: "2022-07-05"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -82,7 +82,7 @@ Running a job and returning the results are done by writing to and reading from 
 {: #sampler-run}
 {: step}
 
-run the job, specifying your previously defined inputs and options. In this simple example, there is only one circuit and it does not have parameters.
+Run the job, specifying your previously defined inputs and options. In this simple example, there is only one circuit and it does not have parameters.
 
 In each call, you will use `circuit_indices` to specify which circuit to run and, if applicable,  `parameter_values` specifies which parameter to use with the specified circuit.
 
