@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-06"
 
 keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status
 
@@ -62,7 +62,7 @@ with Sampler(circuits=bell, service=service, options={ "backend": "" }) as sampl
 {: codeblock}
 
 
-Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create-job){: external}; optionally use [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/create_job){: external}. You must specify the program ID and can optionally supply parameters and the backend to run on. Any other input is ignored. Note the job ID that is returned. You need this information to check the status and view results.
+Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create-job){: external}; optionally use [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/create_job){: external}. You must specify the program ID and can optionally supply parameters and the backend to run on. Note the job ID that is returned. You need this information to check the status and view results.
 
 If you do not specify the backend, the job is sent to the least busy device that you have access to.
 
