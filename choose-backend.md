@@ -2,8 +2,7 @@
 
 copyright:
   years: 2021, 2022
-
-lastupdated: "2022-06-29"
+lastupdated: "2022-07-07"
 
 
 keywords: Qiskit Runtime backend, Qiskit Runtime device, Qiskit Runtime simulator, Qiskit Runtime systems
@@ -27,6 +26,4 @@ The Standard plan only allows access to physical quantum systems, while the Lite
 
 To find your available systems and simulators, view the [Compute resources page](https://cloud.ibm.com/quantum/resources). You must be logged in to see your available compute resources.
 
-
 You can also view your available systems and simulators by using the [List your backends](/apidocs/quantum-computing#list-backends){: external} API directly or in [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Programs/list-backends){: external}.
-

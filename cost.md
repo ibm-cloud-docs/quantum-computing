@@ -2,7 +2,8 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-25"
+lastupdated: "2022-07-07"
+
 
 
 keywords: quantum, Qiskit, runtime, near time compute, standard plan, pay-as-you-go, lite plan

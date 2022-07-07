@@ -4,7 +4,6 @@ copyright:
   years: 2021, 2022
 lastupdated: "2022-07-07"
 
-
 keywords: quantum, Qiskit, runtime, near time compute, estimator, primitive
 
 subcollection: quantum-computing
