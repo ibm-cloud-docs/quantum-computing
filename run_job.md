@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2021-11-05"
+lastupdated: "2022-07-06"
 
 keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status
 
@@ -18,7 +18,7 @@ content-type: howto
 # Run a job
 {: #run_job}
 
-This tutorial walks you through the steps to use a program to run a job on an IBM Quantum computer, and return the job status.
+This tutorial walks you through the steps to use a program to run a job on an IBM Quantum computer and return the job status.
 {: shortdesc}
 
 
@@ -40,11 +40,31 @@ You will use the Qiskit Runtime QiskitRuntimeService.run() method, which takes t
 - options: Runtime options. These options control the execution environment. Currently, the only available option is backend_name, which is optional. If you do not specify a backend, the job is sent to the least busy device that you have access to.
 - result_decoder: Optional class used to decode the job result.
 
-In the following example, we will submit a circuit to the Sampler program.
+In the following example, we will submit a circuit to the Sampler program:
 
-Use the [Run a job API](/apidocs/quantum-computing#create-job){: external}. Optionally, use [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/create_job){: external}. You must specify the program ID and can optionally supply parameters and the device to run on. Any other input is ignored. Note the job ID that is returned. You need this information to check the status and view results.
+```Python
+from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
+from qiskit import QuantumCircuit
 
-If you do not specify the device, the job is sent to the least busy device that you have access to.
+service = QiskitRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
+
+bell = QuantumCircuit(2)
+bell.h(0)
+bell.cx(0, 1)
+bell.measure_all()
+
+# executes a Bell circuit
+with Sampler(circuits=bell, service=service, options={ "backend": "" }) as sampler:
+    result = sampler(circuit_indices=[0], shots=1024)
+    print(result)
+
+```
+{: codeblock}
+
+
+Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create-job){: external}; optionally use [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/create_job){: external}. You must specify the program ID and can optionally supply parameters and the backend to run on. Note the job ID that is returned. You need this information to check the status and view results.
+
+If you do not specify the backend, the job is sent to the least busy device that you have access to.
 
 To ensure fairness, there is a maximum execution time for each Qiskit Runtime job. If a job exceeds this time limit, it is forcibly terminated. The maximum execution time is the smaller of 1) the system limit and 2) the `max_execution_time` defined by the program. The system limit is 3 hours for jobs running on a simulator and 8 hours for jobs running on a physical system.
 {: note}
@@ -57,7 +77,13 @@ Follow up the Qiskit Runtime QiskitRuntimeService.run() method by running a Runt
 
 There are several RuntimeJob methods to choose from, including job.status():
 
-Run the [List job details API](/apidocs/quantum-computing#get-job-details-jid){: external}, manually or by using [Swagger](https://us-east.quantum-computing.test.ibm.com/openapi/#/Jobs/get_job_details_jid){: external} to check the job's status.
+```Python
+job.status()
+```
+{: codeblock}
+
+
+Alternatively, run the [List job details API](/apidocs/quantum-computing#get-job-details-jid){: external}, manually or by using [Swagger](https://us-east.quantum-computing.test.ibm.com/openapi/#/Jobs/get_job_details_jid){: external} to check the job's status.
 
 ## Next steps
 {: #next-steps}
