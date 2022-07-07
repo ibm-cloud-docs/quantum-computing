@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-07"
 
 keywords: Qiskit Runtime sessions, Qiskit Runtime reservations
 
@@ -16,7 +16,7 @@ subcollection: quantum-computing
 # Sessions
 {: #sessions}
 
-When you run a job on a quantum system, it can activate a session on that system, it can run in a session that is already active, or it can run outside of a session.  While a session is active, the scheduler prioritizes the jobs in that session.
+Jobs can run within a session window. The scheduler prioritizes the jobs belonging to that session. Qiskit Runtime primitives transparently take advantage of other session features like shared caching used by the jobs. This helps primitives run as efficiently as possible in the Quantum datacenter and helps users experience a faster turnaround on results for their workload.
 
 ## How to run a job in a session
 {: #run_session}
@@ -34,7 +34,7 @@ When you start a runtime job with the jobs API, by default it does not run in a 
 ## How session jobs fit into the job queue
 {: #queue_session}
 
-For each backend, jobs that are part of an active session take priority.  If there are no jobs that are part of a session, the next job from the regular fair-share queue is run.
+For each backend, the first job in the session waits its turn in the queue normally, but subsequent jobs within the same session take priority over any other queued jobs. If there are no jobs that are part of a session, the next job from the regular fair-share queue is run. Jobs still run one at a time, so jobs belonging to a session may still queue up if you already have one running, but you are not waiting for them to be done before submitting more jobs.
 
 
    A job from the fair-share queue could activate or reactivate a session.
@@ -48,4 +48,4 @@ When a session is started, it is assigned a maximum session timeout value.  This
 
 Additionally, there is an interactive timeout value. If there are no session jobs queued within that window, the session is temporarily de-activated and normal fairshare job selection resumes. If the scheduler gets a job from the session again, the session is re-activated until its maximum timeout value is reached.
 
-When using a Qiskit `with` block, the session is closed when the block is exited.
+When using primitives with their context managers as described above, the session is closed automatically when the block is exited.
