@@ -46,7 +46,7 @@ If you are using the Standard plan, running Estimator incurs a cost. See [Qiskit
 {: #start-session-estimator-example}
 {: step}
 
-With Qiskit Runtime primitives, we introduce the concept of a session that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the Quantum Datacenter on each iteration. See the  [sessions](/docs/quantum-computing?topic=quantum-computing-sessions) topic for more information.
+With Qiskit Runtime primitives, we introduce the concept of a session that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the quantum data center on each iteration. See the [sessions](/docs/quantum-computing?topic=quantum-computing-sessions) topic for more information.
 
 ### Specify program inputs
 {: #estimator-inputs}

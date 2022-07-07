@@ -16,7 +16,7 @@ subcollection: quantum-computing
 # Sessions
 {: #sessions}
 
-Jobs can run within a session window. The scheduler prioritizes the jobs belonging to that session. Qiskit Runtime primitives transparently take advantage of other session features like shared caching used by the jobs. This helps primitives run as efficiently as possible in the Quantum datacenter and helps users experience a faster turnaround on results for their workload.
+Jobs can run within a session window. The scheduler prioritizes the jobs belonging to that session. Qiskit Runtime primitives transparently take advantage of other session features like shared caching used by the jobs. This helps primitives run as efficiently as possible in the quantum data center and helps users experience a faster turnaround on results for their workload.
 
 ## How to run a job in a session
 {: #run_session}
