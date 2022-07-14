@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-26"
+lastupdated: "2022-07-14"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -45,21 +45,24 @@ If you already created your {{site.data.keyword.qiskit_runtime_notm}} service in
 
 2. After completing the required information, click **Create**.
 
-## Install Qiskit packages
+## Install or update Qiskit packages
 {: #install-packages}
 {: step}
 
-Install the following packages to your development environment.  They let you create circuits and work with primitive programs via {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. Make sure to periodically check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) to ensure that you always have the latest version.
+Install or update the following packages in your development environment.  They let you create circuits and work with primitive programs via {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. Periodically check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) (or just rerun these commands) so that you always have the latest version.
+
+Be sure to run these commands even if you already have the packages installed, to verify that you have the latest versions.
+{: note}
 
 ```Python
-# Installs the Qiskit meta-package for circuit creation.
-pip install qiskit
+# Installs the latest version of the Qiskit meta-package for circuit creation.
+pip install qiskit -U
 ```
 {: codeblock}
 
 ```Python
-# Installs the Qiskit Runtime package, which is needed to interact with the Qiskit Runtime primitives on IBM Cloud.
-pip install qiskit-ibm-runtime
+# Installs the latest version of the Qiskit Runtime package, which is needed to interact with the Qiskit Runtime primitives on IBM Cloud.
+pip install qiskit-ibm-runtime -U
 ```
 {: codeblock}
 
