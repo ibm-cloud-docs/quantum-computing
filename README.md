@@ -16,9 +16,9 @@ In order to appear in the table of contents, add all new files to TOC.yaml, foll
 
 ## How to add tagged content
 
-We can use tags to control what information shows up where.  In general (and in these instructions), we use it to work with draft content that we don't want to go live, even if other updates go live. 
+We can use tags to control what information shows up where.  In general (and in these instructions), we use it to add draft content that we don't want to go live, even when other updates go live. 
 
-1. The tag needs to be added to the feature-flags.json file.  "Location" specifies where the output goes. For example: 
+1. The tag needs to be added to the feature-flags.json file.  "Location" specifies where the output goes. In this example, the content will show up in the test environment but will NOT show up in the production environment. For example: 
 ```md
    {
         "name": "migration",
