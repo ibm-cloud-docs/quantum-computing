@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-14"
+lastupdated: "2022-07-20"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -22,8 +22,10 @@ content-type: faq
 {: #qiskit-runtime-faqs}
 
 
+
 To find all FAQs for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/faqs).
 {: shortdesc}
+
 
 
 ## What is {{site.data.keyword.qiskit_runtime_notm}} service?

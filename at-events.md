@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-07-20"
 
 keywords: activity tracker for Qiskit Runtime, Qiskit Runtime events, Qiskit Runtime security, audit logs for Qiskit Runtime, viewing Qiskit Runtime events, Qiskit Runtime events
 
