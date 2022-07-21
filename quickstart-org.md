@@ -15,7 +15,7 @@ completion-time: 25m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Getting started for organizations
+# Set up Qiskit Runtime in an Organization
 {: #quickstart-org}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="25m"}
@@ -23,12 +23,16 @@ completion-time: 25m
 When working in an organization where several individuals might work on several projects, the governance of consuming Qiskit Runtime can become a topic.
 Access management can be used to enable collaboration of users working on the same project, as well as to restrict visibility of users and projects that should be isolated from each other.
 Managing access becomes particularly relevant when paid Qiskit Runtime resources (i.e. Qiskit Runtime service instances with the non-free Standard plan) are shared.
-
-IBM Cloud provides various ways to implement such mechanism -- this tutorial is one way to achieve these objectives, but may not be the only way.
 {: shortdesc}
 
-## Involved Personas
-{: #personas}
+## overview
+{: #overview-org}
+{: step}
+
+IBM Cloud provides various ways to implement such mechanism -- this tutorial is one way to achieve these objectives, but may not be the only way.
+
+### Involved Personas
+{: #personas-org}
 {: step}
 
 The are several main personas used in this tutorial:
@@ -43,7 +47,7 @@ Other terms used in this tutorial are:
 * *Service Instance*: a service instance is used to access Cloud functionality, in our case quantum computing on real devices or simulators. It is defined through the catalog. You can define several service instances based on the same or different plans (offering access to different quantum computing backends). See the [Qiskit Runtime documentation](https://cloud.ibm.com/docs/quantum-computing?topic=quantum-computing-quickstart){: external} for more details.
 * *Project*: a grouping unit that is used to enable users to work on the same resources. In that case, users are seen as part of the same project. **Note:** the project is not related to the "project" notion of the IBM Quantum Platform. See the [according section](##nested-project-structures) for more information on this topic.
 
-## Planning Steps
+## Planning
 {: #planning-org}
 {: step}
 
@@ -61,6 +65,21 @@ The planning process includes decisions on the following aspects:
 * should users be able to delete jobs?
   * Keeping jobs in service instances gives more traceability to how billing cost was induced.
 
+### Resource Groups
+{: #rsc-grp-org}
+
+Instead of access groups directly referencing Qiskit Runtime service instances, service instances can be organized in resource groups.
+Service instances can only be created in existing resource groups, and access groups can also only refer to existing resource groups -- therefore resource groups need to be created first.
+To do so, go to [Manage -- Account -- Resource groups (in Account resources)](https://cloud.ibm.com/account/resource-groups){: external} and hit Create.
+
+It might appear more convenient to put all service instances of a certain resource group in scope of an access group.
+However, note that a service instance can only belong to one resource group and the assignment of instances into resource groups cannot be changed anymore.
+This also means that the resource group assignment can only happen at service instance creation.
+Therefore, resource groups may not provide enough flexibility if assignments of service instances to resource groups might need to change.
+
+Only reason for using resource groups is a clear separation of service instances, and access groups will be simpler.
+Also, if additional service instances are created in a resource group, all users having access to the resource group will see them automatically without updating access groups.  
+
 ## Implementation
 {: #implementation-org}
 {: step}
@@ -70,7 +89,7 @@ Note that these steps are generic to IBM Cloud and not specific to Qiskit Runtim
 
 As an example, this tutorial uses two projects, one called `ml` and the other one called `finance`.
 
-## IAM Settings
+### IAM Settings
 {: #iam-org}
 {: step}
 
@@ -81,12 +100,7 @@ API keys are needed by users as part of this tutorial approach, this setting sho
 
 ![IAM settings](images/org-guide-iam-settings.png "User list visibility"){: caption="Figure 1. IAM settings page with User list visibility enabled" caption-side="bottom"}
 
-## Using App ID as ID Provider
-{: #appid-org}
-{: step}
-
-
-## Create Qiskit Runtime Service Instances
+### Create Qiskit Runtime Service Instances
 {: #create-instance-org}
 {: step}
 
@@ -95,7 +109,7 @@ Unless you have created Qiskit Runtime service instances already, you can do so 
 
 The name of the service instance (e.g. QR-ml) will be used later in a reference from the access group.
 
-## Create Access Groups for Projects
+### Create Access Groups for Projects
 {: #create-group-org}
 {: step}
 
@@ -201,22 +215,6 @@ This audit log contains the fields `initiator_authnName` and `initiator_authnId`
 
 
 To capture App ID events, open your App ID instance, open Manage Authentication -- Authentication settings and enable Runtime Activity.
-
-### Resource Groups
-{: #rsc-grp-org}
-
-
-Instead of access groups directly referencing Qiskit Runtime service instances, service instances can be organized in resource groups.
-Service instances can only be created in existing resource groups, and access groups can also only refer to existing resource groups -- therefore resource groups need to be created first.
-To do so, go to [Manage -- Account -- Resource groups (in Account resources)](https://cloud.ibm.com/account/resource-groups){: external} and hit Create.
-
-It might appear more convenient to put all service instances of a certain resource group in scope of an access group.
-However, note that a service instance can only belong to one resource group and the assignment of instances into resource groups cannot be changed anymore.
-This also means that the resource group assignment can only happen at service instance creation.
-Therefore, resource groups may not provide enough flexibility if assignments of service instances to resource groups might need to change.
-
-Only reason for using resource groups is a clear separation of service instances, and access groups will be simpler.
-Also, if additional service instances are created in a resource group, all users having access to the resource group will see them automatically without updating access groups.
 
 ### More Fine Grained Roles
 {: #more-roles-org}
