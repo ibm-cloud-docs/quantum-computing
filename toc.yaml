@@ -21,6 +21,12 @@ toc:
       id: learn
       topics:
       - quickstart.md
+      - topicgroup:
+        label: Getting started in an organization
+        topics:
+        - quickstart-org.md
+        - cloud-provider-org.md
+        - appid-org.md
       - overview.md
       
       - topic: release-notes.md
