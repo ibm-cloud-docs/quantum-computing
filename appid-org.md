@@ -46,13 +46,13 @@ We use the Cloud Directory capability to add users to the ID provider.
 Refer to the [App ID documentation](https://cloud.ibm.com/docs/appid){: external} for instructions how to integrate other ID providers into App ID.
 
 Open Manage Authentication and deselect the Facebook and Google login options if you do not need them.
-Open Manage Authentication -- Cloud Directory -- Settings to adjust whether user logins should be based on username or password.
-Open Manage Authentication -- Cloud Directory -- Password Policies to define the password strength if desired.
+Open Manage Authentication → Cloud Directory → Settings to adjust whether user logins should be based on username or password.
+Open Manage Authentication → Cloud Directory → Password Policies to define the password strength if desired.
 
 You can customize the appearance of the login page through the Login Customization page on the navigation bar.
 
 As the next step, we integrated the App ID instance as ID provider to the administrator's account.
-To do this, go to [Manage -- Acces (IAM) -- Identity Providers](https://cloud.ibm.com/iam/identity-providers){: external}.
+To do this, go to [Manage → Acces (IAM) → Identity Providers](https://cloud.ibm.com/iam/identity-providers){: external}.
 Type should be set to IBM Cloud App ID, then hit Create.
 
 Specify a name and select the App ID instance from the drop down list.
@@ -99,7 +99,7 @@ However, this substring match behaviour can be useful when a user attribute cont
 
 When using App ID as ID provider with the Cloud directory, you can create users in the Cloud UI.
 Open the App ID instance page, e.g. from the [resource list](https://cloud.ibm.com/resources){: external}.
-Select Manage Authentication -- Cloud Directory -- Users, and hit Create User.
+Select Manage Authentication → Cloud Directory → Users, and hit Create User.
 Enter the user details to add users.
 
 ## Managing Access through the IDP Administrator: Create or Modify Users' Assignments to Projects
@@ -108,7 +108,7 @@ Enter the user details to add users.
 
 If the setup is to allow IDP administrator to define user/project assignments, you can define project values in the user's attributes.
 Open the App ID instance page, e.g. from the [resource list](https://cloud.ibm.com/resources){: external}.
-Select Manage Authentication -- Cloud Directory -- Users, and open the user by clicking on it.
+Select Manage Authentication → Cloud Directory → Users, and open the user by clicking on it.
 Scroll down to the Custom Attributes, and click on Edit.
 Enter a key value pair that can will checked by the dynamic rules of the access groups.
 In our example, add
@@ -132,9 +132,9 @@ Note: The check of access groups against this attribute is done on every login, 
 {: step}
 
 ID provider users login through the ID provider URL that has been presented previously to the administrator setting up the ID provider to the IBM Cloud account.
-The administrator can always go to [Manage -- Access (IAM) -- Identity providers](https://cloud.ibm.com/iam/identity-providers){: external} to look up the ID provider URL.
+The administrator can always go to [Manage → Access (IAM) → Identity providers](https://cloud.ibm.com/iam/identity-providers){: external} to look up the ID provider URL.
 
-To work with Qiskit Runtime, users can create an API key ([Manage -- Access (IAM) -- API keys](https://cloud.ibm.com/iam/apikeys){: external}) and use it for service instances they have got access to.
+To work with Qiskit Runtime, users can create an API key ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}) and use it for service instances they have got access to.
 
 ## Next steps
 {: #next-steps-org}

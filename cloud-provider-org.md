@@ -28,7 +28,7 @@ This tutorial describes how to work with users and gives instructions for users 
 {: step}
 
 When users use their own IBM Cloud accounts to access project resources, users can be invited.
-Go to [Manage -- Access (IAM)](https://cloud.ibm.com/iam/overview){: external} and click on [Invite users](https://cloud.ibm.com/iam/users/invite_users){: external}.
+Go to [Manage → Access (IAM)](https://cloud.ibm.com/iam/overview){: external} and click on [Invite users](https://cloud.ibm.com/iam/users/invite_users){: external}.
 Enter the email addresses of users to be added.
 Select the access group or groups of the projects that the additional users should be part of.
 This assignment can be changed or extended later on.
@@ -46,7 +46,7 @@ You can mix both kinds of users and use the steps in this section.
 
 To change access of users and add them to projects, refer to the Changing Access of Users section.
 
-Go to [Manage -- Access (IAM) -- Users](https://cloud.ibm.com/iam/users){: external} and click on the user.
+Go to [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external} and click on the user.
 
 ![Change User Access](images/org-guide-manage-user.png "Change User Access"){: caption="Figure 11. Change User Access" caption-side="bottom"}
 
@@ -59,7 +59,7 @@ Add additional access groups with Assign group, or remove the user from the acce
 
 Users having an IBM Cloud account can login through the [IBM Cloud portal](https://cloud.ibm.com/){: external}.
 
-To work with Qiskit Runtime, users can create an API key ([Manage -- Access (IAM) -- API keys](https://cloud.ibm.com/iam/apikeys){: external}) and use it for service instances they have got access to.
+To work with Qiskit Runtime, users can create an API key ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}) and use it for service instances they have got access to.
 
 ## Next steps
 {: #next-steps-org}
