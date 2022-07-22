@@ -20,15 +20,13 @@ completion-time: 25m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="25m"}
 
-When working in an organization where several individuals might work on several projects, the governance of consuming Qiskit Runtime can become a topic.
-Access management can be used to enable collaboration of users working on the same project, as well as to restrict visibility of users and projects that should be isolated from each other.
-Managing access becomes particularly relevant when paid Qiskit Runtime resources (i.e. Qiskit Runtime service instances with the non-free Standard plan) are shared.
+When working in an organization where individuals might work on several projects, the governance of consuming Qiskit Runtime can seem complex. However access management can be used to easily enable collaboration by users who work on the same project, as well as to restrict visibility of users and projects that should be isolated from each other. Managing access becomes particularly relevant when sharing Qiskit Runtime resources that are not free; that is, Qiskit Runtime service instances that use the Standard plan.
 {: shortdesc}
 
 ## overview
 {: #overview-org}
 
-IBM Cloud provides various ways to implement these mechanisms. This tutorial is one way to achieve the objectives, but may not be the only way. Most of the steps in this tutorial are generic to IBM Cloud and not specific to Qiskit Runtime, except the custom role details.
+IBM Cloud provides various ways to implement these mechanisms described in this tutorial.  There might be several ways to achieve these objectives. Additionally, most of the steps in this tutorial are generic to IBM Cloud and not specific to Qiskit Runtime, except the custom role details.
 {: note}
 
 ### Involved Personas
@@ -36,20 +34,20 @@ IBM Cloud provides various ways to implement these mechanisms. This tutorial is 
 
 The are several main personas used in this tutorial:
 
-* **User**: a user who gets access to Qiskit Runtime resources (service instances) and can potentially collaborate with other users on these resources. Users will only be able to access instances they have been given visibility to. Also, they will not be able to create or delete resources.
-* **Cloud administrator**: an owner of an IBM Cloud account owning Qiskit Runtime resources and manages access of other users to these resources. As resource owner, the administrator will also be charged for paid resources.
-* **IDP administrator**: an administrator who defines identities and their attributes in an identity provider (IDP).
+* **User**: Someone who gets access to Qiskit Runtime resources (_service instances_) and can potentially collaborate with other users on these resources. Users' access is controlled by an administrator and they cannot create or delete service instances.
+* **Cloud administrator**: An IBM Cloud account owner who owns Qiskit Runtime resources and manages which users can access these resources. As resource owner, the administrator is charged for any paid resource use.
+* **IDP administrator**: An administrator who defines identities and their attributes in an identity provider (IDP).
 
 ### Terminology
 {: #terms-org}
 
 This tutorial uses the following terms in this tutorial:
 
-* *Resource*: a generic Cloud term that refers to an object that can be managed through the Cloud UI, CLI or API. In our example of Qiskit Runtime, it refers to a service instance of Qiskit Runtime.
-* *Service Instance*: a service instance is used to access Cloud functionality, in our case quantum computing on real devices or simulators. It is defined through the catalog. You can define several service instances based on the same or different plans (offering access to different quantum computing backends). See the [Qiskit Runtime documentation](https://cloud.ibm.com/docs/quantum-computing?topic=quantum-computing-quickstart){: external} for more details.
-* *Project*: a grouping unit that is used to enable users to work on the same resources. In that case, users are seen as part of the same project. This tutorial uses two projects; `ml` and `finance`.
+* *Resource*: A generic Cloud term that refers to an object that can be managed through the Cloud user interface, CLI, or API. For this tutorial, a _resource_ is a service instance of Qiskit Runtime.
+* *Service instance*: A service instance is used to access Cloud functionality, specifically, quantum computing on real devices or simulators. It is defined through the catalog. You can define several service instances based on the same or different plans, which can offer access to different quantum computing backends See the [Qiskit Runtime documentation](https://cloud.ibm.com/docs/quantum-computing?topic=quantum-computing-quickstart){: external} for more details.
+* *Project*: A grouping unit that enables users to work on the same resources. In that case, users are seen as part of the same project. This tutorial uses two projects; `ml` and `finance`. See [Nested project structures](#nest-org) for more information.
 
-   The project is not related to the "project" concept in IBM Quantum Platform. See the [according section](##nested-project-structures) for more information on this topic.
+   This project is not related to the "project" concept in IBM Quantum Platform.
    {: note}
 
 ## Plan your setup
@@ -114,7 +112,7 @@ Follow these steps to set up an access group:
    1. In [Manage → IAM → Roles](https://cloud.ibm.com/iam/roles){: external}, click  `Create`.
    2. Enter a name, ID, description, and select `Qiskit Runtime` from the service as shown in the image:
       ![This image shows a custom role being created.](images/org-guide-create-custom-role.png "Using the Configure your resource panel to create a custom role"){: caption="Figure 4. Creating a custom role" caption-side="bottom"}
-   3. Select the following roles:
+   3. Select the following roles, then click **Create**.
       * quantum-computing.device.read
       * quantum-computing.job.cancel
       * quantum-computing.job.create
@@ -127,7 +125,10 @@ Follow these steps to set up an access group:
       * Only select quantum-computing.job.delete if you want users to delete jobs.
 
       ![Defining actions for the custom role](images/org-guide-custom-role-actions.png "Defining actions for the custom role"){: caption="Figure 5. Define actions for the custom role" caption-side="bottom"}
-   4. click **Create**.
+
+      You can optionally define more fine grained roles by following [these instructions](#more-roles-org).
+      {: note}
+
 2. Create an access group.
    1. Navigate to [Manage → IAM → Access groups](https://cloud.ibm.com/iam/groups){: external} and click **Create**.
    2. Enter a name, like `project-ml`, and a description.
@@ -207,27 +208,24 @@ To capture App ID events, open your App ID instance, open **Manage Authenticatio
 The actions in the custom roles can be used for more fine grained access control.
 For example, some users might need full access to work on service instances while others might only need read access to service instances, programs, and jobs.
 
-To achieve that, define two different custom roles; remove all cancel, delete, and update roles from the reader custom role, and include all actions in the custom role for the writer. Next, add them to two different access groups accordingly.
+To achieve that, define two different custom roles: remove all cancel, delete, and update roles from the reader custom role, and include all actions in the custom role for the writer. Next, add them to two different access groups accordingly.
 
 When using dynamic rules, that is, when the IDP administrator manages access through custom IDP user attributes, do not use IDP custom user attributes that are substrings of each other.  For instance, don't use `ml` and `ml-reader`, as the string comparison of `ml` would also accept `ml-reader`. Use `ml-reader` and `ml-writer` to avoid this conflict.
 
-### Other Cloud Resources
+### Other Cloud resources
 {: #other-cloud-rsc-org}
 
-The pattern used in this tutorial can be used to manage access to other Cloud resources as well.
-Include the appropriate permissions to the access groups of the relevant projetcs.
+The steps used in this tutorial can be used to manage access to other Cloud resources as well.
+Include the appropriate permissions to the access groups of the relevant projects.
 
-### Nested Project Structures
+### Nested project structures
 {: #nest-org}
 
-In this tutorial, the mapping of users to projects and service instances was kept simple.
-Through associating several users with access groups and referencing service instances from several access groups, any arbitrary mapping can be implemented.
-This can accomodate a hierarchical structure, e.g. align to how users might be assigned to the Hub/Group/Project access structure in the IBM Quantum Platform;
-e.g., a group could be an access group that is assigned to all service instances of the group's projects.
-Users who should get access to all group's projects would then only have to be added to the group's access group.
+In this tutorial, the mapping of users to projects and service instances was kept simple. However, by associating several users with access groups and referencing service instances from several access groups, any arbitrary mapping can be implemented.
 
-### Consistent and Repeatable Deployment of Configuration
+This method can accommodate a hierarchical structure, that is, it can align to how users might be assigned to the Hub/Group/Project access structure in the IBM Quantum Platform.  For example, a _group_ could be an access group that is assigned to all service instances of the group's projects. Users who should get access to all of the group's projects would then only have to be added to the group's access group.
+
+### Consistent and repeatable deployment of the configuration
 {: #repeat-org}
 
-The steps of this tutorial can be automated for a consistent and repeatable management of users, projects, and the mapping between those.
-Please refer to the [Terraform IBM Cloud Provider documentation (external link)](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external} for more details on template contents.
+The steps of this tutorial can be automated for consistent and repeatable management of users, projects, and the mapping between those. Refer to the [Terraform IBM Cloud Provider documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external} for templates.
