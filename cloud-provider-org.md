@@ -20,46 +20,38 @@ completion-time: 25m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="25m"}
 
-This tutorial describes how to work with users and gives instructions for users to access the environment.  This step is only relevant if you want to enable users who have IBM Cloud accounts; if you are using a different ID provider, this is not needed.  However, you can use IBM Cloud in conjunction with other ID providers if you choose. Follow the instructions in [this topic](/docs/quantum-computing?topic=appid-org) if you want to set up a different ID provider.
+This tutorial describes how to work with users and gives instructions for users to access the environment.  This topic is only relevant if you want to enable users who have IBM Cloud accounts. However, you can use IBM Cloud in conjunction with other ID providers if you choose. Follow the instructions in [this topic](/docs/quantum-computing?topic=appid-org) if you want to set up a different ID provider.
 {: shortdesc}
 
-## Using Cloud Users: Invite Users
+## Invite users
 {: #invite-cloud-org}
 {: step}
 
-When users use their own IBM Cloud accounts to access project resources, users can be invited.
-Go to [Manage → Access (IAM)](https://cloud.ibm.com/iam/overview){: external} and click on [Invite users](https://cloud.ibm.com/iam/users/invite_users){: external}.
-Enter the email addresses of users to be added.
-Select the access group or groups of the projects that the additional users should be part of.
-This assignment can be changed or extended later on.
+1. Ensure that the users you want to invite have IBM Cloud accounts.
+2. Go to Manage → Access (IAM) and click [Invite users](https://cloud.ibm.com/iam/users/invite_users){: external}.
+3. Enter the email addresses of users to be added.
+4. Select the access group or groups of the projects that the users should be part of. These assignments can be changed later.
 
-## Managing Access through the Cloud Administrator: Modify Users' Assignments to Projects
+## Modify users' project assignments
 {: #cloud-assign-user-org}
 {: step}
 
-If ID provider users are used as identities, note that IBM Cloud knows about ID provider users only after the first login.
-At that point, users will not have any permissions.
-Accordingly, access can only be given or modified after the IDP user has logged in for the first time.
+This step applies to Cloud users that have been invited as well as ID provider users which have been added to the account and are managed through the Cloud administrator. Both types of users can be managed by following these steps.
 
-This step applies to Cloud users that have been invited as well as ID provider users which have been added to the account and are managed through the Cloud administrator.
-You can mix both kinds of users and use the steps in this section.
+If ID provider users are included, IBM Cloud does not "know about" them until after their first login. At that point, users will not have any permissions.  Thus, access can only be given or modified after the IDP user has logged in for the first time.
+{: note}
 
-To change access of users and add them to projects, refer to the Changing Access of Users section.
-
-Go to [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external} and click on the user.
-
-![Change User Access](images/org-guide-manage-user.png "Change User Access"){: caption="Figure 11. Change User Access" caption-side="bottom"}
-
-
-Add additional access groups with Assign group, or remove the user from the access group with the three dots on the right hand side (Remove user)
+1. Go to [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external} and click on the user.
+   ![Change User Access](images/org-guide-manage-user.png "Change User Access"){: caption="Figure 11. Change User Access" caption-side="bottom"}
+2. Add access groups with **Assign group**, or remove the user from an access group by clicking the three dot menu and choosing **Remove user**.
 
 ## User Flow
 {: #user-org}
 {: step}
 
-Users having an IBM Cloud account can login through the [IBM Cloud portal](https://cloud.ibm.com/){: external}.
-
-To work with Qiskit Runtime, users can create an API key ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}) and use it for service instances they have got access to.
+1. Users can log in through the [IBM Cloud portal](https://cloud.ibm.com/){: external}.
+2. To work with Qiskit Runtime, users will create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).  They will use it for service instances they can access.
+3. For further information, users can review the Qiskit Runtime documentation, starting with [Getting started, Step 2](/docs/quantum-computing?topic=quickstart#install-packages).
 
 ## Next steps
 {: #next-steps-org}
