@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-07-22"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -20,7 +20,7 @@ completion-time: 25m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="25m"}
 
-Intro
+This tutorial describes how to work with users and gives instructions for users to access the environment.  This step is only relevant if you want to enable users who have IBM Cloud accounts; if you are using a different ID provider, this is not needed.  However, you can use IBM Cloud in conjunction with other ID providers if you choose. Follow the instructions in [this topic](/docs/quantum-computing?topic=appid-org) if you want to set up a different ID provider.
 {: shortdesc}
 
 ## Using Cloud Users: Invite Users
@@ -60,3 +60,9 @@ Add additional access groups with Assign group, or remove the user from the acce
 Users having an IBM Cloud account can login through the [IBM Cloud portal](https://cloud.ibm.com/){: external}.
 
 To work with Qiskit Runtime, users can create an API key ([Manage -- Access (IAM) -- API keys](https://cloud.ibm.com/iam/apikeys){: external}) and use it for service instances they have got access to.
+
+## Next steps
+{: #next-steps-org}
+
+- See [steps for an example scenario](/docs/quantum-computing?topic=quickstart-org#steps-org) for an end-to-end example.
+- See [additional considerations](/docs/quantum-computing?topic=quickstart-org#steps-org#considerations-org) for more information.

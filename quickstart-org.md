@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-22"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -27,13 +27,11 @@ Managing access becomes particularly relevant when paid Qiskit Runtime resources
 
 ## overview
 {: #overview-org}
-{: step}
 
-IBM Cloud provides various ways to implement such mechanism -- this tutorial is one way to achieve these objectives, but may not be the only way.
+IBM Cloud provides various ways to implement such mechanism -- this tutorial is one way to achieve these objectives, but may not be the only way. Most of the steps in this tutorial are generic to IBM Cloud and not specific to Qiskit Runtime, except the custom role details.
 
 ### Involved Personas
 {: #personas-org}
-{: step}
 
 The are several main personas used in this tutorial:
 
@@ -41,29 +39,33 @@ The are several main personas used in this tutorial:
 * **Cloud administrator**: an owner of an IBM Cloud account owning Qiskit Runtime resources and manages access of other users to these resources. As resource owner, the administrator will also be charged for paid resources.
 * **IDP administrator**: an administrator who defines identities and their attributes in an identity provider (IDP).
 
-Other terms used in this tutorial are:
+### Terminology
+{: #terms-org}
+
+This tutorial uses the following terms in this tutorial:
 
 * *Resource*: a generic Cloud term that refers to an object that can be managed through the Cloud UI, CLI or API. In our example of Qiskit Runtime, it refers to a service instance of Qiskit Runtime.
 * *Service Instance*: a service instance is used to access Cloud functionality, in our case quantum computing on real devices or simulators. It is defined through the catalog. You can define several service instances based on the same or different plans (offering access to different quantum computing backends). See the [Qiskit Runtime documentation](https://cloud.ibm.com/docs/quantum-computing?topic=quantum-computing-quickstart){: external} for more details.
-* *Project*: a grouping unit that is used to enable users to work on the same resources. In that case, users are seen as part of the same project. **Note:** the project is not related to the "project" notion of the IBM Quantum Platform. See the [according section](##nested-project-structures) for more information on this topic.
+* *Project*: a grouping unit that is used to enable users to work on the same resources. In that case, users are seen as part of the same project. This tutorial uses two projects; `ml` and `finance`.
 
-## Planning
+   The project is not related to the "project" concept in IBM Quantum Platform. See the [according section](##nested-project-structures) for more information on this topic.
+   {: note}
+
+## Plan your setup
 {: #planning-org}
 {: step}
 
-The planning process includes decisions on the following aspects:
+Before setting up Qiskit Runtime for your organization, you need to decide the following:
 
-* decide on how where user identities are defined: are users IBM Cloud users or are users identities in another ID provider?
-  * In the latter case, this tutorial will show how to create an ID provider in IBM Cloud
-  * note you can have both types of users at the same time if that is really desired
-* decide on who manages resource assignments: does the Cloud administrator or the IDP administrator perform assignment of users to project resources?
-  * if the IDP administrator performs this assignment, a string will be used as a key for project comparisons. This can be a string like `project`; see the following sections how this string is used (this tutorial uses `project` as this string)
-* what are the projects and which service instances should belong to these? Find a name for each project
-  * project names should not be substrings of another. E. g. don't use `ml` and `chemlab` because a string match for `ml` will succeed for both strings. Instead use `ml` and `chem-lab`
-  * quantum experiments (jobs) belong to service instances and users having access to an instance can see its jobs. Also, service instances can be based on different plans, allowing access to different backends like real devices or simulators -- see the [Qiskit Runtime documentation for more details](https://cloud.ibm.com/docs/quantum-computing?topic=quantum-computing-choose-backend){: external}
-* which users should get visibility to which projetcs?
-* should users be able to delete jobs?
-  * Keeping jobs in service instances gives more traceability to how billing cost was induced.
+* How will user identities be defined? You can set up IBM Cloud users, users from another IDP, or both.
+  * If you are using a different IDP, will the Cloud administrator or the IDP administrator assign  users to project resources?
+    * If the IDP administrator performs this assignment, you will need a string to be used as a key, such as `project` (which this tutorial uses) for project comparisons.
+* What are the projects and which service instances should belong to each? Each project needs a name.
+  * Project names should not be substrings of another.  For example, don't use `ml` and `chemlab` because a string match for `ml` will succeed for both strings. Instead use `ml` and `chem-lab`.
+  * Note that quantum experiments (jobs) belong to service instances, and users having access to an instance can see its jobs. Also, service instances can be based on different plans, allowing access to different backends like real devices or simulators -- see the [Qiskit Runtime documentation for more details](https://cloud.ibm.com/docs/quantum-computing?topic=quantum-computing-choose-backend){: external}
+* Which users should get visibility to which projects?
+* Should users be able to delete jobs? Keeping jobs in service instances gives more traceability to how billing cost was induced.  Therefore, it is common practice to not allow users to delete jobs.
+* Will you use access groups that directly reference Qiskit Runtime service instances or organize service in resource groups?
 
 ### Resource Groups
 {: #rsc-grp-org}
@@ -77,19 +79,9 @@ However, note that a service instance can only belong to one resource group and 
 This also means that the resource group assignment can only happen at service instance creation.
 Therefore, resource groups may not provide enough flexibility if assignments of service instances to resource groups might need to change.
 
-Only reason for using resource groups is a clear separation of service instances, and access groups will be simpler.
-Also, if additional service instances are created in a resource group, all users having access to the resource group will see them automatically without updating access groups.  
+Only reason for using resource groups is a clear separation of service instances, and access groups will be simpler. Also, if additional service instances are created in a resource group, all users having access to the resource group will see them automatically without updating access groups.
 
-## Implementation
-{: #implementation-org}
-{: step}
-
-The following steps are needed to create the governance structure to achieve the objectives outline above.
-Note that these steps are generic to IBM Cloud and not specific to Qiskit Runtime, with the only exception being the custom role details which employs Qiskit Runtime specific actions.
-
-As an example, this tutorial uses two projects, one called `ml` and the other one called `finance`.
-
-### IAM Settings
+## Configure IAM settings
 {: #iam-org}
 {: step}
 
@@ -100,7 +92,9 @@ API keys are needed by users as part of this tutorial approach, this setting sho
 
 ![IAM settings](images/org-guide-iam-settings.png "User list visibility"){: caption="Figure 1. IAM settings page with User list visibility enabled" caption-side="bottom"}
 
-### Create Qiskit Runtime Service Instances
+
+
+## Create Qiskit Runtime service instances
 {: #create-instance-org}
 {: step}
 
@@ -109,9 +103,11 @@ Unless you have created Qiskit Runtime service instances already, you can do so 
 
 The name of the service instance (e.g. QR-ml) will be used later in a reference from the access group.
 
-### Create Access Groups for Projects
+## (Optional) Create access groups for projects
 {: #create-group-org}
 {: step}
+
+Skip this step if you are using resource groups for access.  
 
 We use access groups as a simple yet powerful means to consistently assign access to users.
 First we create a access group for each project.
@@ -169,6 +165,33 @@ For Roles and actions, select Viewer as well as the custome role created previou
 Click on Add, then Assign.
 
 If you want to give an access group permissions to several service instances, repeat this sequence to add a policy for every service instance.
+
+## (Optional) Create resource groups
+{: #crt-rsc-grp-org}
+
+Skip this step if you are using access groups that directly reference Qiskit Runtime service instances.
+
+service instances can be organized in resource groups.
+Service instances can only be created in existing resource groups, and access groups can also only refer to existing resource groups -- therefore resource groups need to be created first.
+To do so, go to [Manage -- Account -- Resource groups (in Account resources)](https://cloud.ibm.com/account/resource-groups){: external} and hit Create.
+
+It might appear more convenient to put all service instances of a certain resource group in scope of an access group.
+However, note that a service instance can only belong to one resource group and the assignment of instances into resource groups cannot be changed anymore.
+This also means that the resource group assignment can only happen at service instance creation.
+Therefore, resource groups may not provide enough flexibility if assignments of service instances to resource groups might need to change.
+
+Only reason for using resource groups is a clear separation of service instances, and access groups will be simpler. Also, if additional service instances are created in a resource group, all users having access to the resource group will see them automatically without updating access groups.
+
+## Set up your ID provider and assign users
+{: #setup-idp-org}
+{: step}
+*
+
+Follow the steps in the appropriate topic, depending on the ID provider you chose to use:
+
+- [Use an ID provider other than IBM Cloud](/docs/quantum-computing?topic=appid-org)
+- [Use Cloud as the ID provider](/docs/quantum-computing?topic=cloud-provider-org)
+
 
 ## Steps For an Example Scenario
 {: #steps-org}
