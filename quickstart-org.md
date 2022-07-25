@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-07-25"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -18,7 +18,7 @@ content-type: howto
 {: #quickstart-org}
 {: toc-completion-time="25m"}
 
-When working in an organization where individuals might work on several projects, the governance of consuming Qiskit Runtime can seem complex. However access management can be used to easily enable collaboration by users who work on the same project, as well as to restrict visibility of users and projects that should be isolated from each other. Managing access becomes particularly relevant when sharing Qiskit Runtime resources that are not free; that is, Qiskit Runtime service instances that use the Standard plan.
+When working in an organization where individuals might work on several projects, the governance of consuming Qiskit Runtime can seem complex. However, access management can be used to easily enable collaboration by users who work on the same project, as well as to restrict visibility of users and projects that should be isolated from each other. Managing access becomes particularly relevant when sharing Qiskit Runtime resources that are not free; that is, Qiskit Runtime service instances that use the Standard plan.
 {: shortdesc}
 
 ## Overview
@@ -207,7 +207,7 @@ To capture App ID events, open your App ID instance, open **Manage Authenticatio
 The actions in the custom roles can be used for more fine grained access control.
 For example, some users might need full access to work on service instances while others might only need read access to service instances, programs, and jobs.
 
-To achieve that, define two different custom roles: remove all cancel, delete, and update roles from the reader custom role, and include all actions in the custom role for the writer. Next, add them to two different access groups accordingly.
+To achieve that, define two different custom roles: remove all cancel, delete, and update roles from the reader custom role, and include all actions in the custom role for the writer. Next, add the roles to two different access groups accordingly.
 
 When using dynamic rules, that is, when the IDP administrator manages access through custom IDP user attributes, do not use IDP custom user attributes that are substrings of each other.  For instance, don't use `ml` and `ml-reader`, as the string comparison of `ml` would also accept `ml-reader`. Use `ml-reader` and `ml-writer` to avoid this conflict.
 
