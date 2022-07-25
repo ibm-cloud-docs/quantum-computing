@@ -2,28 +2,26 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-22"
+lastupdated: "2022-07-26"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
 subcollection: quantum-computing
 
-content-type: tutorial
-completion-time: 25m
+content-type: howto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Set up Qiskit Runtime in an Organization
+# Set up Qiskit Runtime for an organization
 {: #quickstart-org}
-{: toc-content-type="tutorial"}
 {: toc-completion-time="25m"}
 
 When working in an organization where individuals might work on several projects, the governance of consuming Qiskit Runtime can seem complex. However access management can be used to easily enable collaboration by users who work on the same project, as well as to restrict visibility of users and projects that should be isolated from each other. Managing access becomes particularly relevant when sharing Qiskit Runtime resources that are not free; that is, Qiskit Runtime service instances that use the Standard plan.
 {: shortdesc}
 
-## overview
+## Overview
 {: #overview-org}
 
 IBM Cloud provides various ways to implement these mechanisms described in this tutorial.  There might be several ways to achieve these objectives. Additionally, most of the steps in this tutorial are generic to IBM Cloud and not specific to Qiskit Runtime, except the custom role details.
@@ -75,7 +73,7 @@ Before setting up Qiskit Runtime for your organization, you need to decide the f
 {: #iam-org}
 {: step}
 
-First, there are some settings to configure in the administator's Identity and Access Management (IAM)  account. To review and configure these settings, go to [Manage → IAM → Settings](https://cloud.ibm.com/iam/settings){: external}.
+First, there are some settings to configure in the administrator's Identity and Access Management (IAM)  account. To review and configure these settings, go to [Manage → IAM → Settings](https://cloud.ibm.com/iam/settings){: external}.
 
 * **User list visibility** determines whether users can see each other, regardless of project assignment. the `enabled` setting restricts user visibility.  That is, users in your account cannot see each other, even if they  can access the same resources. Choose the appropriate value for your environment. See [Controlling user visibility](https://cloud.ibm.com/docs/account?topic=account-iam-user-setting){: external} for more information.
 * **API key creation** controls whether users can create API keys.  For this tutorial, users need API keys. Therefore, this setting should be `disabled`.  Alternatively, you can give specific permissions to each user.
@@ -84,6 +82,7 @@ First, there are some settings to configure in the administator's Identity and A
 
 ## (Optional) Create resource groups
 {: #crt-rsc-grp-org}
+{: step}
 
 Skip this step if you are using access groups that directly reference Qiskit Runtime service instances.
 
@@ -179,11 +178,11 @@ The steps to implement this setup are:
 4. The Cloud administrator creates access groups.
   * The `ml` access group can access `QR-ml` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `ml`.
   * The `finance` access group can access `QR-finance` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `finance`.
-* The IDP administrator uses the App ID instance that the Cloud administrator created and defines the three users:
+5. The IDP administrator uses the App ID instance that the Cloud administrator created and defines the three users:
   * For Fatima, the custom attributes should contain `{"project":"ml"}`.
   * For Ravi, the custom attributes should contain `{"project":"finance"}`.
   * For Amyra, the custom attributes should contain `{"project":"ml finance"}`.
-* Users can log in through the ID provider URL, create API keys, and work with their projects' service instances.
+6. Users can log in through the ID provider URL, create API keys, and work with their projects' service instances.
 
 ## Additional Considerations
 {: #considerations-org}
@@ -198,7 +197,7 @@ Refer to the Qiskit Runtime [Activity Tracker page](https://cloud.ibm.com/docs/q
 
 This audit log contains the fields `initiator_authnName` and `initiator_authnId`, which match the name shown in [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external}.  To view this field, click on the user name, then **Details** in the **IAM ID** field.
 
-![Example of an Activity Tracker event](imagesorg-guide-audit-example.png "Example of an Activity Tracker event"){: caption="Figure 12. Example of an Activity Tracker event" caption-side="bottom"}
+![Example of an Activity Tracker event](images/org-guide-audit-example.png "Example of an Activity Tracker event"){: caption="Figure 12. Example of an Activity Tracker event" caption-side="bottom"}
 
 To capture App ID events, open your App ID instance, open **Manage Authentication -> Authentication settings** and enable **Runtime Activity**.
 

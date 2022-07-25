@@ -21,12 +21,6 @@ toc:
       id: learn
       topics:
       - quickstart.md
-      - topicgroup:
-        label: Getting started in an organization
-        topics:
-        - quickstart-org.md
-        - cloud-provider-org.md
-        - appid-org.md
       - overview.md
       
       - topic: release-notes.md
@@ -41,6 +35,12 @@ toc:
   - navgroup:
       id: howto
       topics:
+      - topicgroup:
+        label: Getting started in an organization
+        topics:
+        - quickstart-org.md
+        - cloud-provider-org.md
+        - appid-org.md
       - choose-backend.md
       - run_job.md
       - results.md

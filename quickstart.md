@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-05-26"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -23,15 +23,16 @@ completion-time: 25m
 This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit_runtime_notm}} service instance, log into your service instance, and run your first job on a quantum computer.
 {: shortdesc}
 
+If you are an administrator who needs to set up Qiskit Runtime for your organization, refer to [this topic](/docs/quantum-computing?topic=quickstart-org) for instructions to set up a service instance and work with users.
+
 
 ## Create a service instance
 {: #create-configure}
 {: step}
 
-If you already created your {{site.data.keyword.qiskit_runtime_notm}} service instance, skip to the next step.  To determine whether you already have an instance, check your [IBM Cloud Instances page](https://cloud.ibm.com/quantum/instances). If you have one or more instances listed, you can skip ahead to [Install Qiskit packages](#install-packages).
+If you already created a {{site.data.keyword.qiskit_runtime_notm}} service instance or were invited to one by an administrator, skip to the next step.  To determine whether you already have access to an instance, check your [IBM Cloud Instances page](https://cloud.ibm.com/quantum/instances). If you have one or more instances listed, you can skip ahead to [Install Qiskit packages](#install-packages).
 
 ![This image shows an Instances page with two instances.](images/instances.png "Instances page with two instances"){: caption="Figure 1. Instances page showing multiple instances" caption-side="bottom"}
-
 
 1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, choose the appropriate service plan, depending on what you need access to. For more information about these plans, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) topic.
 
