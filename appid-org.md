@@ -2,14 +2,13 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-22"
+lastupdated: "2022-07-25"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization, appid
 
 subcollection: quantum-computing
 
-content-type: tutorial
-completion-time: 25m
+content-type: howto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -17,10 +16,9 @@ completion-time: 25m
 
 # Use an ID provider other than IBM Cloud
 {: #appid-org}
-{: toc-content-type="tutorial"}
-{: toc-completion-time="25m"}
+{: toc-completion-time="15m"}
 
-This topic is only relevant if you want to enable users from an ID provider other than using IBM Cloud accounts; if your users have IBM Cloud accounts, this is not needed.  However, you can use IBM Cloud in conjunction with other ID providers if you choose. Follow the instructions in [this topic](/docs/quantum-computing?topic=cloud-provider-org) if you want to use Cloud as the ID provider.
+This topic is only relevant if you want to enable users from an ID provider other than using IBM Cloud accounts; if your users have IBM Cloud accounts, this is not needed.  However, you can use IBM Cloud in conjunction with other ID providers if you choose. Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org) if you want to use Cloud as the ID provider.
 
 App ID creates an ID provider which allows to add users directly in App ID, as well as connecting to other external ID providers.  This tutorial describes how to set up your ID provider, work with users, and gives instructions for users to access the environment.
 {: shortdesc}
@@ -129,10 +127,10 @@ If the IDP administrator will assign users to projects, you can define project v
    The administrator can always go to [Manage → Access (IAM) → Identity providers](https://cloud.ibm.com/iam/identity-providers){: external} to look up the ID provider URL.
    {: note}
 2. To work with Qiskit Runtime, users will create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).  They will use it for service instances they can access.
-3. For further information, users can review the Qiskit Runtime documentation, starting with [Getting started, Step 2](/docs/quantum-computing?topic=quickstart#install-packages).
+3. For further information, users can review the Qiskit Runtime documentation, starting with [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
 
 ## Next steps
 {: #next-steps-org}
 
-- See [steps for an example scenario](/docs/quantum-computing?topic=quickstart-org#steps-org) for an end-to-end example.
-- See [additional considerations](/docs/quantum-computing?topic=quickstart-org#steps-org#considerations-org) for more information.
+- See [steps for an example scenario](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org) for an end-to-end example.
+- See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.

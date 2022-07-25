@@ -2,14 +2,13 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-22"
+lastupdated: "2022-07-25"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
 subcollection: quantum-computing
 
-content-type: tutorial
-completion-time: 25m
+content-type: howto
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -17,10 +16,9 @@ completion-time: 25m
 
 # Use Cloud as the ID provider
 {: #cloud-provider-org}
-{: toc-content-type="tutorial"}
-{: toc-completion-time="25m"}
+{: toc-completion-time="15m"}
 
-This tutorial describes how to work with users and gives instructions for users to access the environment.  This topic is only relevant if you want to enable users who have IBM Cloud accounts. However, you can use IBM Cloud in conjunction with other ID providers if you choose. Follow the instructions in [this topic](/docs/quantum-computing?topic=appid-org) if you want to set up a different ID provider.
+This tutorial describes how to work with users and gives instructions for users to access the environment.  This topic is only relevant if you want to enable users who have IBM Cloud accounts. However, you can use IBM Cloud in conjunction with other ID providers if you choose. Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid-org) if you want to set up a different ID provider.
 {: shortdesc}
 
 ## Invite users
@@ -51,10 +49,10 @@ If ID provider users are included, IBM Cloud does not "know about" them until af
 
 1. Users can log in through the [IBM Cloud portal](https://cloud.ibm.com/){: external}.
 2. To work with Qiskit Runtime, users will create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).  They will use it for service instances they can access.
-3. For further information, users can review the Qiskit Runtime documentation, starting with [Getting started, Step 2](/docs/quantum-computing?topic=quickstart#install-packages).
+3. For further information, users can review the Qiskit Runtime documentation, starting with [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
 
 ## Next steps
 {: #next-steps-org}
 
-- See [steps for an example scenario](/docs/quantum-computing?topic=quickstart-org#steps-org) for an end-to-end example.
-- See [additional considerations](/docs/quantum-computing?topic=quickstart-org#steps-org#considerations-org) for more information.
+- See [steps for an example scenario](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org) for an end-to-end example.
+- See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.
