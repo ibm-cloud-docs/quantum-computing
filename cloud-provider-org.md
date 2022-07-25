@@ -34,14 +34,14 @@ This tutorial describes how to work with users and gives instructions for users 
 {: #cloud-assign-user-org}
 {: step}
 
-This step applies to Cloud users that have been invited as well as ID provider users which have been added to the account and are managed through the Cloud administrator. Both types of users can be managed by following these steps.
+This step applies to Cloud users that have been invited, as well as IDP users that have been added to the account and are managed through the Cloud administrator. Both types of users can be managed by following these steps.
 
-If ID provider users are included, IBM Cloud does not "know about" them until after their first login. At that point, users will not have any permissions.  Thus, access can only be given or modified after the IDP user has logged in for the first time.
+If IDP users are included, IBM Cloud does not "know about" them until after their first login. At that point, users will not have any permissions.  Thus, access can only be given or modified after the IDP user has logged in for the first time.
 {: note}
 
 1. Go to [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external} and click on the user.
    ![Change User Access](images/org-guide-manage-user.png "Change User Access"){: caption="Figure 11. Change User Access" caption-side="bottom"}
-2. Add access groups with **Assign group**, or remove the user from an access group by clicking the three dot menu and choosing **Remove user**.
+2. Add access groups with **Assign group** or remove the user from an access group by clicking the three dot menu and choosing **Remove user**.
 
 ## User Flow
 {: #user-org}
@@ -49,7 +49,7 @@ If ID provider users are included, IBM Cloud does not "know about" them until af
 
 1. Users can log in through the [IBM Cloud portal](https://cloud.ibm.com/){: external}.
 2. To work with Qiskit Runtime, users will create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).  They will use it for service instances they can access.
-3. For further information, users can review the Qiskit Runtime documentation, starting with [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
+3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
 
 ## Next steps
 {: #next-steps-org}
