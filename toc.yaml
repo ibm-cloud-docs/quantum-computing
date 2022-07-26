@@ -77,6 +77,10 @@ toc:
       - faqs.md
       - support.md
       - topicgroup:
+        label: Troubleshooting
+        topics:
+        - tbs-qiskit-version.md
+      - topicgroup:
           label: Communities
           topics:
           - link:
