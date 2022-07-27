@@ -31,16 +31,16 @@ toc:
       topics:
       - example-sampler.md
       - example-estimator.md
-
-  - navgroup:
-      id: howto
-      topics:
       - topicgroup:
-        label: Getting started in an organization
+        label: Set up Qiskit Runtime for an organization
         topics:
         - quickstart-org.md
         - cloud-provider-org.md
         - appid-org.md
+
+  - navgroup:
+      id: howto
+      topics:
       - choose-backend.md
       - run_job.md
       - results.md

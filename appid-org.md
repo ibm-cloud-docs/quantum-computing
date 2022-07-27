@@ -2,13 +2,14 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-07-27"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization, appid
 
 subcollection: quantum-computing
 
-content-type: howto
+content-type: tutorial
+completion-time: 15m
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -16,7 +17,6 @@ content-type: howto
 
 # Use an ID provider other than IBM Cloud
 {: #appid-org}
-{: toc-completion-time="15m"}
 
 This topic is only relevant if you want to enable users from an ID provider other than using IBM Cloud accounts; if your users have IBM Cloud accounts, this is not needed.  However, you can use IBM Cloud in conjunction with other ID providers if you choose. Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org) if you want to use Cloud as the ID provider.
 
