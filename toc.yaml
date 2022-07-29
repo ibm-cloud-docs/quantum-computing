@@ -31,18 +31,15 @@ toc:
       topics:
       - example-sampler.md
       - example-estimator.md
-      - quickstart-org.md
-        - topicgroup:
-          label: Work with identity providers
-          topics:
-          - cloud-provider-org.md
-          - appid-org.md
       - topicgroup:
         label: Set up Qiskit Runtime for an organization
         topics:
         - quickstart-org.md
-        - cloud-provider-org.md
-        - appid-org.md
+        - topicgroup:
+            label: Work with identity providers
+            topics:
+            - cloud-provider-org.md
+            - appid-org.md
 
   - navgroup:
       id: howto
