@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-27"
+lastupdated: "2022-07-29"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -15,7 +15,7 @@ completion-time: 25m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Set up access management for Qiskit Runtime
+# Set up Qiskit Runtime for an organization
 {: #quickstart-org}
 
 When working in an organization where individuals might work on several projects, the governance of consuming Qiskit Runtime can seem complex. However, access management can be used to easily enable collaboration by users who work on the same project, as well as to restrict visibility of users and projects that should be isolated from each other. Managing access becomes particularly relevant when sharing Qiskit Runtime resources that are not free; that is, Qiskit Runtime service instances that use the Standard plan (which organizations are charged for).
@@ -98,7 +98,11 @@ If you have already created Qiskit Runtime service instances, skip this step.
 * If you are using resource groups, make sure to create the service instances on the appropriate resource group.
 * The service instance name, such as `QR-ml`, is needed for access group references.
 
-See [Create a service instance](/docs/quantum-computing?topic=quantum-computing-quickstart#create-configure) for instructions.
+1. If you do not already have one, [create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external} for the organization.
+3. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
+  - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
+  - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
+2. After completing the required information, click **Create**.
 
 ## Create access groups for projects
 {: #create-group-org}
