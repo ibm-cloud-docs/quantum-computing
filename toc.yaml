@@ -35,11 +35,14 @@ toc:
         label: Set up Qiskit Runtime for an organization
         topics:
         - quickstart-org.md
+        - quickstart-steps-org.md
         - topicgroup:
-            label: Work with identity providers
+            label: User management options
             topics:
             - cloud-provider-org.md
+            - appid&cloud-org.md
             - appid-org.md
+        - considerations-org.md
 
   - navgroup:
       id: howto

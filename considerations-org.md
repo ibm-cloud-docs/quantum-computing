@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-01"
+lastupdated: "2022-07-26"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -15,8 +15,8 @@ completion-time: 25m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Plan Qiskit Runtime for an organization
-{: #quickstart-org}
+# Considerations for using Qiskit Runtime in an organization
+{: #considerations-org}
 
 When working in an organization where individuals might work on several projects, the governance of consuming Qiskit Runtime can seem complex. However, access management can be used to easily enable collaboration by users who work on the same project, as well as to restrict visibility of users and projects that should be isolated from each other. Managing access becomes particularly relevant when sharing Qiskit Runtime resources that are not free; that is, Qiskit Runtime service instances that use the Standard plan (which organizations are charged for).
 {: shortdesc}
