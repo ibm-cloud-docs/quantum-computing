@@ -43,7 +43,7 @@ The are several main personas mentioned in this tutorial:
 This tutorial uses the following terms:
 
 * _Resource_: A generic IBM Cloud term that refers to an object that can be managed through the Cloud user interface, CLI, or API. For this tutorial, a _resource_ is a Qiskit Runtime service instance.
-* _Service instance_: A service instance is used to access Cloud functionality. Specifically, quantum computing on real devices or simulators. It is defined through the catalog. You can define several service instances based on the same or different plans, which offer access to different quantum computing backends. See [Qiskit Runtime plans](https://cloud.ibm.com/docs/quantum-computing?topic=quantum-computing-cost) for more details.
+* _Service instance_: A service instance is used to access Cloud functionality. Specifically, quantum computing on real devices or simulators. It is defined through the catalog. You can define several service instances based on the same or different plans, which offer access to different quantum computing backends. See [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) for more details.
 * _Project_: A grouping unit that enables users to work on the same resources. This tutorial uses two projects; `ml` and `finance`. See [Nested project structures](/docs/quantum-computing?topic=quantum-computing-considerations-org#nest-org) for more information.
 
    This project is not related to the "project" concept in IBM Quantum Platform.

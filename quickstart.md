@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-05-26"
+lastupdated: "2022-08-02"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -23,7 +23,7 @@ completion-time: 25m
 This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit_runtime_notm}} service instance, log into your service instance, and run your first job on a quantum computer.
 {: shortdesc}
 
-If you are an administrator who needs to set up Qiskit Runtime for your organization, refer to [this topic](/docs/quantum-computing?topic=quickstart-org) for instructions to set up a service instance and work with users.
+If you are an administrator who needs to set up Qiskit Runtime for your organization, refer to [this topic](/docs/quantum-computing?topic=quantum-computing-quickstart-org) for instructions to set up a service instance and work with users.
 
 
 ## Create a service instance

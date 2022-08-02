@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-28"
+lastupdated: "2022-08-02"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -25,6 +25,6 @@ If you have problems or questions when using {{site.data.keyword.qiskit_runtime_
 
 For help with Qiskit or quantum in general, access one of our Slack communities:
 
-- [Qiskit Slack](http://ibm.co/joinqiskitslack){: external}.
+- [Qiskit Slack](http://ibm.com/joinqiskitslack){: external}.
 - [IBM Quantum Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/ibm-q-experience){: external}
 - [Qiskit Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/qiskit){: external}

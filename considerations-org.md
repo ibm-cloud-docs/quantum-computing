@@ -25,7 +25,7 @@ You should understand the following considerations when setting up your environm
 ## Auditability
 {: #audits-org}
 
-Activity tracker logs significant actions performed on Qiskit Runtime service instances.  Create an instance of Activity Tracker in the region of your Qiskit Runtime instances to get an audit trail of events. Refer to the Qiskit Runtime [Activity Tracker page](https://cloud.ibm.com/docs/quantum-computing?topic=quantum-computing-at_events){: external} for details about the events logged.
+Activity tracker logs significant actions performed on Qiskit Runtime service instances.  Create an instance of Activity Tracker in the region of your Qiskit Runtime instances to get an audit trail of events. Refer to the Qiskit Runtime [Activity Tracker page](/docs/quantum-computing?topic=quantum-computing-at_events){: external} for details about the events logged.
 
 This audit log contains the fields `initiator_authnName` and `initiator_authnId`, which match the name shown in [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external}.  To view this field, click on the user name, then **Details** in the **IAM ID** field.
 
