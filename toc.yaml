@@ -40,7 +40,7 @@ toc:
             label: User management options
             topics:
             - cloud-provider-org.md
-            - appid&cloud-org.md
+            - appid-cloud-org.md
             - appid-org.md
         - considerations-org.md
 

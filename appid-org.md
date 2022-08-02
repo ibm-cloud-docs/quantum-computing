@@ -23,7 +23,7 @@ App ID creates an ID provider that lets you add users directly in App ID, as wel
 
 If your users have IBM Cloud accounts, see one of these topics:
 
-* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid&cloud-org) for instructions to use something other than IBM Cloud as the ID provider for users that have IBM Cloud accounts.
+* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid-cloud-org) for instructions to use something other than IBM Cloud as the ID provider for users that have IBM Cloud accounts.
 * Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org) for instructions to use IBM Cloud as the ID provider for users that have IBM Cloud accounts.
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-01"
+lastupdated: "2022-08-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -42,8 +42,8 @@ The are several main personas mentioned in this tutorial:
 This tutorial uses the following terms:
 
 * *Resource*: A generic IBM Cloud term that refers to an object that can be managed through the Cloud user interface, CLI, or API. For this tutorial, a _resource_ is a Qiskit Runtime service instance.
-* *Service instance*: A service instance is used to access Cloud functionality. Specifically, quantum computing on real devices or simulators. It is defined through the catalog. You can define several service instances based on the same or different plans, which offer access to different quantum computing backends See [Qiskit Runtime plans](https://cloud.ibm.com/docs/quantum-computing?topic=quantum-computing-cost) for more details.
-* *Project*: A grouping unit that enables users to work on the same resources. This tutorial uses two projects; `ml` and `finance`. See [Nested project structures](/docs/quantum-computing?topic=considerations-org#nest-org) for more information.
+* *Service instance*: A service instance is used to access Cloud functionality. Specifically, quantum computing on real devices or simulators. It is defined through the catalog. You can define several service instances based on the same or different plans, which offer access to different quantum computing backends. See [Qiskit Runtime plans](https://cloud.ibm.com/docs/quantum-computing?topic=quantum-computing-cost) for more details.
+* *Project*: A grouping unit that enables users to work on the same resources. This tutorial uses two projects; `ml` and `finance`. See [Nested project structures](/docs/quantum-computing?topic=quantum-computing-considerations-org#nest-org) for more information.
 
    This project is not related to the "project" concept in IBM Quantum Platform.
    {: note}
@@ -73,5 +73,5 @@ Before setting up Qiskit Runtime for your organization, you need to decide the f
 ## Next steps
 {: #next-steps-org}
 
-- See [Considerations for using Qiskit Runtime in an organization](/docs/quantum-computing?topic=considerations-org) for more information.  
-- See [Set up Qiskit Runtime for an organization](/docs/quantum-computing?topic=quickstart-steps-org) for the steps to set up Qiskit Runtime.
+- See [Considerations for using Qiskit Runtime in an organization](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information.  
+- See [Set up Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-steps-org) for the steps to set up Qiskit Runtime.

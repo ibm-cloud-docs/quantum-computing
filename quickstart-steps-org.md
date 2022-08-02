@@ -106,6 +106,6 @@ Follow these steps to set up an access group:
 
 Follow the steps in the appropriate topic, depending on the ID provider you chose to use:
 
-- [Use Cloud as the ID provider for users that have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org)
-- [Use Cloud as the ID provider for users that do not have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org)
-- [Use an ID provider other than IBM Cloud](/docs/quantum-computing?topic=quantum-computing-appid-org)
+- [Use IBM Cloud as the ID provider for users that have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org)
+- [Use IBM Cloud as the ID provider for users that do not have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-appid-cloud-org)
+- [Use an ID provider other than IBM Cloud for users that do not have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-appid-org)
