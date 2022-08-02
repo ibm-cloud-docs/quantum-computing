@@ -14,7 +14,6 @@ completion-time: 15m
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Use an ID provider (not IBM Cloud) to manage IBM Cloud users
 {: #appid-cloudcloud-org}
 {: toc-content-type="tutorial"}
@@ -26,7 +25,6 @@ App ID creates an ID provider that lets you add users directly in App ID, as wel
 * Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org) for instructions to use IBM Cloud as the ID provider for users that have IBM Cloud accounts.
 * Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid-org) for instructions to set up an ID provider other than IBM Cloud to manage users that do not have IBM Cloud accounts.
 
-
 ## Create an App ID instance
 {: #create-appid-cloud}
 {: step}
@@ -36,7 +34,7 @@ App ID creates an ID provider that lets you add users directly in App ID, as wel
     * **Select a pricing plan**:
        * The **Lite** plan is free of charge and is enough to get started. If needed, you can seamlessly upgrade to the graduated tier later.
        * The **Graduated tier** is paid per event and per user above the lite tier limits. This tier supports additional features such as multi-factor authentication. The Cloud administrator as the owning account of the App ID instance will be charged for any charges for the graduated tier instances.
-   * Fill out the values for **Service name** (this will be the App ID instance name), **Resource group** (if one is being used), and any tags you want.
+    * Fill out the values for **Service name** (this will be the App ID instance name), **Resource group** (if one is being used), and any tags you want.
 
    ![Create App ID instance](images/org-guide-create-appid.png "Create App ID instance"){: caption="Figure 2. Create your APP ID instance" caption-side="bottom"}
 
@@ -66,7 +64,6 @@ Refer to the [App ID documentation](https://cloud.ibm.com/docs/appid){: external
    ![Create identity provider](images/org-guide-idp-reference.png "Create identity provider"){: caption="Figure 3. Create identity provider page" caption-side="bottom"}
 
 4. The default IdP URL is shown.  Share this URL with users when they need to log in.
-
 
 ## Add Users
 {: #add-user-org}
@@ -99,4 +96,4 @@ When using App ID as ID provider with the Cloud directory, you can create users 
 ## Next steps
 {: #next-stepscloud-org}
 
-- See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.
+* See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.

@@ -14,7 +14,6 @@ completion-time: 10m
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Considerations for using Qiskit Runtime in an organization
 {: #considerations-org}
 {: toc-content-type="tutorial"}
@@ -22,7 +21,6 @@ completion-time: 10m
 
 You should understand the following considerations when setting up your environment.
 {: shortdesc}
-
 
 ## Auditability
 {: #audits-org}

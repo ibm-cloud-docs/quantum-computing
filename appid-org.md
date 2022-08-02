@@ -14,7 +14,6 @@ completion-time: 15m
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Use an ID provider (not IBM Cloud) to manage users outside of IBM Cloud
 {: #appid-org}
 {: toc-content-type="tutorial"}
@@ -28,7 +27,6 @@ If your users have IBM Cloud accounts, see one of these topics:
 * Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid-cloud-org) for instructions to use something other than IBM Cloud as the ID provider for users that have IBM Cloud accounts.
 * Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org) for instructions to use IBM Cloud as the ID provider for users that have IBM Cloud accounts.
 
-
 ## Create an App ID instance
 {: #create-appid}
 {: step}
@@ -38,7 +36,7 @@ If your users have IBM Cloud accounts, see one of these topics:
    * **Select a pricing plan**:
       * The **Lite** plan is free of charge and is enough to get started. If needed, you can seamlessly upgrade to the graduated tier later.
       * The **Graduated tier** is paid per event and per user above the lite tier limits. This tier supports additional features such as multi-factor authentication. The Cloud administrator as the owning account of the App ID instance will be charged for any charges for the graduated tier instances.
-  * Fill out the values for **Service name** (this will be the App ID instance name), **Resource group** (if one is being used), and any tags you want.
+   * Fill out the values for **Service name** (this will be the App ID instance name), **Resource group** (if one is being used), and any tags you want.
 
    ![Create App ID instance](images/org-guide-create-appid.png "Create App ID instance"){: caption="Figure 2. Create your APP ID instance" caption-side="bottom"}
 
@@ -65,7 +63,7 @@ Refer to the [App ID documentation](https://cloud.ibm.com/docs/appid){: external
 2. Specify a name and select the App ID instance from the drop down list.
 3. Select the checkbox to enable the ID provider.
 
-![Create identity provider](images/org-guide-idp-reference.png "Create identity provider"){: caption="Figure 3. Create identity provider page" caption-side="bottom"}
+  ![Create identity provider](images/org-guide-idp-reference.png "Create identity provider"){: caption="Figure 3. Create identity provider page" caption-side="bottom"}
 
 4. The default IdP URL is shown.  Share this URL with users when they need to log in.
 
@@ -84,7 +82,7 @@ Because the dynamic rules are evaluated during login, any changes are picked up 
    * For the Authentication method, choose **Users federated by IBM Cloud AppID**, then choose the IDP from the Identity provider drop down list.
 
    ![Create Dynamic Rule](images/org-guide-create-dynamic-rule1.png "Create Dynamic Rule"){: caption="Figure 9. Create Dynamic Rule" caption-side="bottom"}
-4. Click **Add a condition**, fill out the following values, then click **Add**.
+3. Click **Add a condition**, fill out the following values, then click **Add**.
    * In the **Allow users when** field, enter the attribute key used by the IDP administrator in ID provider user attributes, such as `project` (this string is a convention defined during planning).
    * Select **Contains** as the **Qualifier**.
       The **Contains** qualifier means that if the names of different projects are substrings of other projects, for example, if you use `ml` and `chemlab` for project names, the `ml` contains qualifier  will trigger on both values. You can reduce such unintended matches by using prefix or suffix values.  However, this substring match behavior can be useful when a user attribute contains several values.  That is, it can allow access to several projects.
@@ -94,7 +92,6 @@ Because the dynamic rules are evaluated during login, any changes are picked up 
    * You might want to increase the **Session duration** to increase the period before users have to log back in. Logged-in users keep their access group membership for that period, and re-evaluation takes place on the next log in.
 
    ![Add Condition to Dynamic Rule](images/org-guide-create-dynamic-rule2.png "Add Condition to Dynamic Rule"){: caption="Figure 10. Add Condition to Dynamic Rule" caption-side="bottom"}
-
 
 ## Add users
 {: #add-user-org}
@@ -115,9 +112,11 @@ If the IDP administrator will assign users to projects, you can define project v
 2. Navigate to **Manage Authentication** → **Cloud Directory** → **Users**, and click on a user to open it.
 3. Scroll down to **Custom Attributes**, and click **Edit**.
 4. Enter a key value pair that can will checked by the dynamic rules of the access groups, then click **Save**. You can add several values in the same string (for example, `{"project":"ml finance"}`); the **contains** qualifier of the dynamic rule will detect a match of a substring.  For our example, add:
-   ```
+
+   ```text
    {"project":"ml"}
    ```
+
    The value `project` corresponds to the convention defined in the planning section.  `ml` is the project that the user belongs to.
 
    If the names of different projects are substrings of other projects, for example, if you use `ml` and `chemlab` for project names, the `ml` contains qualifier  will trigger on both values. You can reduce such unintended matches by using prefix or suffix values.  However, this substring match behavior can be useful when a user attribute contains several values.  That is, it can allow access to several projects.
@@ -139,6 +138,7 @@ If the IDP administrator will assign users to projects, you can define project v
 {: #steps-appid-org}
 
 In our example, we want to create the following setup:
+
 * We have two projects, `ml` and `finance`.
   * The `ml` project should have access to the service instances `QR-ml` and `QR-common`.
   * The `finance` project should have access to the service instances `QR-finance` and `QR-common`.
@@ -151,20 +151,21 @@ In our example, we want to create the following setup:
 * Users should be able to delete jobs.
 
 The steps to implement this setup are:
+
 1. The Cloud administrator creates an App ID instance and ensures that it is linked in the Cloud administrator's account. The administrator notes the ID provider URL to share it with users.
 2. The Cloud administrator creates three service instances: `QR-ml`, `QR finance` and `QR-common`.
 3. The Cloud administrator creates a custom rule that includes the `quantum-computing.job.delete` action.
 4. The Cloud administrator creates two access groups:
-  * The `ml` access group can access `QR-ml` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `ml`.
-  * The `finance` access group can access `QR-finance` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `finance`.
-5. The IDP administrator uses the App ID instance that the Cloud administrator created and defines the three users:
-  * For Fatima, the custom attributes should contain `{"project":"ml"}`.
-  * For Ravi, the custom attributes should contain `{"project":"finance"}`.
-  * For Amyra, the custom attributes should contain `{"project":"ml finance"}`.
-6. Users can log in through the ID provider URL, create API keys, and work with their projects' service instances.
+   * The `ml` access group can access `QR-ml` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `ml`.
+   * The `finance` access group can access `QR-finance` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `finance`.
 
+5. The IDP administrator uses the App ID instance that the Cloud administrator created and defines the three users:
+   * For Fatima, the custom attributes should contain `{"project":"ml"}`.
+   * For Ravi, the custom attributes should contain `{"project":"finance"}`.
+   * For Amyra, the custom attributes should contain `{"project":"ml finance"}`.
+6. Users can log in through the ID provider URL, create API keys, and work with their projects' service instances.
 
 ## Next steps
 {: #next-steps-appid-org}
 
-- See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.
+* See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.

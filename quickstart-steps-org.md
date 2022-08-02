@@ -14,7 +14,6 @@ completion-time: 25m
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Configure Qiskit Runtime for an organization
 {: #quickstart-steps-org}
 {: toc-content-type="tutorial"}
@@ -52,10 +51,10 @@ If you have already created Qiskit Runtime service instances, skip this step.
 * The service instance name, such as `QR-ml`, is needed for access group references.
 
 1. If you do not already have one, [create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external} for the organization.
-3. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
-  - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
-  - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
-2. After completing the required information, click **Create**.
+2. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
+   * **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
+   * **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
+3. After completing the required information, click **Create**.
 
 ## Create access groups for projects
 {: #create-group-org}
@@ -101,13 +100,12 @@ Follow these steps to set up an access group:
       ![Select Roles and actions for Access Group](images/org-guide-create-access-group-3.png "Select Roles and actions for Access Group"){: caption="Figure 8. Select Roles and actions for Access Group" caption-side="bottom"}
    6. Repeat this step if you want to give an access group permissions to several service instances.
 
-
 ## Set up your ID provider and assign users
 {: #setup-idp-org}
 {: step}
 
 Follow the steps in the appropriate topic, depending on the ID provider you chose to use:
 
-- [Use IBM Cloud as the ID provider for users that have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org)
-- [Use IBM Cloud as the ID provider for users that do not have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-appid-cloud-org)
-- [Use an ID provider other than IBM Cloud for users that do not have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-appid-org)
+* [Use IBM Cloud as the ID provider for users that have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org)
+* [Use IBM Cloud as the ID provider for users that do not have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-appid-cloud-org)
+* [Use an ID provider other than IBM Cloud for users that do not have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-appid-org)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-29"
+lastupdated: "2022-08-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, primitive programs
 
@@ -23,9 +23,7 @@ Get a glimpse of the quantum computing future with our world-leading {{site.data
 Because this service is in Beta phase, many functions are not yet available and are still under development, including some of the functions that are outlined in the following diagram.
 {: note}
 
-
 ![A user is shown running the Qiskit program via APIs that control the Qiskit Runtime Manager.](images/Qiskit_Runtime_architecture.png "Qiskit Runtime architecture diagram"){: caption="Figure 1. Diagram of Qiskit Runtime's architecture" caption-side="bottom"}
-
 
 ## Why use Qiskit Runtime?
 {: #why}
@@ -40,7 +38,6 @@ Receive intermediate results:   Receive intermediate results as your execution r
 
 ## Overview of primitive programs
 {: #primitive-programs}
-
 
 With Qiskit Runtime, we are introducing a new set of interfaces, in the form of primitive programs, to expand on how users run jobs on quantum computers.
 
@@ -69,7 +66,6 @@ Primitive program interfaces vary based on the type of task that you want to exe
 
 - [Sampler](/docs/quantum-computing?topic=quantum-computing-example-sampler)
 - [Estimator](/docs/quantum-computing?topic=quantum-computing-example-estimator)
-
 
 ## Next steps
 {: #next-steps}
