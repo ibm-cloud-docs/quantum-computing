@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization, appid
 
@@ -61,7 +61,7 @@ Refer to the [App ID documentation](https://cloud.ibm.com/docs/appid){: external
 2. Specify a name and select the App ID instance from the drop down list.
 3. Select the checkbox to enable the ID provider.
 
-![Create identity provider](images/org-guide-idp-reference.png "Create identity provider"){: caption="Figure 3. Create identity provider page" caption-side="bottom"}
+   ![Create identity provider](images/org-guide-idp-reference.png "Create identity provider"){: caption="Figure 3. Create identity provider page" caption-side="bottom"}
 
 4. The default IdP URL is shown.  Share this URL with users when they need to log in.
 
