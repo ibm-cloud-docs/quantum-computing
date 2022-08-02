@@ -15,7 +15,7 @@ completion-time: 15m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Use Cloud as the ID provider for users with IBM Cloud accounts
+# Use IBM Cloud as the ID provider for users with IBM Cloud accounts
 {: #cloud-provider-org}
 
 This tutorial how to use IBM Cloud to enable users who have IBM Cloud accounts and gives instructions for users to access the environment.  

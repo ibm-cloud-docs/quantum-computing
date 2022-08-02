@@ -15,7 +15,7 @@ completion-time: 15m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Use an ID provider other than IBM Cloud to manage IBM Cloud users
+# Use an ID provider (not IBM Cloud) to manage IBM Cloud users
 {: #appid&cloud-org}
 
 App ID creates an ID provider that lets you add users directly in App ID, as well as connecting to other external ID providers.  This tutorial describes how to set up your ID provider to work with IBM Cloud users, and gives instructions for users to access the environment.

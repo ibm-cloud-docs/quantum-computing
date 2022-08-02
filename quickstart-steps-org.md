@@ -15,7 +15,7 @@ completion-time: 25m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Set up Qiskit Runtime for an organization
+# Configure Qiskit Runtime for an organization
 {: #quickstart-steps-org}
 
 Follow these steps to start setting up Qiskit runtime.
