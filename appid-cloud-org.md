@@ -16,7 +16,9 @@ completion-time: 15m
 
 
 # Use an ID provider (not IBM Cloud) to manage IBM Cloud users
-{: #appid-cloud-org}
+{: #appid-cloudcloud-org}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="15m"}
 
 App ID creates an ID provider that lets you add users directly in App ID, as well as connecting to other external ID providers.  This tutorial describes how to set up your ID provider to work with IBM Cloud users, and gives instructions for users to access the environment.
 {: shortdesc}
@@ -26,22 +28,22 @@ App ID creates an ID provider that lets you add users directly in App ID, as wel
 
 
 ## Create an App ID instance
-{: #create-appid}
+{: #create-appid-cloud}
 {: step}
 
 1. [Open App ID from the IBM Cloud catalog](https://cloud.ibm.com/catalog/services/app-id){: external} and log in.  Specify the following values:
-   * For **Select a location**, it is best practice to keep it in the same location as the Qiskit Runtime service, which is `Washington DC (us-east)`.
-   * **Select a pricing plan**:
-      * The **Lite** plan is free of charge and is enough to get started. If needed, you can seamlessly upgrade to the graduated tier later.
-      * The **Graduated tier** is paid per event and per user above the lite tier limits. This tier supports additional features such as multi-factor authentication. The Cloud administrator as the owning account of the App ID instance will be charged for any charges for the graduated tier instances.
-  * Fill out the values for **Service name** (this will be the App ID instance name), **Resource group** (if one is being used), and any tags you want.
+    * For **Select a location**, it is best practice to keep it in the same location as the Qiskit Runtime service, which is `Washington DC (us-east)`.
+    * **Select a pricing plan**:
+       * The **Lite** plan is free of charge and is enough to get started. If needed, you can seamlessly upgrade to the graduated tier later.
+       * The **Graduated tier** is paid per event and per user above the lite tier limits. This tier supports additional features such as multi-factor authentication. The Cloud administrator as the owning account of the App ID instance will be charged for any charges for the graduated tier instances.
+   * Fill out the values for **Service name** (this will be the App ID instance name), **Resource group** (if one is being used), and any tags you want.
 
    ![Create App ID instance](images/org-guide-create-appid.png "Create App ID instance"){: caption="Figure 2. Create your APP ID instance" caption-side="bottom"}
 
 2. Read and agree to the terms and click **Create**.
 
 ## Add users
-{: #add-users-appid}
+{: #add-users-appid-cloud}
 {: step}
 
 We will use the **Cloud Directory** capability to add users to the ID provider.
@@ -54,7 +56,7 @@ Refer to the [App ID documentation](https://cloud.ibm.com/docs/appid){: external
 5. Optionally open **Login Customization** and customize the appearance of the login page.
 
 ## Integrate the App ID instance as the ID provider for the administrator's account
-{: #integrate-appid}
+{: #integrate-appid-cloud}
 {: step}
 
 1. Go to [Manage → Acces (IAM) → Identity Providers](https://cloud.ibm.com/iam/identity-providers){: external}. For **Type**, choose **IBM Cloud App ID**, then click **Create**.
@@ -90,10 +92,11 @@ When using App ID as ID provider with the Cloud directory, you can create users 
 
    The administrator can always go to [Manage → Access (IAM) → Identity providers](https://cloud.ibm.com/iam/identity-providers){: external} to look up the ID provider URL.
    {: note}
+
 2. To work with Qiskit Runtime, users will create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).  They will use it for service instances they can access.
 3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
 
 ## Next steps
-{: #next-steps-org}
+{: #next-stepscloud-org}
 
 - See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.

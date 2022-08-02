@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-01"
+lastupdated: "2022-08-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -17,6 +17,8 @@ completion-time: 10m
 
 # Considerations for using Qiskit Runtime in an organization
 {: #considerations-org}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="10m"}
 
 You should understand the following considerations when setting up your environment.
 {: shortdesc}

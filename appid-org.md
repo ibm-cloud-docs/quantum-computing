@@ -17,6 +17,8 @@ completion-time: 15m
 
 # Use an ID provider (not IBM Cloud) to manage users outside of IBM Cloud
 {: #appid-org}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="15m"}
 
 App ID creates an ID provider that lets you add users directly in App ID, as well as connecting to other external ID providers.  This tutorial describes how to set up your ID provider to work with users that do not have IBM Cloud accounts.
 {: shortdesc}
@@ -134,7 +136,7 @@ If the IDP administrator will assign users to projects, you can define project v
 3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
 
 ## Example scenario
-{: #steps-org}
+{: #steps-appid-org}
 
 In our example, we want to create the following setup:
 * We have two projects, `ml` and `finance`.
@@ -163,6 +165,6 @@ The steps to implement this setup are:
 
 
 ## Next steps
-{: #next-steps-org}
+{: #next-steps-appid-org}
 
 - See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.

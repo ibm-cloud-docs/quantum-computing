@@ -17,6 +17,8 @@ completion-time: 15m
 
 # Use IBM Cloud as the ID provider for users with IBM Cloud accounts
 {: #cloud-provider-org}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="15m"}
 
 This tutorial how to use IBM Cloud to enable users who have IBM Cloud accounts and gives instructions for users to access the environment.  
 {: shortdesc}

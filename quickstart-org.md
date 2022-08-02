@@ -17,6 +17,8 @@ completion-time: 25m
 
 # Plan Qiskit Runtime for an organization
 {: #quickstart-org}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="25m"}
 
 When working in an organization where individuals might work on several projects, the governance of consuming Qiskit Runtime can seem complex. However, access management can be used to easily enable collaboration by users who work on the same project, as well as to restrict visibility of users and projects that should be isolated from each other. Managing access becomes particularly relevant when sharing Qiskit Runtime resources that are not free; that is, Qiskit Runtime service instances that use the Standard plan (which organizations are charged for).
 {: shortdesc}

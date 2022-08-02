@@ -17,6 +17,8 @@ completion-time: 25m
 
 # Configure Qiskit Runtime for an organization
 {: #quickstart-steps-org}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="25m"}
 
 Follow these steps to start setting up Qiskit runtime.
 {: shortdesc}
