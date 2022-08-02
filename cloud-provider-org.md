@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-27"
+lastupdated: "2022-08-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -15,11 +15,15 @@ completion-time: 15m
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Use Cloud as the ID provider
+# Use Cloud as the ID provider for users with IBM Cloud accounts
 {: #cloud-provider-org}
 
-This tutorial describes how to work with users and gives instructions for users to access the environment.  This topic is only relevant if you want to enable users who have IBM Cloud accounts. However, you can use IBM Cloud in conjunction with other ID providers if you choose. Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid-org) if you want to set up a different ID provider.
+This tutorial how to use IBM Cloud to enable users who have IBM Cloud accounts and gives instructions for users to access the environment.  
 {: shortdesc}
+
+
+* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid&cloud-org) for instructions to use something other than IBM Cloud as the ID provider for users that have IBM Cloud accounts.
+* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid-org) for instructions to set up an ID provider other than IBM Cloud to manage users that do not have IBM Cloud accounts.
 
 ## Invite users
 {: #invite-cloud-org}
@@ -33,11 +37,6 @@ This tutorial describes how to work with users and gives instructions for users 
 ## Modify users' project assignments
 {: #cloud-assign-user-org}
 {: step}
-
-This step applies to Cloud users that have been invited, as well as IDP users that have been added to the account and are managed through the Cloud administrator. Both types of users can be managed by following these steps.
-
-If IDP users are included, IBM Cloud does not "know about" them until after their first login. At that point, users will not have any permissions.  Thus, access can only be given or modified after the IDP user has logged in for the first time.
-{: note}
 
 1. Go to [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external} and click on the user.
    ![Change User Access](images/org-guide-manage-user.png "Change User Access"){: caption="Figure 11. Change User Access" caption-side="bottom"}
@@ -54,5 +53,4 @@ If IDP users are included, IBM Cloud does not "know about" them until after thei
 ## Next steps
 {: #next-steps-org}
 
-- See [steps for an example scenario](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org) for an end-to-end example.
-- See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.
+- See [additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-27"
+lastupdated: "2022-08-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization, appid
 
@@ -18,10 +18,13 @@ completion-time: 15m
 # Use an ID provider other than IBM Cloud
 {: #appid-org}
 
-This topic is only relevant if you want to enable users from an ID provider other than using IBM Cloud accounts; if your users have IBM Cloud accounts, this is not needed.  However, you can use IBM Cloud in conjunction with other ID providers if you choose. Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org) if you want to use Cloud as the ID provider.
-
-App ID creates an ID provider that lets you add users directly in App ID, as well as connecting to other external ID providers.  This tutorial describes how to set up your ID provider, work with users, and gives instructions for users to access the environment.
+App ID creates an ID provider that lets you add users directly in App ID, as well as connecting to other external ID providers.  This tutorial describes how to set up your ID provider to work with users that do not have IBM Cloud accounts.
 {: shortdesc}
+
+If your users have IBM Cloud accounts, see one of these topics:
+
+* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid&cloud-org) for instructions to use something other than IBM Cloud as the ID provider for users that have IBM Cloud accounts.
+* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org) for instructions to use IBM Cloud as the ID provider for users that have IBM Cloud accounts.
 
 
 ## Create an App ID instance
@@ -91,7 +94,7 @@ Because the dynamic rules are evaluated during login, any changes are picked up 
    ![Add Condition to Dynamic Rule](images/org-guide-create-dynamic-rule2.png "Add Condition to Dynamic Rule"){: caption="Figure 10. Add Condition to Dynamic Rule" caption-side="bottom"}
 
 
-## ID Provider Users: Add Users
+## Add users
 {: #add-user-org}
 {: step}
 
@@ -130,8 +133,36 @@ If the IDP administrator will assign users to projects, you can define project v
 2. To work with Qiskit Runtime, users will create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).  They will use it for service instances they can access.
 3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
 
+## Example scenario
+{: #steps-org}
+
+In our example, we want to create the following setup:
+* We have two projects, `ml` and `finance`.
+  * The `ml` project should have access to the service instances `QR-ml` and `QR-common`.
+  * The `finance` project should have access to the service instances `QR-finance` and `QR-common`.
+* We have three users:
+  * Fatima should have access to the `ml` project.
+  * Ravi should have access to the `finance` project.
+  * Amyra should have access to both projects.
+* We will use access groups without resource groups.
+* Users are defined in an App ID instance and project assignments are also done there.
+* Users should be able to delete jobs.
+
+The steps to implement this setup are:
+1. The Cloud administrator creates an App ID instance and ensures that it is linked in the Cloud administrator's account. The administrator notes the ID provider URL to share it with users.
+2. The Cloud administrator creates three service instances: `QR-ml`, `QR finance` and `QR-common`.
+3. The Cloud administrator creates a custom rule that includes the `quantum-computing.job.delete` action.
+4. The Cloud administrator creates two access groups:
+  * The `ml` access group can access `QR-ml` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `ml`.
+  * The `finance` access group can access `QR-finance` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `finance`.
+5. The IDP administrator uses the App ID instance that the Cloud administrator created and defines the three users:
+  * For Fatima, the custom attributes should contain `{"project":"ml"}`.
+  * For Ravi, the custom attributes should contain `{"project":"finance"}`.
+  * For Amyra, the custom attributes should contain `{"project":"ml finance"}`.
+6. Users can log in through the ID provider URL, create API keys, and work with their projects' service instances.
+
+
 ## Next steps
 {: #next-steps-org}
 
-- See [steps for an example scenario](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org) for an end-to-end example.
 - See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.

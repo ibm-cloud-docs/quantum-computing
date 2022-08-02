@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-01"
+lastupdated: "2022-08-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -18,7 +18,7 @@ completion-time: 25m
 # Set up Qiskit Runtime for an organization
 {: #quickstart-steps-org}
 
-TEXT
+Follow these steps to start setting up Qiskit runtime.
 {: shortdesc}
 
 ## Configure IAM settings
@@ -81,7 +81,7 @@ Follow these steps to set up an access group:
 
       ![Defining actions for the custom role](images/org-guide-custom-role-actions.png "Defining actions for the custom role"){: caption="Figure 5. Define actions for the custom role" caption-side="bottom"}
 
-      You can optionally define more fine grained roles by following [these instructions](#more-roles-org).
+      You can optionally define more fine grained roles by following [these instructions](/docs/quantum-computing?topic=quantum-computing-considerations-org#more-roles-org).
       {: note}
 
 2. Create an access group.
@@ -95,10 +95,8 @@ Follow these steps to set up an access group:
    3. In Resources, select **Specific resources**. For Attribute type, choose **Service Instance**.
    4. From the drop down list, select the service instance you want to add to the access group, for example, `QR-ml`. If you are using resource groups, select the resource group instead of selecting individual service instances.  Click **Next**.
       ![Select Resources for Access Group](images/org-guide-create-access-group-2.png "Select Resources for Access Group"){: caption="Figure 7. Select Resources for Access Group" caption-side="bottom"}
-
    5. For Roles and actions, select **Viewer** and the custom role created previously.  Click **Add**, then **Assign**.
       ![Select Roles and actions for Access Group](images/org-guide-create-access-group-3.png "Select Roles and actions for Access Group"){: caption="Figure 8. Select Roles and actions for Access Group" caption-side="bottom"}
-
    6. Repeat this step if you want to give an access group permissions to several service instances.
 
 
@@ -108,34 +106,6 @@ Follow these steps to set up an access group:
 
 Follow the steps in the appropriate topic, depending on the ID provider you chose to use:
 
+- [Use Cloud as the ID provider for users that have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org)
+- [Use Cloud as the ID provider for users that do not have IBM Cloud accounts](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org)
 - [Use an ID provider other than IBM Cloud](/docs/quantum-computing?topic=quantum-computing-appid-org)
-- [Use Cloud as the ID provider](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org)
-
-
-## Example scenario
-{: #steps-org}
-
-In our example, we want to create the following setup:
-* We have two projects, `ml` and `finance`.
-  * The `ml` project should have access to the service instances `QR-ml` and `QR-common`.
-  * The `finance` project should have access to the service instances `QR-finance` and `QR-common`.
-* We have three users:
-  * Fatima should have access to the `ml` project.
-  * Ravi should have access to the `finance` project.
-  * Amyra should have access to both projects.
-* We will use access groups without resource groups.
-* Users are defined in an App ID instance and project assignments are also done there.
-* Users should be able to delete jobs.
-
-The steps to implement this setup are:
-1. The Cloud administrator creates an App ID instance and ensures that it is linked in the Cloud administrator's account. The administrator notes the ID provider URL to share it with users.
-2. The Cloud administrator creates three service instances: `QR-ml`, `QR finance` and `QR-common`.
-3. The Cloud administrator creates a custom rule that includes the `quantum-computing.job.delete` action.
-4. The Cloud administrator creates two access groups:
-  * The `ml` access group can access `QR-ml` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `ml`.
-  * The `finance` access group can access `QR-finance` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `finance`.
-5. The IDP administrator uses the App ID instance that the Cloud administrator created and defines the three users:
-  * For Fatima, the custom attributes should contain `{"project":"ml"}`.
-  * For Ravi, the custom attributes should contain `{"project":"finance"}`.
-  * For Amyra, the custom attributes should contain `{"project":"ml finance"}`.
-6. Users can log in through the ID provider URL, create API keys, and work with their projects' service instances.

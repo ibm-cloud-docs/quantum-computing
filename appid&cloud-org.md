@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization, appid
 
@@ -18,10 +18,11 @@ completion-time: 15m
 # Use an ID provider other than IBM Cloud to manage IBM Cloud users
 {: #appid&cloud-org}
 
-This topic is only relevant if you want to enable users from an ID provider other than using IBM Cloud accounts; if your users have IBM Cloud accounts, this is not needed.  However, you can use IBM Cloud in conjunction with other ID providers if you choose. Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org) if you want to use Cloud as the ID provider.
-
-App ID creates an ID provider that lets you add users directly in App ID, as well as connecting to other external ID providers.  This tutorial describes how to set up your ID provider, work with users, and gives instructions for users to access the environment.
+App ID creates an ID provider that lets you add users directly in App ID, as well as connecting to other external ID providers.  This tutorial describes how to set up your ID provider to work with IBM Cloud users, and gives instructions for users to access the environment.
 {: shortdesc}
+
+* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org) for instructions to use IBM Cloud as the ID provider for users that have IBM Cloud accounts.
+* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid-org) for instructions to set up an ID provider other than IBM Cloud to manage users that do not have IBM Cloud accounts.
 
 
 ## Create an App ID instance
@@ -64,34 +65,8 @@ Refer to the [App ID documentation](https://cloud.ibm.com/docs/appid){: external
 
 4. The default IdP URL is shown.  Share this URL with users when they need to log in.
 
-## Add a dynamic rule to the access group
-{: #manage-idp-org}
-{: step}
 
-The access group needs a dynamic rule to test whether it should be applied to an IDP user logging in.
-
-Because the dynamic rules are evaluated during login, any changes are picked up the next time the user logs in.
-{: note}
-
-1. Navigate to [Manage → IAM → Access groups](https://cloud.ibm.com/iam/groups){: external} and click your access group to open its details page.
-2. Click the **Dynamic rules** tab, then click **Add**.
-   * Provide a name.
-   * For the Authentication method, choose **Users federated by IBM Cloud AppID**, then choose the IDP from the Identity provider drop down list.
-
-   ![Create Dynamic Rule](images/org-guide-create-dynamic-rule1.png "Create Dynamic Rule"){: caption="Figure 9. Create Dynamic Rule" caption-side="bottom"}
-4. Click **Add a condition**, fill out the following values, then click **Add**.
-   * In the **Allow users when** field, enter the attribute key used by the IDP administrator in ID provider user attributes, such as `project` (this string is a convention defined during planning).
-   * Select **Contains** as the **Qualifier**.
-      The **Contains** qualifier means that if the names of different projects are substrings of other projects, for example, if you use `ml` and `chemlab` for project names, the `ml` contains qualifier  will trigger on both values. You can reduce such unintended matches by using prefix or suffix values.  However, this substring match behavior can be useful when a user attribute contains several values.  That is, it can allow access to several projects.
-      {: note}
-
-   * In **Values**, enter the value, such as `ml`. This is the same value that the IDP administrator uses in the IDP user.  This is typically the project name.
-   * You might want to increase the **Session duration** to increase the period before users have to log back in. Logged-in users keep their access group membership for that period, and re-evaluation takes place on the next log in.
-
-   ![Add Condition to Dynamic Rule](images/org-guide-create-dynamic-rule2.png "Add Condition to Dynamic Rule"){: caption="Figure 10. Add Condition to Dynamic Rule" caption-side="bottom"}
-
-
-## ID Provider Users: Add Users
+## Add Users
 {: #add-user-org}
 {: step}
 
@@ -100,25 +75,13 @@ When using App ID as ID provider with the Cloud directory, you can create users 
 1. Open the App ID instance page from the [resource list](https://cloud.ibm.com/resources){: external} Services and software section.
 2. Navigate to **Manage Authentication** → **Cloud Directory** → **Users**, and click **Create User**. Enter the user details.
 
-## Create or modify users' project assignments
-{: #create-assigment-org}
+## Modify users' project assignments
+{: #cloud-assign-user-org}
 {: step}
 
-If the IDP administrator will assign users to projects, you can define project values in the user's attributes.
-
-1. Open the App ID instance page from the [resource list](https://cloud.ibm.com/resources){: external} Services and software section.
-2. Navigate to **Manage Authentication** → **Cloud Directory** → **Users**, and click on a user to open it.
-3. Scroll down to **Custom Attributes**, and click **Edit**.
-4. Enter a key value pair that can will checked by the dynamic rules of the access groups, then click **Save**. You can add several values in the same string (for example, `{"project":"ml finance"}`); the **contains** qualifier of the dynamic rule will detect a match of a substring.  For our example, add:
-   ```
-   {"project":"ml"}
-   ```
-   The value `project` corresponds to the convention defined in the planning section.  `ml` is the project that the user belongs to.
-
-   If the names of different projects are substrings of other projects, for example, if you use `ml` and `chemlab` for project names, the `ml` contains qualifier  will trigger on both values. You can reduce such unintended matches by using prefix or suffix values.  However, this substring match behavior can be useful when a user attribute contains several values.  That is, it can allow access to several projects.
-   {: note}
-
-   This check is done on every login, so changes in the ID provider user attributes will be effective when a user next logs in.
+1. Go to [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external} and click on the user.
+   ![Change User Access](images/org-guide-manage-user.png "Change User Access"){: caption="Figure 11. Change User Access" caption-side="bottom"}
+2. Add access groups with **Assign group** or remove the user from an access group by clicking the three dot menu and choosing **Remove user**.
 
 ## User flow
 {: #user-org}
@@ -133,5 +96,4 @@ If the IDP administrator will assign users to projects, you can define project v
 ## Next steps
 {: #next-steps-org}
 
-- See [steps for an example scenario](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org) for an end-to-end example.
 - See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.
