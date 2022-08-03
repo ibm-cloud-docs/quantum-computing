@@ -14,7 +14,7 @@ completion-time: 15m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Use an ID provider (not IBM Cloud) to manage IBM Cloud users
+# Manage ID provider users via IBM Cloud
 {: #appid-cloud-org}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="15m"}
