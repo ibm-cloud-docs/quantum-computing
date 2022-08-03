@@ -31,7 +31,7 @@ To manage users in a different way, follow the instructions in one of these topi
 {: #create-appid-cloud}
 {: step}
 
-1. [Open App ID from the IBM Cloud catalog](https://cloud.ibm.com/catalog/services/app-id){: external} and log in.  Specify the following values:
+1. [Open App ID from the IBM Cloud catalog](https://cloud.ibm.com/catalog/services/app-id){: external} and log in if necessary.  Specify the following values:
     * For **Select a location**, it is best practice to keep it in the same location as the Qiskit Runtime service, which is `Washington DC (us-east)`.
     * **Select a pricing plan**:
        * The **Lite** plan is free of charge and is enough to get started. If needed, you can seamlessly upgrade to the graduated tier later.
