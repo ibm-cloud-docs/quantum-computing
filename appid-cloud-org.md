@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-08-03"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization, appid
 
@@ -15,7 +15,7 @@ completion-time: 15m
 {{site.data.keyword.attribute-definition-list}}
 
 # Use an ID provider (not IBM Cloud) to manage IBM Cloud users
-{: #appid-cloudcloud-org}
+{: #appid-cloud-org}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="15m"}
 

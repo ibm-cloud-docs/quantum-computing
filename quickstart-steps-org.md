@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-08-03"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -50,7 +50,6 @@ If you have already created Qiskit Runtime service instances, skip this step.
 * If you are using resource groups, make sure to create the service instances on the appropriate resource group.
 * The service instance name, such as `QR-ml`, is needed for access group references.
 
-1. If you do not already have one, [create an {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external} for the organization.
 2. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
    * **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
    * **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
