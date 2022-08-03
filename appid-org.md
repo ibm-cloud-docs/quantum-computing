@@ -22,10 +22,10 @@ completion-time: 15m
 App ID creates an ID provider that lets you add users directly in App ID, as well as connecting to other external ID providers.  This tutorial describes how to set up your ID provider to work with users that do not have IBM Cloud accounts.
 {: shortdesc}
 
-If your users have IBM Cloud accounts, see one of these topics:
+To manage users via IBM Cloud, see one of these topics:
 
-* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid-cloud-org) for instructions to use something other than IBM Cloud as the ID provider for users that have IBM Cloud accounts.
-* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org) for instructions to use IBM Cloud as the ID provider for users that have IBM Cloud accounts.
+* [Manage IBM Cloud users](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org)
+* [Manage ID provider users via IBM Cloud](/docs/quantum-computing?topic=quantum-computing-appid-cloud-org)
 
 ## Create an App ID instance
 {: #create-appid}
@@ -42,7 +42,7 @@ If your users have IBM Cloud accounts, see one of these topics:
 
 2. Read and agree to the terms and click **Create**.
 
-## Add users
+## Configure the ID provider
 {: #add-users-appid}
 {: step}
 
@@ -168,4 +168,4 @@ The steps to implement this setup are:
 ## Next steps
 {: #next-steps-appid-org}
 
-* See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#steps-org#considerations-org) for more information.
+* See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#considerations-org) for more information.

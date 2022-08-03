@@ -22,8 +22,10 @@ completion-time: 15m
 This tutorial how to use IBM Cloud to enable users who have IBM Cloud accounts and gives instructions for users to access the environment.  
 {: shortdesc}
 
-* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid-cloud-org) for instructions to use something other than IBM Cloud as the ID provider for users that have IBM Cloud accounts.
-* Follow the instructions in [this topic](/docs/quantum-computing?topic=quantum-computing-appid-org) for instructions to set up an ID provider other than IBM Cloud to manage users that do not have IBM Cloud accounts.
+To manage ID provider users instead, follow the instructions in one of these topics:
+
+* [Manage ID provider users via the ID provider](/docs/quantum-computing?topic=quantum-computing-appid-org)
+* [Manage ID provider users via IBM Cloud](/docs/quantum-computing?topic=quantum-computing-appid-cloud-org)
 
 ## Invite users
 {: #invite-cloud-org}
