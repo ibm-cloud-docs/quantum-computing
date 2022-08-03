@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-08-03"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -33,7 +33,7 @@ This audit log contains the fields `initiator_authnName` and `initiator_authnId`
 
 To capture App ID events, open your App ID instance, then navigate to **Manage Authentication -> Authentication settings** and enable **Runtime Activity**.
 
-## Defining more fine grained roles
+## Define more fine grained roles
 {: #more-roles-org}
 
 The actions in the custom roles can be used for more fine grained access control. For example, some users might need full access to work on service instances, while others might only need Read access to service instances, programs, and jobs.
