@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-08-03"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -65,7 +65,7 @@ Before setting up Qiskit Runtime for your organization, you need to decide the f
 * Which users should get visibility to which projects?
 * Should users be able to delete jobs? Keeping jobs in service instances gives more traceability for billing costs. Therefore, it is common practice to not allow users to delete jobs.
 * Will you use access groups that directly reference Qiskit Runtime service instances or organize services into resource groups?
-  * **Access groups** are the most common way of controlling user access for IBM Cloud resources.  They are a simple but powerful means to consistently assign user access. We create a access group for each project and map users to access groups. Each access group uses a custom role that allows users to access specific  Qiskit Runtime service instances or resource groups.
+  * **Access groups** are the most common way of controlling user access for IBM Cloud resources.  They are a simple but powerful means to consistently assign user access. We create a access group for each project and map users to access groups. Each access group uses a custom role that allows users to access specific Qiskit Runtime service instances or resource groups.
   * **Resource groups** are used only when you need to maintain a clear separation of service instances.  If additional service instances are created in a resource group, all users having access to the resource group will see them automatically without updating access groups.  If you choose to use resource groups, you will still create access groups, which will then be assigned to resource groups.
 
    A service instance can only belong to one resource group, and after instances are assigned into resource groups, they cannot be changed. This also means that the resource group assignment can only happen at service instance creation. Therefore, resource groups may not provide enough flexibility if assignments of service instances to resource groups might need to change.
@@ -74,5 +74,5 @@ Before setting up Qiskit Runtime for your organization, you need to decide the f
 ## Next steps
 {: #next-steps-org}
 
-* See [Considerations for using Qiskit Runtime in an organization](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information.  
-* See [Set up Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-steps-org) for the steps to set up Qiskit Runtime.
+* See [Additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information.  
+* See [Configure Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-steps-org) for the steps to set up Qiskit Runtime.

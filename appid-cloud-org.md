@@ -98,4 +98,4 @@ When using App ID as ID provider with the Cloud directory, you can create users 
 ## Next steps
 {: #next-stepscloud-org}
 
-* See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#considerations-org) for more information.
+* See [additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information.

@@ -168,4 +168,4 @@ The steps to implement this setup are:
 ## Next steps
 {: #next-steps-appid-org}
 
-* See [additional considerations](/docs/quantum-computing?topic=quantum-computing-quickstart-org#considerations-org) for more information.
+* See [additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information.
