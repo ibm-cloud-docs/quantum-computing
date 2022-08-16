@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-08-16"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization, appid
 
@@ -85,10 +85,7 @@ Because the dynamic rules are evaluated during login, any changes are picked up 
 3. Click **Add a condition**, fill out the following values, then click **Add**.
    * In the **Allow users when** field, enter the attribute key used by the IDP administrator in ID provider user attributes, such as `project` (this string is a convention defined during planning).
    * Select **Contains** as the **Qualifier**.
-      The **Contains** qualifier means that if the names of different projects are substrings of other projects, for example, if you use `ml` and `chemlab` for project names, the `ml` contains qualifier  will trigger on both values. You can reduce such unintended matches by using prefix or suffix values.  However, this substring match behavior can be useful when a user attribute contains several values.  That is, it can allow access to several projects.
-      {: note}
-
-   * In **Values**, enter the value, such as `ml`. This is the same value that the IDP administrator uses in the IDP user.  This is typically the project name.
+   * In **Values**, enter the value, such as `ml`. This is the same value that the IDP administrator uses in the IDP user profile definition.  It is typically the project name.
    * You might want to increase the **Session duration** to increase the period before users have to log back in. Logged-in users keep their access group membership for that period, and re-evaluation takes place on the next log in.
 
    ![Add Condition to Dynamic Rule](images/org-guide-create-dynamic-rule2.png "Add Condition to Dynamic Rule"){: caption="Figure 10. Add Condition to Dynamic Rule" caption-side="bottom"}
@@ -118,9 +115,6 @@ If the IDP administrator will assign users to projects, you can define project v
    ```
 
    The value `project` corresponds to the convention defined in the planning section.  `ml` is the project that the user belongs to.
-
-   If the names of different projects are substrings of other projects, for example, if you use `ml` and `chemlab` for project names, the `ml` contains qualifier  will trigger on both values. You can reduce such unintended matches by using prefix or suffix values.  However, this substring match behavior can be useful when a user attribute contains several values.  That is, it can allow access to several projects.
-   {: note}
 
    This check is done on every login, so changes in the ID provider user attributes will be effective when a user next logs in.
 

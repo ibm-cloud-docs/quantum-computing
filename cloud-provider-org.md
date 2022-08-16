@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-08-16"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -35,8 +35,13 @@ To manage ID provider users instead, follow the instructions in one of these top
 2. Go to Manage → Access (IAM) and click [Invite users](https://cloud.ibm.com/iam/users/invite_users){: external}.
 3. Enter the email addresses of users to be added.
 4. Select the access group or groups of the projects that the users should be part of. These assignments can be changed later.
+5. Click Add to confirm the access group selection.
+6. Click Invite to send the invitation to the users.
 
-## Modify users' project assignments
+   Users cannot be managed until they accept the invitation and log in at least once.
+   {: note}
+
+## Optional: Modify users' project assignments
 {: #cloud-assign-user-org}
 {: step}
 
@@ -48,11 +53,11 @@ To manage ID provider users instead, follow the instructions in one of these top
 {: #user-org}
 {: step}
 
-1. Users can log in through the [IBM Cloud portal](https://cloud.ibm.com/){: external}.
+1. After accepting their invitation, users can log in through the [IBM Cloud portal](https://cloud.ibm.com/){: external}.
 2. To work with Qiskit Runtime, users will create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).  They will use it for service instances they can access.
 3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
 
 ## Next steps
 {: #next-steps-org}
 
-* See [additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information.
+* See [Additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information.

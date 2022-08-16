@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-08-16"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization, appid
 
@@ -71,23 +71,27 @@ Refer to the [App ID documentation](https://cloud.ibm.com/docs/appid){: external
 {: #add-user-org}
 {: step}
 
-When using App ID as ID provider with the Cloud directory, you can create users in the Cloud user interface.
+When using App ID as ID provider with the Cloud directory, you can create users in the IBM Cloud user interface.
 
 1. Open the App ID instance page from the [resource list](https://cloud.ibm.com/resources){: external} Services and software section.
 2. Navigate to **Manage Authentication** → **Cloud Directory** → **Users**, and click **Create User**. Enter the user details.
 
-## Modify users' project assignments
+## Create or modify users' project assignments
 {: #cloud-assign-user-org}
 {: step}
 
 1. Go to [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external} and click on the user.
    ![Change User Access](images/org-guide-manage-user.png "Change User Access"){: caption="Figure 11. Change User Access" caption-side="bottom"}
+
+   If you don't see the user you want to manage, verify that they have logged in to IBM Cloud at least once. See step 1. in the [User flow](#user-org).
+   {: note}
+
 2. Add access groups with **Assign group** or remove the user from an access group by clicking the three dot menu and choosing **Remove user**.
 
 ## User flow
 {: #user-org}
 
-1. A user is sent the ID provider URL for the IBM Cloud account.
+1. A user is sent the ID provider URL for the IBM Cloud account.  They use this URL and the given login information to access the system.  It is recommended that the user change their password after logging on.
 
    The administrator can always go to [Manage → Access (IAM) → Identity providers](https://cloud.ibm.com/iam/identity-providers){: external} to look up the ID provider URL.
    {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-07-26"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -26,10 +26,10 @@ Follow these steps to start setting up Qiskit runtime.
 {: #iam-org}
 {: step}
 
-First, there are some settings to configure in the administrator's Identity and Access Management (IAM)  account. To review and configure these settings, go to [Manage → IAM → Settings](https://cloud.ibm.com/iam/settings){: external}.
+First, there are some settings to configure in the administrator's Identity and Access Management (IAM) account. To review and configure these settings, go to [Manage → IAM → Settings](https://cloud.ibm.com/iam/settings){: external}.
 
-* **User list visibility** determines whether users can see each other, regardless of project assignment. The `enabled` setting restricts user visibility.  That is, users in your account cannot see each other, even if they  can access the same resources. Choose the appropriate value for your environment. See [Controlling user visibility](https://cloud.ibm.com/docs/account?topic=account-iam-user-setting){: external} for more information.
-* **API key creation** controls whether users can create API keys.  For this tutorial, users need API keys. Therefore, this setting should be `disabled`.  Alternatively, you can give specific permissions to each user.
+* **User list visibility** determines whether users can see each other, regardless of project assignment. The `enabled` setting restricts user visibility.  That is, users in your account cannot see each other, even if they can access the same resources. Choose the appropriate value for your environment. See [Controlling user visibility](https://cloud.ibm.com/docs/account?topic=account-iam-user-setting){: external} for more information.
+* **API key creation** controls whether users can create API keys.  In Qiskit Runtime, it is common to use API keys. If API keys are being used, choose `disabled`.  Alternatively, you can give specific permissions to each user.
 
 ![IAM settings](images/org-guide-iam-settings.png "User list visibility"){: caption="Figure 1. IAM settings page with User list visibility enabled" caption-side="bottom"}
 
@@ -50,10 +50,10 @@ If you have already created Qiskit Runtime service instances, skip this step.
 * If you are using resource groups, make sure to create the service instances on the appropriate resource group.
 * The service instance name, such as `QR-ml`, is needed for access group references.
 
-2. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
+1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
    * **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
-   * **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
-3. After completing the required information, click **Create**.
+   * **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and use all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
+1. After completing the required information, click **Create**.
 
 ## Create access groups for projects
 {: #create-group-org}
@@ -77,7 +77,7 @@ Follow these steps to set up an access group:
       * quantum-computing.program.read
       * quantum-computing.program.update
       * quantum-computing.user.logout
-      * Only select quantum-computing.job.delete if you want users to delete jobs.
+      * Only select quantum-computing.job.delete if you want to allow users to delete jobs.
 
       ![Defining actions for the custom role](images/org-guide-custom-role-actions.png "Defining actions for the custom role"){: caption="Figure 5. Define actions for the custom role" caption-side="bottom"}
 
@@ -93,7 +93,7 @@ Follow these steps to set up an access group:
       ![Select Service for Access Group](images/org-guide-create-access-group-1.png "Select Service for Access Group"){: caption="Figure 6. Select Service for Access Group" caption-side="bottom"}
 
    3. In Resources, select **Specific resources**. For Attribute type, choose **Service Instance**.
-   4. From the drop down list, select the service instance you want to add to the access group, for example, `QR-ml`. If you are using resource groups, select the resource group instead of selecting individual service instances.  Click **Next**.
+   4. From the drop-down list, select the service instance you want to add to the access group, for example, `QR-ml`. If you are using resource groups, select the resource group instead of selecting individual service instances.  Click **Next**.
       ![Select Resources for Access Group](images/org-guide-create-access-group-2.png "Select Resources for Access Group"){: caption="Figure 7. Select Resources for Access Group" caption-side="bottom"}
    5. For Roles and actions, select **Viewer** and the custom role created previously.  Click **Add**, then **Assign**.
       ![Select Roles and actions for Access Group](images/org-guide-create-access-group-3.png "Select Roles and actions for Access Group"){: caption="Figure 8. Select Roles and actions for Access Group" caption-side="bottom"}

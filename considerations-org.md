@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-08-16"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -38,17 +38,19 @@ To capture App ID events, open your App ID instance, then navigate to **Manage A
 
 The actions in the custom roles can be used for more fine grained access control. For example, some users might need full access to work on service instances, while others might only need Read access to service instances, programs, and jobs.
 
-To achieve that, define two different custom roles. Remove all cancel, delete, and update roles from the `reader` custom role, and include all actions in the `writer` custom role. Next, add the roles to two different access groups accordingly.
+To achieve that, define two different custom roles such as `MLreader` and `MLwriter`. Remove all cancel, delete, and update roles from the `MLreader` custom role, and include all actions in the `MLwriter` custom role. Next, add the roles to two different access groups accordingly.
 
-When using dynamic rules, that is, when the IDP administrator manages access through custom IDP user attributes, do not use IDP custom user attributes that are substrings of each other.  For instance, don't use `ml` and `ml-reader`, as the string comparison of `ml` would also accept `ml-reader`. Use `ml-reader` and `ml-writer` to avoid this conflict.
+When using dynamic rules, that is, when the IDP administrator manages access through custom IDP user attributes, do not use IDP custom user attributes that are substrings of each other.  For instance, don't use `ml` and `mlReader`, as the string comparison of `ml` would also accept `mlReader`. You could use `MLreader` and `MLwriter` to avoid this conflict.
 {: note}
+
+For an example of setting up custom roles, see [Create access groups for projects](/docs/quantum-computing?topic=quantum-computing-quickstart-steps-org#create-group-org).
 
 ## Other Cloud resources
 {: #other-cloud-rsc-org}
 
 The steps used in this tutorial can be used to manage access to other Cloud resources as well. Include the appropriate permissions to the access groups of the relevant projects.
 
-## Nested project structures
+## Hierarchical project structures
 {: #nest-org}
 
 In this tutorial, the mapping of users to projects and service instances was kept simple. However, by associating several users with access groups and referencing service instances from several access groups, more complex mappings can be implemented.
