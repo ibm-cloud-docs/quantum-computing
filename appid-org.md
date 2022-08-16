@@ -63,7 +63,7 @@ Refer to the [App ID documentation](https://cloud.ibm.com/docs/appid){: external
 2. Specify a name and select the App ID instance from the drop down list.
 3. Select the checkbox to enable the ID provider.
 
-  ![Create identity provider](images/org-guide-idp-reference.png "Create identity provider"){: caption="Figure 3. Create identity provider page" caption-side="bottom"}
+   ![Create identity provider](images/org-guide-idp-reference.png "Create identity provider"){: caption="Figure 3. Create identity provider page" caption-side="bottom"}
 
 4. The default IdP URL is shown.  Share this URL with users when they need to log in.
 
@@ -125,6 +125,7 @@ If the IDP administrator will assign users to projects, you can define project v
 
    The administrator can always go to [Manage → Access (IAM) → Identity providers](https://cloud.ibm.com/iam/identity-providers){: external} to look up the ID provider URL.
    {: note}
+
 2. To work with Qiskit Runtime, users will create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).  They will use it for service instances they can access.
 3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
 
@@ -134,12 +135,12 @@ If the IDP administrator will assign users to projects, you can define project v
 In our example, we want to create the following setup:
 
 * We have two projects, `ml` and `finance`.
-  * The `ml` project should have access to the service instances `QR-ml` and `QR-common`.
-  * The `finance` project should have access to the service instances `QR-finance` and `QR-common`.
+   * The `ml` project should have access to the service instances `QR-ml` and `QR-common`.
+   * The `finance` project should have access to the service instances `QR-finance` and `QR-common`.
 * We have three users:
-  * Fatima should have access to the `ml` project.
-  * Ravi should have access to the `finance` project.
-  * Amyra should have access to both projects.
+   * Fatima should have access to the `ml` project.
+   * Ravi should have access to the `finance` project.
+   * Amyra should have access to both projects.
 * We will use access groups without resource groups.
 * Users are defined in an App ID instance and project assignments are also done there.
 * Users should be able to delete jobs.

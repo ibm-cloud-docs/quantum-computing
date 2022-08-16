@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-08-16"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -11,7 +11,6 @@ subcollection: quantum-computing
 content-type: faq
 
 ---
-
 
 
 {{site.data.keyword.attribute-definition-list}}

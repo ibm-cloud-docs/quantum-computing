@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-08-16"
 
 keywords: quantum, Qiskit, runtime, near time compute, primitive programs
 
@@ -58,6 +58,7 @@ The following primitive programs are available:
 |---|---|---|
 | Sampler | Allows a user to input a circuit and then generate quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference. | ![An example of Sampler output is shown.](images/sampler.png) |
 | Estimator | Allows a user to specify a list of circuits and observables and provides the ability to selectively group between the lists to efficiently evaluate expectation values and variances for a parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators that are required for many algorithms. | ![An example of Estimator output is shown.](images/estimator.png) |
+{: caption="Table 1. Available primitive programs" caption-side="bottom"}
 
 ## How to use primitives
 {: #how-to-use-primitives}

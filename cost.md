@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-08-16"
 
 
 
@@ -46,6 +46,7 @@ This is a free plan that gives you access to quantum simulators to help you get 
    - **Simulated Qubits**: 63
 
 ## Standard plan
+{: #standard-plan}
 
 A pay-as-you-go plan for accessing IBM Quantum systems. Build your own programs and leverage all the benefits of Qiskit Runtime by running on real quantum hardware.
 
@@ -80,6 +81,6 @@ You will receive a monthly invoice that provides details about your resource cha
 
 You can set up spending notifications to get notified when your account or a particular service reaches a specific spending threshold that you set. For information, see the [IBM Cloud account **Type** description](https://cloud.ibm.com/docs/account?topic=account-accounts){: external}. Note that {{site.data.keyword.cloud}} spending notifications must be used in conjunction with other methods of cost management for several reasons:
 
-  - The notifications trigger only _after_ cost has surpassed the specified limit.
-  - Cost is submitted to the billing system hourly. Thus, there could be a long delay between the job being run and the spending notification being sent.
-  - The billing system can take multiple days to get information to the invoicing system, which could cause further delay in notifications.  For more information about how the IBM Cloud billing system works, see [Setting spending notifications](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-spending){: external}.
+   - The notifications trigger only _after_ cost has surpassed the specified limit.
+   - Cost is submitted to the billing system hourly. Thus, there could be a long delay between the job being run and the spending notification being sent.
+   - The billing system can take multiple days to get information to the invoicing system, which could cause further delay in notifications.  For more information about how the IBM Cloud billing system works, see [Setting spending notifications](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-spending){: external}.

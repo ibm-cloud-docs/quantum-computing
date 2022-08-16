@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-16"
 
 keywords: question about qiskit errors, error when running qiskit or qiskit runtime commands
 
@@ -13,8 +13,6 @@ content-type: troubleshoot
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 # Why am I getting an import error when I run a Qiskit command?
 {: #tbs-qiskit-version}
