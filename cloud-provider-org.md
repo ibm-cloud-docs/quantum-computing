@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-22"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -56,6 +56,33 @@ To manage ID provider users instead, follow the instructions in one of these top
 1. After accepting their invitation, users can log in through the [IBM Cloud portal](https://cloud.ibm.com/){: external}.
 2. To work with Qiskit Runtime, users will create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).  They will use it for service instances they can access.
 3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
+
+## Example scenario
+{: #steps-cloud-org}
+
+In our example, we want to create the following setup:
+
+* We have two projects, `ml` and `finance`.
+   * The `ml` project should have access to the service instances `QR-ml` and `QR-common`.
+   * The `finance` project should have access to the service instances `QR-finance` and `QR-common`.
+* We have three users:
+   * Fatima should have access to the `ml` project.
+   * Ravi should have access to the `finance` project.
+   * Amyra should have access to both projects.
+* We will use access groups without resource groups.
+* Users are defined in IBM Cloud and project assignments are done there as well.
+* Users should be able to delete jobs.
+
+The steps to implement this setup are:
+
+1. The Cloud administrator creates two access groups:
+   * The `ml` access group can access `QR-ml` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `ml`.
+   * The `finance` access group can access `QR-finance` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `finance`.
+1. The Cloud administrator invites cloud users as follows:
+   * Fatima is invited to the "ml" project.
+   * Ravi is invited to the "finance" project.
+   * Amyra is invited to both the "ml" and "finance" projects.
+1. Users can log in through the IBM Cloud portal, create API keys, and work with their projects' service instances.
 
 ## Next steps
 {: #next-steps-org}

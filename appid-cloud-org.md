@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-22"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization, appid
 
@@ -98,6 +98,38 @@ When using App ID as ID provider with the Cloud directory, you can create users 
 
 2. To work with Qiskit Runtime, users will create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).  They will use it for service instances they can access.
 3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
+
+## Example scenario
+{: #steps-appid-org}
+
+In our example, we want to create the following setup:
+
+* We have two projects, `ml` and `finance`.
+   * The `ml` project should have access to the service instances `QR-ml` and `QR-common`.
+   * The `finance` project should have access to the service instances `QR-finance` and `QR-common`.
+* We have three users:
+   * Fatima should have access to the `ml` project.
+   * Ravi should have access to the `finance` project.
+   * Amyra should have access to both projects.
+* We will use access groups without resource groups.
+* Users are defined in IBM Cloud but project assignments are done in an App ID instance.
+* Users should be able to delete jobs.
+
+The steps to implement this setup are:
+
+1. The Cloud administrator creates an App ID instance and ensures that it is linked in the Cloud administrator's account. The administrator notes the ID provider URL to share it with users.
+2. The Cloud administrator creates three service instances: `QR-ml`, `QR finance` and `QR-common`.
+3. The Cloud administrator creates a custom rule that includes the `quantum-computing.job.delete` action.
+4. The Cloud administrator creates two access groups:
+   * The `ml` access group can access `QR-ml` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `ml`.
+   * The `finance` access group can access `QR-finance` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `finance`.
+
+5. The Cloud administrator defines the three users in the IBM Cloud user interface.
+6. The cloud administrator creates the following project assignments:
+   * For Fatima, the custom attributes should contain `{"project":"ml"}`.
+   * For Ravi, the custom attributes should contain `{"project":"finance"}`.
+   * For Amyra, the custom attributes should contain `{"project":"ml finance"}`.
+6. Users can log in through the ID provider URL, create API keys, and work with their projects' service instances.
 
 ## Next steps
 {: #next-stepscloud-org}
