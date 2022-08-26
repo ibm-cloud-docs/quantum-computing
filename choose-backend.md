@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-08-26"
 
 
 keywords: Qiskit Runtime backend, Qiskit Runtime device, Qiskit Runtime simulator, Qiskit Runtime systems
@@ -19,9 +19,9 @@ content-type: howto
 # Choose a system or simulator
 {: #choose-backend}
 
-Before running a job, you can optionally choose a physical quantum system or a simulator to run on.  If you do not specify one, the job is sent to the least busy device that you have access to.
+Before you run a job, you can optionally choose a physical quantum system or a simulator to run on. If you do not specify one, the job is sent to the least busy device that you have access to.
 
-The Standard plan only allows access to physical quantum systems, while the Lite plan only allows access to simulators.
+The Standard plan allows access only to physical quantum systems, while the Lite plan allows access only to simulators.
 {: #note}
 
 To find your available systems and simulators, view the [Compute resources page](https://cloud.ibm.com/quantum/resources). You must be logged in to see your available compute resources.
