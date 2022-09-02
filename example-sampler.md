@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-09-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -91,7 +91,7 @@ You can invoke the run() method multiple times with the different inputs within 
 The Sampler.run() method takes in the following arguments:
 
 * A list of **circuits** that you want to investigate.
-* Optional: A list of **parameters** for any parameterized circuits. 
+* Optional: A list of **parameters** for any parameterized circuits.
 * Optional: An optional list of concrete **parameter_values** to be bound.
 * Optional: Extra options (**kwargs**) to overwrite the default values.
 
@@ -102,7 +102,7 @@ For more information, see the [Sampler API reference](https://qiskit.org/documen
 {: #sampler-run}
 {: step}
 
-Run the job, specifying your previously defined inputs and options. In each call, you specify which circuits to run and, if applicable, `parameter_values` specifies which parameter to use with each circuit. This example has one circuit and it doesn't have parameters. 
+Run the job, specifying your previously defined inputs and options. In each call, you specify which circuits to run and, if applicable, `parameter_values` specifies which parameter to use with each circuit. This example has one circuit and it doesn't have parameters.
 
 ```Python
 # executes a Bell circuit
@@ -175,7 +175,7 @@ pqc2.measure_all()
 theta1 = [0, 1, 1, 2, 3, 5]
 theta2 = [1, 2, 3, 4, 5, 6]
 theta3 = [0, 1, 2, 3, 4, 5, 6, 7]
-    
+
 with Session(service) as session:
     sampler = Sampler(session=session, options=options)
 
