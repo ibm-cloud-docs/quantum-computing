@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-09-06"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization, appid
 
@@ -124,11 +124,12 @@ The steps to implement this setup are:
    * The `ml` access group can access `QR-ml` and `QR-common`. This access group needs a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `ml`.
    * The `finance` access group can access `QR-finance` and `QR-common`. This access group nees a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `finance`.
 
-5. The Cloud administrator defines the three users in the IBM Cloud user interface.
-6. The cloud administrator creates the following project assignments:
-   * For Fatima, the custom attributes contain `{"project":"ml"}`.
-   * For Ravi, the custom attributes contain `{"project":"finance"}`.
-   * For Amyra, the custom attributes contain `{"project":"ml finance"}`.
+5. The ID provider administrator defines the three users in the IBM Cloud user interface.
+1. Users log in at least once.
+6. The cloud administrator assigns access by adding users to the access groups that give them access to the projects: 
+   * Fatima is given access to the `ml` project.
+   * Ravi is given access to the `finance` project.
+   * Amyra is given access to the `ml` and `finanace` projects.  
 6. Users can log in through the ID provider URL, create API keys, and work with their projects' service instances.
 
 ## Next steps

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-09-06"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -19,7 +19,7 @@ completion-time: 15m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="15m"}
 
-This tutorial how to use IBM Cloud to enable users who have IBM Cloud accounts and gives instructions for users to access the environment. 
+This tutorial how to use IBM Cloud to enable users who have IBM Cloud accounts and gives instructions for users to access the environment.
 {: shortdesc}
 
 To manage ID provider users instead, follow the instructions in one of these topics:
@@ -75,13 +75,15 @@ In our example, we want to create the following setup:
 
 The steps to implement this setup are:
 
+2. The Cloud administrator creates three service instances: `QR-ml`, `QR finance`, and `QR-common`.
+3. The Cloud administrator creates a custom rule that includes the `quantum-computing.job.delete` action.
 1. The Cloud administrator creates two access groups:
-   * The `ml` access group can access `QR-ml` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `ml`.
-   * The `finance` access group can access `QR-finance` and `QR-common`. This access group should get a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `finance`.
-1. The Cloud administrator invites cloud users as follows:
-   * Fatima is invited to the "ml" project.
-   * Ravi is invited to the "finance" project.
-   * Amyra is invited to both the "ml" and "finance" projects.
+   * The `ml` access group can access `QR-ml` and `QR-common`.
+   * The `finance` access group can access `QR-finance` and `QR-common`.
+1. The Cloud administrator invites cloud users to the appropriate project.  Specifically, they invite and assign users to an access group that includes the project.
+   * Fatima is added to the "ml" access group.
+   * Ravi is added to the "finance" access group.
+   * Amyra is added to both the "ml" and "finance" access groups.
 1. Users can log in through the IBM Cloud portal, create API keys, and work with their projects' service instances.
 
 ## Next steps
