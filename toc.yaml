@@ -50,6 +50,7 @@ toc:
       - choose-backend.md
       - run_job.md
       - results.md
+      - view-cost.md
       - setup-terraform.md
       - topicgroup:
         label: Enhancing security
