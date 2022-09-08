@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-03-14"
 
 keywords: activity tracker for Qiskit Runtime, Qiskit Runtime events, Qiskit Runtime security, audit logs for Qiskit Runtime, viewing Qiskit Runtime events, Qiskit Runtime events
 
@@ -31,14 +31,14 @@ The following table lists the Qiskit Runtime actions that generate an event:
 
 | Action                           | Description                        |
 |----------------------------------|------------------------------------|
-| `quantum-computing.program.create` | An event is generated a program is uploaded.     |
-| `quantum-computing.program.read` | An event is generated when program information is returned. For example, when you list programs or program details.     |
-| `quantum-computing.program.delete` | An event is generated when a program is deleted.     |
-| `quantum-computing.program.update` | An event is generated when a program metadata is updated.     |
-| `quantum-computing.job.create` | An event is generated when a job is started.     |
-| `quantum-computing.job.read` | An event is generated when job information is returned. This includes listing jobs, job details, job results, job interim results, or job logs.      |
-| `quantum-computing.job.delete` | An event is generated when a job is deleted.     |
-| `quantum-computing.job.cancel` | An event is generated when a job is cancelled.     |
+| `quantum-computing.program.create` | An event is generated a program is uploaded. |
+| `quantum-computing.program.read` | An event is generated when program information is returned. For example, when you list programs or program details. |
+| `quantum-computing.program.delete` | An event is generated when a program is deleted. |
+| `quantum-computing.program.update` | An event is generated when a program metadata is updated. |
+| `quantum-computing.job.create` | An event is generated when a job is started. |
+| `quantum-computing.job.read` | An event is generated when job information is returned. This includes listing jobs, job details, job results, job interim results, or job logs. |
+| `quantum-computing.job.delete` | An event is generated when a job is deleted. |
+| `quantum-computing.job.cancel` | An event is generated when a job is cancelled. |
 {: caption="Table 2. Actions that generate data events" caption-side="bottom"}
 
 

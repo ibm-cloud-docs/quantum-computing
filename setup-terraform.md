@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-03-28"
 
 keywords: quantum, Qiskit, runtime, near time compute, terraform
 
@@ -55,7 +55,7 @@ After the job completes, you can view the results.
    {: codeblock}
 
    Change the name of the service instance (parameter “name”) and the plan (parameter “plan”) according to your requirements.
-2. Create a Terraform execution plan.  
+2. Create a Terraform execution plan. 
 
    ```terraform
    terraform plan

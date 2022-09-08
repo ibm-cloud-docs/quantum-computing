@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-06"
+lastupdated: "2022-07-26"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -80,7 +80,7 @@ The steps to implement this setup are:
 1. The Cloud administrator creates two access groups:
    * The `ml` access group can access `QR-ml` and `QR-common`.
    * The `finance` access group can access `QR-finance` and `QR-common`.
-1. The Cloud administrator invites cloud users to the appropriate project.  Specifically, they invite and assign users to an access group that includes the project.
+1. The Cloud administrator invites cloud users to the appropriate project. Specifically, they invite and assign users to an access group that includes the project.
    * Fatima is added to the "ml" access group.
    * Ravi is added to the "finance" access group.
    * Amyra is added to both the "ml" and "finance" access groups.

@@ -44,7 +44,7 @@ For each backend, the first job in the session waits its turn in the queue norma
 ## How long is a session active?
 {: #active_session}
 
-When a session is started, it is assigned a maximum session timeout value.  This timeout value is the same as the initial job's maximum execution time and is the smaller of 1) the system limit (8 hours for physical systems) and 2) the max_execution_time defined by the program.  After this time limit is reached, the session is permanently closed.
+When a session is started, it is assigned a maximum session timeout value. This timeout value is the same as the initial job's maximum execution time and is the smaller of 1) the system limit (8 hours for physical systems) and 2) the max_execution_time defined by the program. After this time limit is reached, the session is permanently closed.
 
 Additionally, there is an interactive timeout value. If there are no session jobs queued within that window, the session is temporarily de-activated and normal fairshare job selection resumes. If the scheduler gets a job from the session again, the session is re-activated until its maximum timeout value is reached.
 

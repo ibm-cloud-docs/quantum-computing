@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-08"
+lastupdated: "2022-04-14"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -37,13 +37,13 @@ To find all FAQs for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/fa
 {: #faq-why-runtime}
 {: faq}
 
-IBM made quantum computers available through the cloud in 2016. In 2022, IBM integrates with {{site.data.keyword.cloud}} accounts to offer {{site.data.keyword.qiskit_runtime_notm}} API access. This access creates a smoother customer experience and the ability to combine {{site.data.keyword.qiskit_runtime_notm}} with other kinds of cloud compute resources for their particular workflow or application.  
+IBM made quantum computers available through the cloud in 2016. In 2022, IBM integrates with {{site.data.keyword.cloud}} accounts to offer {{site.data.keyword.qiskit_runtime_notm}} API access. This access creates a smoother customer experience and the ability to combine {{site.data.keyword.qiskit_runtime_notm}} with other kinds of cloud compute resources for their particular workflow or application. 
 
 ## What can {{site.data.keyword.qiskit_runtime_notm}} service *not* do?
 {: #faq-runtime-not}
 {: faq}
 
-{{site.data.keyword.qiskit_runtime_notm}} service provides access to IBM Quantum systems. Today’s quantum systems are somewhat constrained in the size of problems that they can address due to available scale and quantum volume. Nonetheless, these systems can already be used to solve small problems and to explore this new and exciting field.  
+{{site.data.keyword.qiskit_runtime_notm}} service provides access to IBM Quantum systems. Today’s quantum systems are somewhat constrained in the size of problems that they can address due to available scale and quantum volume. Nonetheless, these systems can already be used to solve small problems and to explore this new and exciting field. 
 
 ## What skills are required to use the {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #faq-skills}

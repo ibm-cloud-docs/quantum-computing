@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-02"
+lastupdated: "2022-08-05"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -154,7 +154,7 @@ SamplerResult(quasi_dists=[{'11': 0.484375, '00': 0.515625}, {'00': 0.5029296875
 ## Multiple parameterized circuits example
 {: #mult-parm-example-sampler}
 
-In this example, we run multiple parameterized circuits. When it is run, this line `result = sampler(circuits=[0, 0, 1], parameter_values=[theta1, theta2, theta3])` specifies which parameter to send to each circuit.  
+In this example, we run multiple parameterized circuits. When it is run, this line `result = sampler(circuits=[0, 0, 1], parameter_values=[theta1, theta2, theta3])` specifies which parameter to send to each circuit. 
 
 In our example, parameter `theta1` is sent to the first circuit, `theta2` is sent to the first circuit, and `theta3` is sent to the second circuit.
 

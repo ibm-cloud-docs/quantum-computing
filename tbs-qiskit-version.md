@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-07-26"
 
 keywords: question about qiskit errors, error when running qiskit or qiskit runtime commands
 
@@ -21,7 +21,7 @@ content-type: troubleshoot
 You're having trouble running Qiskit commands, for example, from a notebook.
 {: shortdesc}
 
-You run a Qiskit command but get an error message, starting with an import error.  For example: `ImportError: cannot import name 'SymbolicPulse' from 'qiskit.pulse.library'...`.
+You run a Qiskit command but get an error message, starting with an import error. For example: `ImportError: cannot import name 'SymbolicPulse' from 'qiskit.pulse.library'...`.
 {: tsSymptoms}
 
 This can happen when Qiskit or Qiskit Runtime is down-level.

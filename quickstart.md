@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-05-26"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -30,16 +30,16 @@ If you are an administrator who needs to set up Qiskit Runtime for your organiza
 {: #create-configure}
 {: step}
 
-If you already created a {{site.data.keyword.qiskit_runtime_notm}} service instance or were invited to one by an administrator, skip to the next step.  To determine whether you already have access to an instance, check your [IBM Cloud Instances page](https://cloud.ibm.com/quantum/instances). If you have one or more instances listed, you can skip ahead to [Install Qiskit packages](#install-packages).
+If you already created a {{site.data.keyword.qiskit_runtime_notm}} service instance or were invited to one by an administrator, skip to the next step. To determine whether you already have access to an instance, check your [IBM Cloud Instances page](https://cloud.ibm.com/quantum/instances). If you have one or more instances listed, you can skip ahead to [Install Qiskit packages](#install-packages).
 
 ![This image shows an Instances page with two instances.](images/instances.png "Instances page with two instances"){: caption="Figure 1. Instances page showing multiple instances" caption-side="bottom"}
 
 1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, choose the appropriate service plan, depending on what you need access to. For more information about these plans, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) topic.
 
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} using our examples and tutorials for one of the pre-built programs available for executing circuits efficiently.
-      - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.  
+      - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware. 
 
-      Because this is not a free plan, it is important to understand how to best manage your costs.  See [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
+      Because this is not a free plan, it is important to understand how to best manage your costs. See [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
 
       If you want to access physical devices as well as simulators, you will need to set up one instance with the Lite plan and one instance with the Standard plan.
       {: note}
@@ -50,7 +50,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 {: #install-packages}
 {: step}
 
-Install or update the following packages in your development environment.  They let you create circuits and work with primitive programs via {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. Periodically check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) (or just rerun these commands) so that you always have the latest version.
+Install or update the following packages in your development environment. They let you create circuits and work with primitive programs via {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. Periodically check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) (or just rerun these commands) so that you always have the latest version.
 
 Be sure to run these commands even if you already have the packages installed, to verify that you have the latest versions.
 {: note}
@@ -105,7 +105,7 @@ service = QiskitRuntimeService()
 ```
 {: codeblock}
 
-If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials.  For more information about managing your account see the [account management tutorial](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/tutorials/04_account_management.html){: external}.
+If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials. For more information about managing your account see the [account management tutorial](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/tutorials/04_account_management.html){: external}.
 
 For instructions to use the cloud Quantum Qiskit API, see the [authentication](/apidocs/quantum-computing#authentication){: external} section in the API documentation.
 
