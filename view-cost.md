@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-07"
+lastupdated: "2022-09-08"
 
 
 keywords: Qiskit Runtime cost, Qiskit Runtime instance, Qiskit Runtime job cost, Qiskit Runtime price
@@ -16,7 +16,7 @@ content-type: howto
 {{site.data.keyword.attribute-definition-list}}
 
 
-# View cost
+# View the cost
 {: #view-cost}
 
 At any time, you can see how much cost has been incurred by jobs associated with an instance.
@@ -30,8 +30,8 @@ To determine how much has been billed to an instance during the current billing 
 
 These are the fields relevant to cost:
 
-* Billing cycle QR usage: The amount of quantum runtime used by this instance during the current billing cycle
-* Billing cycle cost: The total cost of running jobs during the current billing cycle
+* **Billing cycle QR usage**: The amount of quantum runtime used by this instance during the current billing cycle
+* **Billing cycle cost**: The total cost of running jobs during the current billing cycle
 
 You can view your billing cycle on the [Billing and usage page](https://cloud.ibm.com/billing){: external}.
 
@@ -42,8 +42,8 @@ To determine how much has been billed to each job associated with an instance, f
 
 These are the columns relevant to cost:
 
-* QR usage: The amount of quantum runtime used by this job
-* Cost: The total cost of running this job
+* **QR usage**: The amount of quantum runtime used by this job
+* **Cost**: The total cost of running this job
 
 ## Next steps
 {: #next-steps-view-cost}
