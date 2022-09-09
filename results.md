@@ -16,7 +16,7 @@ content-type: howto
 
 
 # View final job results
-{: #view-final}
+{: #results}
 
 This tutorial describes how to review final results after running a job. For an example of running a job, see [Get started with the Estimator primitive](/docs/quantum-computing?topic=quantum-computing-example-estimator) or [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-sampler).
 {: shortdesc}
@@ -35,7 +35,7 @@ Immediately after running the job, follow up the {{site.data.keyword.qiskit_runt
 
 If you ran other jobs since running the job you want to investigate, run `job = service.job(job_id)` then run `job.status()`.
 
-Jobs are also listed on the Jobs page for your quantum service instance.  From the {{site.data.keyword.cloud_notm}} console quantum [Instances page](https://cloud.ibm.com/quantum/instances){: external}, click the name of your instance, then click the Jobs tab.  To see the current status of your job, click the refresh arrow in the upper right corner.
+Jobs are also listed on the Jobs page for your quantum service instance. From the {{site.data.keyword.cloud_notm}} console quantum [Instances page](https://cloud.ibm.com/quantum/instances){: external}, click the name of your instance, then click the Jobs tab. To see the current status of your job, click the refresh arrow in the upper right corner.
 
 You can optionally run the [List job details API](/apidocs/quantum-computing#get-job-details-jid){: external}, manually or by using [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/get_job_details_jid){: external} to check the job's status.
 

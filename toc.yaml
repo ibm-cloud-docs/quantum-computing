@@ -22,6 +22,7 @@ toc:
       topics:
       - quickstart.md
       - overview.md
+      
       - topic: release-notes.md
         navtitle: Release notes
 
@@ -30,6 +31,18 @@ toc:
       topics:
       - example-sampler.md
       - example-estimator.md
+      - topicgroup:
+            label: Set up Qiskit Runtime for an organization
+            topics:
+            - quickstart-org.md
+            - quickstart-steps-org.md
+            - topicgroup:
+                  label: User management options
+                  topics:
+                  - cloud-provider-org.md
+                  - appid-cloud-org.md
+                  - appid-org.md
+      - considerations-org.md
 
   - navgroup:
       id: howto
@@ -37,13 +50,13 @@ toc:
       - choose-backend.md
       - run_job.md
       - results.md
-      - admin.md
+      - view-cost.md
       - setup-terraform.md
       - topicgroup:
-        label: Enhancing security
-        topics:
-        - architecture-workload-isolation.md
-        - data-security.md
+            label: Enhancing security
+            topics:
+            - architecture-workload-isolation.md
+            - data-security.md
       - at-events.md
 
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
@@ -70,14 +83,18 @@ toc:
       - faqs.md
       - support.md
       - topicgroup:
-          label: Communities
-          topics:
-          - link:
-              label: Qiskit Slack
-              href: http://ibm.co/joinqiskitslack
-          - link:
-              label: IBM Quantum Stack Exchange
-              href: https://quantumcomputing.stackexchange.com/questions/tagged/ibm-q-experience
-          - link:
-              label: Qiskit Stack Exchange
-              href: https://quantumcomputing.stackexchange.com/questions/tagged/qiskit
+            label: Troubleshooting
+            topics:
+            - tbs-qiskit-version.md
+      - topicgroup:
+            label: Communities
+            topics:
+            - link:
+                label: Qiskit Slack
+                href: http://ibm.com/joinqiskitslack
+            - link:
+                label: IBM Quantum Stack Exchange
+                href: https://quantumcomputing.stackexchange.com/questions/tagged/ibm-q-experience
+            - link:
+                label: Qiskit Stack Exchange
+                href: https://quantumcomputing.stackexchange.com/questions/tagged/qiskit

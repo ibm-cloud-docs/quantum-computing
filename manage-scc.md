@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2020, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-08-16"
 
 keywords: security and compliance for *service_name*, security for *service_name*, compliance for *service_name*,
 
@@ -15,9 +15,9 @@ subcollection: # Your subcollection value
 # Manage security with Qiskit Runtime
 {: #manage-security-compliance-qiskit-runtime}
 
-
 Qiskit Runtime is integrated with the {{site.data.keyword.compliance_short}} to help you manage security and compliance for your organization.
 {: shortdesc}
+
 
 
 With the {{site.data.keyword.compliance_short}}, you can:

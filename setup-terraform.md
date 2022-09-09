@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-03-28"
 
 keywords: quantum, Qiskit, runtime, near time compute, terraform
 
@@ -18,13 +18,13 @@ content-type: howto
 # Set up Terraform for Qiskit Runtime
 {: #setup-terraform}
 
-If you use Terraform to manage your infrastructure, the [IBM Cloud provider for Terraform]( https://cloud.ibm.com/docs/terraform?topic=terraform-getting-started) supports provisioning Qiskit Runtime service instances. The generic “ibm_resource_instance” resource is used for that. The following parameters have to be specified:
+If you use Terraform to manage your infrastructure, the [IBM Cloud provider for Terraform](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started){: external} supports provisioning Qiskit Runtime service instances. The generic “ibm_resource_instance” resource is used for that. The following parameters have to be specified:
 {: shortdesc}
 
 ## Provisioning with Terraform
 {: #Provisioning-with-Terraform}
 
-If you use Terraform to manage your infrastructure, the [IBM Cloud provider for Terraform]( https://cloud.ibm.com/docs/terraform?topic=terraform-getting-started) supports provisioning Qiskit Runtime service instances. The generic “ibm_resource_instance” resource is used for that. The following parameters have to be specified:
+If you use Terraform to manage your infrastructure, the [IBM Cloud provider for Terraform](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started){: external} supports provisioning Qiskit Runtime service instances. The generic “ibm_resource_instance” resource is used for that. The following parameters have to be specified:
 
 -	`name` – The name of your service instance.
 -	`service` – Specify `quantum-computing` to provision Qiskit Runtime instances.
@@ -55,7 +55,7 @@ After the job completes, you can view the results.
    {: codeblock}
 
    Change the name of the service instance (parameter “name”) and the plan (parameter “plan”) according to your requirements.
-2. Create a Terraform execution plan.  
+2. Create a Terraform execution plan. 
 
    ```terraform
    terraform plan
