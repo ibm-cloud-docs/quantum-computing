@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-02"
+lastupdated: "2022-09-13"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -62,7 +62,7 @@ The maximum execution time is 18000 seconds (5 hours).
         - **Description**: A list of observable indices. It must have the same length as circuit_indices and parameter_values.
         - **Required**: True   
     - **options**        
-        - **Description**: Additional parameters, such as the backend to use.
+        - **Description**: Extra parameters, such as the backend to use.
         - **Required**: False   
 - **Returns**:
    - **metadata**:
@@ -70,7 +70,7 @@ The maximum execution time is 18000 seconds (5 hours).
         - **Description**: Additional metadata. 
         - **Required**: False
    - **value**:
-       - **Description**: Estimated expectation values. This is a numpy array. The i{sup}th{/sup} element is calculated using the circuit and observable indexed by the i{sup}th{/sup} circuit_indices and i{sup}th{/sup} observable_indices, and bound with i{sup}th{/sup} parameter_values.
+       - **Description**: Estimated expectation values. This is a numpy array. The i{sup}th{/sup} element is calculated by using the circuit and observable that is indexed by the i{sup}th{/sup} circuit_indices and i{sup}th{/sup} observable_indices, and bound with i{sup}th{/sup} parameter_values.
        - **Type**: array
        - **Required**: False
 

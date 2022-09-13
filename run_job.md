@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-09-13"
 
 keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status
 
@@ -25,7 +25,7 @@ This tutorial walks you through the steps to use a program to run a job on an IB
 ## Before you begin
 {: #run-program-byb}
 
-You'll need a circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
+You need a circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
 
 ## Run the job
@@ -36,11 +36,11 @@ You'll need a circuit to submit to the program. To learn how to create circuits 
 You will use the Qiskit Runtime QiskitRuntimeService.run() method, which takes the following parameters:
 
 - program_id: ID of the program to run.
-- inputs: Program input parameters. These input values are passed to the runtime program and are dependent on the parameters defined for the program.
+- inputs: Program input parameters. These input values are passed to the runtime program and depend on the parameters that are defined for the program.
 - options: Runtime options. These options control the execution environment. Currently, the only available option is backend_name, which is optional. If you do not specify a backend, the job is sent to the least busy device that you have access to.
 - result_decoder: Optional class used to decode the job result.
 
-In the following example, we will submit a circuit to the Sampler program:
+In the following example, we submit a circuit to the Sampler program:
 
 ```Python
 from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
@@ -66,7 +66,7 @@ Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create
 
 If you do not specify the backend, the job is sent to the least busy device that you have access to.
 
-To ensure fairness, there is a maximum execution time for each Qiskit Runtime job. If a job exceeds this time limit, it is forcibly terminated. The maximum execution time is the smaller of 1) the system limit and 2) the `max_execution_time` defined by the program. The system limit is 3 hours for jobs running on a simulator and 8 hours for jobs running on a physical system.
+To ensure fairness, a maximum execution time for each Qiskit Runtime job exists. If a job exceeds this time limit, it is forcibly ended. The maximum execution time is the smaller of 1) the system limit and 2) the `max_execution_time` defined by the program. The system limit is three hours for simulator jobs and eight hours for jobs that are running on a physical system.
 {: note}
 
 ## (Optional) Return the job status
@@ -75,7 +75,7 @@ To ensure fairness, there is a maximum execution time for each Qiskit Runtime jo
 
 Follow up the Qiskit Runtime QiskitRuntimeService.run() method by running a RuntimeJob method. The run() method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program.
 
-There are several RuntimeJob methods to choose from, including job.status():
+Several RuntimeJob methods exist, including job.status():
 
 ```Python
 job.status()
