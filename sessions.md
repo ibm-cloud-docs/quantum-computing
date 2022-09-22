@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-22"
 
 keywords: Qiskit Runtime sessions, Qiskit Runtime reservations
 
@@ -24,7 +24,8 @@ Jobs can run within a session window. The scheduler prioritizes the jobs that be
 In Qiskit, you can associate a primitive with a session by using a context manager. When you call a primitive by using a context manager and that job runs, a session is started (or the job is run in an active session if a session is already active). For example, the following code uses a context manager to call the Estimator primitive:
 
 ```Python
-with Estimator(...):
+with Session(service) as session:
+    estimator = Estimator(session=session, options=options)
 ```
 {: codeblock}
 
@@ -45,8 +46,8 @@ For each backend, the first job in the session waits its turn in the queue norma
 {: #active_session}
 
 When a session is started, it is assigned a maximum session timeout value. This timeout value is the same as the initial job's maximum execution time and is the smaller of these values:
-   *  The system limit (8 hours for physical systems) 
-   *  The max_execution_time defined by the program. 
+   *  The system limit (8 hours for physical systems).
+   *  The max_execution_time defined by the program.
 
 After this time limit is reached, the session is permanently closed.
 
