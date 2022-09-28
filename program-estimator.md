@@ -9,6 +9,7 @@ keywords: quantum, Qiskit, runtime, near time compute
 subcollection: quantum-computing
 ---
 {{site.data.keyword.attribute-definition-list}}
+
 # Estimator primitive
 {: #program-estimator}
 Understand the input and output for the Estimator primitive.
@@ -119,3 +120,5 @@ EstimatorResult(values=array([ 1.55078125, 0.13085938, -1.04101562]), metadata=[
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to create an instance and run your first job.
 - Review [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-estimator) for a step-by-step example of using this primitive.
 - Use Qiskit [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.
+
+

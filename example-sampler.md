@@ -11,6 +11,7 @@ content-type: tutorial
 completion-time: 10m
 ---
 {{site.data.keyword.attribute-definition-list}}
+
 # Get started with the Sampler primitive
 {: #example-sampler}
 {: toc-content-type="tutorial"}
@@ -154,3 +155,5 @@ The results align with the parameter - circuit pairs specified previously.  For 
 ```text
 SamplerResult(quasi_dists=[{'11': 0.42578125, '00': 0.14453125, '10': 0.0888671875, '01': 0.3408203125}, {'01': 0.025390625, '11': 0.3046875, '00': 0.0615234375, '10': 0.6083984375}, {'11': 0.0224609375, '00': 0.171875, '10': 0.095703125, '01': 0.7099609375}], metadata=[{'header_metadata': None, 'shots': 1024}, {'header_metadata': None, 'shots': 1024}, {'header_metadata': None, 'shots': 1024}])
 ```
+
+

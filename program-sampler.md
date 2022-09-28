@@ -9,6 +9,7 @@ keywords: quantum, Qiskit, runtime, near time compute
 subcollection: quantum-computing
 ---
 {{site.data.keyword.attribute-definition-list}}
+
 # Sampler primitive
 {: #program-sampler}
 Learn how to use the Sampler primitive.
@@ -83,3 +84,5 @@ SamplerResult(quasi_dists=[{'00': 0.4873046875, '11': 0.5126953125}], metadata=[
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to create an instance and run your first job.
 - Review [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-sampler) for a step-by-step example of using this primitive.
 - Use Qiskit [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.
+
+

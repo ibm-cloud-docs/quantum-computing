@@ -23,10 +23,13 @@ Jobs can run within a session window. The scheduler prioritizes the jobs that be
 
 In Qiskit, you can associate a primitive with a session by using a context manager. When you call a primitive by using a context manager and that job runs, a session is started (or the job is run in an active session if a session is already active). For example, the following code uses a context manager to call the Estimator primitive:
 
+
 ```Python
 with Estimator(...):
 ```
 {: codeblock}
+
+
 
 When you start a runtime job with the jobs API, by default it does not run in a session. You can specify that it runs in a new session (`start_session=true`) or you can assign the job to run in a current session (`session_id=ID of a running session`). For information about using the jobs API, see the [Quiskit Runtime API Reference](https://cloud.ibm.com/apidocs/quantum-computing#create-job){: external}
 

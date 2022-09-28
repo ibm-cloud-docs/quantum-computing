@@ -11,6 +11,7 @@ content-type: tutorial
 completion-time: 10m
 ---
 {{site.data.keyword.attribute-definition-list}}
+
 # Get started with the Estimator primitive
 {: #example-estimator}
 {: toc-content-type="tutorial"}
@@ -120,3 +121,5 @@ EstimatorResult(values=array([0.19921875]), metadata=[{'variance': 0.96031188964
 EstimatorResult(values=array([1.515625 , 0.97460938]), metadata=[{'variance': 9.603851318359375, 'shots': 1024}, {'variance': 11.997127532958984, 'shots': 1024}])
 EstimatorResult(values=array([ 1.55078125, 0.13085938, -1.04101562]), metadata=[{'variance': 9.120590209960938, 'shots': 1024}, {'variance': 0.9828758239746094, 'shots': 1024}, {'variance': 1.2807121276855469, 'shots': 1024}])
 ```
+
+
