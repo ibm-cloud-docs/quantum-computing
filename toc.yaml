@@ -22,7 +22,7 @@ toc:
       topics:
       - quickstart.md
       - overview.md
-      
+     
       - topic: release-notes.md
         navtitle: Release notes
 
@@ -42,7 +42,6 @@ toc:
                   - cloud-provider-org.md
                   - appid-cloud-org.md
                   - appid-org.md
-      - considerations-org.md
 
   - navgroup:
       id: howto
@@ -69,6 +68,7 @@ toc:
       - program-hello-world.md
       - cost.md
       - sessions.md
+      - considerations-org.md
       - /quantum-computing-cli-plugin/quantum-computing-cli-plugin-quantum-computing-cli
       - link:
           label: API reference
