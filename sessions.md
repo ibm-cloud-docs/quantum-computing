@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-09-28"
 
 keywords: Qiskit Runtime sessions, Qiskit Runtime reservations
 
@@ -24,8 +24,7 @@ Jobs can run within a session window. The scheduler prioritizes the jobs that be
 In Qiskit, you can associate a primitive with a session by using a context manager. When you call a primitive by using a context manager and that job runs, a session is started (or the job is run in an active session if a session is already active). For example, the following code uses a context manager to call the Estimator primitive:
 
 ```Python
-with Session(service) as session:
-    estimator = Estimator(session=session, options=options)
+with Estimator(...):
 ```
 {: codeblock}
 
