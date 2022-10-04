@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-09-29"
+lastupdated: "2022-10-04"
 
 
 
@@ -66,22 +66,18 @@ The maximum execution time for the Sampler primitive is 10000 seconds (2.78 hour
 
 Additionally, the system limit on the job execution time is 3 hours for a job that is running on a simulator and 8 hours for a job running on a physical system.
 
+
+
 ## How to limit your cost
 {: #limit-cost}
 
-The time your job takes (and therefore, its cost) depends on how many iterations you make in a session and how many shots are run in each iteration. Thus, you can manage your cost by running only as many iterations and shots as you need.
-
-To set cost limits, navigate to the [IBM Cloud Instances page](https://cloud.ibm.com/quantum/instances){: external}, then click your instance. You can set these limits:
-
-* **Instance cost limit**: Specify how much total cost this instance can incur.
-* **Max cost per session**: Specify how much can be spent running jobs in each session. 
+The time your job takes (and therefore, its cost) depends on how many iterations you make in a session and how many shots are run in each iteration. Thus, you can manage your cost by running only as many iterations and shots as you need. As we expand on the primitives interface, we will provide more ways to manage cost.
 
 ## How to see what you're being charged
 {: #pricing-bill}
 
- You can see how much has been spent on each instance's details page. For more information, see [View the cost](/docs/quantum-computing?topic=quantum-computing-view-cost).
+You are sent a monthly invoice that provides details about your resource charges. You can check how much has been spent at any time on the [IBM Cloud Billing and usage page](https://cloud.ibm.com/billing). You can also see how much has been spent on each instance's details page. For more information, see [View the cost](/docs/quantum-computing?topic=quantum-computing-view-cost).
 
-Additionally, you are sent a monthly invoice that provides details about your resource charges. You can check how much has been spent at any time on the [IBM Cloud Billing and usage page](https://cloud.ibm.com/billing).
 
 ## Set up spending notifications
 {: #pricing-notifications}
