@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-13"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -37,7 +37,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, choose the appropriate service plan, depending on what you need access to. For more information about these plans, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) topic.
 
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} by following our examples and tutorials for one of the pre-built programs available for running circuits efficiently.
-      - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware. 
+      - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
 
       Because this is not a free plan, it is important to understand how to best manage your costs. See [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
 
@@ -52,7 +52,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 
 Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. Periodically check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) (or rerun these commands) so that you always have the latest version.
 
-Be sure to run these commands even if you already installed the packages, to verify that you have the latest versions.
+Be sure to run these commands even if you already installed the packages, to ensure that you have the latest versions.
 {: note}
 
 ```Python
@@ -147,7 +147,7 @@ Hello world!
 {: #choose-program}
 {: step}
 
-Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview) to interface with quantum computers. The following programs are publicly available. Choose the appropriate link to continue learning how to run a program.
+Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview#primitive-programs) to interface with quantum computers. The following programs are publicly available. Choose the appropriate link to continue learning how to run a program.
 
 - **[Sampler](/docs/quantum-computing?topic=quantum-computing-example-sampler)**:  
        Allows a user to specify a circuit as an input and then generate quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.

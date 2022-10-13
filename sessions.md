@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-04"
+lastupdated: "2022-10-13"
 
 keywords: Qiskit Runtime sessions, Qiskit Runtime reservations
 
@@ -16,12 +16,12 @@ subcollection: quantum-computing
 # Sessions
 {: #sessions}
 
-Jobs can run within a session window. The scheduler prioritizes the jobs that belong to that session. Qiskit Runtime primitives transparently take advantage of other session features like shared caching used by the jobs. This helps primitives run as efficiently as possible in the quantum data center and helps users experience a faster turnaround on results for their workload.
+A Qiskit Runtime session allows you to group a collection of iterative calls to the quantum computer. A session is started when the first job within the session is started. Subsequent jobs within the session are prioritized by the scheduler to minimize artificial delay within an iterative algorithm. Data used within a session, such as transpiled circuits, is also cached to avoid unnecessary overhead.
 
 ## How to run a job in a session
 {: #run_session}
 
-In Qiskit, you can associate a primitive with a session by using a context manager. When you call a primitive by using a context manager and that job runs, a session is started (or the job is run in an active session if a session is already active). For example, the following code uses a context manager to call the Estimator primitive:
+You can create a Runtime session by using the context manager (`with ...:`), which automatically opens and closes the session for you. When you call a primitive by using a context manager and that job runs, a session is started (or the job is run in an active session if a session is already active). For example, the following code uses a context manager to call the Estimator primitive:
 
 
 ```Python
