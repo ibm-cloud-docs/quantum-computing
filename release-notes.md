@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-03-18"
+lastupdated: "2022-10-14"
 content-type: release-note
 subcollection: quantum-computing
 
@@ -16,6 +16,12 @@ subcollection: quantum-computing
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.qiskit_runtime_notm}}.
 {: shortdesc}
+
+## 19 October 2022
+{: #0.3.0}
+{: release-note}
+
+The Estimator and Sampler primitives interface is redesigned. 
 
 ## 12 April 2022
 {: #0.2.0}
