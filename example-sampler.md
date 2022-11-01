@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-28"
+lastupdated: "2022-11-01"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -11,50 +11,101 @@ content-type: tutorial
 completion-time: 10m
 ---
 {{site.data.keyword.attribute-definition-list}}
+
 # Get started with the Sampler primitive
 {: #example-sampler}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
+
 Learn how to set up and use the Sampler primitive program.
 {: shortdesc}
+
 ## Overview
 {: #sampler-overview}
 
-The Sampler primitive lets you more accurately contextualize counts. It takes a user circuit as an input and generates quasiprobabilities. This enables you to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.  
+With the Sampler primitive you can more accurately contextualize counts. It takes a circuit as input and generates quasiprobabilities. This enables you to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.  
 
-If you are using the Standard plan, running Sampler incurs a cost. See [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) for cost information.
+If you are using the Standard plan, running Sampler incurs a cost. See [Manage costs](/docs/quantum-computing?topic=quantum-computing-cost) for cost information.
 {: note}
+
 ## Prepare the environment
 {: #example-sampler-byb}
 {: step}
 
 1. Follow the steps in the [getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your Quantum Service instance ready to use.
-2. You'll need at least one circuit to submit to the program. Our examples all have circuits in them, but if you want to submit your own circuit, you can use Qiskit to create one. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
+2. You need at least one circuit to submit to the program. Our examples all have circuits in them, but if you want to submit your own circuit, you can use Qiskit to create one. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
 ## Start a session
 {: #start-session-sampler-example}
 {: step}
 
-With Qiskit Runtime primitives, we introduce the concept of a session that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the quantum data center on each iteration.
+With Qiskit Runtime primitives, we introduce the concept of a session that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the quantum data center on each iteration. You can create a Runtime session by using the context manager (`with ...:`), which automatically opens and closes the session for you.
 
-### Specify program inputs
-{: #sampler-inputs}
+When you start the session, you can specify these values:
+
+*  **backend**: The system or simulator to run on. If none is specified, the least busy backend is used.
+*  **max_time**: How long a runtime session can be open before it is forcibly closed. Can be specified as seconds (int) or a string like "2h 30m 40s". This value must be in between 300 seconds and the system imposed maximum time. See [this FAQ](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/faqs/max_execution_time.html){: external} for details.
+
+This is an experimental setting and can break between releases without warning.
+{: Note}
+
+See the [sessions](/docs/quantum-computing?topic=quantum-computing-sessions) topic for more information.
+
+## Create a Sampler instance
+{: #rw-session-sampler-example}
 {: step}
 
-The Sampler takes in:
-* The **circuits** you want to investigate.
-* The **service** to use.
+You can make one or more calls to the Sampler primitive within a session, by first creating a Sampler instance.
 
-* The **parameters** input to evaluate the circuits.
-* Optional: **options**, such as the backend to run on.  If a backend is not specified, the least busy backend is used. To learn about choosing a backend, see [Choose a system or simulator](/docs/quantum-computing?topic=quantum-computing-choose-backend).
-* Optional: The instruction to **skip_transpilation**.
+The `Sampler` class takes in an options variable to control the execution environment. Options can be either a dictionary or a `qiskit_ibm_runtime.Options` class instance. Initializing it as an `Options` class allows you to use auto-complete.
+
+There are many settings you can specify as options.  These are some of the most commonly used options:
+
+* **optimization_level**: How much optimization to perform on the circuits. Higher levels generate more optimized circuits, at the expense of longer transpilation times. Values are an integer from 0 (no optimization) to 3 (heaviest optimization). The default value is 1 (light optimization). The default is 1.
+* **resilience_level**: How much resilience to build against errors. Higher levels generate more accurate results, at the expense of longer processing times. The default is 0.
+
+For all options, see the [Options API reference](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/stubs/qiskit_ibm_runtime.options.Options.html#qiskit_ibm_runtime.options.Options){: external}.
 
 Example:
 
 ```Python
-from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
+from qiskit_ibm_runtime import QiskitRuntimeService, Session, Options, Sampler
+
+service = QiskitRuntimeService()
+options = Options(optimization_level=1)
+
+with Session(service=service, backend="ibmq_qasm_simulator"):
+    sampler = Sampler(options=options)
+```
+{: codeblock}
+
+## Invoke the Sampler primitive
+{: #sampler-invoke}
+{: step}
+
+Use the Sampler instance's `run()` method to launch the Sampler primitive program. The method returns an `IBMRuntimeJob` instance that you can use to query for information such as job ID and status. The job's `result()` method returns the result.
+
+You can invoke the `run()` method multiple times with the different inputs within a session.
+
+### Specify program inputs
+{: #estimator-spec-input}
+{: step}
+
+The `Sampler.run()` method takes in the following arguments:
+
+* A list of **circuits** that you want to investigate.
+* Optional: An optional list of concrete **parameter_values** to be bound.
+* Optional: Extra options (**kwargs**) to overwrite the default values.
+
+For more information, see the [Sampler API reference](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/stubs/qiskit_ibm_runtime.Sampler.html){: external}.
+
+Example:
+
+```Python
+# Prepare the input circuit.
+
 from qiskit import QuantumCircuit
-service = QiskitRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
+
 bell = QuantumCircuit(2)
 bell.h(0)
 bell.cx(0, 1)
@@ -62,95 +113,99 @@ bell.measure_all()
 ```
 {: codeblock}
 
-## Write to & read from a session
-{: #rw-session-sampler-example}
-{: step}
 
-Running a job and returning the results are done by writing to and reading from the session. The session closes when the code exits the `with` block.
-
-### Run the job & print results
+### Run the job and print results
 {: #sampler-run}
 {: step}
 
-Run the job, specifying your previously defined inputs and options. In this simple example, there is only one circuit and it does not have parameters.
-
-In each call, you will use `circuit_indices` to specify which circuit to run and, if applicable,  `parameter_values` specifies which parameter to use with the specified circuit.
-
-In this example, we specified one circuit, `circuits=bell`, and we asked for the result for running the first (and only) circuit: `circuit_indices=[0]`.
-
-As you will see in later examples, if we had specified multiple circuits, such as `circuits=[pqc, pqc2]`, you could specify `circuit_indices=[1]` to run the `pqc2` circuit.
-
+Run the job, specifying your previously defined inputs and options. In each call, you specify which circuits to run and, if applicable, `parameter_values` to specify which parameter to use with each circuit. This example has one circuit and it doesn't have parameters.
 
 ```Python
-# executes a Bell circuit
-with Sampler(circuits=bell, service=service, options={ "backend": "" }) as sampler:
-    result = sampler(circuit_indices=[0], shots=1024)
-    print(result)
+# Execute the Bell circuit
+with Session(service=service, backend="ibmq_qasm_simulator"):
+    sampler = Sampler(options=options)
+    job = sampler.run(circuits=bell)
+    print(job.result())
+
+    # You can invoke run() multiple times.
+    job = sampler.run(circuits=bell)
+    print(job.result())
 ```
 {: codeblock}
 
 ```text
-SamplerResult(quasi_dists=[{'00': 0.4873046875, '11': 0.5126953125}], metadata=[{'header_metadata': None, 'shots': 1024}])
+SamplerResult(quasi_dists=[{3: 0.494, 0: 0.506}], metadata=[{'header_metadata': {}, 'shots': 4000}])
+SamplerResult(quasi_dists=[{0: 0.4985, 3: 0.5015}], metadata=[{'header_metadata': {}, 'shots': 4000}])
 ```
 
-## Multiple circuit example
+## Example with multiple circuits
 {: #example2-sampler}
 
 In this example, we specify three circuits, but they have no parameters:
 
 ```Python
-from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
+from qiskit_ibm_runtime import QiskitRuntimeService, Session, Options, Sampler
 from qiskit import QuantumCircuit
-service = QiskitRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
+
+service = QiskitRuntimeService()
+options = Options(optimization_level=1)
+
 bell = QuantumCircuit(2)
 bell.h(0)
 bell.cx(0, 1)
 bell.measure_all()
+
 # executes three Bell circuits
-with Sampler(circuits=[bell]*3, service=service, options={ "backend": "ibmq_qasm_simulator" }) as sampler:
-    result = sampler(circuit_indices=[0, 1, 2])
-    print(result)
+with Session(service=service, backend="ibmq_qasm_simulator"):
+    sampler = Sampler(options=options)
+    job = sampler.run(circuits=[bell]*3)
+    print(job.result())
 ```
 {: codeblock}
 
 ```text
-SamplerResult(quasi_dists=[{'11': 0.5009765625, '00': 0.4990234375}, {'11': 0.5224609375, '00': 0.4775390625}, {'11': 0.4921875, '00': 0.5078125}], metadata=[{'header_metadata': None, 'shots': 1024}, {'header_metadata': None, 'shots': 1024}, {'header_metadata': None, 'shots': 1024}])
-SamplerResult(quasi_dists=[{'00': 0.5185546875, '11': 0.4814453125}, {'11': 0.498046875, '00': 0.501953125}], metadata=[{'header_metadata': None, 'shots': 1024}, {'header_metadata': None, 'shots': 1024}])
-SamplerResult(quasi_dists=[{'00': 0.458984375, '11': 0.541015625}, {'11': 0.49609375, '00': 0.50390625}], metadata=[{'header_metadata': None, 'shots': 1024}, {'header_metadata': None, 'shots': 1024}])
+SamplerResult(quasi_dists=[{0: 0.49025, 3: 0.50975}, {3: 0.501, 0: 0.499}, {0: 0.4825, 3: 0.5175}], metadata=[{'header_metadata': {}, 'shots': 4000}, {'header_metadata': {}, 'shots': 4000}, {'header_metadata': {}, 'shots': 4000}])
 ```
 
 
 ## Multiple parameterized circuits example
 {: #mult-parm-example-sampler}
 
-In this example, we run multiple parameterized circuits. When it is run, this line `result = sampler(circuit_indices=[0, 0, 1], parameter_values=[theta1, theta2, theta3])` specifies which parameter to send to each circuit.  
+In this example, we run multiple parameterized circuits. When it is run, this line `result = sampler(circuits=[0, 0, 1], parameter_values=[theta1, theta2, theta3])` specifies which parameter to send to each circuit.
 
-In our example, the parameter labeled `theta` is sent to the first circuit, `theta2` is sent to the first circuit, and `theta3` is sent to the second circuit.
+In our example, parameter `theta1` is sent to the first circuit, `theta2` is sent to the first circuit, and `theta3` is sent to the second circuit.
 
 ```Python
-from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
+from qiskit_ibm_runtime import QiskitRuntimeService, Session, Options, Sampler
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import RealAmplitudes
-service = QiskitRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
+
+service = QiskitRuntimeService()
+options = Options(optimization_level=1)
+
 # parameterized circuit
 pqc = RealAmplitudes(num_qubits=2, reps=2)
 pqc.measure_all()
 pqc2 = RealAmplitudes(num_qubits=2, reps=3)
 pqc2.measure_all()
+
 theta1 = [0, 1, 1, 2, 3, 5]
 theta2 = [1, 2, 3, 4, 5, 6]
 theta3 = [0, 1, 2, 3, 4, 5, 6, 7]
-with Sampler(circuits=[pqc, pqc2], service=service, options={ "backend": "ibmq_qasm_simulator" }) as sampler:
-    result = sampler(circuit_indices=[0, 0, 1], parameter_values=[theta1, theta2, theta3])
-    print(result)
+
+with Session(service=service, backend="ibmq_qasm_simulator"):
+    sampler = Sampler(options=options)
+
+    job = sampler.run(circuits=[pqc, pqc, pqc2], parameter_values=[theta1, theta2, theta3])
+    print(job.result())
 ```
 {: codeblock}
 
 ### Result
 {: #example3-result-sampler}
 
-The results align with the parameter - circuit pairs specified previously.  For example, the first result (`{'11': 0.42578125, '00': 0.14453125, '10': 0.0888671875, '01': 0.3408203125}`) is the output of the parameter labeled `theta` being sent to the first circuit.
+The results align with the parameter - circuit pairs that were previously specified. For example, the first result `({2: 0.09375, 0: 0.12975, 3: 0.41875, 1: 0.35775})` is the output of the `theta1` parameter being sent to the first circuit.
 
 ```text
-SamplerResult(quasi_dists=[{'11': 0.42578125, '00': 0.14453125, '10': 0.0888671875, '01': 0.3408203125}, {'01': 0.025390625, '11': 0.3046875, '00': 0.0615234375, '10': 0.6083984375}, {'11': 0.0224609375, '00': 0.171875, '10': 0.095703125, '01': 0.7099609375}], metadata=[{'header_metadata': None, 'shots': 1024}, {'header_metadata': None, 'shots': 1024}, {'header_metadata': None, 'shots': 1024}])
+SamplerResult(quasi_dists=[{2: 0.09375, 0: 0.12975, 3: 0.41875, 1: 0.35775}, {1: 0.033, 0: 0.05975, 2: 0.61275, 3: 0.2945}, {0: 0.1845, 2: 0.1055, 3: 0.03325, 1: 0.67675}], metadata=[{'header_metadata': {}, 'shots': 4000}, {'header_metadata': {}, 'shots': 4000}, {'header_metadata': {}, 'shots': 4000}])
 ```

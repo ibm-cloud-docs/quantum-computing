@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-14"
+lastupdated: "2022-11-01"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -37,13 +37,13 @@ To find all FAQs for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/fa
 {: #faq-why-runtime}
 {: faq}
 
-IBM made quantum computers available through the cloud in 2016. In 2022, IBM integrates with {{site.data.keyword.cloud}} accounts to offer {{site.data.keyword.qiskit_runtime_notm}} API access. This access creates a smoother customer experience and the ability to combine {{site.data.keyword.qiskit_runtime_notm}} with other kinds of cloud compute resources for their particular workflow or application. 
+IBM made quantum computers available through the cloud in 2016. In 2022, IBM integrates with {{site.data.keyword.cloud}} accounts to offer {{site.data.keyword.qiskit_runtime_notm}} API access. This access creates a smoother customer experience and the ability to combine {{site.data.keyword.qiskit_runtime_notm}} with other kinds of cloud compute resources for their particular workflow or application.
 
 ## What can {{site.data.keyword.qiskit_runtime_notm}} service *not* do?
 {: #faq-runtime-not}
 {: faq}
 
-{{site.data.keyword.qiskit_runtime_notm}} service provides access to IBM Quantum systems. Today’s quantum systems are somewhat constrained in the size of problems that they can address due to available scale and quantum volume. Nonetheless, these systems can already be used to solve small problems and to explore this new and exciting field. 
+{{site.data.keyword.qiskit_runtime_notm}} service provides access to IBM Quantum systems. Today’s quantum systems are somewhat constrained in the size of problems that they can address due to available scale and quantum volume. Nonetheless, these systems can already be used to solve small problems and to explore this new and exciting field.
 
 ## What skills are required to use the {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #faq-skills}
@@ -73,7 +73,7 @@ Whether accessing it through {{site.data.keyword.cloud}} or directly through IBM
 {: #faq-plans}
 {: faq}
 
-Currently, there are two plans. The Lite plan allows the user to access only quantum simulators and is free of charge. Pay-as-you-go access to IBM Quantum hardware is provided with the Standard plan. The Standard plan does not allow access to quantum simulators. For more information, see [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost).
+Currently, there are two plans. The Lite plan allows the user to access only quantum simulators and is free of charge. Pay-as-you-go access to IBM Quantum hardware is provided with the Standard plan. The Standard plan does not allow access to quantum simulators. For more information, see [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost).
 
 ##	What is the cost of the {{site.data.keyword.qiskit_runtime_notm}} Standard plan?
 {: #faq-pricing}
@@ -85,7 +85,7 @@ The {{site.data.keyword.qiskit_runtime_notm}} Standard plan is a pay-as-you-go s
 {: #faq-pricing-metric}
 {: faq}
 
-For this service, one second is one second of execution time when the Qiskit program is running, whether on a quantum processor or accompanying classical cluster. Queue time is not included. For more information, see the [Qiskit Runtime Standard plan](/docs/quantum-computing?topic=quantum-computing-cost) topic.
+For this service, one second is one second of execution time when the Qiskit program is running, whether on a quantum processor or accompanying classical cluster. Queue time is not included. For more information, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
 
 
 ##	Can I use {{site.data.keyword.qiskit_runtime_notm}} with my {{site.data.keyword.cloud}} lite account?
