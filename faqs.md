@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-14"
+lastupdated: "2022-11-01"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -85,7 +85,7 @@ The {{site.data.keyword.qiskit_runtime_notm}} Standard plan is a pay-as-you-go s
 {: #faq-pricing-metric}
 {: faq}
 
-For this service, one second is one second of execution time when the Qiskit program is running, whether on a quantum processor or accompanying classical cluster. Queue time is not included. For more information, see the [Qiskit Runtime Standard plan](/docs/quantum-computing?topic=quantum-computing-cost) topic.
+For this service, one second is one second of execution time when the Qiskit program is running, whether on a quantum processor or accompanying classical cluster. Queue time is not included. For more information, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
 
 
 ##	Can I use {{site.data.keyword.qiskit_runtime_notm}} with my {{site.data.keyword.cloud}} lite account?

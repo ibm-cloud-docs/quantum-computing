@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-10-04"
+lastupdated: "2022-11-01"
 
 
 keywords: Qiskit Runtime cost, Qiskit Runtime instance, Qiskit Runtime job cost, Qiskit Runtime price
@@ -49,6 +49,6 @@ These are the columns relevant to cost:
 ## Next steps
 {: #next-steps-view-cost}
 
-To learn about how costs are incurred, see [Pricing overview](/docs/quantum-computing?topic=quantum-computing-cost#pricing-overview).
+To learn about how costs are incurred, see [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans).
 
-To learn how to limit costs, see [How to limit your cost](/docs/quantum-computing?topic=quantum-computing-cost#limit-cost).
+To learn how to limit costs, see [Manage costs](/docs/quantum-computing?topic=quantum-computing-cost).
