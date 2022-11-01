@@ -28,13 +28,12 @@ You can set up a Runtime session by using the context manager (`with ...:`), whi
 
 Start by loading the options into a primitive constructor, then pass in circuits, parameters, and observables:
 
-
 ```Python
-with Estimator(...):
+with Session(service) as session:
+    estimator = Estimator(session=session, options=options) #primitive constructor
+	 estimator.run(circuit, parameters, observable) #job call
 ```
 {: codeblock}
-
-
 
 ## How session jobs fit into the job queue
 {: #queue_session}
