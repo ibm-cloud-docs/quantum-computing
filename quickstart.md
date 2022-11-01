@@ -39,7 +39,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} by following our examples and tutorials for one of the pre-built programs available for running circuits efficiently.
       - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
 
-      Because this is not a free plan, it is important to understand how to best manage your costs. See [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
+      Because this is not a free plan, it is important to understand how to best manage your costs. See [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
 
       If you want to access physical devices as well as simulators, you need to set up one instance with the Lite plan and one instance with the Standard plan.
       {: note}
