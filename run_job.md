@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-11-04"
 
 keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status
 
@@ -43,21 +43,27 @@ You will use the Qiskit Runtime QiskitRuntimeService.run() method, which takes t
 In the following example, we submit a circuit to the Sampler program:
 
 ```Python
-from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
+from qiskit_ibm_runtime import QiskitRuntimeService, Session, Options, Sampler
 from qiskit import QuantumCircuit
 
-service = QiskitRuntimeService(channel="ibm_cloud", token="<api-token>", instance="<IBM Cloud CRN>")
+
+service = QiskitRuntimeService()
+options = Options(optimization_level=1)
 
 bell = QuantumCircuit(2)
 bell.h(0)
 bell.cx(0, 1)
 bell.measure_all()
 
-# executes a Bell circuit
-with Sampler(circuits=bell, service=service, options={ "backend": "" }) as sampler:
-    result = sampler(circuit_indices=[0], shots=1024)
-    print(result)
+# Execute the Bell circuit
+with Session(service=service, backend="ibmq_qasm_simulator"):
+    sampler = Sampler(options=options)
+    job = sampler.run(circuits=bell)
+    print(job.result())
 
+    # You can invoke run() multiple times.
+    job = sampler.run(circuits=bell)
+    print(job.result())
 ```
 {: codeblock}
 
