@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-10"
+lastupdated: "2022-11-14"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -24,6 +24,8 @@ This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit
 {: shortdesc}
 
 If you are an administrator who needs to set up Qiskit Runtime for your organization, refer to [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org) for instructions to set up a service instance and work with users.
+
+
 
 
 ## Create a service instance
