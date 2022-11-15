@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-01"
+lastupdated: "2022-11-15"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -44,7 +44,7 @@ With Qiskit Runtime primitives, we introduce the concept of a session that allow
 When you start the session, you can specify these values:
 
 *  **backend**: The system or simulator to run on. If none is specified, the least busy backend is used.
-*  **max_time**: How long a runtime session can be open before it is forcibly closed. Can be specified as seconds (int) or a string like "2h 30m 40s". This value must be in between 300 seconds and the system imposed maximum time. See [this FAQ](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/faqs/max_execution_time.html){: external} for details.
+*  **max_time**: How long a runtime session can be open before it is forcibly closed. Can be specified as seconds (int) or a string like "2h 30m 40s". This value must be between 300 seconds and the system imposed maximum time. See [this FAQ](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/faqs/max_execution_time.html){: external} for details.
 
 This is an experimental setting and can break between releases without warning.
 {: Note}
@@ -57,9 +57,9 @@ See the [sessions](/docs/quantum-computing?topic=quantum-computing-sessions) top
 
 You can make one or more calls to the Sampler primitive within a session, by first creating a Sampler instance.
 
-The `Sampler` class takes in an options variable to control the execution environment. Options can be either a dictionary or a `qiskit_ibm_runtime.Options` class instance. Initializing it as an `Options` class allows you to use auto-complete.
+The `Sampler` class takes in an options variable to control the execution environment. Options can be either a dictionary or a `qiskit_ibm_runtime.Options` class instance. Initializing it as an `Options` class allows you to use auto complete.
 
-There are many settings you can specify as options.  These are some of the most commonly used options:
+There are many settings you can specify as options.  These are some commonly used options:
 
 * **optimization_level**: How much optimization to perform on the circuits. Higher levels generate more optimized circuits, at the expense of longer transpilation times. Values are an integer from 0 (no optimization) to 3 (heaviest optimization). The default value is 1 (light optimization). The default is 1.
 * **resilience_level**: How much resilience to build against errors. Higher levels generate more accurate results, at the expense of longer processing times. The default is 0.

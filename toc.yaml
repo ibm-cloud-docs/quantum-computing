@@ -21,6 +21,7 @@ toc:
       id: learn
       topics:
       - quickstart.md
+     
       - overview.md
      
       - topic: release-notes.md
@@ -92,7 +93,7 @@ toc:
             topics:
             - link:
                 label: Qiskit Slack
-                href: http://ibm.com/joinqiskitslack
+                href: https://ibm.co/joinqiskitslack
             - link:
                 label: IBM Quantum Stack Exchange
                 href: https://quantumcomputing.stackexchange.com/questions/tagged/ibm-q-experience

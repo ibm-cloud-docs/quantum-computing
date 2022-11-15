@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-01"
+lastupdated: "2022-11-15"
 
 keywords: Qiskit Runtime sessions, Qiskit Runtime reservations
 
@@ -19,7 +19,7 @@ subcollection: quantum-computing
 A Qiskit Runtime session allows you to group a collection of iterative calls to the quantum computer. A session is started when the first job within the session is started. As long as the session is active, subsequent jobs within the session are prioritized by the scheduler to minimize artificial delay within an iterative algorithm. Data used within a session, such as transpiled circuits, is also cached to avoid unnecessary overhead.
 {: shortdesc}
 
-As a result, sessions allow you to more efficiently run programs that require iterative calls between classical and quantum resources while giving you the flexibility to deploy your programs remotely on cloud or on-premise classical resources (including your laptop).
+As a result, sessions allow you to more efficiently run programs that require iterative calls between classical and quantum resources while giving you the flexibility to deploy your programs remotely on cloud or on premises classical resources (including your laptop).
 
 ## How to run a job in a session
 {: #run_session}

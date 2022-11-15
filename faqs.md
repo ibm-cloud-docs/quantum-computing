@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-01"
+lastupdated: "2022-11-15"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -140,7 +140,7 @@ Currently, the {{site.data.keyword.qiskit_runtime_notm}} cloud service is in bet
 Follow any of the following support links for help:
 
 - [{{site.data.keyword.cloud}} Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter)
-- [Qiskit Slack community](https://ibm.com/joinqiskitslack)
+- [Qiskit Slack community](https://ibm.co/joinqiskitslack)
 - [Qiskit Stack Exchange community](https://quantumcomputing.stackexchange.com/questions/tagged/qiskit)
 
 
