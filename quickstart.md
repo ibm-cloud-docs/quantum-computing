@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-15"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -107,7 +107,7 @@ service = QiskitRuntimeService()
 ```
 {: codeblock}
 
-If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials. For more information about managing your account, see the [account management tutorial](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/tutorials/04_account_management.html){: external}.
+If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials. For more information about managing your account, see the [account management topic](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/account-management.html){: external}.
 
 For instructions to use the cloud Quantum Qiskit API, see the [authentication](/apidocs/quantum-computing#authentication){: external} section in the API documentation.
 
