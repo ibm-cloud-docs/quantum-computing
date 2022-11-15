@@ -21,7 +21,7 @@ toc:
       id: learn
       topics:
       - quickstart.md
-     <partner> - quickstart-partner.md <\partner>
+     
       - overview.md
      
       - topic: release-notes.md
