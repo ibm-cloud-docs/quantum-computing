@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-11-15"
+lastupdated: "2022-12-02"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -68,6 +68,14 @@ The {{site.data.keyword.qiskit_runtime_notm}} primitives define abstract interfa
 {: faq}
 
 Whether accessing it through {{site.data.keyword.cloud}} or directly through IBM Quantum Experience, users can harness the power of Qiskit Runtime. {{site.data.keyword.qiskit_runtime_notm}} on {{site.data.keyword.cloud}} allows users to pay only for what they use, and also makes it easy to integrate your quantum computing work with your other {{site.data.keyword.cloud}} tools.
+
+##	Which URLs should I add to our firewall whitelist for IBM Quantum access?
+{: #faq-whitelist}
+{: faq}
+
+* **IBM Quantum API**: ``*.quantum-computing.ibm.com``
+* **IBM Cloud Quantum API**: ``*.quantum-computing.cloud.ibm.com``
+* **IBM Cloud**: ``*.cloud.ibm.com``
 
 ##	What plans are available to use {{site.data.keyword.qiskit_runtime_notm}} with {{site.data.keyword.cloud}}?
 {: #faq-plans}
