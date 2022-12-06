@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-06"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -17,7 +17,7 @@ content-type: faq
 
 
 
-# FAQs for Qiskit Runtime
+# FAQs for IBM Cloud Qiskit Runtime
 {: #qiskit-runtime-faqs}
 
 
@@ -117,7 +117,7 @@ You can set up spending notifications to get notified when your account or a par
 {{site.data.keyword.qiskit_runtime_notm}} (beta) is unavailable from the following countries (as of April 2022): Armenia, Azerbaijan, Belarus, Cambodia, China (including Hong Kong S.A.R. of the PRC), Cuba, Georgia, Iraq, Iran, Kazakhstan, Kyrgyzstan, Laos, Libya, Macao S.A.R. of the PRC, Moldova, Mongolia, Myanmar (Burma), North Korea, Russia, Sudan, Syria, Tajikistan, Turkmenistan, Ukraine, Uzbekistan, Venezuela, Vietnam, and Yemen.
 
 
-## Currently, two quantum systems are accessible with Qiskit Runtime. Will there be more systems and systems with more qubits available in the future?
+## Currently, two quantum systems are accessible through Qiskit Runtime. Will there be more systems and systems with more qubits available in the future?
 {: #faq-more-systems}
 {: faq}
 
@@ -174,7 +174,7 @@ We continue to evaluate the use of quantum hardware and expand the set of primit
 {: #faq-how-long}
 {: faq}
 
-The service can be deployed in just minutes and can be used immediately after it appears in the {{site.data.keyword.cloud}} account resource list.
+The service can be deployed in about 10 seconds and can be used immediately after it appears in the {{site.data.keyword.cloud}} account resource list.
 
 ## How can I access IBM Quantum systems after the Qiskit Runtime service is deployed in IBM Cloud?
 {: #faq-access-systems}
