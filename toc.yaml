@@ -21,7 +21,6 @@ toc:
       id: learn
       topics:
       - quickstart.md
-     
       - overview.md
      
       - topic: release-notes.md
