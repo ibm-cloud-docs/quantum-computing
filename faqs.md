@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-12"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -194,4 +194,4 @@ The Cloud service API is programming language independent. However, Qiskit provi
 {: #faq-custom-pgm}
 {: faq}
 
-Running, adding, or changing custom programs are not supported on IBM Cloud Qiskit Runtime. If you used this function previously, you can instead use code that calls primitives.
+Running, adding, or changing custom programs are not supported on IBM Cloud Qiskit Runtime. If you used this function previously, you can instead use code that calls primitives. To get  performance benefits comparable to uploaded programs, you can use use sessions, which are a service aware context manager that minimizes artificial queuing latency inside an iterative workload.
