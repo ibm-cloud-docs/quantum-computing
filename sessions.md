@@ -30,8 +30,8 @@ Start by loading the options into a primitive constructor, then pass in circuits
 
 ```Python
 with Session(service) as session:
-    estimator = Estimator(session=session, options=options) #primitive constructor
-	 estimator.run(circuit, parameters, observable) #job call
+    estimator = Estimator(session=session, options=options)  #primitive constructor
+    estimator.run(circuit, parameters, observable)  #job call
 ```
 {: codeblock}
 
