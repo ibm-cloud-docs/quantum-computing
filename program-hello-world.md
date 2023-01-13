@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-15"
+lastupdated: "2022-05-27"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -19,7 +19,7 @@ subcollection: quantum-computing
 Run the Hello World program to ensure that your environment is set up properly.
 {: shortdesc}
 
-If you are using the Standard plan, running Hello World incurs a cost. See [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost) for cost information.
+Running Hello World on a physical backend incurs a cost. See [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost) for cost information.
 {: note}
 
 ## Program details

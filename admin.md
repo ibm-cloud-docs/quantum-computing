@@ -26,7 +26,7 @@ content-type: howto
 3. Create a {{site.data.keyword.qiskit_runtime_notm}} service instance:
    1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan:
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} with our examples and tutorials.
-      - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and use all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
+      - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems and simulators. Build your own programs and use all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
    2. Complete the required information, then click **Create**.
 
 ## Manage access to the service instance

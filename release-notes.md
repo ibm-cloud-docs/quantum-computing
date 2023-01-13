@@ -17,6 +17,12 @@ subcollection: quantum-computing
 Use these release notes to learn about the latest updates to {{site.data.keyword.qiskit_runtime_notm}}.
 {: shortdesc}
 
+## 13 January 2023
+{: #0.4.0}
+{: release-note}
+
+The Standard plan now includes access to simulators. 
+
 ## 19 October 2022
 {: #0.3.0}
 {: release-note}

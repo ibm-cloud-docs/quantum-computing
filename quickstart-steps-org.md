@@ -52,7 +52,7 @@ If you already created Qiskit Runtime service instances, skip this step.
 
 1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
    * **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} by following our examples and tutorials for one of the pre-built programs available for running circuits efficiently.
-   * **Standard**: A pay-as-you-go model for accessing IBM Quantum systems. Build your own programs and use all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware.
+   * **Standard**: A pay-as-you-go model for accessing IBM Quantum systems and simulators. Build your own programs and use all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware, while maintaining access to all of the simulators available on the Lite plan.
 1. Complete the required information, then click **Create**.
 
 ## Create access groups for projects
