@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-12-12"
+lastupdated: "2022-04-14"
 
 keywords: qiskit runtime frequently asked questions, quantum, Qiskit, runtime, near time compute
 
@@ -81,13 +81,13 @@ Whether accessing it through {{site.data.keyword.cloud}} or directly through IBM
 {: #faq-plans}
 {: faq}
 
-Currently, there are two plans. The Lite plan allows the user to access only quantum simulators and is free of charge. Pay-as-you-go access to IBM Quantum hardware is provided with the Standard plan. The Standard plan does not allow access to quantum simulators. For more information, see [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost).
+Currently, there are two plans. The Lite plan allows the user to access only quantum simulators and is free of charge. Pay-as-you-go access to IBM Quantum hardware and simulators is provided with the Standard plan.  For more information, see [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost).
 
 ##	What is the cost of the {{site.data.keyword.qiskit_runtime_notm}} Standard plan?
 {: #faq-pricing}
 {: faq}
 
-The {{site.data.keyword.qiskit_runtime_notm}} Standard plan is a pay-as-you-go service and costs $1.6 runtime second. For more information, see the [Qiskit Runtime Standard plan](/docs/quantum-computing?topic=quantum-computing-cost) topic.
+The {{site.data.keyword.qiskit_runtime_notm}} Standard plan is a pay-as-you-go service and costs $1.6 runtime second when running on physical systems. For more information, see the [Qiskit Runtime Standard plan](/docs/quantum-computing?topic=quantum-computing-cost) topic.
 
 ##	What is the pricing metric of the {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #faq-pricing-metric}
