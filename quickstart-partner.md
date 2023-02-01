@@ -14,7 +14,7 @@ completion-time: 25m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting started
+# Getting started for channel partners
 {: #quickstart-partner}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="25m"}
