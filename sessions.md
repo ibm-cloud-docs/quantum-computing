@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-12-14"
+lastupdated: "2022-07-07"
 
 keywords: Qiskit Runtime sessions, Qiskit Runtime reservations
 
@@ -45,13 +45,11 @@ For each backend, the first job in the session waits its turn in the queue norma
 
 When a session is started, it is assigned a maximum session timeout value.  You can set this value by using the `max_time` parameter, which can be greater than the program’s `max_execution_time`.
 
-
 If you don't specify a timeout value, it is set to the initial job's maximum execution time and is the smaller of these values:
-   *  The system limit (8 hours for physical systems).
-   *  The `max_execution_time` defined by the program.
+
+* The system limit (8 hours for physical systems).
+* The `max_execution_time` defined by the program.
 
 After this time limit is reached, the session is permanently closed.
 
 Additionally, there is an _interactive_ timeout value. If there are no session jobs queued within that window, the session is temporarily deactivated and normal job selection resumes. After a session is deactivated, a subsequent job could start an additional session.  Jobs for the new session would then take priority until the new session deactivates or is closed. After the new session becomes inactive, if the job scheduler gets a job from the original session and its maximum timeout value has not been reached, the session is reactivated until its maximum timeout value is reached.
-
-When using primitives with their context managers as previously described, the session is closed automatically when the block is exited.
