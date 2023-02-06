@@ -40,7 +40,7 @@ The cost limit is always specified in US dollars (USD), then converted to runtim
 ## How to remove a cost limit
 {: #unlimit-cost}
 
-An instance administrator can remove the cost limit.  To do so, navigate to the `IBM Cloud Instances page <https://cloud.ibm.com/quantum/instances>`__, then open the instance and click the edit button by the **Cost limit**. Delete the value and click **Save**.
+An instance administrator can remove the cost limit.  To do so, navigate to the [IBM Cloud Instances page](https://cloud.ibm.com/quantum/instances), then open the instance and click the edit button by the **Cost limit**. Delete the value and click **Save**.
 
 ### What happens when the cost limit is reached
 {: #cost-limit-reached}
