@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-26"
+lastupdated: "2022-07-26"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization, appid
 
@@ -127,7 +127,7 @@ If the IDP administrator will assign users to projects, you can define project v
    {: note}
 
 2. To work with Qiskit Runtime serive instances, users must create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).
-3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
+3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-get-started#install-packages).
 
 ## Example scenario
 {: #steps-appid-org}

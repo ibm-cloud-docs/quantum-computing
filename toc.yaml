@@ -20,7 +20,7 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - quickstart.md
+      - get-started.md
       
       - overview.md
      
