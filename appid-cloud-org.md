@@ -97,7 +97,7 @@ When you use App ID as ID provider with the Cloud directory, you can create user
    {: note}
 
 2. To work with Qiskit Runtime and access service instances, users need to create an API key from ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).
-3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
+3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-get-started#install-packages).
 
 ## Example scenario
 {: #steps-appid-org}

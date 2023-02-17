@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-01"
+lastupdated: "2022-09-13"
 
 keywords: quantum, Qiskit, runtime, near time compute, university, business, organization
 
@@ -75,5 +75,5 @@ Before you set up Qiskit Runtime for your organization, you need to make these d
 ## Next steps
 {: #next-steps-org}
 
-* See [Configure Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-steps-org) for the steps to set up Qiskit Runtime.
+* See [Configure Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-get-started-steps-org) for the steps to set up Qiskit Runtime.
 * See [Additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information. 

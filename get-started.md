@@ -16,14 +16,14 @@ completion-time: 25m
 
 
 # Getting started
-{: #quickstart}
+{: #get-started}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="25m"}
 
 This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit_runtime_notm}} service instance, log in to your service instance, and run your first job on a quantum computer.
 {: shortdesc}
 
-If you are an administrator who needs to set up Qiskit Runtime for your organization, refer to [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org) for instructions to set up a service instance and work with users.
+If you are an administrator who needs to set up Qiskit Runtime for your organization, refer to [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-get-started-org) for instructions to set up a service instance and work with users.
 
 
 ## Create a service instance

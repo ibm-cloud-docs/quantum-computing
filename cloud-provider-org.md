@@ -55,7 +55,7 @@ To manage ID provider users instead, follow the instructions in one of these top
 
 1. After they accept an invitation, users can log in through the [IBM Cloud portal](https://cloud.ibm.com/){: external}.
 2. To work with Qiskit Runtime service instances, users must create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).
-3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-quickstart#install-packages).
+3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-get-started#install-packages).
 
 ## Example scenario
 {: #steps-cloud-org}

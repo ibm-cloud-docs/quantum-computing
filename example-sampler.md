@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-15"
+lastupdated: "2022-10-14"
 
 keywords: quantum, Qiskit, runtime, near time compute, sampler, primitive
 
@@ -32,7 +32,7 @@ If you are using the Standard plan, running Sampler incurs a cost. See [Manage c
 {: #example-sampler-byb}
 {: step}
 
-1. Follow the steps in the [getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart) to get your Quantum Service instance ready to use.
+1. Follow the steps in the [getting started guide](/docs/quantum-computing?topic=quantum-computing-get-started) to get your Quantum Service instance ready to use.
 2. You need at least one circuit to submit to the program. Our examples all have circuits in them, but if you want to submit your own circuit, you can use Qiskit to create one. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://qiskit.org/documentation/tutorials/circuits/01_circuit_basics.html){: external}.
 
 ## Start a session

@@ -180,7 +180,7 @@ The service can be deployed in about 10 seconds and can be used immediately afte
 {: #faq-access-systems}
 {: faq}
 
- Make sure to use the Standard plan when you deploy a service instance of Qiskit Runtime, as described in the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-quickstart).
+ Make sure to use the Standard plan when you deploy a service instance of Qiskit Runtime, as described in the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-get-started).
 
 
 ## What programing languages can I use to program against the primitives?
