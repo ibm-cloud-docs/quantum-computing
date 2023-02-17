@@ -51,6 +51,7 @@ toc:
       - run_job.md
       - results.md
       - view-cost.md
+      - cost.md
       - setup-terraform.md
       - topicgroup:
             label: Enhancing security
@@ -67,7 +68,6 @@ toc:
       - program-sampler.md
       - program-estimator.md
       - program-hello-world.md
-      - cost.md
       - plans.md
       - sessions.md
       - considerations-org.md

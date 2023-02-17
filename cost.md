@@ -8,6 +8,8 @@ keywords: quantum, Qiskit, runtime, near time compute, standard plan, pay-as-you
 
 subcollection: quantum-computing
 
+content-type: howto
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
