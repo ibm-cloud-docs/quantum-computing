@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-11-15"
+lastupdated: "2022-03-28"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -23,8 +23,6 @@ If you have problems or questions when using {{site.data.keyword.qiskit_runtime_
 * You can check the status of the {{site.data.keyword.Bluemix_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
 * You can review [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to see whether other users ran into the same problem. When using the forum to ask a question, tag your question with "ibm-cloud" and "quantum" so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 
-For help with Qiskit or quantum in general, access one of our Slack communities:
+For help with Qiskit or quantum in general, access our Slack community:
 
-- [Qiskit Slack](https://ibm.co/joinqiskitslack){: external}.
-- [IBM Quantum Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/ibm-q-experience){: external}
-- [Qiskit Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/qiskit){: external}
+[Qiskit Slack](https://ibm.co/joinqiskitslack){: external}.

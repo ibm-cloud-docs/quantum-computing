@@ -149,7 +149,6 @@ Follow any of the following support links for help:
 
 - [{{site.data.keyword.cloud}} Support Center](https://cloud.ibm.com/unifiedsupport/supportcenter)
 - [Qiskit Slack community](https://ibm.co/joinqiskitslack)
-- [Qiskit Stack Exchange community](https://quantumcomputing.stackexchange.com/questions/tagged/qiskit)
 
 
 ## {{site.data.keyword.qiskit_runtime_notm}} is in beta status. When will {{site.data.keyword.qiskit_runtime_notm}} be generally available in {{site.data.keyword.cloud}}?
