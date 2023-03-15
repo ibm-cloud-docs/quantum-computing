@@ -23,6 +23,9 @@ If you have problems or questions when using {{site.data.keyword.qiskit_runtime_
 * You can check the status of the {{site.data.keyword.Bluemix_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
 * You can review [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to see whether other users ran into the same problem. When using the forum to ask a question, tag your question with "ibm-cloud" and "quantum" so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 
-For help with Qiskit or quantum in general, access our Slack community:
+For help with Qiskit, access our Slack community: [Qiskit Slack](https://ibm.co/joinqiskitslack){: external}.
 
-[Qiskit Slack](https://ibm.co/joinqiskitslack){: external}.
+Discuss quantum information science and development with the larger quantum computing field:
+
+- [IBM Quantum Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/ibm-q-experience){: external}
+- [Qiskit Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/qiskit){: external}
