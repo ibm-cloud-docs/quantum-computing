@@ -108,7 +108,7 @@ Yes, but with the Lite plan you can access only quantum simulators. To use IBM Q
 
 You will receive a monthly invoice that provides details about your resource charges. You can check how much you've spent at any time on the [IBM Cloud Billing and usage page](https://cloud.ibm.com/billing).
 
-You can set up spending notifications to get notified when your account or a particular service reaches a specific spending threshold that you set. For information, see the [IBM Cloud account **Type** description](https://cloud.ibm.com/docs/account?topic=account-accounts){: external}. {{site.data.keyword.cloud}} spending notifications trigger only _after_ cost surpasses the specified limit.
+You can set up spending notifications to get notified when your account or a particular service reaches a specific spending threshold that you set. For information, see the [IBM Cloud account **Type** description](/docs/account?topic=account-accounts){: external}. {{site.data.keyword.cloud}} spending notifications trigger only _after_ cost surpasses the specified limit.
 
 ##	Are there countries from which the Qiskit Runtime service is not available?
 {: #faq-countries}
