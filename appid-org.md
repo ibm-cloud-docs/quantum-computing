@@ -34,7 +34,7 @@ To manage users via IBM Cloud, see one of these topics:
 {: step}
 
 We will use the **Cloud Directory** capability to add users to the ID provider.
-Refer to the [App ID documentation](https://cloud.ibm.com/docs/appid){: external} for instructions how to integrate other ID providers into App ID.
+Refer to the [App ID documentation](/docs/appid){: external} for instructions how to integrate other ID providers into App ID.
 
 1. Open the [IBM Cloud resource list](https://cloud.ibm.com/resources){: external}, expand the **Services and software** section, find your App ID instance and click its name to view its details.
 2. Click **Manage Authentication** and deselect any login options that you don't need, such as Facebook and Google.

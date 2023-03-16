@@ -28,7 +28,7 @@ Follow these steps to start setting up Qiskit runtime.
 
 First, configure some settings in the administrator's Identity and Access Management (IAM) account. To review and configure these settings, go to [Manage → IAM → Settings](https://cloud.ibm.com/iam/settings){: external}.
 
-* **User list visibility** determines whether users can see each other, regardless of project assignment. The `enabled` setting restricts user visibility. That is, users in your account cannot see each other, even if they can access the same resources. Choose the appropriate value for your environment. See [Controlling user visibility](https://cloud.ibm.com/docs/account?topic=account-iam-user-setting){: external} for more information.
+* **User list visibility** determines whether users can see each other, regardless of project assignment. The `enabled` setting restricts user visibility. That is, users in your account cannot see each other, even if they can access the same resources. Choose the appropriate value for your environment. See [Controlling user visibility](/docs/account?topic=account-iam-user-setting){: external} for more information.
 * **API key creation** controls whether users can create API keys. In Qiskit Runtime, it is common to use API keys. If API keys are being used, choose `disabled`. Alternatively, you can give specific permissions to each user.
 
 ![IAM settings](images/org-guide-iam-settings.png "User list visibility"){: caption="Figure 1. IAM settings page with User list visibility enabled" caption-side="bottom"}

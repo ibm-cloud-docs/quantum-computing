@@ -43,7 +43,7 @@ To achieve that, define two different custom roles such as `MLreader` and `MLwri
 When using dynamic rules, that is, when the IDP administrator manages access through custom IDP user attributes, do not use IDP custom user attributes that are substrings of each other. For instance, don't use `ml` and `mlReader`, as the string comparison of `ml` would also accept `mlReader`. You could use `MLreader` and `MLwriter` to avoid this conflict.
 {: note}
 
-For an example of setting up custom roles, see [Create access groups for projects](/docs/quantum-computing?topic=quantum-computing-get-started-steps-org#create-group-org).
+For an example of setting up custom roles, see [Create access groups for projects](/docs/quantum-computing?topic=quantum-computing-quickstart-steps-org#create-group-org).
 
 ## Other Cloud resources
 {: #other-cloud-rsc-org}

@@ -34,7 +34,7 @@ content-type: howto
 
 From the [{{site.data.keyword.cloud_notm}} console](/iam/overview){: external}, click Manage > Access (IAM) to create an IAM access policy, ideally an access group policy, to give users access to the service instance. Optionally use resource groups, access groups, tags, and so on, to manage resources and access to them.
 
-For more information about roles, including details about program level roles and instructions to work with access groups, see the [IAM access documentation](https://cloud.ibm.com/docs/account?topic=account-userroles){: external}.
+For more information about roles, including details about program level roles and instructions to work with access groups, see the [IAM access documentation](/docs/account?topic=account-userroles){: external}.
 
 ### Access roles
 {: #access-roles}

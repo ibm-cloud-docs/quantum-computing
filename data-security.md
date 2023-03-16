@@ -35,4 +35,4 @@ Deleting a service instance removes all of the content associated with that inst
 ### Deleting Qiskit Runtime instances
 {: #service-delete}
 
-The Qiskit Runtime data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the Qiskit Runtime service description, which you can find in the [{{site.data.keyword.cloud_notm}} Terms](https://www.ibm.com/support/customer/csol/terms?id=i126-9425&lc=en#detail-document){: external}.
+The Qiskit Runtime data retention policy describes how long your data is stored after you delete the service. The data retention policy is included in the Qiskit Runtime service description, which you can find in the [{{site.data.keyword.cloud_notm}} Terms]( https://www.ibm.com/support/customer/csol/terms/?id=i126-9425&lc=en#detail-document){: external}.
