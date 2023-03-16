@@ -27,20 +27,7 @@ To manage users via IBM Cloud, see one of these topics:
 * [Manage IBM Cloud users](/docs/quantum-computing?topic=quantum-computing-cloud-provider-org)
 * [Manage ID provider users with IBM Cloud](/docs/quantum-computing?topic=quantum-computing-appid-cloud-org)
 
-## Create an App ID instance
-{: #create-appid}
-{: step}
-
-1. [Open App ID from the IBM Cloud catalog](https://cloud.ibm.com/catalog/services/app-id){: external} and log in. Specify the following values:
-   * For **Select a location**, it is recommended to keep it in the same location as the Qiskit Runtime service, which is `Washington DC (us-east)`.
-   * **Select a pricing plan**:
-      * The **Lite** plan is free of charge and is enough to get started. If needed, you can seamlessly upgrade to the graduated tier later.
-      * The **Graduated tier** is paid per event and per user beyond the Lite tier limits. This tier supports more features such as multi-factor authentication. The Cloud administrator as the owning account of the App ID instance is charged for any costs for the graduated tier instances.
-   * Complete the values for **Service name** (the App ID instance name), **Resource group** (if one is being used), and any tags you want.
-
-   ![Create App ID instance](images/org-guide-create-appid.png "Create App ID instance"){: caption="Figure 2. Create your APP ID instance" caption-side="bottom"}
-
-2. Read and agree to the terms and click **Create**.
+{{appid-cloud-org.md#create-appid-cloud}}
 
 ## Configure the ID provider
 {: #add-users-appid}

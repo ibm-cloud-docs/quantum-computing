@@ -18,6 +18,12 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 ## 13 January 2023
+{: #0.5.0}
+{: release-note}
+
+The Standard plan now charges only for time used on quantum devices (Q time).
+
+## 13 January 2023
 {: #0.4.0}
 {: release-note}
 

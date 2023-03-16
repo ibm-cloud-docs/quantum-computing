@@ -94,9 +94,3 @@ toc:
             - link:
                 label: Qiskit Slack
                 href: https://ibm.co/joinqiskitslack
-            - link:
-                label: IBM Quantum Stack Exchange
-                href: https://quantumcomputing.stackexchange.com/questions/tagged/ibm-q-experience
-            - link:
-                label: Qiskit Stack Exchange
-                href: https://quantumcomputing.stackexchange.com/questions/tagged/qiskit
