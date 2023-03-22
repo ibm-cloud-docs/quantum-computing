@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-11-01"
+  years: 2021, 2023
+lastupdated: "2022-09-07"
 
 
 keywords: Qiskit Runtime cost, Qiskit Runtime instance, Qiskit Runtime job cost, Qiskit Runtime price
