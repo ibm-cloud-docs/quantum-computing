@@ -84,22 +84,22 @@ The following topics are use cases with code migration examples:
 
 |  | Backend.run | Runtime Primitives |
 |-----|-----|-----|
-| Simplified algorithm building blocks | ![close icon](images/close.svg) | ![Checkmark icon](images/checkmark.svg) |
+| Simplified algorithm building blocks | **X** | ![Checkmark icon](images/checkmark.svg) |
 | Flexible interface | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) |
 | Elastic compute integration | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) |
-| Queuing efficiency | ![close icon](images/close.svg) | ![Checkmark icon](images/checkmark.svg) |
-| Data caching | ![close icon](images/close.svg) | ![clock icon](images/time.svg) |
-| Error mitigation support | ![close icon](images/close.svg) | ![Checkmark icon](images/checkmark.svg) |
-| SAAS enablement | ![close icon](images/close.svg) | ![clock icon](images/time.svg) |
+| Queuing efficiency | X | ![Checkmark icon](images/checkmark.svg) |
+| Data caching | X | F |
+| Error mitigation support | X | ![Checkmark icon](images/checkmark.svg) |
+| SAAS enablement | X | F |
 {: row-headers}
 {: class="comparison-table"}
 {: caption="Table comparison. Qiskit Runtime primitive functionality compared to backend.run" caption-side="bottom"}
 {: summary="This table has row and column headers. The row headers identify the function. The column headers indentify the method. To understand whether a function is supported, in the table, navigate to the row, and find the value for the method you are interested in."}
 
 Key:
-* :heavy_check_mark: - Full support
-* :x: - No support
-* :clock3: - Future support
+* ![Checkmark icon](images/checkmark.svg): Full support
+* X: No support
+* F - Future support
 
 **Benefits of using Qiskit Runtime**:
 
