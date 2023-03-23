@@ -97,9 +97,9 @@ The following topics are use cases with code migration examples:
 {: summary="This table has row and column headers. The row headers identify the function. The column headers indentify the method. To understand whether a function is supported, in the table, navigate to the row, and find the value for the method you are interested in."}
 
 Key:
-* ![Checkmark icon](images/checkmark.svg): Full support
-* ![close icon](images/close.svg): No support
-* ![clock icon](images/time.svg): Future support
+* :heavy_check_mark: - Full support
+* :x: - No support
+* :clock3: - Future support
 
 **Benefits of using Qiskit Runtime**:
 
