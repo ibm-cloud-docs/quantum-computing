@@ -88,10 +88,9 @@ The following topics are use cases with code migration examples:
 | Flexible interface | ✔ | ✔ |
 | Elastic compute integration | ✔ | ✔ |
 | Queuing efficiency | **X** | ✔ |
-| Data caching | **X** | F |
-| Data caching | **X** | F |
+| Data caching | **X** |🕑 |
 | Error mitigation support | **X** | ✔ |
-| SAAS enablement | **X** | F |
+| SAAS enablement | **X** | 🕑 |
 {: row-headers}
 {: class="comparison-table"}
 {: caption="Table comparison. Qiskit Runtime primitive functionality compared to backend.run" caption-side="bottom"}
@@ -100,7 +99,7 @@ The following topics are use cases with code migration examples:
 Key:
 * ✔ - Full support
 * **X** - No support
-* F - Future support
+* 🕑 - Future support
 
 **Benefits of using Qiskit Runtime**:
 
