@@ -27,6 +27,6 @@ We can use tags to control what information shows up where. In general (and in t
 ```    
 2. Add this tag to any content that you add, in the TOC and around any new content. It can be around the whole file, just a few paragraphs, items in the Table of Contents, etc. For example:
 ```md
-   
+    Content 
 ```
 3. Check in the changes to the `source` branch as you normally would.

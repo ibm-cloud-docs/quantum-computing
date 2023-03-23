@@ -23,7 +23,15 @@ toc:
       - get-started.md
       
       - overview.md
-     
+      - topicgroup:
+            label: Migrate to the Qiskit Runtime execution model
+            topics:
+            - migrate-overview.md
+            - migrate-estimator.md
+            - migrate-sampler.md
+            - migrate-update-parm.md
+            - migrate-qiskit-alg.md
+            - migrate-tuning.md 
       - topic: release-notes.md
         navtitle: Release notes
 
