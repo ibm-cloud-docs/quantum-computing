@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2022
-lastupdated: "2022-11-04"
+  years: 2021, 2023
+lastupdated: "2022-09-13"
 
 keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status
 

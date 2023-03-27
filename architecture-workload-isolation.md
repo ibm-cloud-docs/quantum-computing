@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-08-26"
+  years: 2022, 2023
+lastupdated: "2022-03-28"
 
 keywords: public isolation for Qiskit Runtime, compute isolation for Qiskit Runtime, Qiskit Runtime architecture, workload isolation in Qiskit Runtime
 
