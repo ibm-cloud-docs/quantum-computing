@@ -32,6 +32,7 @@ toc:
             - migrate-update-parm.md
             - migrate-qiskit-alg.md
             - migrate-tuning.md 
+            - migrate-update-parm.md
       - topic: release-notes.md
         navtitle: Release notes
 
