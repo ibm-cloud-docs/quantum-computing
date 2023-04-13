@@ -47,7 +47,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 {: #install-packages}
 {: step}
 
-Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit textbook](https://qiskit.org/textbook/ch-appendix/qiskit.html){: external}. Periodically check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) (or rerun these commands) so that you always have the latest version.
+Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit Getting started topic](https://qiskit.org/documentation/getting_started.html){: external}. Periodically check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) (or rerun these commands) so that you always have the latest version.
 
 Be sure to run these commands even if you already installed the packages, to ensure that you have the latest versions.
 {: note}

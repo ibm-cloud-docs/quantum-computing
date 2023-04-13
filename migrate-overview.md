@@ -143,7 +143,7 @@ After deciding which channel to use to interact with Qiskit Runtime, you
 can get set up on either platform using the instructions below:
 
 - To get started with Qiskit Runtime on IBM Quantum Platform, see [Experiment with Qiskit Runtime](https://quantum-computing.ibm.com/services/resources/docs/resources/runtime/start).
-- To get started with Qiskit Runtime on IBM Cloud, see the [Getting Started guide](docs/quantum-computing?topic=quantum-computing-getstarted).
+- To get started with Qiskit Runtime on IBM Cloud, see the [Getting Started guide](/docs/quantum-computing?topic=quantum-computing-get-started).
 
 </details>
 

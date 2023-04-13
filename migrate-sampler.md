@@ -135,7 +135,7 @@ associated with a quantum state:
 
 If you want to use the `Sampler` primitive, the circuit
 **must contain measurements**.
-{: #important}
+{: important}
 
 ``` python
 from qiskit import QuantumCircuit
