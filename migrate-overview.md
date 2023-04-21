@@ -31,7 +31,7 @@ allow for managed performance through the Qiskit Runtime service.
 However, if your algorithm requires more granular information, such as
 pre-shot measurements, the primitives might not provide the desired
 abstraction level. You can refer to the restructured
-`qiskit-ibm-provider` package, and its corresponding [migration guide](https://qiskit.org/documentation/partners/qiskit_ibm_provider/tutorials/Migration_Guide_from_qiskit-ibmq-provider.html){: external}
+`qiskit-ibm-provider` package, and its corresponding [migration guide](https://qiskit.org/ecosystem/ibm-provider/tutorials/Migration_Guide_from_qiskit-ibmq-provider.html){: external}
 for further information on alternatives to the Qiskit Runtime
 primitives.
 
