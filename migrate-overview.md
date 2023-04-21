@@ -22,6 +22,9 @@ examples to help you migrate code from the legacy `qiskit-ibmq-provider`
 package to use the Qiskit Runtime primitives.
 {: shortdesc}
 
+To understand how to migrate from the legacy `qiskit-ibmq-provider`
+package without using the Qiskit Runtime primitives, see [Migrate your setup from qiskit-ibmq-provider](/docs/quantum-computing?topic=quantum-computing-migrate-setup).
+
 The primitives are the recommended tool to write quantum algorithms, as
 they encapsulate common device queries seen in application packages, and
 allow for managed performance through the Qiskit Runtime service.
