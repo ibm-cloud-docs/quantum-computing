@@ -27,12 +27,12 @@ toc:
             label: Migrate to the Qiskit Runtime execution model
             topics:
             - migrate-overview.md
+            - migrate-setup.md
             - migrate-estimator.md
             - migrate-sampler.md
             - migrate-update-parm.md
             - migrate-qiskit-alg.md
             - migrate-tuning.md 
-            - migrate-update-parm.md
       - topic: release-notes.md
         navtitle: Release notes
 
