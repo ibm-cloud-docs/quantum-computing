@@ -15,7 +15,7 @@ subcollection: quantum-computing
 {{site.data.keyword.attribute-definition-list}}
 
 # Parametrized circuits With primitives
-{: #migrate-circuits-update}
+{: #migrate-update-parm}
 
 Parametrized circuits are a commonly used tool for quantum algorithm
 design. Because `backend.run()` did not accept parametrized
