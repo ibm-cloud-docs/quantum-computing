@@ -106,41 +106,7 @@ If you need to update your saved credentials, run `save_account` again, passing 
 
 For instructions to use the cloud Quantum Qiskit API, see the [authentication](/apidocs/quantum-computing#authentication){: external} section in the API documentation.
 
-## Test your setup
-{: #test-setup}
-{: step}
-
-Run the Hello World program to ensure that your environment is set up properly.
-
-If you use a physical backend, running Hello World incurs a cost. See [Manage costs](/docs/quantum-computing?topic=quantum-computing-cost) for cost information.
-{: note}
-
-If you did not save your credentials to disk, specify `QiskitRuntimeService(channel="ibm_cloud", token=<IBM Cloud API key>, instance=<IBM Cloud CRN>)`
-instead of `QiskitRuntimeService()` in the following code.
-
-```Python
-from qiskit_ibm_runtime import QiskitRuntimeService
-
-service = QiskitRuntimeService()
-program_inputs = {'iterations': 1}
-options = {"backend": ""}
-job = service.run(program_id="hello-world",
-                  options=options,
-                  inputs=program_inputs
-                 )
-print(f"job id: {job.job_id()}")
-result = job.result()
-print(result)
-```
-{: codeblock}
-
-Result:
-
-```text
-Hello world!
-```
-
-## Choose a program to run
+## Run a program
 {: #choose-program}
 {: step}
 
@@ -150,6 +116,35 @@ Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-c
        Allows a user to specify a circuit as an input and then generate quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.
 - **[Estimator](/docs/quantum-computing?topic=quantum-computing-example-estimator)**:  
        Allows a user to specify a list of circuits and observables and selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators that are required for many algorithms. 
+
+This example uses the Sampler primitive:
+
+```python
+# Authenticate to the service.
+from qiskit_ibm_runtime import QiskitRuntimeService
+
+service = QiskitRuntimeService(
+    channel="ibm_cloud",
+    token="<IBM Cloud API key>",
+    instance="<IBM Cloud CRN>")
+
+# Prepare the input circuit.
+from qiskit import QuantumCircuit
+
+bell = QuantumCircuit(2)
+bell.h(0)
+bell.cx(0, 1)
+bell.measure_all()
+
+# Execute the circuit
+from qiskit_ibm_runtime import Session, Sampler
+
+with Session(service=service, backend="ibmq_qasm_simulator"):
+    sampler = Sampler()
+    job = sampler.run(circuits=bell)
+    print(job.result())
+```
+{: codeblock}
 
 ## Next steps
 {: #next-steps}
