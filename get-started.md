@@ -121,15 +121,6 @@ Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-c
 This example uses the Sampler primitive:
 
 ```python
-# Authenticate to the service.
-from qiskit_ibm_runtime import QiskitRuntimeService
-
-service = QiskitRuntimeService(
-    channel="ibm_cloud",
-    token="<IBM Cloud API key>",
-    instance="<IBM Cloud CRN>",
-    name="account-name")
-
 # Prepare the input circuit.
 from qiskit import QuantumCircuit
 
