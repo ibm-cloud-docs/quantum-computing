@@ -96,9 +96,10 @@ If you save your credentials to disk, you can use `QiskitRuntimeService()` in th
 from qiskit_ibm_runtime import QiskitRuntimeService
 
 # Save account to disk.
-QiskitRuntimeService.save_account(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>")
+QiskitRuntimeService.save_account(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>", name="account-name")
 
-service = QiskitRuntimeService()
+# Load the saved credentials 
+service = QiskitRuntimeService(name="account-name")
 ```
 {: codeblock}
 
@@ -126,7 +127,8 @@ from qiskit_ibm_runtime import QiskitRuntimeService
 service = QiskitRuntimeService(
     channel="ibm_cloud",
     token="<IBM Cloud API key>",
-    instance="<IBM Cloud CRN>")
+    instance="<IBM Cloud CRN>",
+    name="account-name")
 
 # Prepare the input circuit.
 from qiskit import QuantumCircuit
