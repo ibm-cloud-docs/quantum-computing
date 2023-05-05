@@ -29,9 +29,7 @@ There are time limits on programs, systems, and sessions.
 * **Programs:** The maximum execution time for a program is set on its ``max_execution_time`` parameter.
 * **Prototype programs:** The maximum execution time is listed on the [Prototype programs page](https://quantum-computing.ibm.com/services/programs/prototypes).
 * **Systems:** The system limit on the job execution time is 3 hours for a job that is running on a simulator and 8 hours for a job running on a physical system.
-* **Sessions:** When a session is started, it is assigned a maximum session timeout value.  After the maximum session timeout is reached, the session is permanently closed. The maximum session timeout value is set on the ``max_time`` parameter, which can be greater than the program’s ``max_execution_time``. By default, it is set to the initial job's maximum execution time and is the smaller of these values:
-   *  The system limit
-   *  The ``max_execution_time`` defined by the program
+* **Sessions:** When a session is started, it is assigned a maximum session timeout value.  After the maximum session timeout is reached, the session is permanently closed. The maximum session timeout value is set on the ``max_time`` parameter, which can be greater than the program’s ``max_execution_time``. By default, it is set to the system limit.
 
   Additionally, there is a 5 minute *interactive* timeout value. If there are no session jobs queued within that window, the session is temporarily deactivated and normal job selection resumes. After the new session becomes inactive, if the job scheduler gets a job from the original session and its maximum timeout value has not been reached, the session is reactivated until its maximum timeout value is reached.
   
