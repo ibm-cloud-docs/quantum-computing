@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2022-07-07"
+lastupdated: "2023-05-18"
 
 keywords: Qiskit Runtime sessions, Qiskit Runtime reservations
 
