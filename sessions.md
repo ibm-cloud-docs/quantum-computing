@@ -98,7 +98,7 @@ algorithms, such as VQE, to perform classical post-processing.
 -   Post-processing could be done anywhere, such as a personal computer,
     cloud service, or an HPC environment.
 
-![Iterative session execution diagram.](images/iterative.png "Iterative session execution diagram"){: caption="Iterative session execution" caption-side="bottom"}
+![Iterative session execution diagram.](images/iterative.png "Iterative session execution diagram"){: caption="Figure 2. Iterative session execution" caption-side="bottom"}
 
 ### Batch
 {: #batch}
@@ -113,7 +113,7 @@ that is, to maintain device characterzation.
 When batching, jobs are not guaranteed to run in the order they are submitted.
 {: note}
 
-![Batch session execution diagram.](images/batch.png "Batch session execution diagram"){: caption="Batch session execution" caption-side="bottom"}
+![Batch session execution diagram.](images/batch.png "Batch session execution diagram"){: caption="Figure 3. Batch session execution" caption-side="bottom"}
 
 
 ## How long a session stays active
@@ -185,7 +185,7 @@ session jobs don't finish during the reservation window, the remaining
 pending jobs might fail. If you use session inside a reservation we
 recommend that you set a realistic `max_time` value.
 
-![Diagram showing which job runs next in the queue.](images/jobs-failing.png "Job selection diagram"){: caption="Job selection" caption-side="bottom"}
+![Diagram showing which job runs next in the queue.](images/jobs-failing.png "Job selection diagram"){: caption="Figure 4. Job selection" caption-side="bottom"}
  
 ## Next steps
 {: #next-steps-sessions}
