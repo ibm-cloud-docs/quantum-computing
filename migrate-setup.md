@@ -94,7 +94,7 @@ service = QiskitRuntimeService(channel="ibm_quantum")
 {: codeblock}   
 
 ## Channel selection (get a provider)
-{: migrate-setup-channel} 
+{: #migrate-setup-channel} 
 
 Use the updated code to select a channel.
 
@@ -123,7 +123,7 @@ service = QiskitRuntimeService(channel="ibm_quantum", instance="my_hub/my_group/
 {: codeblock} 
 
 ## Get the backend
-{: migrate-get-backend} 
+{: #migrate-get-backend} 
 
 Use the updated code to view backends.
 
@@ -144,7 +144,7 @@ backend = service.backend("ibmq_qasm_simulator")
 {: codeblock} 
 
 ## Upload, view, or delete custom prototype programs
-{: migrate-upload-program}
+{: #migrate-upload-program}
 
 To work with custom programs, replace ``provider.runtime`` with ``service``.
 
@@ -188,7 +188,7 @@ program_id = service.upload_program(
 {: codeblock} 
 
 ## Run prototype programs
-{: run-prototype-migrate} 
+{: #run-prototype-migrate} 
 
 To run prototype programs, replace ``provider.runtime`` with ``service``.
 
