@@ -107,6 +107,22 @@ If you need to update your saved credentials, run `save_account` again, passing 
 
 For instructions to use the cloud Quantum Qiskit API, see the [authentication](/apidocs/quantum-computing#authentication){: external} section in the API documentation.
 
+Test your setup
+==============================
+
+Run a simple circuit using `Sampler` to ensure that your environment is set up properly:
+
+.. code-block:: python
+
+    from qiskit.test.reference_circuits import ReferenceCircuits
+    from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
+
+    job = Sampler("ibmq_qasm_simulator").run(ReferenceCircuits.bell())
+
+    print(f"job id: {job.job_id()}")
+    result = job.result()
+    print(result)
+    
 ## Run a program
 {: #choose-program}
 {: step}
