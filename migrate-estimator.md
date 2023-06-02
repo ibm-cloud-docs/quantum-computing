@@ -78,7 +78,7 @@ the `qiskit-ibm-runtime` **primitives** (`Sampler` and `Estimator`). To
 run **local** simulations, you can import specific local
 primitives from `qiskit_aer.primitives` and `qiskit.primitives`. All
 of them follow the `BaseSampler` and `BaseEstimator` interfaces, but
-**only the Runtime primitives offer access to the Runtime service, sessions, and built-in error mitigation**.
+**only the Runtime primitives offer access to the Runtime service, sessions, and built-in error mitigation**. This guide focuses on the `qiskit-ibm-runtime` primitives. 
 
 <details>
 <summary>Code example for Runtime Estimator</summary>
@@ -97,22 +97,6 @@ backend = service.backend("ibmq_qasm_simulator") # cloud simulator
 estimator = Estimator(session=backend)
 
 # Run Expectation value calculation
-result = estimator.run(circuits, observables).result()
-```
-{: codeblock}
-
-</details>
-
-<details>
-<summary>Code example for Aer Estimator</summary>
-
-``` python
-from qiskit_aer import Estimator
-
-# Get local simulator Estimator
-estimator = Estimator()
-
-# Run expectation value calculation
 result = estimator.run(circuits, observables).result()
 ```
 {: codeblock}
@@ -253,90 +237,3 @@ to the following:
 - [Setting execution options topic](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/options.html){: external}
 - [Primitive execution options API reference](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/stubs/qiskit_ibm_runtime.options.Options.html#qiskit_ibm_runtime.options.Options){: external}
 - [How to run a session topic](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/run_session.html){: external}
-
-## 3. Other execution alternatives (non-Runtime)
-{: #mig-est-3}
-
-This section describes how to use non-Runtime primitives to test an
-algorithm using local simulation. Let's assume that we want to solve
-the problem defined above with a local statevector simulation.
-
-### 3.a. Legacy: Use the Qiskit Aer simulator
-{: #mig-est-3a}
-
-``` python
-from qiskit.opflow import StateFn, PauliExpectation, CircuitSampler
-from qiskit_aer import AerSimulator
-
-# Define the state to sample
-measurable_expression = StateFn(opflow_op, is_measurement=True).compose(opflow_state)
-
-# Convert to expectation value calculation object
-expectation = PauliExpectation().convert(measurable_expression)
-
-# Define statevector simulator
-simulator = AerSimulator(method="statevector", shots=100)
-
-# Inject backend into circuit sampler
-circuit_sampler = CircuitSampler(simulator).convert(expectation)
-
-# Evaluate
-expectation_value = circuit_sampler.eval().real
-```
-{: codeblock}
-
-``` python
->>> print("expectation: ", expectation_value)
-expectation:  -1.0636533500290943
-```
-{: codeblock}
-
-### 3.b. New: Use the Reference `Estimator` or Aer `Estimator` primitive
-{: #mig-est-3b}
-
-The Reference `Estimator` lets you perform either an exact or a
-shot-based noisy simulation based on the `Statevector` class in the
-`qiskit.quantum_info` module.
-
-``` python
-from qiskit.primitives import Estimator
-
-estimator = Estimator()
-
-expectation_value = estimator.run(state, op).result().values
-
-# for shot-based simulation:
-expectation_value = estimator.run(state, op, shots=100).result().values
-```
-{: codeblock}
-
-``` python
->>> print("expectation: ", expectation_value)
-expectation:  [-1.03134297]
-```
-{: codeblock}
-
-You can still access the Aer Simulator through its dedicated
-`Estimator`. This can be useful for performing simulations with noise
-models. In this example, the simulation method has been updated to match
-the result from 3.a:
-
-``` python
-from qiskit_aer.primitives import Estimator # import change!!!
-
-estimator = Estimator(run_options= {"method": "statevector"})
-
-expectation_value = estimator.run(state, op, shots=100).result().values
-```
-{: codeblock}
-
-``` python
->>> print("expectation: ", expectation_value)
-expectation:  [-1.06365335]
-```
-{: codeblock}
-
-For more information on using the Aer primitives, see the [VQE tutorial](https://qiskit.org/documentation/tutorials/algorithms/03_vqe_simulation_with_noise.html){: external}.
-
-For more information about running noisy simulations with the **Runtime primitives**, see [Noisy Simulators in Qiskit Runtime](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/noisy_simulators.html){: external}.
-

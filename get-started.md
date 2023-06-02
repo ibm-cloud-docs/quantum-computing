@@ -112,7 +112,7 @@ Test your setup
 
 Run a simple circuit using `Sampler` to ensure that your environment is set up properly:
 
-.. code-block:: python
+```python
 
     from qiskit.test.reference_circuits import ReferenceCircuits
     from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
@@ -122,7 +122,9 @@ Run a simple circuit using `Sampler` to ensure that your environment is set up p
     print(f"job id: {job.job_id()}")
     result = job.result()
     print(result)
-    
+```
+{: codeblock}
+
 ## Run a program
 {: #choose-program}
 {: step}
