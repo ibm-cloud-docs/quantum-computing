@@ -53,7 +53,7 @@ A pay-as-you-go plan for accessing IBM Quantum systems and simulators. Build you
 ## Pricing overview
 {: #pricing-overview}
 
-The Lite plan is free. The Standard plan charges you per _runtime second_ when running on a physical system. The following diagram illustrates what is included in a runtime second. For this service, one runtime second includes quantum compute time as well as classical near-time pre- and post-processing time. Any time spent waiting for results or in the queue for the quantum computer are excluded from the classical processing time.
+The Lite plan is free. The Standard plan charges you per _runtime second_ when running on a physical system. The following diagram illustrates what is included in a runtime second. For this service, one runtime second includes only quantum compute time. Any time spent waiting for results or in the queue for the quantum computer are excluded from the classical processing time.
 
 ![This diagram shows that everything before the program starts (such as queuing) is free. After the job starts, it costs $1.60 per second.](images/Runtime_Accounting_Diagram.png "Runtime second accounting"){: caption="Figure 1. Runtime second accounting" caption-side="bottom"}
 
