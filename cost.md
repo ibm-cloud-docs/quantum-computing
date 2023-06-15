@@ -27,7 +27,6 @@ There are time limits on programs, systems, and sessions.
 
 * **Primitives:** The maximum execution time for the Sampler primitive is 10000 seconds (2.78 hours). The maximum execution time for the Estimator primitive is 18000 seconds (5 hours).
 * **Programs:** The maximum execution time for a program is set on the job's options by using the ``max_execution_time`` parameter. If specified, it must be at least 300 seconds. 
-* **Prototype programs:** The maximum execution time is listed on the [Prototype programs page](https://quantum-computing.ibm.com/services/programs/prototypes).
 * **Systems:** The system limit on the job execution time is 3 hours for a job that is running on a simulator and 8 hours for a job running on a physical system.
 * **Sessions:** When a session is started, it is assigned a maximum session timeout value, which is the system limit by default.  After the maximum session timeout is reached, the session is permanently closed and any queued jobs that remain in the session are put into a ``failed`` state. The maximum session timeout value is set on the ``max_time`` parameter, which can be greater than the program’s ``max_execution_time``.
 
