@@ -46,7 +46,7 @@ from qiskit_ibm_runtime import QiskitRuntimeService
 
 
 ## Save and load accounts
-{: #migrate-import-path}
+{: #migrate-save-accounts}
 
 Use the updated code to work with accounts.
 
