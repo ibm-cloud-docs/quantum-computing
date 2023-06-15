@@ -132,7 +132,7 @@ starts each time a session job finishes.
 When a session is started, it is assigned a *maximum session timeout*
 value. You can set this value by using the `max_time` parameter, which
 can be greater than the program's `max_execution_time`. For
-instructions, see [Run a primitive in a session](how_to/run_session.html).
+instructions, see [Run a primitive in a session](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/run_session.html){: external}.
 
 If you do not specify a timeout value, it is the smaller of these
 values:
