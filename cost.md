@@ -66,30 +66,6 @@ You are sent a monthly invoice that provides details about your resource charges
 
 Additionally, you can determine cost per instance or per job at any time.
 
-### View instance cost
-{: #view-instance-cost}
-
-To determine how much has been billed to an instance during the current billing cycle, from the [Instances page](https://cloud.ibm.com/quantum/instances), click the instance to open its details page.
-
-These are the fields relevant to cost:
-
-- **Billing cycle QR usage**: The amount of quantum runtime used by this instance during the current billing cycle
-- **Billing cycle cost**: The total cost of running jobs during the current billing cycle
-- **Total QR usage**: The amount of quantum runtime used by this instance since it was created
-- **Total cost**: The total cost of running jobs on this instance since it was created
-
-You can view your billing cycle on the [IBM Cloud Billing and usage page](https://cloud.ibm.com/billing).
-
-### View job cost
-{: #view-job-cost}
-
-To determine how much has been billed to each job associated with an instance, from the [Instances page](https://cloud.ibm.com/quantum/instances), click the instance to open its details page. Next, on the left side, click Jobs.
-
-These are the columns relevant to cost:
-
-- **QR usage**: The amount of quantum runtime used by this job
-- **Cost**: The total cost of running this job
-
 ## Set up spending notifications
 {: #pricing-notifications}
 

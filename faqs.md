@@ -87,13 +87,13 @@ Currently, there are two plans. The Lite plan allows the user to access only qua
 {: #faq-pricing}
 {: faq}
 
-The {{site.data.keyword.qiskit_runtime_notm}} Standard plan is a pay-as-you-go service and costs $1.6 runtime second when running on physical systems. For more information, see the [Qiskit Runtime Standard plan](/docs/quantum-computing?topic=quantum-computing-cost) topic.
+The {{site.data.keyword.qiskit_runtime_notm}} Standard plan is a pay-as-you-go service and costs $1.6 per QR second when running on physical systems. For more information, see the [Qiskit Runtime Standard plan](/docs/quantum-computing?topic=quantum-computing-cost) topic.
 
 ##	What is the pricing metric of the {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #faq-pricing-metric}
 {: faq}
 
-For this service, one second is one second of execution time when the Qiskit program is running, whether on a quantum processor or accompanying classical cluster. Queue time is not included. For more information, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
+For this service, you are charged for quantum runtime (QR) usage.  QR usage is the time counted by QR to process a job, and is determined by the use of internal resources. Queue time is not included. For more information, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
 
 
 ##	Can I use {{site.data.keyword.qiskit_runtime_notm}} with my {{site.data.keyword.cloud}} lite account?
