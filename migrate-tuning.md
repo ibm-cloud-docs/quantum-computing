@@ -38,8 +38,8 @@ corresponding API references for information about the
 For some algorithms, setting a specific number of shots is a core part
 of their routines. Previously, shots could be set during the call to
 `backend.run()`. For example, `backend.run(shots=1024)`.
-Now, that setting is part of the execution options ("second level
-option"). This can be done during the primitive setup:
+Now, that setting is part of the execution options (`"second level
+option"`). This can be done during the primitive setup:
 
 ``` python
 from qiskit_ibm_runtime import Estimator, Options
@@ -80,7 +80,7 @@ suppression mechanisms. Level 0 only involves basic transpilation. To
 learn about each optimization level, view the Optimization level table
 in the [Error suppression topic](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/locale/es_UN/how_to/error-suppression.html#setting-the-optimization-level){: external}.
 
-The optimization level option is a "first level option", and can be
+The optimization level option is a first level option, and can be
 set as follows:
 
 ``` python
@@ -98,7 +98,7 @@ estimator = Estimator(session=session, options=options)
 
 You might want to configure your transpilation strategy further, and for
 this, there are advanced transpilation options you can set up. These are
-"second level options", and can be set as follows:
+second level options, and can be set as follows:
 
 ``` python
 from qiskit_ibm_runtime import Estimator, Options

@@ -131,7 +131,7 @@ whether to access Qiskit Runtime through IBM Cloud or IBM Quantum
 Platform. Some information that might help you decide includes:
 
 - The available plans:
-   - Qiskit Runtime is available in both the Open (free access) or Premium (contract-based paid access) plan on IBM Quantum Platform. See [IBM Quantum access plans](https://www.ibm.com/quantum/access-plans) for details.
+   - Qiskit Runtime is available in both the Open (free access) or Premium (contract-based paid access) plan on IBM Quantum Platform. See [IBM Quantum access plans](https://www.ibm.com/quantum/access-plans){: external} for details.
    - Qiskit Runtime is accessible through the Lite (free access) or Standard (pay-as-you-go access) plan in IBM Cloud. See [Plans](/docs/quantum-computing?topic=quantum-computing-plans) for details.
 - The use case requirements:
    - IBM Quantum Platform offers a visual circuit composer (Quantum Composer) and a Jupyter Notebook environment (Quantum Lab).
@@ -145,7 +145,7 @@ Platform. Some information that might help you decide includes:
 After deciding which channel to use to interact with Qiskit Runtime, you
 can get set up on either platform using the instructions below:
 
-- To get started with Qiskit Runtime on IBM Quantum Platform, see [Experiment with Qiskit Runtime](https://quantum-computing.ibm.com/services/resources/docs/resources/runtime/start).
+- To get started with Qiskit Runtime on IBM Quantum Platform, see [Experiment with Qiskit Runtime](https://quantum-computing.ibm.com/services/resources/docs/resources/runtime/start){: external}.
 - To get started with Qiskit Runtime on IBM Cloud, see the [Getting Started guide](/docs/quantum-computing?topic=quantum-computing-get-started).
 
 </details>

@@ -158,7 +158,7 @@ with Session(service=service, backend="ibmq_qasm_simulator"):
 {: codeblock}
 
 ## Next steps
-{: #next-steps}
+{: #next-steps-getstarted}
 
 - View the [API reference](/apidocs/quantum-computing){: external}.
 - Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}.

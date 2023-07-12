@@ -21,7 +21,6 @@ content-type: faq
 {: #qiskit-runtime-faqs}
 
 
-
 To find all FAQs for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/faqs).
 {: shortdesc}
 
@@ -93,7 +92,7 @@ The {{site.data.keyword.qiskit_runtime_notm}} Standard plan is a pay-as-you-go s
 {: #faq-pricing-metric}
 {: faq}
 
-For this service, you are charged for quantum runtime (QR) usage.  QR usage is the time counted by QR to process a job, and is determined by the use of internal resources. Queue time is not included. For more information, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
+For this service, you are charged for Quantum Runtime usage.  QR usage is the time counted by QR to process a job, and is determined by the use of internal resources. Queue time is not included. For more information, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
 
 
 ##	Can I use {{site.data.keyword.qiskit_runtime_notm}} with my {{site.data.keyword.cloud}} lite account?
