@@ -14,14 +14,12 @@ toc:
     product-page: https://www.ibm.com/quantum-computing
     path: quantum-computing
     label: Qiskit Runtime
-
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
       id: learn
       topics:
       - get-started.md
-      
       - overview.md
       - topicgroup:
             label: Migrate to the Qiskit Runtime execution model
@@ -35,7 +33,6 @@ toc:
             - migrate-tuning.md 
       - topic: release-notes.md
         navtitle: Release notes
-
   - navgroup:
       id: tutorial
       topics:
@@ -52,7 +49,6 @@ toc:
                   - cloud-provider-org.md
                   - appid-cloud-org.md
                   - appid-org.md
-
   - navgroup:
       id: howto
       topics:
@@ -68,7 +64,6 @@ toc:
             - architecture-workload-isolation.md
             - data-security.md
       - at-events.md
-
 #  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
 #  Links to your command line reference docs should be included in the Reference navigation group. For link help see https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav#toc-yaml-properties
   - navgroup:
@@ -79,14 +74,13 @@ toc:
       - plans.md
       - sessions.md
       - considerations-org.md
-      - /quantum-computing-cli-plugin/quantum-computing-cli-plugin-quantum-computing-cli
+      - include: ../quantum-computing-cli-plugin/quantum-services-cli.md
       - link:
           label: API reference
           href: https://{DomainName}/apidocs/quantum-computing
       - link:
           label: Qiskit API reference
           href: https://qiskit.org/documentation/partners/qiskit_ibm_runtime/apidocs/ibm-runtime.html
-
   - navgroup:
       id: help
       topics:
