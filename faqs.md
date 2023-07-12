@@ -21,7 +21,6 @@ content-type: faq
 {: #qiskit-runtime-faqs}
 
 
-
 To find all FAQs for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/faqs).
 {: shortdesc}
 
