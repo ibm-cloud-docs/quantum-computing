@@ -28,7 +28,8 @@ For further details about migrating from `qiskit-ibmq-provider` to `qiskit-ibm-r
 
 The import path has changed as follows:
 
-**Legacy**
+### Legacy
+{: #migrate-import-path-legacy}
 
 ``` python
 from qiskit import IBMQ
@@ -36,7 +37,8 @@ from qiskit import IBMQ
 ```
 {: codeblock}
 
-**Updated**
+### Updated
+{: #migrate-import-path-updated}
 
 ``` python
 from qiskit_ibm_runtime import QiskitRuntimeService
@@ -50,7 +52,8 @@ from qiskit_ibm_runtime import QiskitRuntimeService
 
 Use the updated code to work with accounts.
 
-**Legacy - Save accounts**
+### Legacy - Save accounts
+{: #migrate-save-accounts-legacy}
 
 ``` python
 IBMQ.save_account("<QUANTUM_TOKEN>", overwrite=True)
@@ -58,7 +61,9 @@ IBMQ.save_account("<QUANTUM_TOKEN>", overwrite=True)
 ```
 {: codeblock}  
 
-**Updated - Save accounts**
+### Updated - Save accounts
+{: #migrate-save-accounts-updated}
+
 The new syntax accepts credentials for two different channels. For more information on retrieving account credentials, see the `getting started guide <https://qiskit.org/documentation/partners/qiskit_ibm_runtime/getting_started.html>`_.
 
 ``` python
@@ -71,7 +76,8 @@ The new syntax accepts credentials for two different channels. For more informat
 ```
 {: codeblock}
 
-**Legacy - Load accounts**
+### Legacy - Load accounts
+{: #migrate-load-accounts-legacy}
 
 ``` python
 IBMQ.load_account()
@@ -79,7 +85,9 @@ IBMQ.load_account()
 ```
 {: codeblock} 
 
-**Updated - Load accounts**
+### Updated - Load accounts
+{: #migrate-load-accounts-updated}
+
 
 The new syntax combines the functionality from ``load_account()`` and ``get_provider()`` in one statement. The ``channel`` input parameter is optional. If multiple accounts have been saved in one device and no ``channel`` is provided, the default is ``"ibm_cloud"``.
 
@@ -98,7 +106,8 @@ service = QiskitRuntimeService(channel="ibm_quantum")
 
 Use the updated code to select a channel.
 
-**Legacy**
+### Legacy
+{: #migrate-setup-channel-legacy} 
 
 ``` python
 provider = IBMQ.get_provider(project="my_project", group="my_group", hub="my_hub")
@@ -106,7 +115,8 @@ provider = IBMQ.get_provider(project="my_project", group="my_group", hub="my_hub
 ```
 {: codeblock}
 
-**Updated**
+### Updated
+{: #migrate-setup-channel-updated} 
 
 The new syntax combines the functionality from ``load_account()`` and ``get_provider()`` in one statement.
 When using the ``ibm_quantum`` channel, the ``hub``, ``group``, and ``project`` are specified through the new
@@ -127,7 +137,9 @@ service = QiskitRuntimeService(channel="ibm_quantum", instance="my_hub/my_group/
 
 Use the updated code to view backends.
 
-**Legacy**
+### Legacy
+{: #migrate-get-backend-l} 
+
 
 ``` python
 backend = provider.get_backend("ibmq_qasm_simulator")
@@ -135,7 +147,9 @@ backend = provider.get_backend("ibmq_qasm_simulator")
 ```
 {: codeblock}
 
-**Updated**
+### Updated
+{: #migrate-get-backend-u} 
+
 
 ``` python
 backend = service.backend("ibmq_qasm_simulator")
