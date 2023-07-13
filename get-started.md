@@ -107,8 +107,7 @@ If you need to update your saved credentials, run `save_account` again, passing 
 
 For instructions to use the cloud Quantum Qiskit API, see the [authentication](/apidocs/quantum-computing#authentication){: external} section in the API documentation.
 
-Test your setup
-==============================
+## Test your setup
 
 Run a simple circuit using `Sampler` to ensure that your environment is set up properly:
 
