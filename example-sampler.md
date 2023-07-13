@@ -125,12 +125,12 @@ print(f" > Quasiprobability distribution: {result.quasi_dists}")
 ## Sessions and advanced options example
 {: #start-session-sampler-example}
 
-Explore sessions and advanced options to optimize circuit performance on quantum systems.  With Qiskit Runtime primitives, we introduce the concept of a session that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the quantum data center on each iteration. You can create a Runtime session by using the context manager (`with ...:`), which automatically opens and closes the session for you. See [Sessions](https://quantum-computing.ibm.com/run/sessions){: external} for details.
+Explore sessions and advanced options to optimize circuit performance on quantum systems.  With Qiskit Runtime primitives, we introduce the concept of a session that allows you to define a job as a collection of iterative calls to the quantum computer. When you start a session, it caches the data you send so it doesn't have to be transmitted to the quantum data center on each iteration. You can create a Runtime session by using the context manager (`with ...:`), which automatically opens and closes the session for you. See [Sessions](/docs/quantum-computing?topic=quantum-computing-sessions) for details.
 
 When you start the session, you can specify these values:
 
 *  **backend**: The system or simulator to run on. If none is specified, the least busy backend is used.
-*  **max_time**: How long a runtime session can be open before it is forcibly closed. Can be specified as seconds (int) or a string like "2h 30m 40s". This value must be between 300 seconds and the system imposed maximum time. See [Maximum execution time for a Qiskit Runtime job](https://quantum-computing.ibm.com/run/max_execution_time){: external} for details.
+*  **max_time**: How long a runtime session can be open before it is forcibly closed. Can be specified as seconds (int) or a string like "2h 30m 40s". This value must be between 300 seconds and the system imposed maximum time. See [Maximum execution time for a Qiskit Runtime job](https://qiskit.org/ecosystem/ibm-runtime/faqs/max_execution_time.html){: external} for details.
 
 This is an experimental setting and can break between releases without warning.
 {: Note}
