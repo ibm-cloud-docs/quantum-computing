@@ -86,6 +86,7 @@ toc:
       topics:
       - faqs.md
       - support.md
+      - accessibility.md
       - topicgroup:
             label: Troubleshooting
             topics:
