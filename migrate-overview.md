@@ -123,61 +123,31 @@ Use primitive programs to write code more efficiently. For details, see the exam
 Users might have the following questions when planning to migrate their
 code to Qiskit Runtime:
 
-<details>
-<summary>Which channel should I use?</summary>
+- Which channel should I use?
 
-After deciding to use Qiskit Runtime primitives, the user must determine
-whether to access Qiskit Runtime through IBM Cloud or IBM Quantum
-Platform. Some information that might help you decide includes:
+   After deciding to use Qiskit Runtime primitives, the user must determine
+   whether to access Qiskit Runtime through IBM Cloud or IBM Quantum
+   Platform. Some information that might help you decide includes:
 
-- The available plans:
-   - Qiskit Runtime is available in both the Open (free access) or Premium (contract-based paid access) plan on IBM Quantum Platform. See [IBM Quantum access plans](https://www.ibm.com/quantum/access-plans){: external} for details.
-   - Qiskit Runtime is accessible through the Lite (free access) or Standard (pay-as-you-go access) plan in IBM Cloud. See [Plans](/docs/quantum-computing?topic=quantum-computing-plans) for details.
-- The use case requirements:
-   - IBM Quantum Platform offers a visual circuit composer (Quantum Composer) and a Jupyter Notebook environment (Quantum Lab).
-   - IBM Cloud offers a cloud native service that is ideal if users need to integrate quantum capabilities with other cloud services.
+      - The available plans:
+         - Qiskit Runtime is available in both the Open (free access) or Premium (contract-based paid access) plan on IBM Quantum Platform. See [IBM Quantum access plans](https://www.ibm.com/quantum/access-plans){: external} for details.
+         - Qiskit Runtime is accessible through the Lite (free access) or Standard (pay-as-you-go access) plan in IBM Cloud. See [Plans](/docs/quantum-computing?topic=quantum-computing-plans) for details.
+      - The use case requirements:
+         - IBM Quantum Platform offers a visual circuit composer (Quantum Composer) and a Jupyter Notebook environment (Quantum Lab).
+         - IBM Cloud offers a cloud native service that is ideal if users need to integrate quantum capabilities with other cloud services.
+- How do I set up my channel?
 
-</details>
+   After deciding which channel to use to interact with Qiskit Runtime, you can get set up on either platform using the instructions below:
 
-<details>
-<summary>How do I set up my channel?</summary>
+      - To get started with Qiskit Runtime on IBM Quantum Platform, see [Experiment with Qiskit Runtime](https://quantum-computing.ibm.com/services/resources/docs/resources/runtime/start){: external}.
+      - To get started with Qiskit Runtime on IBM Cloud, see the [Getting Started guide](/docs/quantum-computing?topic=quantum-computing-get-started).
+- Should I modify the Qiskit Terra algorithms?
 
-After deciding which channel to use to interact with Qiskit Runtime, you
-can get set up on either platform using the instructions below:
+   As of v0.22, [Qiskit Terra algorithms](https://github.com/Qiskit/qiskit-terra/tree/main/qiskit/algorithms){: external} use Qiskit Runtime primitives. Thus, there is no need for users to modify amplitude estimators or any other Qiskit Terra algorithms.
+- Which primitive should I use?</summary>
 
-- To get started with Qiskit Runtime on IBM Quantum Platform, see [Experiment with Qiskit Runtime](https://quantum-computing.ibm.com/services/resources/docs/resources/runtime/start){: external}.
-- To get started with Qiskit Runtime on IBM Cloud, see the [Getting Started guide](/docs/quantum-computing?topic=quantum-computing-get-started).
+   When choosing which primitive to use, you first need to understand whether the algorithm uses a **quasi-probability distribution** sampled from a quantum state (a list of quasi-probabilities), or an **expectation value** of a certain observable with respect to a quantum state (a real number).
 
-</details>
+   A probability distribution is often of interest in optimization problems that return a classical bit string, encoding a certain solution to a problem at hand. In these cases, you might be interested in finding a bit string that corresponds to a ket value with the largest probability of being measured from a quantum state, for example.
 
-<details>
-<summary>Should I modify the Qiskit Terra algorithms?</summary>
-
-As of v0.22, [Qiskit Terra algorithms](https://github.com/Qiskit/qiskit-terra/tree/main/qiskit/algorithms){: external} use Qiskit Runtime primitives. Thus, there is no need for users to
-modify amplitude estimators or any other Qiskit Terra algorithms.
-
-</details>
-
-<details>
-<summary>Which primitive should I use?</summary>
-
-When choosing which primitive to use, you first need to understand
-whether the algorithm uses a **quasi-probability distribution** sampled
-from a quantum state (a list of quasi-probabilities), or an
-**expectation value** of a certain observable with respect to a
-quantum state (a real number).
-
-A probability distribution is often of interest in optimization problems
-that return a classical bit string, encoding a certain solution to a
-problem at hand. In these cases, you might be interested in finding a
-bit string that corresponds to a ket value with the largest probability
-of being measured from a quantum state, for example.
-
-An expectation value of an observable could be the target quantity in
-scenarios where knowing a quantum state is not relevant. This often
-occurs in optimization problems or chemistry applications. For example,
-when trying to discover the extremal energy of a system.
-
-</details>
-
-
+   An expectation value of an observable could be the target quantity in scenarios where knowing a quantum state is not relevant. This often occurs in optimization problems or chemistry applications. For example, when trying to discover the extremal energy of a system.

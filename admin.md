@@ -41,13 +41,13 @@ For more information about roles, including details about program level roles an
 
 Following are the roles that you can assign to access groups:
 
-Action | Description | Roles
----|---|---
-quantum-computing.program.create | Create programs and change program privacy | Manager, Writer
-quantum-computing.program.read | View programs and program details | Manager, Reader
-quantum-computing.program.delete | Delete programs | Manager, Writer
-quantum-computing.program.update | Update programs | Manager, Writer
-quantum-computing.job.create | Run jobs | Manager, Writer
-quantum-computing.job.read | View job results and logs | Manager, Reader
-quantum-computing.job.delete | Delete jobs | Manager, Writer
+|Action | Description | Roles |
+|---|---|---|
+|quantum-computing.program.create | Create programs and change program privacy | Manager, Writer|
+|quantum-computing.program.read | View programs and program details | Manager, Reader|
+|quantum-computing.program.delete | Delete programs | Manager, Writer|
+|quantum-computing.program.update | Update programs | Manager, Writer|
+|quantum-computing.job.create | Run jobs | Manager, Writer|
+|quantum-computing.job.read | View job results and logs | Manager, Reader|
+|quantum-computing.job.delete | Delete jobs | Manager, Writer|
 {: caption="Table 1. Access roles to grant for managing, writing, and reading" caption-side="bottom"}
