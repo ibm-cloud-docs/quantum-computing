@@ -41,7 +41,7 @@ Receive intermediate results:   Receive intermediate results as your execution r
 
 With Qiskit Runtime, we are introducing a new set of interfaces, in the form of primitive programs, to expand on how users run jobs on quantum computers.
 
-The existing Qiskit interface to backends (`backend.run()`) was designed to accept a list of circuits and return counts for every job. Over time, it became clear that users have diverse purposes for quantum computing, and therefore the ways in which they define the requirements for their computing jobs are expanding. Therefore, their results also look different.
+The existing Qiskit interface to backends (`backend.run()`) was designed to accept a list of circuits and return counts for every job. Over time, it became clear that users have diverse purposes for quantum cov -mputing, and therefore the ways in which they define the requirements for their computing jobs are expanding. Therefore, their results also look different.
 
 For example, an algorithm researcher and developer cares about information beyond counts; they are more focused on efficiently calculating quasiprobabilities and expectation values of observables.
 
@@ -63,16 +63,14 @@ The following primitive programs are available:
 ## How to use primitives
 {: #how-to-use-primitives}
 
-Primitive program interfaces vary based on the type of task that you want to run on the quantum computer and the corresponding data that you want returned as a result. After identifying the appropriate primitive for your program, you can use Qiskit to prepare inputs, such as circuits, observables (for Estimator), and customizable options to optimize your job. For more information, see the appropriate topic:
-
-- [Sampler](/docs/quantum-computing?topic=quantum-computing-example-sampler)
-- [Estimator](/docs/quantum-computing?topic=quantum-computing-example-estimator)
+Primitive program interfaces vary based on the type of task that you want to run on the quantum computer and the corresponding data that you want returned as a result. After identifying the appropriate primitive for your program, you can use Qiskit to prepare inputs, such as circuits, observables (for Estimator), and customizable options to optimize your job.
 
 ## Next steps
 {: #next-steps}
 
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-get-started) to create an instance and run your first job.
-- Use Qiskit [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.
+- [Get started with primitives](https://docs.quantum-computing.ibm.com/build/primitives-start){: external}
+- [Learn by using tutorials, courses, and tools](https://learning.quantum-computing.ibm.com){: external}
 - Watch the [Qiskit Runtime Tutorial video](https://www.youtube.com/watch?v=b9mdMye-iVk){: external} for more information.
 - View the [Qiskit Runtime API reference](/apidocs/quantum-computing){: external} to understand how to use cURL commands to work with your cloud service instance.
 - Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}.

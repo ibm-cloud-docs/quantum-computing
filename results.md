@@ -18,7 +18,7 @@ content-type: howto
 # View final job results
 {: #results}
 
-This tutorial describes how to review final results after running a job. For an example of running a job, see [Get started with the Estimator primitive](/docs/quantum-computing?topic=quantum-computing-example-estimator) or [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-sampler).
+This tutorial describes how to review final results after running a job. 
 {: shortdesc}
 
 ## Before you begin

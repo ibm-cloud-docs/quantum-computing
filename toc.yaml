@@ -21,23 +21,12 @@ toc:
       topics:
       - get-started.md
       - overview.md
-      - topicgroup:
-            label: Migrate to the Qiskit Runtime execution model
-            topics:
-            - migrate-overview.md
-            - migrate-setup.md
-            - migrate-estimator.md
-            - migrate-sampler.md
-            - migrate-update-parm.md
-            - migrate-qiskit-alg.md
-            - migrate-tuning.md 
+      - work-qiskit-runtime.md
       - topic: release-notes.md
         navtitle: Release notes
   - navgroup:
       id: tutorial
       topics:
-      - example-sampler.md
-      - example-estimator.md
       - topicgroup:
             label: Set up Qiskit Runtime for an organization
             topics:
@@ -69,18 +58,15 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - program-sampler.md
-      - program-estimator.md
       - plans.md
-      - sessions.md
       - considerations-org.md
       - include: ../quantum-computing-cli-plugin/quantum-services-cli.md
       - link:
           label: API reference
           href: https://{DomainName}/apidocs/quantum-computing
       - link:
-          label: Qiskit API reference
-          href: https://qiskit.org/documentation/partners/qiskit_ibm_runtime/apidocs/ibm-runtime.html
+          label: Qiskit Runtime API reference
+          href: https://docs.quantum-computing.ibm.com/api/qiskit-ibm-runtime/runtime_service
   - navgroup:
       id: help
       topics:
