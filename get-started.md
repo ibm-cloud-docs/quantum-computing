@@ -147,12 +147,12 @@ bell.cx(0, 1)
 bell.measure_all()
 
 # Execute the circuit
-from qiskit_ibm_runtime import Session, Sampler
+from qiskit_ibm_runtime import Sampler
 
-with Session(service=service, backend="ibmq_qasm_simulator"):
-    sampler = Sampler()
-    job = sampler.run(circuits=bell)
-    print(job.result())
+backend = service.backend("ibmq_qasm_simulator")
+sampler = Sampler(backend)
+job = sampler.run(circuits=bell)
+print(job.result())
 ```
 {: codeblock}
 
