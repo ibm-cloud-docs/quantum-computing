@@ -86,4 +86,4 @@ print(f"Job result: {job.result()}")
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-get-started) to create an instance and run your first job.
 - Review [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-sampler) for a step-by-step example of using this primitive.
 - Use Qiskit [tutorials](https://qiskit.org/documentation/tutorials.html){: external} to learn how to create circuits with Qiskit.
-- See the [Qiskit Runtime API Reference](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/apidocs/ibm-runtime.html){: external} for more information.
+- See the [Qiskit Runtime API Reference](https://docs.quantum-computing.ibm.com/api/qiskit-ibm-runtime/runtime_service){: external} for more information.

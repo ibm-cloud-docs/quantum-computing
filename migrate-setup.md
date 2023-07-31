@@ -64,7 +64,7 @@ IBMQ.save_account("<QUANTUM_TOKEN>", overwrite=True)
 ### Updated - Save accounts
 {: #migrate-save-accounts-updated}
 
-The new syntax accepts credentials for two different channels. For more information on retrieving account credentials, see the `getting started guide <https://qiskit.org/documentation/partners/qiskit_ibm_runtime/getting_started.html>`_.
+The new syntax accepts credentials for two different channels. For more information on retrieving account credentials, see the `getting started guide <https://docs.quantum-computing.ibm.com/start>`_.
 
 ``` python
 	# IBM cloud channel
