@@ -150,7 +150,7 @@ bell.measure_all()
 from qiskit_ibm_runtime import Sampler
 
 backend = service.backend("ibmq_qasm_simulator")
-sampler = Sampler(backend)
+sampler = Sampler(backend=backend)
 job = sampler.run(circuits=bell)
 print(job.result())
 ```
