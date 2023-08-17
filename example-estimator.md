@@ -70,6 +70,7 @@ print(f" > Metadata: {result.metadata}")
 {: codeblock}
 
 For more information, see the [Estimator API reference](https://docs.quantum-computing.ibm.com/api/qiskit-ibm-runtime/qiskit_ibm_runtime.Estimator){: external}.
+
 ## Multiple circuit example
 {: #example2-estimator}
 
@@ -186,5 +187,4 @@ print(f" > Expectation values job 1: {result.values}")
 # second job 
 print(f" > Expectation values job 2: {another_result.values}")
 ```
-
 {: codeblock}
