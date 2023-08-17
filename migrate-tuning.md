@@ -68,7 +68,7 @@ estimator.run(circuits=circuits, observables=observables, shots=100)
 ```
 {: codeblock}
 
-For more information about the primitive options, refer to the [Options class API reference](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/stubs/qiskit_ibm_runtime.options.Options.html#qiskit_ibm_runtime.options.Options){: external}.
+For more information about the primitive options, refer to the [Options class API reference](https://docs.quantum-computing.ibm.com/api/qiskit-ibm-runtime/qiskit_ibm_runtime.options.Options){: external}.
 
 ## Transpilation
 {: #migrate-transpilation}
@@ -118,7 +118,7 @@ Finally, you might want to specify settings that are not available
 through the primitives interface, or use custom transpiler passes. In
 these cases, you can set `skip_transpilation=True` to submit
 user-transpiled circuits. To learn how this is done, refer to the
-[Submitting user-transpiled circuits using primitives tutorial](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/tutorials/user-transpiled-circuits.html){: external}.
+[Submitting user-transpiled circuits using primitives tutorial](https://learning.quantum-computing.ibm.com/tutorial/submitting-user-transpiled-circuits-using-primitives){: external}.
 
 The `skip_transpilation` option is an advanced transpilation option, set
 as follows:
@@ -140,7 +140,7 @@ You might want to leverage different error mitigation methods and see
 how these affect the performance of your algorithm. These can also be
 set through the `resilience_level` option. The method selected for each
 level is different for `Sampler` and `Estimator`. You can find more
-information in the [Configure error mitigation topic](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/error-mitigation.html){: external}.
+information in the [Configure error mitigation topic](https://docs.quantum-computing.ibm.com/optimize/error-mitigation){: external}.
 
 The configuration is similar to the other options:
 

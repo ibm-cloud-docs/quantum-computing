@@ -69,7 +69,7 @@ Primitive program interfaces vary based on the type of task that you want to run
 {: #next-steps}
 
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-get-started) to create an instance and run your first job.
-- [Get started with primitives](https://docs.quantum-computing.ibm.com/build/primitives-start){: external}
+- [Get started with primitives](https://docs.quantum-computing.ibm.com/build/primitives){: external}
 - [Learn by using tutorials, courses, and tools](https://learning.quantum-computing.ibm.com){: external}
 - Watch the [Qiskit Runtime Tutorial video](https://www.youtube.com/watch?v=b9mdMye-iVk){: external} for more information.
 - View the [Qiskit Runtime API reference](/apidocs/quantum-computing){: external} to understand how to use cURL commands to work with your cloud service instance.
