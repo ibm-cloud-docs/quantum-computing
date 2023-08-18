@@ -47,7 +47,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 {: #install-packages}
 {: step}
 
-Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit Getting started topic](https://qiskit.org/documentation/getting_started.html){: external}. Periodically check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) (or rerun these commands) so that you always have the latest version.
+Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit install and setup topic](https://docs.quantum-computing.ibm.com/start/install){: external}. Periodically check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) (or rerun these commands) so that you always have the latest version.
 
 Be sure to run these commands even if you already installed the packages, to ensure that you have the latest versions.
 {: note}
@@ -103,11 +103,12 @@ service = QiskitRuntimeService(name="account-name")
 ```
 {: codeblock}
 
-If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials. For more information about managing your account, see the [account management topic](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/account-management.html){: external}.
+If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials. For more information about managing your account, see the [account management topic](https://docs.quantum-computing.ibm.com/run/account-management){: external}.
 
 For instructions to use the cloud Quantum Qiskit API, see the [authentication](/apidocs/quantum-computing#authentication){: external} section in the API documentation.
 
 ## Test your setup
+{: #test-setup}
 
 Run a simple circuit using `Sampler` to ensure that your environment is set up properly:
 
@@ -128,11 +129,11 @@ Run a simple circuit using `Sampler` to ensure that your environment is set up p
 {: #choose-program}
 {: step}
 
-Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview#primitive-programs) to interface with quantum computers. The following programs are publicly available. Choose the appropriate link to continue learning how to run a program.
+Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview#primitive-programs) to interface with quantum computers. The following programs are publicly available. 
 
-- **[Sampler](/docs/quantum-computing?topic=quantum-computing-example-sampler)**:  
+- **Sampler**:  
        Allows a user to specify a circuit as an input and then generate quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.
-- **[Estimator](/docs/quantum-computing?topic=quantum-computing-example-estimator)**:  
+- **Estimator**:  
        Allows a user to specify a list of circuits and observables and selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators that are required for many algorithms. 
 
 This example uses the Sampler primitive:
@@ -147,12 +148,12 @@ bell.cx(0, 1)
 bell.measure_all()
 
 # Execute the circuit
-from qiskit_ibm_runtime import Session, Sampler
+from qiskit_ibm_runtime import Sampler
 
-with Session(service=service, backend="ibmq_qasm_simulator"):
-    sampler = Sampler()
-    job = sampler.run(circuits=bell)
-    print(job.result())
+backend = service.backend("ibmq_qasm_simulator")
+sampler = Sampler(backend)
+job = sampler.run(circuits=bell)
+print(job.result())
 ```
 {: codeblock}
 

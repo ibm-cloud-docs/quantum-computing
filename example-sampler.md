@@ -61,7 +61,7 @@ print(f" > Metadata: {result.metadata}")
 ```
 {: codeblock}
 
-For more information, see the [Sampler API reference](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/stubs/qiskit_ibm_runtime.Sampler.html){: external}.
+For more information, see the [Sampler API reference](https://docs.quantum-computing.ibm.com/api/qiskit-ibm-runtime/qiskit_ibm_runtime.Sampler){: external}.
 
 ## Multiple circuit example
 {: #example2-sampler}

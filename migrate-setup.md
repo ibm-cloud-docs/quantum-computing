@@ -18,7 +18,6 @@ subcollection: quantum-computing
 {: #migrate-setup}
 
 This guide describes how to migrate code from the legacy IBMQ provider (`qiskit-ibmq-provider`) package to use Qiskit Runtime (`qiskit-ibm-runtime`). This guide includes instructions to migrate legacy runtime programs to the new syntax. However, the ability to use custom uploaded programs is pending deprecation, so these should be migrated to use primitives instead.  
-
 {: shortdesc}
 
 For further details about migrating from `qiskit-ibmq-provider` to `qiskit-ibm-runtime`, see the [Migration guide](/docs/quantum-computing?topic=quantum-computing-migrate-overview).
@@ -64,7 +63,7 @@ IBMQ.save_account("<QUANTUM_TOKEN>", overwrite=True)
 ### Updated - Save accounts
 {: #migrate-save-accounts-updated}
 
-The new syntax accepts credentials for two different channels. For more information on retrieving account credentials, see the `getting started guide <https://qiskit.org/documentation/partners/qiskit_ibm_runtime/getting_started.html>`_.
+The new syntax accepts credentials for two different channels. For more information on retrieving account credentials, see the `getting started guide <https://docs.quantum-computing.ibm.com/start>`_.
 
 ``` python
 	# IBM cloud channel

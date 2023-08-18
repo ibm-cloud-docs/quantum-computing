@@ -43,7 +43,7 @@ that you want returned as a result. After identifying the appropriate
 primitive for your program, you can use Qiskit to prepare inputs, such
 as circuits, observables (for Estimator), and customizable options to
 optimize your job. For more information, see the
-[Primitives](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/primitives.html){: external} topic.
+[Primitives](https://docs.quantum-computing.ibm.com/build/primitives){: external} topic.
 
 ## Benefits of using sessions
 {: #benefits-sessions}
@@ -132,7 +132,7 @@ starts each time a session job finishes.
 When a session is started, it is assigned a *maximum session timeout*
 value. You can set this value by using the `max_time` parameter, which
 can be greater than the program's `max_execution_time`. For
-instructions, see [Run a primitive in a session](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/run_session.html){: external}.
+instructions, see [Run a primitive in a session](https://docs.quantum-computing.ibm.com/run/run-sessions){: external}.
 
 If you do not specify a timeout value, it is the smaller of these
 values:
@@ -140,7 +140,7 @@ values:
 -   The system limit
 -   The `max_execution_time` defined by the program
 
-See [What is the maximum execution time for a Qiskit Runtime job?](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/faqs/max_execution_time.html){: external} to determine the system limit and
+See [What is the maximum execution time for a Qiskit Runtime job?](https://docs.quantum-computing.ibm.com/run/max-execution-time){: external} to determine the system limit and
 the `max_execution_time` for primitive programs.
 
 ## Interactive timeout value
@@ -166,7 +166,7 @@ is deactivated or closed, at which point normal job selection resumes.
 
 A session ends by reaching its maximum timeout value or when it is
 manually closed by the user. Do not close a session until all jobs
-**complete**. See [Close a session](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/run_session.html#close-a-session){: external} for details. After a
+**complete**. See [Close a session](https://docs.quantum-computing.ibm.com/run/run-sessions#close-a-session){: external} for details. After a
 session is closed, the following occurs:
 
 -   Any queued jobs remaining in the session (whether they are queued or
@@ -190,4 +190,4 @@ recommend that you set a realistic `max_time` value.
 ## Next steps
 {: #next-steps-sessions}
 
-[Run a primitive in a session](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/run_session.html){: external}
+[Run a primitive in a session](https://docs.quantum-computing.ibm.com/run/run-sessions){: external}

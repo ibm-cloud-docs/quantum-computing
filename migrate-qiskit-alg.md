@@ -251,7 +251,7 @@ with Session(service, backend="ibmq_qasm_simulator") as session:
 {: #migrate-alg-rel}
 
 - See the [Session documentation](/docs/quantum-computing?topic=quantum-computing-sessions) for further information about the Qiskit Runtime sessions.
-- See the [How to run a primitive in a session](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/run_session.html){: external} topic for detailed code examples.
+- See the [How to run a primitive in a session](https://docs.quantum-computing.ibm.com/run/run-sessions){: external} topic for detailed code examples.
 - See the [Qiskit algorithm documentation](https://qiskit.org/documentation/apidoc/algorithms.html){: external} for details about each algorithm.
 - See the [Qiskit algorithm tutorials](https://qiskit.org/documentation/tutorials.html#algorithms){: external} for examples of how to use algorithms.
 - Read the blog [Introducing Qiskit Algorithms With Qiskit Primitives!](https://medium.com/qiskit/introducing-qiskit-algorithms-with-qiskit-runtime-primitives-d89703ecfca3){: external} for an introduction to using the updated algorithms.

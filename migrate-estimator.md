@@ -233,7 +233,7 @@ options that do not have a legacy alternative to migrate from, but can
 help improve your performance and results. For more information, refer
 to the following:
 
-- [Error mitigation tutorial](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/tutorials/Error-Suppression-and-Error-Mitigation.html){: external}
-- [Setting execution options topic](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/options.html){: external}
-- [Primitive execution options API reference](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/stubs/qiskit_ibm_runtime.options.Options.html#qiskit_ibm_runtime.options.Options){: external}
-- [How to run a session topic](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/run_session.html){: external}
+- [Error mitigation tutorial](https://learning.quantum-computing.ibm.com/tutorial/error-suppression-and-error-mitigation-with-qiskit-runtime){: external}
+- [Setting execution options topic](https://docs.quantum-computing.ibm.com/api/qiskit-ibm-runtime/qiskit_ibm_runtime.options.Options){: external}
+- [Primitive execution options API reference](https://docs.quantum-computing.ibm.com/api/qiskit-ibm-runtime/qiskit_ibm_runtime.options.Options){: external}
+- [How to run a session topic](https://docs.quantum-computing.ibm.com/run/run-sessions){: external}

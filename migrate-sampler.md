@@ -273,9 +273,9 @@ options that do not have a legacy alternative to migrate from, but can
 help improve your performance and results. For more information, refer
 to the following:
 
-- [Error mitigation tutorial](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/tutorials/Error-Suppression-and-Error-Mitigation.html){: external}
-- [Setting execution options topic](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/options.html){: external}
-- [How to run a session topic](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/run_session.html){: external}
+- [Error mitigation tutorial](https://learning.quantum-computing.ibm.com/tutorial/error-suppression-and-error-mitigation-with-qiskit-runtime){: external}
+- [Setting execution options topic](https://docs.quantum-computing.ibm.com/build/primitive-options){: external}
+- [How to run a session topic](https://docs.quantum-computing.ibm.com/run/run-sessions){: external}
 
 ## 3. Other execution alternatives (non-Runtime)
 {: #migrate-sampler3}
@@ -425,5 +425,5 @@ binary_quasi_dist:  {'0001': 0.2802734375, '0010': 0.2412109375, '0000': 0.23925
 ```
 {: codeblock}
 
-For information about running noisy simulations with the **Runtime primitives**, see [this topic](https://qiskit.org/documentation/partners/qiskit_ibm_runtime/how_to/noisy_simulators.html){: external}.
+For information about running noisy simulations with the **Runtime primitives**, see [this topic](https://docs.quantum-computing.ibm.com/test/noise){: external}.
 
