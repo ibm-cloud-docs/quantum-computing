@@ -20,27 +20,35 @@ content-type: howto
 The Standard plan is not free. Use the information in this topic to help you understand how much you’re paying and how to limit your costs.
 {: shortdesc}
 
-## Time limits
-{: #time-limits}
-
-There are time limits on programs, systems, and sessions.
-
-* **Primitives:** The maximum execution time for the Sampler primitive is 10000 seconds (2.78 hours). The maximum execution time for the Estimator primitive is 18000 seconds (5 hours).
-* **Programs:** The maximum execution time for a program is set on the job's options by using the ``max_execution_time`` parameter. If specified, it must be at least 300 seconds. 
-* **Systems:** The system limit on the job execution time is 3 hours for a job that is running on a simulator and 8 hours for a job running on a physical system.
-* **Sessions:** When a session is started, it is assigned a maximum session timeout value, which is the system limit by default.  After the maximum session timeout is reached, the session is permanently closed and any queued jobs that remain in the session are put into a ``failed`` state. The maximum session timeout value is set on the ``max_time`` parameter, which can be greater than the program’s ``max_execution_time``.
-
-   Additionally, there is a 5 minute *interactive* timeout value. If there are no session jobs queued within that window, the session is temporarily deactivated and normal job selection resumes. After the new session becomes inactive, if the job scheduler gets a job from the original session and its maximum timeout value has not been reached, the session is reactivated until its maximum timeout value is reached.
-  
-   The timer for ``max_time`` is not paused during any temporary deactivation periods due to interactive timeouts.
-   {: note}
-
 ## How to limit your cost
 {: #limit-cost}
 
+There are several ways to limit your costs.
+
+### Minimize iterations and shots
+{: #min-shots}
+
 The time your job takes (and therefore, its cost) depends on how many iterations you make in a session and how many shots are run in each iteration. Thus, you can manage your cost by running only as many iterations and shots as you need.
 
-Additionally, an instance administrator can limit how much is spent. To set cost limits, navigate to the [IBM Cloud Instances page](https://cloud.ibm.com/quantum/instances) then click the instance and set the **Cost limit**.
+### Set time limits
+{: #time-limits}
+
+The maximum execution time for a Qiskit Runtime job is the smallest of these values:
+
+* The `max_execution_time` (in quantum time) defined on the job's options by using the ``max_execution_time`` parameter. 
+* The system-calculated limit - The system calculates an appropriate job timeout value based on the input circuits and options. This timeout is capped at 3 hours to ensure fair device usage.
+
+For example, if you specify `max_execution_time=5000` (approximately 83 minutes), but the system determines it should not take more than 5 minutes (300 seconds) to execute the job, then the job is cancelled after 5 minutes.
+
+If you are using sessions, you can also set the session's `max_time` parameter (in wall clock time).  However, this does not set a "hard" limit on a job's run time, since any session jobs that are running when the session ends continue to run. 
+
+For instructions to use these settings, see the [Maximum execution time for a Qiskit Runtime job or session](https://docs.quantum-computing.ibm.com/run/max-execution-time) topic. 
+
+
+### Set the cost limit
+{: #admin-limit-cost}
+
+An instance administrator can limit how much is spent. To set cost limits, navigate to the [IBM Cloud Instances page](https://cloud.ibm.com/quantum/instances) then click the instance and set the **Cost limit**.
 
 The instance's cost limit refers to the total cost of all jobs run with this instance since it was created, and it will always be greater than or equal to the Total cost. After the instance reaches the specified limit, no further jobs can be run and no more cost is incurred.
 
