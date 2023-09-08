@@ -20,6 +20,8 @@ subcollection: quantum-computing
 Get a glimpse of the quantum computing future with our world-leading {{site.data.keyword.qiskit_runtime_notm}}, a new architecture that delivers significant performance enhancements to program execution. By using our physical systems and simulators (cloud-based classical emulators of quantum systems), you can experience frictionless quantum computing. That is, the ability to run quantum programs in an environment where the classical computer is physically closer to the quantum computer. Test programs and algorithms, and develop new models with our cloud-based quantum runtime for drastically improved capacity and higher performance today.
 {: shortdesc}
 
+This documentation is based on Qiskit Runtime version 0.12.0.
+
 Because this service is in Beta phase, many functions are not yet available and are still under development, including some of the functions that are outlined in the following diagram.
 {: note}
 
@@ -41,7 +43,7 @@ Receive intermediate results:   Receive intermediate results as your execution r
 
 With Qiskit Runtime, we are introducing a new set of interfaces, in the form of primitive programs, to expand on how users run jobs on quantum computers.
 
-The existing Qiskit interface to backends (`backend.run()`) was designed to accept a list of circuits and return counts for every job. Over time, it became clear that users have diverse purposes for quantum computing, and therefore the ways in which they define the requirements for their computing jobs are expanding. Therefore, their results also look different.
+The existing Qiskit interface to backends (`backend.run()`) was designed to accept a list of circuits and return counts for every job. Over time, it became clear that users have diverse purposes for quantum cov -mputing, and therefore the ways in which they define the requirements for their computing jobs are expanding. Therefore, their results also look different.
 
 For example, an algorithm researcher and developer cares about information beyond counts; they are more focused on efficiently calculating quasiprobabilities and expectation values of observables.
 
