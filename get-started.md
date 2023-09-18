@@ -39,7 +39,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} by following our examples and tutorials for one of the pre-built programs available for running circuits efficiently.
       - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems and simulators. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware, while maintaining access to all of the systems available to the Lite plan.
 
-      Because this is not a free plan, it is important to understand how to best manage your costs. See [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
+         Because this is not a free plan, it is important to understand how to best manage your costs. See [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
 
 2. Complete the required information, then click **Create**.
 
@@ -162,3 +162,4 @@ print(job.result())
 
 - View the [API reference](/apidocs/quantum-computing){: external}.
 - Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}.
+
