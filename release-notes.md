@@ -21,7 +21,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #0.5.0}
 {: release-note}
 
-The max_execution_time value is based on quantum time instead of wall clock time. Quantum time represents the time that the QPU complex (including control software, control electronics, QPU, and so on) is engaged in processing the job.
+The max_execution_time value is based on job execution time instead of wall clock time. Job execution time represents the time that the QPU complex (including control software, control electronics, QPU, and so on) is engaged in processing the job.
 
 ## 13 January 2023
 {: #0.4.0}
