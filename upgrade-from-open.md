@@ -15,7 +15,7 @@ completion-time: 30m
 {{site.data.keyword.attribute-definition-list}}
 
 # Upgrade from the Open plan
-{: #upgrade-overview}
+{: #upgrade-from-open}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
 
@@ -49,7 +49,7 @@ You must upgrade your IBM Cloud account in the following circumstances:
 - You have a Trial account.
 - You have a Lite account that you created before 25 October 2021.
 
-With a Pay-As-You-Go account, you pay for only what you use beyond the free runtime and service allowances. After you upgrade, you can continue to use any instances that you created with your Lite account.
+After you upgrade, you can continue to use any instances that you created with your Lite account.
 
 To upgrade to a Pay-As-You-Go account, complete the following steps:
 
