@@ -19,7 +19,7 @@ completion-time: 30m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
 
-This tutorial is for entities coming from IBM Quantum Open plan and want to upgrade to an IBM Cloud Standard (Pay-As-You-Go) plan. To get a similar user experience in both plans, follow these steps.
+This tutorial is for entities who want to upgrade from the IBM Quantum Open plan to an IBM Cloud Standard (Pay-As-You-Go) plan. To get a similar user experience in both plans, follow these steps.
 {: shortdesc}
 
 ![The steps to upgrade are listed](images/steps-to-migrate.png "Upgrade process diagram"){: caption="Figure 1. Steps to upgrade from the Open plan" caption-side="bottom"}
@@ -51,14 +51,12 @@ You must upgrade your IBM Cloud account in the following circumstances:
 - You have a Trial account.
 - You have a Lite account that you created before 25 October 2021.
 
-After you upgrade, you can continue to use any instances that you created with your Lite account.
-
-To upgrade to a Pay-As-You-Go account, complete the following steps:
+After you upgrade, you can continue to use any instances that you created with your Lite account. To upgrade to a Pay-As-You-Go account, complete the following steps:
 
 1. Go to Manage > [Account](https://cloud.ibm.com/account){: external} in the IBM Cloud console.
 2. Select **Account settings**, and click **Add credit card**.
 3. Enter your payment information and click **Next** to submit your information.
-4. After your payment information is processed, your account is upgraded, and you can explore and access the full IBM Cloud catalog. For any billable services that you use beyond any free allowances, you receive a monthly invoice. For full details, see [Upgrading your account](https://cloud.ibm.com/docs/account?topic=account-upgrading-account){: external}.
+4. After your payment information is processed, your account is upgraded, and you can explore and access the full IBM Cloud catalog. 
 
 ## Create a Qiskit Runtime instance
 {: #create-qr-account}
@@ -68,22 +66,22 @@ To create a Qiskit Runtime service instance, complete the following steps:
 
 1. Go to [Quantum instances](https://cloud.ibm.com/quantum/instances){: external} and click [Create instance](https://cloud.ibm.com/catalog/services/quantum-computing){: external} at the top right.
 1. Complete the following on the creation page:
-   - Select **Standard plan** and change the default name of the instance to the one you will use.
-   - If you have a promotional code, enter it in **Apply promo code** in the right panel and click **Apply**.
-   - Accept the terms and click **Create**. You will be redirected to the new instance details page.
+   - Select **Standard plan** and specify a name for the instance.
+   - If you have a promotional code, enter it in **Apply promo code** in the panel on the right and click **Apply**.
+   - Accept the terms and click **Create**. You are redirected to the new instance's details page.
 
 ## Set the maximum cost limit
 {: #set-max-cost-new}
 {: step}
 
-If you successfully created a Qiskit Runtime instance in the previous step, you were redirected to the instance details page. Otherwise, open it by going to the [Instances page](https://cloud.ibm.com/quantum/instances){: external}, and the click on the instance you created.
+If you successfully created a Qiskit Runtime instance in the previous step, you were redirected to the instance details page. Otherwise, open it by going to the [Instances page](https://cloud.ibm.com/quantum/instances){: external}, and clicking on the instance you created.
 
 To set the maximum cost limit, complete the following steps:
 
 1. Click **Edit** in the Cost limits panel.
-1. In the field **Maximum total cost limit**, enter the maximum cost allowed in this instance, then click **Save**.
+1. In the **Maximum total cost limit** field, enter the maximum cost allowed in this instance, then click **Save**.
 
-If the instance usage reaches this limit, any running jobs are cancelled and the instance will not incur additional charges. [More info](/docs/quantum-computing?topic=quantum-computing-cost).
+If the instance usage reaches this limit, any running jobs are cancelled and the instance will not incur additional charges. See [Manage costs](/docs/quantum-computing?topic=quantum-computing-cost) for more information.
 
 ## Manage users and access
 {: #manage-users-access}
@@ -100,8 +98,8 @@ To share a Qiskit Runtime instance with other users, complete the following step
 1. In the **Create access group** window that opens, add a name and description that represent the group of users that you will invite.  For example, the company name. Click **Create**.
 1. In the access group just created, click the **Access** tab, then click **Assign access** at the top right. 
 1. In the **Create policy** page that opens, define these elements: 
-   - **Service** - Select the service you will give access to. In the search field look for Qiskit Runtime and select it. Click **Next**.
-   - **Resources** - Select **Specific resources**, and in the rest of the dropdowns:
+   - **Service** - In the search field look for Qiskit Runtime and select it. Click **Next**.
+   - **Resources** - Select **Specific resources**, and in the rest of the dropdowns, choose the following:
       - For **Attribute type**, select **Service Instance**.
       - For **Operator**, select **string equals**.
       - For **Value**, select the instance you created. Click **Next**.
@@ -114,6 +112,6 @@ To share a Qiskit Runtime instance with other users, complete the following step
 1. On the left panel in the **Manage identies** section, click **Users**. Then, at the top right click **Invite users**.
    - Enter the email addresses of your users separated by commas, spaces, or line breaks.
    - Select **Access groups** as the way to assign access.
-   - In the access groups table, select the one you already created andc click **Add**. You will see the Access summary on the right panel. Click **Invite** at the bottom of the Access summary panel.
+   - In the access groups table, select the one you already created and click **Add**. You will see the Access summary on the right panel. Click **Invite** at the bottom of the Access summary panel.
 
 Users will receive an email with an invitation to use this account with the access defined in the [step 3](#create-qr-account) for the shared instance. After they accept the invitation, they will see a new account in their account switcher at the top of any page on IBM Cloud. After selecting it, they will see the shared instance.
