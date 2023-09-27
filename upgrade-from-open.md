@@ -64,8 +64,6 @@ To upgrade to a Pay-As-You-Go account, complete the following steps:
 {: #create-qr-account}
 {: step}
 
-We are going to assume that the owner of this account will also be the administrator of the Qiskit Runtime instances that the rest of the company's users will use. In more complex configurations, there could be more roles and many different ways to manage the company, as explained in [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org).
-
 To create a Qiskit Runtime service instance, complete the following steps:
 
 1. Go to [Quantum instances](https://cloud.ibm.com/quantum/instances){: external} and click [Create instance](https://cloud.ibm.com/catalog/services/quantum-computing){: external} at the top right.
@@ -90,6 +88,8 @@ If the instance usage reaches this limit, any running jobs are cancelled and the
 ## Manage users and access
 {: #manage-users-access}
 {: step}
+
+Skip this step if you are an individual user setting this up for your own use. We are going to assume that the owner of this account will also be the administrator of the Qiskit Runtime instances that the rest of the company's users will use. In more complex configurations, there could be more roles and many different ways to manage the company, as explained in [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org). 
 
 As the account owner or administrator, you add the people in your organization to the IBM Cloud account and then assign them access permissions to use the Qiskit Runtime instance created in [step 3](#create-qr-account).
 
