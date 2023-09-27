@@ -22,6 +22,8 @@ completion-time: 30m
 This tutorial is for entities coming from IBM Quantum Open plan and want to upgrade to an IBM Cloud Standard (Pay-As-You-Go) plan. To get a similar user experience in both plans, follow these steps.
 {: shortdesc}
 
+![The steps to upgrade are listed](images/steps-to-migrate.png "Upgrade process diagram"){: caption="Figure 1. Steps to upgrade from the Open plan" caption-side="bottom"}
+
 ## Differences between the Open and Standard plans
 {: #diff-open-standard}
 
