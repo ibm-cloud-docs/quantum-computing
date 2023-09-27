@@ -81,13 +81,13 @@ To set the maximum cost limit, complete the following steps:
 1. Click **Edit** in the Cost limits panel.
 1. In the **Maximum total cost limit** field, enter the maximum cost allowed in this instance, then click **Save**.
 
-If the instance usage reaches this limit, any running jobs are cancelled and the instance will not incur additional charges. See [Manage costs](/docs/quantum-computing?topic=quantum-computing-cost) for more information.
+If the instance usage reaches this limit, any running jobs are canceled and the instance will not incur additional charges. See [Manage costs](/docs/quantum-computing?topic=quantum-computing-cost) for more information.
 
 ## Manage users and access
 {: #manage-users-access}
 {: step}
 
-Skip this step if you are an individual user setting this up for your own use. We are going to assume that the owner of this account will also be the administrator of the Qiskit Runtime instances that the rest of the company's users will use. In more complex configurations, there could be more roles and many different ways to manage the company, as explained in [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org). 
+Skip this step if you are an individual user setting up Qiskit Runtime for your own use. In these instructions, the owner of this account also administrates the Qiskit Runtime instances that the rest of the company's users will use. In more complex configurations, there could be more roles and many different ways to manage the users, as explained in [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org). 
 
 As the account owner or administrator, you add the people in your organization to the IBM Cloud account and then assign them access permissions to use the Qiskit Runtime instance created in [step 3](#create-qr-account).
 
@@ -114,4 +114,4 @@ To share a Qiskit Runtime instance with other users, complete the following step
    - Select **Access groups** as the way to assign access.
    - In the access groups table, select the one you already created and click **Add**. You will see the Access summary on the right panel. Click **Invite** at the bottom of the Access summary panel.
 
-Users will receive an email with an invitation to use this account with the access defined in the [step 3](#create-qr-account) for the shared instance. After they accept the invitation, they will see a new account in their account switcher at the top of any page on IBM Cloud. After selecting it, they will see the shared instance.
+Users will receive an email with an invitation to use this account with the access defined in the [step 3](#create-qr-account) for the shared instance. After they accept the invitation, they will see a new account in their account switcher at the top of any page on IBM Cloud. After selecting the new account, they will see the shared instance.
