@@ -19,8 +19,11 @@ completion-time: 30m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
 
-This tutorial is for entities who want to upgrade from the IBM Quantum Open plan to an IBM Cloud Standard (Pay-As-You-Go) plan. To get a similar user experience in both plans, follow these steps.
+This tutorial is for entities who want to upgrade from the IBM Quantum Open plan to an IBM Cloud Standard (Pay-As-You-Go) plan. For instructions to set up a cloud account, set up a service instance, and work with users, follow these steps. 
 {: shortdesc}
+
+- If your organization has a more complex organization, refer to [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org) for more flexible instructions to set up a service instance and work with users.
+- If you are an individual setting up the {{site.data.keyword.qiskit_runtime_notm}} service for the first time or if you have been invited to an instance by an administrator, [Getting started](quantum-computing?topic=quantum-computing-get-started).
 
 ![The steps to upgrade are listed](images/steps-to-migrate.png "Upgrade process diagram"){: caption="Figure 1. Steps to upgrade from the Open plan" caption-side="bottom"}
 
