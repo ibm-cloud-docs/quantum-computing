@@ -23,8 +23,9 @@ completion-time: 25m
 This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit_runtime_notm}} service instance, log in to your service instance, and run your first job on a quantum computer.
 {: shortdesc}
 
-If you are an administrator who needs to set up Qiskit Runtime for your organization, refer to [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org) for instructions to set up a service instance and work with users.
-
+- If you are an entity upgrading from an IBM Quantum program who needs to set up Qiskit Runtime, refer to [Upgrade from the Open plan](/docs/quantum-computing?topic=quantum-computing-upgrade-from-open) for instructions to set up a cloud account, a service instance, and work with users.
+- If your organization has a more complex organization, refer to [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org) for more flexible instructions to set up a service instance and work with users.
+- If you are an individual setting up the {{site.data.keyword.qiskit_runtime_notm}} service for the first time or if you have been invited to an instance by an administrator, continue following the steps in this topic. 
 
 ## Create a service instance
 {: #create-configure}
@@ -39,7 +40,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} by following our examples and tutorials for one of the pre-built programs available for running circuits efficiently.
       - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems and simulators. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware, while maintaining access to all of the systems available to the Lite plan.
 
-      Because this is not a free plan, it is important to understand how to best manage your costs. See [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
+         Because this is not a free plan, it is important to understand how to best manage your costs. See [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
 
 2. Complete the required information, then click **Create**.
 
@@ -162,3 +163,4 @@ print(job.result())
 
 - View the [API reference](/apidocs/quantum-computing){: external}.
 - Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}.
+

@@ -281,7 +281,7 @@ to the following:
 {: #migrate-sampler3}
 
 The following migration paths use non-Runtime primitives to use local
-simulation to test an algorithm. Let\'s assume that we want to use a
+simulation to test an algorithm. Let's assume that we want to use a
 local statevector simulation to solve the problem defined previously.
 
 ### 3.a. Legacy: Use the Qiskit Aer simulator

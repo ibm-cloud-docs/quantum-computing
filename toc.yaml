@@ -27,6 +27,7 @@ toc:
   - navgroup:
       id: tutorial
       topics:
+      - upgrade-from-open.md
       - topicgroup:
             label: Set up Qiskit Runtime for an organization
             topics:

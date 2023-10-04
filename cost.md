@@ -35,7 +35,7 @@ The time your job takes (and therefore, its cost) depends on how many iterations
 
 The maximum execution time for a Qiskit Runtime job is the smallest of these values:
 
-* The `max_execution_time` (in quantum time) defined on the job's options by using the ``max_execution_time`` parameter. 
+* The `max_execution_time` defined on the job's options by using the ``max_execution_time`` parameter. This execution time is the time that the QPU complex (including control software, control electronics, QPU, and so on) is engaged in processing the job.
 * The system-calculated limit - The system calculates an appropriate job timeout value based on the input circuits and options. This timeout is capped at 3 hours to ensure fair device usage.
 
 For example, if you specify `max_execution_time=5000` (approximately 83 minutes), but the system determines it should not take more than 300 seconds (5 minutes) to execute the job, then the job is cancelled after 5 minutes.
