@@ -20,7 +20,7 @@ subcollection: quantum-computing
 Get a glimpse of the quantum computing future with our world-leading {{site.data.keyword.qiskit_runtime_notm}}, a new architecture that delivers significant performance enhancements to program execution. By using our physical systems and simulators (cloud-based classical emulators of quantum systems), you can experience frictionless quantum computing. That is, the ability to run quantum programs in an environment where the classical computer is physically closer to the quantum computer. Test programs and algorithms, and develop new models with our cloud-based quantum runtime for drastically improved capacity and higher performance today.
 {: shortdesc}
 
-This documentation is based on Qiskit Runtime version 0.12.1.
+This documentation is based on Qiskit Runtime version 0.13.0.
 
 Because this service is in Beta phase, many functions are not yet available and are still under development, including some of the functions that are outlined in the following diagram.
 {: note}
@@ -41,7 +41,7 @@ Receive intermediate results:   Receive intermediate results as your execution r
 ## Overview of primitive programs
 {: #primitive-programs}
 
-With Qiskit Runtime, we are introducing a new set of interfaces, in the form of primitive programs, to expand on how users run jobs on quantum computers.
+Qiskit Runtime introduces a set of interfaces, in the form of primitive programs, to expand on how users run jobs on quantum computers.
 
 The existing Qiskit interface to backends (`backend.run()`) was designed to accept a list of circuits and return counts for every job. Over time, it became clear that users have diverse purposes for quantum cov -mputing, and therefore the ways in which they define the requirements for their computing jobs are expanding. Therefore, their results also look different.
 
@@ -49,7 +49,7 @@ For example, an algorithm researcher and developer cares about information beyon
 
 Our primitives provide methods that make it easier to build modular algorithms and other higher-order programs. Instead of simply returning counts, they return more immediately meaningful information. Additionally, they provide a seamless way to access the latest optimizations in IBM Quantum hardware and software.
 
-The basic operations that one can do with a probability distribution is to sample from it or to estimate quantities on it. Therefore, these operations form the fundamental building blocks of quantum algorithm development. Our first two Qiskit Runtime primitives (Sampler and Estimator) use these sampling and estimating operations as core interfaces to our quantum systems.
+The basic operations that one can do with a probability distribution is to sample from it or to estimate quantities on it. Therefore, these operations form the fundamental building blocks of quantum algorithm development. Our first two Qiskit Runtime primitives (Sampler and Estimator) use these sampling and estimating operations as core interfaces to our quantum systems. Learn more about what you can do with Qiskit Runtime primitive programs in the [IBM Quantum documentation.](https://docs.quantum-computing.ibm.com/run){: external}
 
 ## Available primitives
 {: #available-primitives}
@@ -71,7 +71,7 @@ Primitive program interfaces vary based on the type of task that you want to run
 {: #next-steps}
 
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-get-started) to create an instance and run your first job.
-- [Get started with primitives](https://docs.quantum-computing.ibm.com/build/primitives){: external}
+- [Get started with primitives](https://docs.quantum-computing.ibm.com/run/primitives-get-started){: external}
 - [Learn by using tutorials, courses, and tools](https://learning.quantum-computing.ibm.com){: external}
 - Watch the [Qiskit Runtime Tutorial video](https://www.youtube.com/watch?v=b9mdMye-iVk){: external} for more information.
 - View the [Qiskit Runtime API reference](/apidocs/quantum-computing){: external} to understand how to use cURL commands to work with your cloud service instance.

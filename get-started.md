@@ -96,8 +96,8 @@ If you save your credentials to disk, you can use `QiskitRuntimeService()` in th
 ```python
 from qiskit_ibm_runtime import QiskitRuntimeService
 
-# Save account to disk.
-QiskitRuntimeService.save_account(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>", name="account-name")
+# Save account to disk and save it as the default.
+QiskitRuntimeService.save_account(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>", name="account-name", set_as_default=True)
 
 # Load the saved credentials 
 service = QiskitRuntimeService(name="account-name")
