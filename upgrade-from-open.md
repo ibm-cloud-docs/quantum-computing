@@ -22,15 +22,9 @@ completion-time: 30m
 This tutorial is for entities who want to upgrade from the IBM Quantum Open plan to an IBM Cloud Standard (Pay-As-You-Go) plan. For instructions to set up a cloud account, set up a service instance, and work with users, follow these steps. 
 {: shortdesc}
 
-- If your organization has a more complex organization, refer to [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org) for more flexible instructions to set up a service instance and work with users.
-- If you are an individual setting up the {{site.data.keyword.qiskit_runtime_notm}} service for the first time or if you have been invited to an instance by an administrator, [Getting started](quantum-computing?topic=quantum-computing-get-started).
+If you are an individual setting up the {{site.data.keyword.qiskit_runtime_notm}} service for the first time or if you have been invited to an instance by an administrator, follow the steps in [Getting started](quantum-computing?topic=quantum-computing-get-started) instead.
 
 ![The steps to upgrade are listed](images/steps-to-migrate.png "Upgrade process diagram"){: caption="Figure 1. Steps to upgrade from the Open plan" caption-side="bottom"}
-
-## Differences between the Open and Standard plans
-{: #diff-open-standard}
-
-There are a few functional differences between IBM Quantum and the IBM Cloud Qiskit Runtime service that you should take into account. The biggest difference is that IBM Cloud only supports the Qiskit IBM Runtime client. Therefore, if you are still using Qiskit IBM Provider, review the [Migrate to using Qiskit Runtime primitives](https://docs.quantum-computing.ibm.com/start/migrate){: external} and [backend.run compared to Qiskit Runtime](https://docs.quantum-computing.ibm.com/start/compare#backendrun-compared-to-qiskit-runtime){: external} topics for instructions to update your code.
 
 ## Sign up for IBM Cloud
 {: #sign-up-cloud}
@@ -43,11 +37,10 @@ Skip this step if you already have an IBM Cloud account. Follow these steps to s
 
 Next, [create a Qiskit Runtime instance](#create-qr-account). 
 
-## Upgrade your IBM Cloud account
+### Optional: Upgrade your IBM Cloud account
 {: #update-cloud-account}
-{: step}
 
-Skip this step if you already have an IBM Cloud account with a Pay-As-You-Go plan. All new IBM Cloud accounts are set up with a Pay-As-You-Go plan. 
+Skip this if you already have an IBM Cloud account with a Pay-As-You-Go plan. All new IBM Cloud accounts are set up with a Pay-As-You-Go plan. 
 
 You must upgrade your IBM Cloud account in the following circumstances:
 
@@ -118,3 +111,8 @@ To share a Qiskit Runtime instance with other users, complete the following step
    - In the access groups table, select the one you already created and click **Add**. You will see the Access summary on the right panel. Click **Invite** at the bottom of the Access summary panel.
 
 Users will receive an email with an invitation to use this account with the access defined in the [step 3](#create-qr-account) for the shared instance. After they accept the invitation, they will see a new account in their account switcher at the top of any page on IBM Cloud. After selecting the new account, they will see the shared instance.
+
+## Differences between the Open and Standard plans
+{: #diff-open-standard}
+
+There are a few functional differences between IBM Quantum and the IBM Cloud Qiskit Runtime service that you should take into account. The biggest difference is that IBM Cloud only supports the Qiskit IBM Runtime client. Therefore, if you are still using Qiskit IBM Provider, review the [Migrate to using Qiskit Runtime primitives](https://docs.quantum-computing.ibm.com/start/migrate){: external} and [backend.run compared to Qiskit Runtime](https://docs.quantum-computing.ibm.com/start/compare#backendrun-compared-to-qiskit-runtime){: external} topics for instructions to update your code.
