@@ -24,3 +24,4 @@ Use these topics to learn how to work qith Qiskit.
 - [Run jobs](https://docs.quantum-computing.ibm.com/run){: external}
 - [Migrate from using backend.run() to using primitives](https://docs.quantum-computing.ibm.com/api/migration-guides/qiskit-runtime){: external}
 - [Learn by using tutorials, courses, and tools](https://learning.quantum-computing.ibm.com){: external}
+- [Leverage Q-CTRL performance management](https://docs.q-ctrl.com/q-ctrl-embedded){: external}
