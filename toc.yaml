@@ -68,6 +68,9 @@ toc:
       - link:
           label: Qiskit Runtime API reference
           href: https://docs.quantum-computing.ibm.com/api/qiskit-ibm-runtime/runtime_service
+      - link:
+          label: Q-CTRL documentation
+          href: https://docs.q-ctrl.com/q-ctrl-embedded   
   - navgroup:
       id: help
       topics:
