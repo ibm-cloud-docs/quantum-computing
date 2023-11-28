@@ -38,7 +38,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, choose the appropriate service plan, depending on what you need access to. For more information about these plans, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
 
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} by following our examples and tutorials for one of the pre-built programs available for running circuits efficiently.
-      - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems and simulators. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware, while maintaining access to all of the systems available to the Lite plan. This option includes access to Q-CTRL Automated Error Suppression at no additional cost. 
+      - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems and simulators. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware, while maintaining access to all of the simulators available to the Lite plan. This plan includes access to Q-CTRL Automated Error Suppression at no additional cost. 
 
          Because this is not a free plan, it is important to understand how to best manage your costs. See [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
 
