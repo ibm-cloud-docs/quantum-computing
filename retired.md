@@ -20,9 +20,6 @@ subcollection: quantum-computing
 
 The following systems have been retired. For the list of currently available systems, see the [Compute resources page.](https://cloud.ibm.com/quantum/resources/systems){: external} 
 
-To retrieve jobs from a retired system, see [these instructions.](#retired-retrieve)
-{: note}
-
 
 | System name       | Qubit count | Retirement date (Year - month - day) |
 | ----------------- | ----------- | --------------- |
@@ -33,13 +30,15 @@ To retrieve jobs from a retired system, see [these instructions.](#retired-retri
 ## Retrieve a job from a retired system
 {: #retired-retrieve}
 
+To retrieve jobs from a retired system, use code similar to this:
+
 ```python
 from qiskit_ibm_runtime import QiskitRuntimeService
 
-# Load your IBM Quantum account(s). Replace "hub/group/project" with your desired instance
-service = QiskitRuntimeService(channel="ibm_quantum", instance="hub/group/project")
+# Load your IBM Quantum account. 
+service = QiskitRuntimeService(channel="ibm_quantum", instance="instance_name")
 
-# Retrieve a single job by id
+# Retrieve a single job by ID
 job = service.job(<job_id>)
 
 # Retrieve a batch of jobs. Filtering options can be found in the QiskitRuntimeService.jobs api reference
