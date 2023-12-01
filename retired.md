@@ -23,8 +23,8 @@ The following systems have been retired. For the list of currently available sys
 
 | System name       | Qubit count | Retirement date (Year - month - day) |
 | ----------------- | ----------- | --------------- |
-| ibm_canberra      | **27**      | 2023-11-28      |
-| ibm_nazca         | **127**     | 2023-11-28      |
+| ibm_canberra      | **27**      | 2023-08-15      |
+| ibm_nazca         | **127**     | 2023-08-15      |
 
 
 ## Retrieve a job from a retired system
