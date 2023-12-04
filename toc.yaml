@@ -61,6 +61,7 @@ toc:
       topics:
       - plans.md
       - considerations-org.md
+      - retired.md
       - include: ../quantum-computing-cli-plugin/quantum-services-cli.md
       - link:
           label: API reference
