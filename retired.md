@@ -36,7 +36,7 @@ To retrieve jobs from a retired system, use code similar to this:
 from qiskit_ibm_runtime import QiskitRuntimeService
 
 # Load your IBM Quantum account. 
-service = QiskitRuntimeService(channel="ibm_quantum", instance="instance_name")
+service = QiskitRuntimeService(channel="ibm_cloud", instance="instance_name")
 
 # Retrieve a single job by ID
 job = service.job(<job_id>)
