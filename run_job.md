@@ -62,7 +62,7 @@ print(job.result())
 ```
 {: codeblock}
 
-If using an instance with Q-CTRL performance management enabled, there is no need to specify `optimization` or `resilience_level`, as the strategy includes automatic presets. Setting `optimization_level` or `resilience_level` to 0 causes an execution error. Levels 1, 2, and 3 are permitted but do not impact performance. Setting other options will likewise not impact performance, and might cause a runtime warning. For more information visit the [Q-CTRL documentation](https://docs.q-ctrl.com/q-ctrl-embedded){: external}.
+If using an instance with Q-CTRL performance management enabled, there is no need to specify `optimization` or `resilience_level`, as the strategy includes automatic presets. Setting `optimization_level` or `resilience_level` to 0 causes an execution error. For more information visit the [Q-CTRL documentation](https://docs.q-ctrl.com/q-ctrl-embedded){: external}.
 {: note}
 
 Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create-job){: external}; optionally use [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/create_job){: external}. You must specify the program ID and can optionally supply parameters and the backend to run on. Note the job ID that is returned. You need this information to check the status and view results.
