@@ -17,7 +17,7 @@ subcollection: quantum-computing
 # Work with Qiskit Runtime
 {: #work-qiskit}
 
-Use these topics to learn how to work qith Qiskit.
+Use these topics to learn how to work with Qiskit.
 {: shortdesc}
 
 - [Build with Qiskit](https://docs.quantum-computing.ibm.com/build){: external}
