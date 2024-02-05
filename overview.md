@@ -67,6 +67,20 @@ The following primitive programs are available:
 
 Primitive program interfaces vary based on the type of task that you want to run on the quantum computer and the corresponding data that you want returned as a result. After identifying the appropriate primitive for your program, you can use Qiskit to prepare inputs, such as circuits, observables (for Estimator), and customizable options to optimize your job.
 
+## V2 primitives
+{: #v2-primitives}
+
+Version 2 is first the major interface change since the introduction of Qiskit Runtime primitives. Based on user feedback, this version introduces the following major new functions:
+
+* A new interface that lets you specify a single circuit and multiple observables (if using Estimator) and parameter value sets for that circuit. Previously, you had to specify the  same circuit multiple times to match the size of the data to be combined.
+* SamplerV2 no longer supports resilience levels.  Instead, it was simplified to focus on its core task of sampling the output register from running quantum circuits. It returns the samples, whose type is defined by the program, without weights. The result class, however, has methods to return weighted samples, such as counts and quasi-probabilities. 
+* EstimatorV2 does not support resilience level 3.  This is because resilience level 3 in V1 Estimator uses PEC, which is proven to give unbiased results at the cost of exponential processing time. To make this trade-off more obvious, resilience level 3 support was removed from EstimatorV2. You can, however, still use PEC as the error mitigation method by using the `pec_mitigation` option.
+* Both V2 primitives let you turn on or off individual error mitigation / suppression methods.
+* To reduce the total execution time, V2 primitives support only lightweight transpilation. You can use the [Qiskit transpiler](https://docs.quantum-computing.ibm.com/run/advanced-runtime-options#runtime-compilation){: external} or the [AI-driven transpilation service](https://docs.quantum-computing.ibm.com/transpile/qiskit-transpiler-service){: external} (premium users).
+
+To learn more, refer to the [V2 primitives migration guide.](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
+
+
 ## Next steps
 {: #next-steps}
 
