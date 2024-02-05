@@ -80,7 +80,6 @@ Version 2 is first the major interface change since the introduction of Qiskit R
 
 To learn more, refer to the [V2 primitives migration guide.](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
 
-
 ## Next steps
 {: #next-steps}
 
