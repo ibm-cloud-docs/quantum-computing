@@ -123,14 +123,19 @@ Run a simple circuit using `Sampler` to ensure that your environment is set up p
 
 ```python
 
-    from qiskit.test.reference_circuits import ReferenceCircuits
-    from qiskit_ibm_runtime import QiskitRuntimeService, Sampler
+from qiskit import QuantumCircuit
 
-    job = Sampler("ibmq_qasm_simulator").run(ReferenceCircuits.bell())
+qc = QuantumCircuit(2)
+qc.h(0)
+qc.cx(0, 1)
+qc.measure_all()
 
-    print(f"job id: {job.job_id()}")
-    result = job.result()
-    print(result)
+from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
+
+service = QiskitRuntimeService()
+sampler = Sampler(service=service, backend="ibm_gotham")
+job = sampler.run(qc)
+result = job.result()
 ```
 {: codeblock}
 
@@ -171,5 +176,4 @@ print(job.result())
 
 - View the [API reference](/apidocs/quantum-computing){: external}.
 - Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}.
-
 
