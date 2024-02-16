@@ -81,7 +81,7 @@ print(f"Job result: {job.result()}")
 
 
 ## Next steps
-{: #next-steps}
+{: #next-steps-pgm-sam}
 
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-get-started) to create an instance and run your first job.
 - Review [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-sampler) for a step-by-step example of using this primitive.

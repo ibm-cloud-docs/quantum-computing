@@ -70,7 +70,7 @@ Primitive program interfaces vary based on the type of task that you want to run
 
 
 ## Next steps
-{: #next-steps}
+{: #next-steps-overview}
 
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-get-started) to create an instance and run your first job.
 - [Get started with primitives](https://docs.quantum-computing.ibm.com/run/primitives-get-started){: external}

@@ -101,7 +101,7 @@ with Session(service=service, backend="ibmq_qasm_simulator") as session:
 
 
 ## Next steps
-{: #next-steps}
+{: #next-steps-program-est}
 
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-get-started) to create an instance and run your first job.
 - Review [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-estimator) for a step-by-step example of using this primitive.
