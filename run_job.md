@@ -37,7 +37,7 @@ You will use the Qiskit Runtime QiskitRuntimeService.run() method, which takes t
 
 - program_id: ID of the program to run.
 - inputs: Program input parameters. These input values are passed to the runtime program and depend on the parameters that are defined for the program.
-- options: Runtime options. These options control the execution environment. Currently, the only available option is backend_name, which is optional. If you do not specify a backend, the job is sent to the least busy device that you have access to.
+- options: Runtime options. These options control the execution environment. Currently, the only available option is backend_name, which is optional. 
 - result_decoder: Optional class used to decode the job result.
 
 In the following example, we submit a circuit to the Sampler program:
@@ -65,9 +65,7 @@ print(job.result())
 If using an instance with Q-CTRL performance management enabled, there is no need to specify `optimization` or `resilience_level`, as the strategy includes automatic presets. Setting `optimization_level` or `resilience_level` to 0 causes an execution error. For more information visit the [Q-CTRL documentation](https://docs.q-ctrl.com/q-ctrl-embedded){: external}.
 {: note}
 
-Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create-job){: external}; optionally use [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/create_job){: external}. You must specify the program ID and can optionally supply parameters and the backend to run on. Note the job ID that is returned. You need this information to check the status and view results.
-
-If you do not specify the backend, the job is sent to the least busy device that you have access to.
+Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create-job){: external}; optionally use [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/create_job){: external}. You must specify the program ID and the backend to run on, and can optionally supply parameters. Note the job ID that is returned. You need this information to check the status and view results.
 
 To ensure fairness, a maximum execution time for each Qiskit Runtime job exists. If a job exceeds this time limit, it is forcibly ended. The maximum execution time is the smaller of 1) the system limit and 2) the `max_execution_time` defined by the program. The system limit is three hours for simulator jobs and eight hours for jobs that are running on a physical system.
 {: note}
