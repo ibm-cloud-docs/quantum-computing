@@ -174,7 +174,8 @@ from qiskit_ibm_runtime import Sampler
 
 backend = service.backend("ibmq_qasm_simulator")
 sampler = Sampler(backend)
-job = sampler.run([(circuits=bell)])
+job = sampler.run(circuits=bell)
+
 result = job.result()
 
 print(job.result())
