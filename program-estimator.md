@@ -59,7 +59,7 @@ Specify these parameters to initialize the Estimator primitive. Any specified li
         - **Type**: dictionary or `Options` class    
         - **Description**: Runtime settings that control the execution environment.
         - **Required**: False   
-            - **backend**: Optional instance of `qiskit_ibm_runtime.IBMBackend` class or string name of backend. If not specified, the least busy backend is used. This parameter can now be specified when you initialize a Session instance.
+            - **backend**: Optional instance of `qiskit_ibm_runtime.IBMBackend` class or string name of backend. This parameter can now be specified when you initialize a Session instance.
         - **image**: The runtime image used to run the program, specified in the form `image_name:tag`. Not all accounts are authorized to select a different image.
         - **log_level - DEPRECATED**: Logging level to set in the execution environment. The valid log levels are: DEBUG, INFO, WARNING, ERROR, and CRITICAL. The default level is WARNING. This parameter is now specified in `Options()`
 
@@ -101,7 +101,7 @@ with Session(service=service, backend="ibmq_qasm_simulator") as session:
 
 
 ## Next steps
-{: #next-steps}
+{: #next-steps-program-est}
 
 - Use the [Getting started guide](/docs/quantum-computing?topic=quantum-computing-get-started) to create an instance and run your first job.
 - Review [Get started with the Sampler primitive](/docs/quantum-computing?topic=quantum-computing-example-estimator) for a step-by-step example of using this primitive.

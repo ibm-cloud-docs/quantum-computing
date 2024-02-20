@@ -19,7 +19,7 @@ content-type: howto
 # Choose a system or simulator
 {: #choose-backend}
 
-Before you run a job, you can optionally choose a physical quantum system or a simulator to run on. If you do not specify one, the job is sent to the least busy device that you have access to.
+Before you run a job, you must choose a physical quantum system or a simulator to run on. 
 {: shortdesc}
 
 The Standard plan allows access to both physical quantum systems and simulators, while the Lite plan allows access only to simulators.

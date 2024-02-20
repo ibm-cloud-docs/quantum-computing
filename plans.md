@@ -60,6 +60,6 @@ The Lite plan is free. The Standard plan charges you per *Qiskit Runtime second*
 Job execution time is the amount of time that the system is dedicated to processing your job.
 
 ## Next steps
-{: #next-steps}
+{: #next-steps-plans}
 
 - See [Manage costs](/docs/quantum-computing?topic=quantum-computing-cost) to learn how to determine and minimize your costs.

@@ -69,7 +69,7 @@ Refer to the [App ID documentation](/docs/appid){: external} for instructions ho
 4. The default IdP URL is shown. Share this URL with users when they need to log in.
 
 ## Add Users
-{: #add-user-org}
+{: #add-user-org-cloud}
 {: step}
 
 When you use App ID as ID provider with the Cloud directory, you can create users in the IBM Cloud user interface.
@@ -78,7 +78,7 @@ When you use App ID as ID provider with the Cloud directory, you can create user
 2. Go to **Manage Authentication** → **Cloud Directory** → **Users**, and click **Create User**. Enter the user details.
 
 ## Create or modify users' project assignments
-{: #cloud-assign-user-org}
+{: #cloud-assign-user-org-cloud}
 {: step}
 
 1. Go to [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external} and click the user.
@@ -90,7 +90,7 @@ When you use App ID as ID provider with the Cloud directory, you can create user
 2. Add access groups with **Assign group** or remove the user from an access group by clicking the three dot menu and choosing **Remove user**.
 
 ## User flow
-{: #user-org}
+{: #user-org-cloud}
 
 1. A user is sent the ID provider URL for the IBM Cloud account. They use this URL and the login information to access the system. The user should change their password after they log on.
 
@@ -101,7 +101,7 @@ When you use App ID as ID provider with the Cloud directory, you can create user
 3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-get-started#install-packages).
 
 ## Example scenario
-{: #steps-appid-org}
+{: #steps-appid-org-cloud}
 
 In our example, we want to create the following setup:
 

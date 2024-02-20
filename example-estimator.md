@@ -145,7 +145,7 @@ Explore sessions and advanced options to optimize circuit performance on quantum
 
 When you start the session, you can specify these values:
 
-*  **backend**: The system or simulator to run on. If none is specified, the least busy backend is used.
+*  **backend**: The system or simulator to run on. 
 *  **max_time**: How long a runtime session can be open before it is forcibly closed. Can be specified as seconds (int) or a string like `"2h 30m 40s"`. This value must be between 300 seconds and the system imposed maximum time. See [Maximum execution time for a Qiskit Runtime job](https://qiskit.org/ecosystem/ibm-runtime/faqs/max_execution_time.html){: external} for details.
 
 This is an experimental setting and can break between releases without warning.
