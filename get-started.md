@@ -133,7 +133,7 @@ qc.measure_all()
 from qiskit_ibm_runtime import QiskitRuntimeService,  Sampler
 
 service = QiskitRuntimeService()
-sampler = Sampler(service=service, backend="ibm_gotham")
+sampler = Sampler(service=service, backend="ibmq_qasm_simulator")
 job = sampler.run(qc)
 result = job.result()
 ```
