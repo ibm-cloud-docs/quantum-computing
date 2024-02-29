@@ -130,11 +130,11 @@ qc.h(0)
 qc.cx(0, 1)
 qc.measure_all()
 
-from qiskit_ibm_runtime import QiskitRuntimeService,  Sampler
+from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
 
 service = QiskitRuntimeService()
 sampler = Sampler(service=service, backend="ibmq_qasm_simulator")
-job = sampler.run(qc)
+job = sampler.run([(qc,)])
 result = job.result()
 ```
 {: codeblock}
