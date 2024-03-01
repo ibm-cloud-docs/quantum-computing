@@ -20,7 +20,7 @@ subcollection: quantum-computing
 Use these topics to learn how to work with Qiskit Runtime.
 {: shortdesc}
 
-- [/api/migration-guides/v2-primitives](https://docs.quantum-computing.ibm.com/api/migration-guides/v2-primitives){: external}
+- [Migrate to the V2 primitives](https://docs.quantum-computing.ibm.com/api/migration-guides/v2-primitives){: external}
 - [Build with Qiskit Runtime](https://docs.quantum-computing.ibm.com/build){: external}
 - [Run jobs](https://docs.quantum-computing.ibm.com/run){: external}
 - [Migrate from using backend.run() to using primitives](https://docs.quantum-computing.ibm.com/api/migration-guides/qiskit-runtime){: external}

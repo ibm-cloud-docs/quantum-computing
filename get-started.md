@@ -143,7 +143,7 @@ result = job.result()
 {: #choose-program}
 {: step}
 
-Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview#primitive-programs) to interface with quantum computers. The following programs are publicly available. To learn more about the changes in the V2 primitives, read [Migrate to using the V2 primitives](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
+Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview#primitive-programs) to interface with quantum computers. The following programs are publicly available. To learn more about the changes in the V2 primitives, read [Migrate to the V2 primitives](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
 
 - **Sampler**:  
        Allows a user to specify a circuit as an input and then return the outputs (bitstrings) from every shot (V2), or quasiprobabilities (V1). This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.
