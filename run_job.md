@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2022-09-13"
+  years: 2021, 2024
+lastupdated: "2024-02-29"
 
 keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status
 
@@ -43,7 +43,7 @@ You will use the Qiskit Runtime QiskitRuntimeService.run() method, which takes t
 In the following example, we submit a circuit to the Sampler program:
 
 ```Python
-from qiskit_ibm_runtime import QiskitRuntimeService, Options, Sampler
+from qiskit_ibm_runtime import QiskitRuntimeService, Options, SamplerV2 as Sampler
 from qiskit import QuantumCircuit
 
 service = QiskitRuntimeService()
@@ -57,7 +57,7 @@ bell.measure_all()
 # Execute the Bell circuit
 backend = service.backend("ibmq_qasm_simulator")
 sampler = Sampler(backend=backend, options=options)
-job = sampler.run(circuits=bell)
+job = sampler.run([(bell,)])
 print(job.result())
 ```
 {: codeblock}
