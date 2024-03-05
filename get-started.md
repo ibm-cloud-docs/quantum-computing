@@ -170,7 +170,9 @@ sampler = Sampler(backend)
 job = sampler.run([(bell,)])
 result = job.result()
 
-print(job.result())
+pub_result = result[0]
+# Get counts from the classical register "meas". 
+print(f" >> Counts for the meas output register: {pub_result.data.meas.get_counts()}")
 ```
 
 ### ISA input

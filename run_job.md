@@ -58,7 +58,11 @@ bell.measure_all()
 backend = service.backend("ibmq_qasm_simulator")
 sampler = Sampler(backend=backend, options=options)
 job = sampler.run([(bell,)])
-print(job.result())
+result = job.result()
+
+pub_result = result[0]
+# Get counts from the classical register "meas". 
+print(f" >> Counts for the meas output register: {pub_result.data.meas.get_counts()}")
 ```
 {: codeblock}
 
@@ -74,12 +78,13 @@ To ensure fairness, a maximum execution time for each Qiskit Runtime job exists.
 {: #return-status}
 {: step}
 
-Follow up the Qiskit Runtime QiskitRuntimeService.run() method by running a RuntimeJob method. The run() method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program.
+Follow up the Qiskit Runtime `QiskitRuntimeService.run()` method by running a `RuntimeJobV2` method. The `run()` method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program. The `RuntimeJobV2` class inherits from `BasePrimitiveJob`. The `status()` method of this class returns a string instead of a JobStatus enum that was previously returned. See the [RuntimeJobV2 API reference](../qiskit-ibm-runtime/qiskit_ibm_runtime.RuntimeJobV2) for details.
 
-Several RuntimeJob methods exist, including job.status():
+Several RuntimeJob methods exist, including `job.status()`:
 
 ```Python
-job.status()
+# check the job status
+print(f"Job {job.job_id()} status: {job.status()}")
 ```
 {: codeblock}
 

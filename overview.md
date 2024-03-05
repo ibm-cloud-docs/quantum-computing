@@ -81,15 +81,13 @@ Primitive program interfaces vary based on the type of task that you want to run
 
 This document uses Version 2 primitives.  Version 2 is first the major interface change since the introduction of Qiskit Runtime primitives. Based on user feedback, this version introduces the following major new functions:
 
-* A new interface that lets you specify a single circuit and multiple observables (if using Estimator) and parameter value sets for that circuit. Previously, you had to specify the  same circuit multiple times to match the size of the data to be combined.
-* SamplerV2 
-  - Returns the outputs (bitstrings) from every shot, rather than providing a counts-like return (quasi-probabilities). The result class, however, has methods to return weighted samples, such as counts.
-  - Returns data from separate `ClassicalRegisters`. This enables derived classes to implement Sampler support for circuits with classical control flows.
-  - No longer supports resilience levels (error mitigation).  
-* EstimatorV2 
-  - Has a new `precision` argument in the `run()` method that specifies the targeted precision of the expectation value estimates.
-  - Does not support resilience level 3.  This is because resilience level 3 in V1 Estimator uses Probabilistic Error Cancellation (PEC), which is proven to give unbiased results at the cost of exponential processing time.  You can, however, still use PEC as the error mitigation method by using the `pec_mitigation` option.
-* Both V2 primitives let you turn on or off individual error mitigation / suppression methods.
+Version 2 of the primitives is introduced with a new base class for both Sampler and Estimator ([BaseSamplerV2](https://docs.quantum-computing.ibm.com/api/qiskit/qiskit.primitives.BaseSamplerV2){: external} and [BaseEstimatorV2](https://docs.quantum-computing.ibm.com/api/qiskit/qiskit.primitives.BaseEstimatorV2){: external}), along with new types for their inputs and outputs. 
+
+The new interface lets you specify a single circuit and multiple observables (if using Estimator) and parameter value sets for that circuit, so that sweeps over parameter value sets and observables can be efficiently specified. Previously, you had to specify the same circuit multiple times to match the size of the data to be combined.  Also, while you can still use `optimization_level` and `resilience_level` (if using Estimator) as the simple knobs, V2 primitives give you the flexibility to turn on or off individual error mitigation / suppression methods to customize them for your needs.
+
+To reduce the total job execution time, V2 primitives only accept circuits and observables that use instructions supported by the target system (referred to as instruction set architecture (ISA) circuits and observables). V2 primitives do not perform layout, routing, and translation operations but continue to optimize the circuits if you specify `optimization_level>0`.  See the [transpilation documentation](https://docs.quantum-computing.ibm.com/transpile){: external} for instructions to transform circuits.
+
+V2 Sampler is simplified to focus on its core task of sampling the output register from execution of quantum circuits. It returns the samples, whose type is defined by the program, without weights. The output data is also separated by the output register names defined by the program. This change enables future support for circuits with classical control flow.
 
 To learn more, refer to the [V2 primitives migration guide.](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
 
