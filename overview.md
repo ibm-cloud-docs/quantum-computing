@@ -79,7 +79,7 @@ Primitive program interfaces vary based on the type of task that you want to run
 ## V2 primitives
 {: #v2-primitives}
 
-This document uses Version 2 primitives.  Version 2 is first the major interface change since the introduction of Qiskit Runtime primitives. Based on user feedback, this version introduces the following major new functions:
+This document uses Version 2 primitives (available with qiskit-ibm-runtime 0.21.0).  Version 2 is first the major interface change since the introduction of Qiskit Runtime primitives. Based on user feedback, this version introduces the following major new functions:
 
 Version 2 of the primitives is introduced with a new base class for both Sampler and Estimator ([BaseSamplerV2](https://docs.quantum-computing.ibm.com/api/qiskit/qiskit.primitives.BaseSamplerV2){: external} and [BaseEstimatorV2](https://docs.quantum-computing.ibm.com/api/qiskit/qiskit.primitives.BaseEstimatorV2){: external}), along with new types for their inputs and outputs. 
 
