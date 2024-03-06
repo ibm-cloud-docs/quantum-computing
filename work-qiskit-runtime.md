@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2023-07-28"
+  years: 2021, 2024
+lastupdated: "2024-02-29"
 
 keywords: quantum, Qiskit, runtime, near time compute, primitive programs
 
@@ -20,6 +20,7 @@ subcollection: quantum-computing
 Use these topics to learn how to work with Qiskit Runtime.
 {: shortdesc}
 
+- [Migrate to the Qiskit Runtime V2 primitives](https://docs.quantum-computing.ibm.com/api/migration-guides/v2-primitives){: external}
 - [Build with Qiskit Runtime](https://docs.quantum-computing.ibm.com/build){: external}
 - [Run jobs](https://docs.quantum-computing.ibm.com/run){: external}
 - [Migrate from using backend.run() to using primitives](https://docs.quantum-computing.ibm.com/api/migration-guides/qiskit-runtime){: external}

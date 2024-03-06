@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2022-09-13"
+  years: 2021, 2024
+lastupdated: "2024-02-29"
 
 keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status
 
@@ -43,7 +43,7 @@ You will use the Qiskit Runtime QiskitRuntimeService.run() method, which takes t
 In the following example, we submit a circuit to the Sampler program:
 
 ```Python
-from qiskit_ibm_runtime import QiskitRuntimeService, Options, Sampler
+from qiskit_ibm_runtime import QiskitRuntimeService, Options, SamplerV2 as Sampler
 from qiskit import QuantumCircuit
 
 service = QiskitRuntimeService()
@@ -57,8 +57,12 @@ bell.measure_all()
 # Execute the Bell circuit
 backend = service.backend("ibmq_qasm_simulator")
 sampler = Sampler(backend=backend, options=options)
-job = sampler.run(circuits=bell)
-print(job.result())
+job = sampler.run([(bell,)])
+result = job.result()
+
+pub_result = result[0]
+# Get counts from the classical register "meas". 
+print(f" >> Counts for the meas output register: {pub_result.data.meas.get_counts()}")
 ```
 {: codeblock}
 
@@ -74,12 +78,13 @@ To ensure fairness, a maximum execution time for each Qiskit Runtime job exists.
 {: #return-status}
 {: step}
 
-Follow up the Qiskit Runtime QiskitRuntimeService.run() method by running a RuntimeJob method. The run() method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program.
+Follow up the Qiskit Runtime `QiskitRuntimeService.run()` method by running a `RuntimeJobV2` method. The `run()` method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program. The `RuntimeJobV2` class inherits from `BasePrimitiveJob`. The `status()` method of this class returns a string instead of a JobStatus enum that was previously returned. See the [RuntimeJobV2 API reference](../qiskit-ibm-runtime/qiskit_ibm_runtime.RuntimeJobV2) for details.
 
-Several RuntimeJob methods exist, including job.status():
+Several RuntimeJob methods exist, including `job.status()`:
 
 ```Python
-job.status()
+# check the job status
+print(f"Job {job.job_id()} status: {job.status()}")
 ```
 {: codeblock}
 

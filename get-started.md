@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2023
-lastupdated: "2022-10-13"
+  years: 2021, 2024
+lastupdated: "2024-02-29"
 
 keywords: quantum, Qiskit, runtime, near time compute
 
@@ -130,11 +130,11 @@ qc.h(0)
 qc.cx(0, 1)
 qc.measure_all()
 
-from qiskit_ibm_runtime import QiskitRuntimeService,  Sampler
+from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
 
 service = QiskitRuntimeService()
 sampler = Sampler(service=service, backend="ibmq_qasm_simulator")
-job = sampler.run(qc)
+job = sampler.run([(qc,)])
 result = job.result()
 ```
 {: codeblock}
@@ -143,20 +143,12 @@ result = job.result()
 {: #choose-program}
 {: step}
 
-Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview#primitive-programs) to interface with quantum computers. The following programs are publicly available. 
+Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview#primitive-programs) to interface with quantum computers. The following programs are publicly available. To learn more about the changes in the V2 primitives, read [Migrate to the V2 primitives](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
 
 - **Sampler**:  
-       Allows a user to specify a circuit as an input and then generate quasiprobabilities. This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.
+       Allows a user to specify a circuit as an input and then return the outputs (bitstrings) from every shot (V2), or quasiprobabilities (V1). This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.
 - **Estimator**:  
        Allows a user to specify a list of circuits and observables and selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators that are required for many algorithms. 
-
-To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the system (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
-{: important}
-
-This change has the following important impacts:
-
-*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  The option to use the least busy system that you have access to will not work.  If you don't specify a backend, you will receive an error. 
-*  The primitives will no longer perform layout or routing operations. Consequently, transpilation options referring to those tasks will no longer have any effect. Users can still request that the primitives do no optimization of input circuits by using `options.transpilation.skip_transpilation`.
 
 This example uses the Sampler primitive:
 
@@ -170,15 +162,51 @@ bell.cx(0, 1)
 bell.measure_all()
 
 # Execute the circuit
-from qiskit_ibm_runtime import Sampler
+from qiskit_ibm_runtime import SamplerV2 as Sampler
 
 backend = service.backend("ibmq_qasm_simulator")
 sampler = Sampler(backend)
-job = sampler.run(circuits=bell)
 
+job = sampler.run([(bell,)])
 result = job.result()
 
-print(job.result())
+pub_result = result[0]
+# Get counts from the classical register "meas". 
+print(f" >> Counts for the meas output register: {pub_result.data.meas.get_counts()}")
+```
+
+### ISA input
+{: #isa-input}
+
+To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the system (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
+{: important}
+
+This change has the following important impacts:
+
+*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  The option to use the least busy system that you have access to will not work.  If you don't specify a backend, you will receive an error. 
+*  The primitives will no longer perform layout or routing operations. Consequently, transpilation options referring to those tasks will no longer have any effect. Users can still request that the primitives do no optimization of input circuits by using `optimization_level=0`.
+
+Example code for generating ISA circuits and observables:
+
+```python
+from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
+
+# Create a new circuit with two qubits (first argument) and two classical
+# bits (second argument)
+qc = QuantumCircuit(2)
+qc.h(0)
+qc.cx(0, 1)
+
+# Set up six different observables.
+observables_labels = ["ZZ", "ZI", "IZ", "XX", "XI"]
+observables = [SparsePauliOp(label) for label in observables_labels]
+
+# Convert to an ISA circuit and layout-mapped observables.
+pm = generate_preset_pass_manager(backend=backend, optimization_level=1)
+isa_circuit = pm.run(qc)
+observables = [
+    observable.apply_layout(isa_circuit.layout) for observable in observables
+]
 ```
 {: codeblock}
 

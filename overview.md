@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-15"
+lastupdated: "2024-02-29"
 
 keywords: quantum, Qiskit, runtime, near time compute, primitive programs, Qiskit 1.0
 
@@ -49,7 +49,7 @@ For example, an algorithm researcher and developer cares about information beyon
 
 Our primitives provide methods that make it easier to build modular algorithms and other higher-order programs. Instead of simply returning counts, they return more immediately meaningful information. Additionally, they provide a seamless way to access the latest optimizations in IBM Quantum hardware and software.
 
-The basic operations that one can do with a probability distribution is to sample from it or to estimate quantities on it. Therefore, these operations form the fundamental building blocks of quantum algorithm development. Our first two Qiskit Runtime primitives (Sampler and Estimator) use these sampling and estimating operations as core interfaces to our quantum systems. Learn more about what you can do with Qiskit Runtime primitive programs in the [IBM Quantum documentation.](https://docs.quantum-computing.ibm.com/run){: external}
+The basic operations that one can do with a probability distribution is to sample from it or to estimate quantities on it. Therefore, these operations form the fundamental building blocks of quantum algorithm development. The Qiskit Runtime primitives (Sampler and Estimator) use these sampling and estimating operations as core interfaces to our quantum systems. Learn more about what you can do with Qiskit Runtime primitive programs in the [IBM Quantum documentation.](https://docs.quantum-computing.ibm.com/run){: external}
 
 To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the system (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
 {: important}
@@ -57,7 +57,7 @@ To ensure faster and more efficient results, as of 1 March 2024, circuits and ob
 This change has the following important impacts:
 
 *  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  The option to use the least busy system that you have access to will not work.  If you don't specify a backend, you will receive an error. 
-*  The primitives will no longer perform layout or routing operations. Consequently, transpilation options referring to those tasks will no longer have any effect. Users can still request that the primitives do no optimization of input circuits by using `options.transpilation.skip_transpilation`.
+*  The primitives will no longer perform layout or routing operations. Consequently, transpilation options referring to those tasks will no longer have any effect. Users can still request that the primitives do no optimization of input circuits by using `optimization_level=0`.
 
 ## Available primitives
 {: #available-primitives}
@@ -66,7 +66,7 @@ The following primitive programs are available:
 
 | Primitive | Description | Example output |
 |---|---|---|
-| Sampler | Allows a user to input a circuit and then generate quasiprobabilities. This generation enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference. | ![An example of Sampler output is shown.](images/sampler.png) |
+| Sampler | Allows a user to input a circuit and then return the outputs (bitstrings) from every shot (V2), or quasiprobabilities (V1). This generation enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference. | ![An example of Sampler output is shown.](images/sampler.png) |
 | Estimator | Allows a user to specify a list of circuits and observables and selectively group between the lists to efficiently evaluate expectation values and variances for a parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators that are required for many algorithms. | ![An example of Estimator output is shown.](images/estimator.png) |
 {: caption="Table 1. Available primitive programs" caption-side="bottom"}
 
@@ -75,6 +75,21 @@ The following primitive programs are available:
 
 Primitive program interfaces vary based on the type of task that you want to run on the quantum computer and the corresponding data that you want returned as a result. After identifying the appropriate primitive for your program, you can use Qiskit to prepare inputs, such as circuits, observables (for Estimator), and customizable options to optimize your job.
 
+
+## V2 primitives
+{: #v2-primitives}
+
+This document uses Version 2 primitives (available with qiskit-ibm-runtime 0.21.0).  Version 2 is first the major interface change since the introduction of Qiskit Runtime primitives. Based on user feedback, this version introduces the following major new functions:
+
+Version 2 of the primitives is introduced with a new base class for both Sampler and Estimator ([BaseSamplerV2](https://docs.quantum-computing.ibm.com/api/qiskit/qiskit.primitives.BaseSamplerV2){: external} and [BaseEstimatorV2](https://docs.quantum-computing.ibm.com/api/qiskit/qiskit.primitives.BaseEstimatorV2){: external}), along with new types for their inputs and outputs. 
+
+The new interface lets you specify a single circuit and multiple observables (if using Estimator) and parameter value sets for that circuit, so that sweeps over parameter value sets and observables can be efficiently specified. Previously, you had to specify the same circuit multiple times to match the size of the data to be combined.  Also, while you can still use `optimization_level` and `resilience_level` (if using Estimator) as the simple knobs, V2 primitives give you the flexibility to turn on or off individual error mitigation / suppression methods to customize them for your needs.
+
+To reduce the total job execution time, V2 primitives only accept circuits and observables that use instructions supported by the target system (referred to as instruction set architecture (ISA) circuits and observables). V2 primitives do not perform layout, routing, and translation operations but continue to optimize the circuits if you specify `optimization_level>0`.  See the [transpilation documentation](https://docs.quantum-computing.ibm.com/transpile){: external} for instructions to transform circuits.
+
+V2 Sampler is simplified to focus on its core task of sampling the output register from execution of quantum circuits. It returns the samples, whose type is defined by the program, without weights. The output data is also separated by the output register names defined by the program. This change enables future support for circuits with classical control flow.
+
+To learn more, refer to the [V2 primitives migration guide.](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
 
 
 ## Next steps
