@@ -106,7 +106,7 @@ If the IDP administrator will assign users to projects, you can define project v
    This check is done on every login, so changes in the ID provider user attributes will be effective when a user next logs in.
 
 ## User flow
-{: #user-org}
+{: #user-flow-org}
 
 1. A user is sent the ID provider URL for the IBM Cloud account.
 

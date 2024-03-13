@@ -19,7 +19,7 @@
     ],
     "section_learn": {
       "developer": "https://developer.ibm.com/depmodels/quantum-computing/",
-      "training": "https://qiskit.org/textbook/preface",
+      "training": "https://learning.quantum.ibm.com/",
       "community": "https://ibm-cloudplatform.slack.com/archives/C1KEB2FE2"
     },
     "section_updates": {

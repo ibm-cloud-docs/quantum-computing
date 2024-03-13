@@ -142,7 +142,7 @@ Currently, the {{site.data.keyword.qiskit_runtime_notm}} cloud service is in bet
 {: #faq-help}
 {: faq}
 
-For help with Qiskit, access our Slack community: [Qiskit Slack](https://ibm.co/joinqiskitslack){: external}.
+For help with Qiskit, access our Slack community: [Qiskit Slack](https://qisk.it/join-slack){: external}.
 
 
 ## {{site.data.keyword.qiskit_runtime_notm}} is in beta status. When will {{site.data.keyword.qiskit_runtime_notm}} be generally available in {{site.data.keyword.cloud}}?

@@ -53,7 +53,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 {: #install-packages}
 {: step}
 
-Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit install and setup topic](https://docs.quantum-computing.ibm.com/start/install){: external}. Periodically check the [Qiskit release notes](https://qiskit.org/documentation/release_notes.html) (or rerun these commands) so that you always have the latest version.
+Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit install and setup topic](https://docs.quantum.ibm.com/start/install){: external}. Periodically check the [Qiskit release notes](https://docs.quantum.ibm.com/api/qiskit/release-notes){: external} (or rerun these commands) so that you always have the latest version.
 
 Be sure to run these commands even if you already installed the packages, to ensure that you have the latest versions.
 {: note}
@@ -112,7 +112,7 @@ service = QiskitRuntimeService(name="account-name")
 ```
 {: codeblock}
 
-If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials. For more information about managing your account, see the [account management topic](https://docs.quantum-computing.ibm.com/run/account-management){: external}.
+If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials. For more information about managing your account, see the [account management topic](https://docs.quantum.ibm.com/run/account-management){: external}.
 
 For instructions to use the cloud Quantum Qiskit API, see the [authentication](/apidocs/quantum-computing#authentication){: external} section in the API documentation.
 

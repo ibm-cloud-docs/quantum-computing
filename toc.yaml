@@ -68,7 +68,7 @@ toc:
           href: https://{DomainName}/apidocs/quantum-computing
       - link:
           label: Qiskit Runtime API reference
-          href: https://docs.quantum-computing.ibm.com/api/qiskit-ibm-runtime/runtime_service
+          href: https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/runtime_service
       - link:
           label: Q-CTRL documentation
           href: https://docs.q-ctrl.com/q-ctrl-embedded   
@@ -87,4 +87,4 @@ toc:
             topics:
             - link:
                 label: Qiskit Slack
-                href: https://ibm.co/joinqiskitslack
+                href: https://qisk.it/join-slack

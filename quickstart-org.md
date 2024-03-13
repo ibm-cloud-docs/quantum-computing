@@ -73,7 +73,7 @@ Before you set up Qiskit Runtime for your organization, you need to make these d
    {: note}
 
 ## Next steps
-{: #next-steps-org}
+{: #next-steps-quickstart-org}
 
 * See [Configure Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-steps-org) for the steps to set up Qiskit Runtime.
 * See [Additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information. 

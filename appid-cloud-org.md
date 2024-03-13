@@ -84,7 +84,7 @@ When you use App ID as ID provider with the Cloud directory, you can create user
 1. Go to [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external} and click the user.
    ![Change User Access](images/org-guide-manage-user.png "Change User Access"){: caption="Figure 11. Change User Access" caption-side="bottom"}
 
-   If you don't see the user that you want to manage, verify that they logged in to IBM Cloud at least once. See step 1 in the [User flow](#user-org).
+   If you don't see the user that you want to manage, verify that they logged in to IBM Cloud at least once. See step 1 in the [User flow](#user-org-cloud).
    {: note}
 
 2. Add access groups with **Assign group** or remove the user from an access group by clicking the three dot menu and choosing **Remove user**.
