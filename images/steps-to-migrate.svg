@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2102" height="398" viewBox="0 0 2102 398">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 20px;
+        font-family: "IBM Plex Sans";
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      .cls-2 {
+        font-size: 32px;
+      }
+
+      .cls-2, .cls-3 {
+        text-anchor: middle;
+        font-family: Arial;
+      }
+
+      .cls-3 {
+        font-size: 24px;
+      }
+    </style>
+  </defs>
+  <image x="74" y="164" width="1954" height="128" xlink:href="data:img/png;base64,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"/>
+  <text id="Lorem_Ipsum" data-name="Lorem Ipsum" class="cls-1" x="915.999" y="-108">Lorem Ipsum</text>
+  <text id="Steps_1-2" data-name="Steps 1-2" class="cls-2" x="241.001" y="126"><tspan x="241.001">Steps 1-2</tspan></text>
+  <text id="Step_3" data-name="Step 3" class="cls-2" x="779.499" y="125"><tspan x="779.499">Step 3</tspan></text>
+  <text id="Step_4" data-name="Step 4" class="cls-2" x="1323.499" y="125"><tspan x="1323.499">Step 4</tspan></text>
+  <text id="Step_5" data-name="Step 5" class="cls-2" x="1862.25" y="123.8"><tspan x="1862.25">Step 5</tspan></text>
+  <text id="Set_up_an_IBM_Cloud_account" data-name="Set up an IBM Cloud account" class="cls-3" x="236" y="223.5"><tspan x="236">Set up an</tspan><tspan x="236" dy="28.8">IBM Cloud account</tspan></text>
+  <text id="Create_a_Qiskit_Runtime_instance" data-name="Create a Qiskit Runtime instance" class="cls-3" x="782.999" y="224"><tspan x="782.999">Create a Qiskit</tspan><tspan x="782.999" dy="28.8">Runtime instance</tspan></text>
+  <text id="Establish_the_max_cost_limit" data-name="Establish the max cost limit" class="cls-3" x="1324.5" y="223.5"><tspan x="1324.5">Establish the</tspan><tspan x="1324.5" dy="28.8">max cost limit</tspan></text>
+  <text id="Give_access_to_users" data-name="Give access to users" class="cls-3" x="1863.251" y="220.8"><tspan x="1863.251">Give access</tspan><tspan x="1863.251" dy="28.8">to users</tspan></text>
+</svg>
