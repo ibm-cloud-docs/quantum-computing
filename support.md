@@ -16,7 +16,7 @@ subcollection: quantum-computing
 # Getting help
 {: #support}
 
-If you have problems or questions when using {{site.data.keyword.qiskit_runtime_notm}} (Beta), you can go directly to the [{{site.data.keyword.Bluemix}} Support page](https://www.ibm.com/cloud/support){: external} to view cloud status or post questions on Stack Overflow. You can also open a support case for help with your quantum resources.
+If you have problems or questions when using {{site.data.keyword.qiskit_runtime_notm}} (Beta), you can go directly to the [{{site.data.keyword.Bluemix}} Support page](https://www.ibm.com/cloud/support){: external} to view cloud status or post questions on Stack Overflow. Choose **Qiskit Runtime** from the Topic field to open a support case.
 {: shortdesc}
 
 * Review the [frequently asked questions](/docs/quantum-computing?topic=quantum-computing-qiskit-runtime-faqs).
