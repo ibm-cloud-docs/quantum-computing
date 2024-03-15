@@ -17,6 +17,18 @@ subcollection: quantum-computing
 Use these release notes to learn about the latest updates to {{site.data.keyword.qiskit_runtime_notm}}.
 {: shortdesc}
 
+## 1 March 2024
+{: #0.7.0}
+{: release-note}
+
+The latest update for Qiskit Runtime includes V2 primitives, which require updated code formatting. 
+
+## 15 February 2024
+{: #0.6.0}
+{: release-note}
+
+The primitives now require ISA input.  Because this formating is specific to each backend, you must specify a backend. 
+
 ## 14 August 2023
 {: #0.5.0}
 {: release-note}

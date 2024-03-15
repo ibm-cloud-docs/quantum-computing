@@ -22,7 +22,7 @@ Get a glimpse of the quantum computing future with our world-leading {{site.data
 
 This documentation is based on the current version of [Qiskit Runtime.](https://docs.quantum.ibm.com/api/qiskit-ibm-runtime){: external}
 
-Because this service is in Beta phase, many functions are not yet available and are still under development, including some of the functions that are outlined in the following diagram.
+Because this service is in Beta phase, many functions are not yet available and are still under development, including some functions that are outlined in the following diagram.
 {: note}
 
 ![A user is shown running the Qiskit program by using APIs that control the Qiskit Runtime Manager.](images/Qiskit_Runtime_architecture.svg "Qiskit Runtime architecture diagram"){: caption="Figure 1. Diagram of Qiskit Runtime's architecture" caption-side="bottom"}

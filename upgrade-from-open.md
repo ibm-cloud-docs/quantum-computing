@@ -117,4 +117,4 @@ Users will receive an email with an invitation to use this account with the acce
 ## Differences between the Open and Standard plans
 {: #diff-open-standard}
 
-There are a few functional differences between IBM Quantum and the IBM Cloud Qiskit Runtime service that you should take into account. The biggest difference is that IBM Cloud only supports the Qiskit IBM Runtime client. However, this provider supports `backend.run()`.  See [Migrate backend.run() from qiskit_ibm_provider to qiskit_ibm_runtime](https://docs.quantum.ibm.com/api/migration-guides/qiskit-runtime-from-provider) for details.
+There are a few functional differences between IBM Quantum and the IBM Cloud Qiskit Runtime service that you should consider. The biggest difference is that IBM Cloud only supports the Qiskit IBM Runtime client. However, this provider supports `backend.run()`.  See [Migrate backend.run() from qiskit_ibm_provider to qiskit_ibm_runtime](https://docs.quantum.ibm.com/api/migration-guides/qiskit-runtime-from-provider) for details.
