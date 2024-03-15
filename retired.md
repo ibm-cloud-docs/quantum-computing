@@ -26,6 +26,7 @@ The following systems have been retired. For the list of currently available sys
 | ibm_canberra      | **27**      | 2023-08-15      |
 | ibm_nazca         | **127**     | 2023-08-15      |
 | ibm_algiers       | **27**      | 2024-02-20      |
+{: caption="Retired systems" caption-side="bottom"}
 
 
 ## Retrieve a job from a retired system

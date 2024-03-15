@@ -17,7 +17,7 @@ subcollection: quantum-computing
 # Qiskit Runtime overview
 {: #overview}
 
-Get a glimpse of the quantum computing future with our world-leading {{site.data.keyword.qiskit_runtime_notm}}, a new architecture that delivers significant performance enhancements to program execution. By using our physical systems and simulators (cloud-based classical emulators of quantum systems), you can experience frictionless quantum computing. That is, the ability to run quantum programs in an environment where the classical computer is physically closer to the quantum computer. Test programs and algorithms, and develop new models with our cloud-based quantum runtime for drastically improved capacity and higher performance today.
+Get a glimpse of the quantum computing future with our world-leading {{site.data.keyword.qiskit_runtime_notm}}, a new architecture that delivers significant performance enhancements to program execution. By using our physical systems and simulators (classical emulators of quantum systems), you can experience frictionless quantum computing. That is, the ability to run quantum programs in an environment where the classical computer is physically closer to the quantum computer. Test programs and algorithms, and develop new models with our cloud-based quantum runtime for drastically improved capacity and higher performance.
 {: shortdesc}
 
 This documentation is based on the current version of [Qiskit Runtime.](https://docs.quantum.ibm.com/api/qiskit-ibm-runtime){: external}
@@ -34,10 +34,6 @@ Run your experiments with an improved architecture:   For variational algorithms
 
 Use primitives to get started quickly:   Primitive programs provide a simplified interface for building and customizing applications. You can submit circuits and return shot counts, pre-shot readouts, or observable expectation values. (Some primitives are future functions.)
 
-Upload and iterate:   Upload your own Qiskit quantum program and run it with different inputs and configurations each time. (Future function)
-
-Receive intermediate results:   Receive intermediate results as your execution runs. (Future function)
-
 ## Overview of primitive programs
 {: #primitive-programs}
 
@@ -51,13 +47,13 @@ Our primitives provide methods that make it easier to build modular algorithms a
 
 The basic operations that one can do with a probability distribution is to sample from it or to estimate quantities on it. Therefore, these operations form the fundamental building blocks of quantum algorithm development. The Qiskit Runtime primitives (Sampler and Estimator) use these sampling and estimating operations as core interfaces to our quantum systems. Learn more about what you can do with Qiskit Runtime primitive programs in the [IBM Quantum documentation.](https://docs.quantum.ibm.com/run){: external}
 
-To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the system (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
+To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the system (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. *Exception*: This does not apply when using Q-CTRL. See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
 {: important}
 
 This change has the following important impacts:
 
 *  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  The option to use the least busy system that you have access to will not work.  If you don't specify a backend, you will receive an error. 
-*  The primitives will no longer perform layout or routing operations. Consequently, transpilation options referring to those tasks will no longer have any effect. Users can still request that the primitives do no optimization of input circuits by using `optimization_level=0`.
+*  The primitives will no longer perform layout or routing operations. Consequently, transpilation options referring to those tasks will no longer have any effect. By default, all primitives except Sampler V2 still optimize the input circuits. To bypass all optimization, set `optimization_level=0`.
 
 ## Available primitives
 {: #available-primitives}

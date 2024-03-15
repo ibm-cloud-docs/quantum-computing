@@ -105,6 +105,7 @@ To share a Qiskit Runtime instance with other users, complete the following step
       - For **Platform access**, select **Viewer**.
       - For **Custom access**, select **User actions for Qiskit Runtime**. Click **Next**.
    - **Conditions (optional)**. Click **Review**.
+   
    At the bottom, click **Add**. You should see the policy on the right panel. Click **Assign** at the bottom of the right panel. You have successfully created an access group.
 1. On the left panel in the **Manage identies** section, click **Users**. Then, at the top right click **Invite users**.
    - Enter the email addresses of your users separated by commas, spaces, or line breaks.
