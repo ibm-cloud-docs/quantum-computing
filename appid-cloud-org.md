@@ -123,7 +123,7 @@ The steps to implement this setup are:
 3. The Cloud administrator creates a custom rule that includes the `quantum-computing.job.delete` action.
 4. The Cloud administrator creates two access groups:
    * The `ml` access group can access `QR-ml` and `QR-common`. This access group needs a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `ml`.
-   * The `finance` access group can access `QR-finance` and `QR-common`. This access group nees a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `finance`.
+   * The `finance` access group can access `QR-finance` and `QR-common`. This access group needs a dynamic rule for the App ID IDP that accepts users whose `project` attribute contains `finance`.
 
 5. The ID provider administrator defines the three users in the IBM Cloud user interface.
 1. Users log in at least once.

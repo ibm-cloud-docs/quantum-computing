@@ -25,6 +25,6 @@ Before you run a job, you must choose a physical quantum system or a simulator t
 The Standard plan allows access to both physical quantum systems and simulators, while the Lite plan allows access only to simulators.
 {: note}
 
-To find your available systems and simulators, view the [Compute resources page](https://cloud.ibm.com/quantum/resources){: external}. You must be logged in to see your available compute resources.
+To find your available systems and cloud simulators, view the [Compute resources page](https://cloud.ibm.com/quantum/resources){: external}. You must be logged in to see your available compute resources. 
 
 You can also view your available systems and simulators by using the [List your backends](/apidocs/quantum-computing#list-backends){: external} API directly or in [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Programs/list-backends){: external}.

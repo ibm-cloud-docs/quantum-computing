@@ -113,7 +113,7 @@ If the IDP administrator will assign users to projects, you can define project v
    The administrator can always go to [Manage → Access (IAM) → Identity providers](https://cloud.ibm.com/iam/identity-providers){: external} to look up the ID provider URL.
    {: note}
 
-2. To work with Qiskit Runtime serive instances, users must create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).
+2. To work with Qiskit Runtime service instances, users must create an API key by going to ([Manage → Access (IAM) → API keys](https://cloud.ibm.com/iam/apikeys){: external}).
 3. For further information, users can review [Getting started, Step 2](/docs/quantum-computing?topic=quantum-computing-get-started#install-packages).
 
 ## Example scenario
