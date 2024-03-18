@@ -96,4 +96,4 @@ To learn more, refer to the [V2 primitives migration guide.](https://docs.quantu
 - [Learn by using tutorials, courses, and tools](https://learning.quantum.ibm.com){: external}
 - Watch the [Qiskit Runtime Tutorial video](https://www.youtube.com/watch?v=b9mdMye-iVk){: external} for more information.
 - View the [Qiskit Runtime API reference](/apidocs/quantum-computing){: external} to understand how to use cURL commands to work with your cloud service instance.
-- Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}.
+- Learn about [IBM Quantum Computing](https://www.ibm.com/quantum/){: external}.

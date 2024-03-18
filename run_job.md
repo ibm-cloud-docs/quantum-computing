@@ -78,7 +78,7 @@ To ensure fairness, a maximum execution time for each Qiskit Runtime job exists.
 {: #return-status}
 {: step}
 
-Follow up the Qiskit Runtime `QiskitRuntimeService.run()` method by running a `RuntimeJobV2` method. The `run()` method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program. The `RuntimeJobV2` class inherits from `BasePrimitiveJob`. The `status()` method of this class returns a string instead of a JobStatus enum that was previously returned. See the [RuntimeJobV2 API reference](../qiskit-ibm-runtime/qiskit_ibm_runtime.RuntimeJobV2) for details.
+Follow up the Qiskit Runtime `QiskitRuntimeService.run()` method by running a `RuntimeJobV2` method. The `run()` method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program. The `RuntimeJobV2` class inherits from `BasePrimitiveJob`. The `status()` method of this class returns a string instead of a JobStatus enum that was previously returned. See the [RuntimeJobV2 API reference](https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/qiskit_ibm_runtime.RuntimeJobV2){: external} for details.
 
 Several RuntimeJob methods exist, including `job.status()`:
 
@@ -95,7 +95,7 @@ Alternatively, run the [List job details API](/apidocs/quantum-computing#get-job
 {: #next-steps-run-job}
 
 - [View the results](/docs/quantum-computing?topic=quantum-computing-results).
-- View the [API reference](/apidocs/quantum-computing/quantum-computing){: external}.
+- View the [API reference](/apidocs/quantum-computing){: external}.
 - Learn about IBM Quantum:
-    - [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}
+    - [IBM Quantum Computing](https://www.ibm.com/quantum/){: external}
     - [Qiskit](https://www.ibm.com/quantum/qiskit){: external}

@@ -112,7 +112,7 @@ service = QiskitRuntimeService(name="account-name")
 ```
 {: codeblock}
 
-If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials. For more information about managing your account, see the [account management topic](https://docs.quantum.ibm.com/run/account-management){: external}.
+If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials. 
 
 For instructions to use the cloud Quantum Qiskit API, see the [authentication](/apidocs/quantum-computing#authentication){: external} section in the API documentation.
 
@@ -214,5 +214,5 @@ observables = [
 {: #next-steps-getstarted}
 
 - View the [API reference](/apidocs/quantum-computing){: external}.
-- Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}.
+- Learn about [IBM Quantum Computing](https://www.ibm.com/quantum/){: external}.
 

@@ -11,7 +11,7 @@ toc:
     release-level: beta
     href: /docs/quantum-computing
     console-page: /quantum
-    product-page: https://www.ibm.com/quantum-computing
+    product-page: https://www.ibm.com/quantum
     path: quantum-computing
     label: Qiskit Runtime
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
