@@ -31,8 +31,6 @@ First, configure some settings in the administrator's Identity and Access Manage
 * **User list visibility** determines whether users can see each other, regardless of project assignment. The `enabled` setting restricts user visibility. That is, users in your account cannot see each other, even if they can access the same resources. Choose the appropriate value for your environment. See [Controlling user visibility](/docs/account?topic=account-iam-user-setting){: external} for more information.
 * **API key creation** controls whether users can create API keys. In Qiskit Runtime, it is common to use API keys. If API keys are being used, choose `disabled`. Alternatively, you can give specific permissions to each user.
 
-![IAM settings](images/org-guide-iam-settings.png "User list visibility"){: caption="Figure 1. IAM settings page with User list visibility enabled" caption-side="bottom"}
-
 ## (Optional) Create resource groups
 {: #crt-rsc-grp-org}
 {: step}
@@ -65,8 +63,7 @@ Follow these steps to set up an access group:
 
 1. Create a custom role.
    1. From [Manage → IAM → Roles](https://cloud.ibm.com/iam/roles){: external}, click `Create`.
-   2. Enter a name, ID, description, and select `Qiskit Runtime` from the service, as shown in the image:
-      ![This image shows a custom role that is being created.](images/org-guide-create-custom-role.png "Using the Configure your resource window to create a custom role"){: caption="Figure 4. Creating a custom role" caption-side="bottom"}
+   2. Enter a name, ID, description, and select `Qiskit Runtime` for the service. 
    3. Select the following roles, then click **Create**.
       * quantum-computing.device.read
       * quantum-computing.job.cancel
