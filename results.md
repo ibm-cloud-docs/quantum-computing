@@ -53,5 +53,5 @@ Alternatively, run the [list job results API](/apidocs/quantum-computing#get-job
 ## Next steps
 {: #next-steps}
 
-- View the [API reference](/apidocs/quantum-computing/quantum-computing){: external}.
-- Learn about [IBM Quantum Computing](https://www.ibm.com/quantum-computing/){: external}.
+- View the [API reference](/apidocs/quantum-computing){: external}.
+- Learn about [IBM Quantum Computing](https://www.ibm.com/quantum/){: external}.

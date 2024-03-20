@@ -1,6 +1,3 @@
-#  Name your file `toc.yaml`
-#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav
-#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
 ---
 toc:
   properties:
@@ -11,10 +8,9 @@ toc:
     release-level: beta
     href: /docs/quantum-computing
     console-page: /quantum
-    product-page: https://www.ibm.com/quantum-computing
+    product-page: https://www.ibm.com/quantum
     path: quantum-computing
     label: Qiskit Runtime
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
       id: learn
@@ -54,8 +50,6 @@ toc:
             - architecture-workload-isolation.md
             - data-security.md
       - at-events.md
-#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
-#  Links to your command line reference docs should be included in the Reference navigation group. For link help see https://test.cloud.ibm.com/docs/writing?topic=writing-code-nav#toc-yaml-properties
   - navgroup:
       id: reference
       topics:
@@ -68,7 +62,7 @@ toc:
           href: https://{DomainName}/apidocs/quantum-computing
       - link:
           label: Qiskit Runtime API reference
-          href: https://docs.quantum-computing.ibm.com/api/qiskit-ibm-runtime/runtime_service
+          href: https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/runtime_service
       - link:
           label: Q-CTRL documentation
           href: https://docs.q-ctrl.com/q-ctrl-embedded   
@@ -87,4 +81,4 @@ toc:
             topics:
             - link:
                 label: Qiskit Slack
-                href: https://ibm.co/joinqiskitslack
+                href: https://qisk.it/join-slack
