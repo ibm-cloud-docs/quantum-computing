@@ -46,7 +46,6 @@ To manage ID provider users instead, follow the instructions in one of these top
 {: step}
 
 1. Go to [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external} and click the user.
-   ![Change User Access](images/org-guide-manage-user.png "Change User Access"){: caption="Figure 11. Change User Access" caption-side="bottom"}
 2. Add access groups with **Assign group** or remove the user from an access group by clicking the three dot menu and choosing **Remove user**.
 
 ## User Flow

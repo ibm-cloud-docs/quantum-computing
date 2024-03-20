@@ -38,9 +38,6 @@ To manage users in a different way, follow the instructions in one of these topi
        * The **Lite** plan is free of charge and is enough to get started. If needed, you can seamlessly upgrade to the graduated tier later.
        * The **Graduated tier** is paid per event and per user beyond the lite tier limits. This tier supports more features such as multi-factor authentication. The Cloud administrator as the owning account of the App ID instance is charged for any fees for the graduated tier instances.
     * Complete the values for **Service name** (the App ID instance name), **Resource group** (if one is being used), and any tags you want.
-
-   ![Create App ID instance](images/org-guide-create-appid.png "Create App ID instance"){: caption="Figure 2. Create your APP ID instance" caption-side="bottom"}
-
 2. Read and agree to the terms and click **Create**.
 
 ## Configure the ID provider
@@ -63,9 +60,6 @@ Refer to the [App ID documentation](/docs/appid){: external} for instructions ho
 1. Go to [Manage → Access (IAM) → Identity Providers](https://cloud.ibm.com/iam/identity-providers){: external}. For **Type**, choose **IBM Cloud App ID**, then click **Create**.
 2. Specify a name and select the App ID instance from the drop-down list.
 3. Select the checkbox to enable the ID provider.
-
-   ![Create identity provider](images/org-guide-idp-reference.png "Create identity provider"){: caption="Figure 3. Create identity provider page" caption-side="bottom"}
-
 4. The default IdP URL is shown. Share this URL with users when they need to log in.
 
 ## Add Users
@@ -82,8 +76,6 @@ When you use App ID as ID provider with the Cloud directory, you can create user
 {: step}
 
 1. Go to [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external} and click the user.
-   ![Change User Access](images/org-guide-manage-user.png "Change User Access"){: caption="Figure 11. Change User Access" caption-side="bottom"}
-
    If you don't see the user that you want to manage, verify that they logged in to IBM Cloud at least once. See step 1 in the [User flow](#user-org-cloud).
    {: note}
 

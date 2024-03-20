@@ -49,9 +49,6 @@ Refer to the [App ID documentation](/docs/appid){: external} for instructions ho
 1. Go to [Manage → Access (IAM) → Identity Providers](https://cloud.ibm.com/iam/identity-providers){: external}. For **Type**, choose **IBM Cloud App ID**, then click **Create**.
 2. Specify a name and select the App ID instance from the drop-down list.
 3. Select the checkbox to enable the ID provider.
-
-   ![Create identity provider](images/org-guide-idp-reference.png "Create identity provider"){: caption="Figure 3. Create identity provider page" caption-side="bottom"}
-
 4. The default IdP URL is shown. Share this URL with users when they need to log in.
 
 ## Add a dynamic rule to the access group
@@ -67,15 +64,11 @@ Because the dynamic rules are evaluated during login, any changes are picked up 
 2. Click the **Dynamic rules** tab, then click **Add**.
    * Provide a name.
    * For the Authentication method, choose **Users federated by IBM Cloud AppID**, then select the IDP from the Identity provider drop-down list.
-
-   ![Create Dynamic Rule](images/org-guide-create-dynamic-rule1.png "Create Dynamic Rule"){: caption="Figure 9. Create Dynamic Rule" caption-side="bottom"}
 3. Click **Add a condition**, complete the following values, then click **Add**.
    * In the **Allow users when** field, enter the attribute key that is used by the IDP administrator in the ID provider user attributes, such as `project` (this string is a convention that is defined during planning).
    * Select **Contains** as the **Qualifier**.
    * In **Values**, enter the value, such as `ml`. This is the same value that the IDP administrator uses in the IDP user profile definition. It is typically the project name.
    * You might want to increase the **Session duration** to increase the period before users must log back in. Logged-in users keep their access group membership for that period, and reevaluation takes place on the next login.
-
-   ![Add Condition to Dynamic Rule](images/org-guide-create-dynamic-rule2.png "Add Condition to Dynamic Rule"){: caption="Figure 10. Add Condition to Dynamic Rule" caption-side="bottom"}
 
 ## Add users
 {: #add-user-org}
