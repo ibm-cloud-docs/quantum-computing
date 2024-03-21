@@ -24,8 +24,6 @@ This tutorial is for entities who want to upgrade from the IBM Quantum Open plan
 
 If you are an individual setting up the {{site.data.keyword.qiskit_runtime_notm}} service for the first time or if you have been invited to an instance by an administrator, follow the steps in [Getting started](/docs/quantum-computing?topic=quantum-computing-get-started) instead.
 
-![The steps to upgrade are listed](images/steps-to-migrate.svg "Upgrade process diagram"){: caption="Figure 1. Steps to upgrade from the Open plan" caption-side="bottom"}
-
 ## Sign up for IBM Cloud
 {: #sign-up-cloud}
 {: step}
