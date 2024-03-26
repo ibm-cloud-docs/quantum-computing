@@ -29,8 +29,6 @@ Activity tracker logs significant actions performed on Qiskit Runtime service in
 
 This audit log contains the fields `initiator_authnName` and `initiator_authnId`, which match the name shown in [Manage → Access (IAM) → Users](https://cloud.ibm.com/iam/users){: external}. To view this field, click on the user name, then **Details** in the **IAM ID** field.
 
-![Example of an Activity Tracker event](images/org-guide-audit-example.png "Example of an Activity Tracker event"){: caption="Figure 12. Example of an Activity Tracker event" caption-side="bottom"}
-
 To capture App ID events, open your App ID instance, then navigate to **Manage Authentication -> Authentication settings** and enable **Runtime Activity**.
 
 ## Define more fine grained roles
