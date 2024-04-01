@@ -21,6 +21,9 @@ content-type: howto
 This tutorial describes how to review final results after running a job. 
 {: shortdesc}
 
+The job's data will be deleted after 30 days.
+{: important}
+
 ## Before you begin
 {: #before-you-begin-results}
 
@@ -39,10 +42,8 @@ Jobs are also listed on the Jobs page for your quantum service instance. From th
 
 You can optionally run the [List job details API](/apidocs/quantum-computing#get-job-details-jid){: external}, manually or by using [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/get_job_details_jid){: external} to check the job's status.
 
-
 ## View the results
 {: #view-results}
-
 
 Follow up the {{site.data.keyword.qiskit_runtime_notm}} QiskitRuntimeService.run() method by running `job.result()`.
 
