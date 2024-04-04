@@ -110,7 +110,7 @@ To share a Qiskit Runtime instance with other users, complete the following step
    - Select **Access groups** as the way to assign access.
    - In the access groups table, select the one you already created and click **Add**. You will see the Access summary on the right panel. Click **Invite** at the bottom of the Access summary panel.
 
-Users will receive an email with an invitation to use this account with the access defined in the [step 3](#create-qr-account) for the shared instance. After they accept the invitation, they will see a new account in their account switcher at the top of any page on IBM Cloud. After selecting the new account, they will see the shared instance.
+Users will receive an email with an invitation to use this account with the access defined in [step 3](#create-qr-account) for the shared instance. After they accept the invitation, they will see a new account in their account switcher at the top of any page on IBM Cloud. After selecting the new account, they will see the shared instance.
 
 ## Differences between the Open and Standard plans
 {: #diff-open-standard}
