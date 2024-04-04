@@ -51,7 +51,6 @@ This tutorial uses the following terms:
 
 ## Plan your setup
 {: #planning-org}
-{: step}
 
 Before you set up Qiskit Runtime for your organization, you need to make these decisions:
 
