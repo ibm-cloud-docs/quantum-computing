@@ -116,11 +116,11 @@ For instructions to use the cloud Quantum Qiskit API, see the [authentication](/
 
 ## Test your setup
 {: #test-setup}
+{: step}
 
 Run a simple circuit using `Sampler` to ensure that your environment is set up properly:
 
 ```python
-
 from qiskit import QuantumCircuit
 
 qc = QuantumCircuit(2)
@@ -128,11 +128,19 @@ qc.h(0)
 qc.cx(0, 1)
 qc.measure_all()
 
-from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
+from qiskit_ibm_runtime import SamplerV2 as Sampler
+from qiskit_ibm_runtime.fake_provider import FakeManilaV2
 
-service = QiskitRuntimeService()
-sampler = Sampler(service=service, backend="ibmq_qasm_simulator")
-job = sampler.run([(qc,)])
+# Run the sampler job locally using FakeManilaV2
+backend = FakeManilaV2()
+
+# Get ISA circuit
+from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
+pm = generate_preset_pass_manager(backend=backend, optimization_level=1)
+isa_qc = pm.run(qc)
+
+sampler = Sampler(backend=backend)
+job = sampler.run([(isa_qc,)])
 result = job.result()
 ```
 {: codeblock}
@@ -161,17 +169,25 @@ bell.measure_all()
 
 # Execute the circuit
 from qiskit_ibm_runtime import SamplerV2 as Sampler
+from qiskit_ibm_runtime.fake_provider import FakeManilaV2
 
-backend = service.backend("ibmq_qasm_simulator")
+# Run the sampler job locally using FakeManilaV2
+backend = FakeManilaV2()
+
+from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
+pm = generate_preset_pass_manager(backend=backend, optimization_level=1)
+isa_bell = pm.run(bell)
+
 sampler = Sampler(backend)
 
-job = sampler.run([(bell,)])
+job = sampler.run([(isa_bell,)])
 result = job.result()
 
 pub_result = result[0]
 # Get counts from the classical register "meas". 
 print(f" >> Counts for the meas output register: {pub_result.data.meas.get_counts()}")
 ```
+{: codeblock}
 
 ### ISA input
 {: #isa-input}
@@ -181,7 +197,9 @@ To ensure faster and more efficient results, as of 1 March 2024, circuits and ob
 
 This change has the following important impacts:
 
-*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  The option to use the least busy system that you have access to will not work.  If you don't specify a backend, you will receive an error. 
+*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  If you don't specify a backend, you will receive an error.  
+
+   Previously, if you did not specify a backend, the least busy system that you have access to was used.  To use the least busy backend now, use code similar to this: `backend = service.least_busy(operational=True, simulator=False)`.
 *  The primitives will no longer perform layout or routing operations. Consequently, transpilation options referring to those tasks will no longer have any effect. Users can still request that the primitives do no optimization of input circuits by using `optimization_level=0`.
 
 Example code for generating ISA circuits and observables:
@@ -197,6 +215,8 @@ qc.cx(0, 1)
 
 # Set up six different observables.
 observables_labels = ["ZZ", "ZI", "IZ", "XX", "XI"]
+
+from qiskit.quantum_info import SparsePauliOp
 observables = [SparsePauliOp(label) for label in observables_labels]
 
 # Convert to an ISA circuit and layout-mapped observables.

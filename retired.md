@@ -46,3 +46,4 @@ job = service.job(<job_id>)
 # Retrieve a batch of jobs. Filtering options can be found in the QiskitRuntimeService.jobs api reference
 jobs = service.jobs(backend_name=<backend_name>)
 ```
+{: codeblock}

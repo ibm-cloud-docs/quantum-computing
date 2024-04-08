@@ -43,11 +43,10 @@ You will use the Qiskit Runtime QiskitRuntimeService.run() method, which takes t
 In the following example, we submit a circuit to the Sampler program:
 
 ```Python
-from qiskit_ibm_runtime import QiskitRuntimeService, Options, SamplerV2 as Sampler
+from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
 from qiskit import QuantumCircuit
 
 service = QiskitRuntimeService()
-options = Options(optimization_level=1)
 
 bell = QuantumCircuit(2)
 bell.h(0)
@@ -56,7 +55,7 @@ bell.measure_all()
 
 # Execute the Bell circuit
 backend = service.backend("ibmq_qasm_simulator")
-sampler = Sampler(backend=backend, options=options)
+sampler = Sampler(backend=backend)
 job = sampler.run([(bell,)])
 result = job.result()
 

@@ -143,4 +143,4 @@ The steps to implement this setup are:
 ## Next steps
 {: #next-steps-appid-org}
 
-* For more information, see [additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org).
+For more information, see [additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org).
