@@ -197,7 +197,9 @@ To ensure faster and more efficient results, as of 1 March 2024, circuits and ob
 
 This change has the following important impacts:
 
-*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  The option to use the least busy system that you have access to will not work.  If you don't specify a backend, you will receive an error. 
+*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  If you don't specify a backend, you will receive an error.  
+
+   Previously, if you did not specify a backend, the least busy system that you have access to was used.  To use the least busy backend now, use code similar to this: `backend = service.least_busy(operational=True, simulator=False)`.
 *  The primitives will no longer perform layout or routing operations. Consequently, transpilation options referring to those tasks will no longer have any effect. Users can still request that the primitives do no optimization of input circuits by using `optimization_level=0`.
 
 Example code for generating ISA circuits and observables:
