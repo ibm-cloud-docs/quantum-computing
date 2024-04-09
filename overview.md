@@ -25,7 +25,7 @@ This documentation is based on the current version of [Qiskit Runtime.](https://
 Because this service is in Beta phase, many functions are not yet available and are still under development, including some functions that are outlined in the following diagram.
 {: note}
 
-![A user is shown running the Qiskit program by using APIs that control the Qiskit Runtime Manager.](images/Qiskit_Runtime_architecture.svg "Qiskit Runtime architecture diagram"){: caption="Figure 1. Diagram of Qiskit Runtime's architecture" caption-side="bottom"}
+![The top box represents code, which consists of classical + quantum processes. The user sends the code to the Qiskit Runtime API, which is part of the Qiskit Runtime Service.  Primitive programs are part of the API. The API sends QASM circuits to quantum hardware, which returns the circuits back to the API.  All of this processing is part of the Qiskit Runtime Service.  The API then sends return values back to the user.](images/Qiskit_Runtime_architecture.svg "Qiskit Runtime architecture diagram"){: caption="Figure 1. Diagram of Qiskit Runtime's architecture" caption-side="bottom"}
 
 ## Why use Qiskit Runtime?
 {: #why}
