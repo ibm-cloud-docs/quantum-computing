@@ -19,7 +19,7 @@ content-type: howto
 # Choose a system or simulator
 {: #choose-backend}
 
-Before you run a job, you must choose a physical quantum system or a simulator to run on. Alternatively, you can use [Qiskit Runtime local testing mode.](https://docs.quantum.ibm.com/verify/local-testing-mode) {: external} to run jobs on your local system. 
+Before you run a job, you must choose a physical quantum system or a simulator to run on. Alternatively, you can use [Qiskit Runtime local testing mode.](https://docs.quantum.ibm.com/verify/local-testing-mode){: external} to run jobs on your local system. 
 {: shortdesc}
 
 The Standard plan allows access to both physical quantum systems and simulators, while the Lite plan allows access only to simulators.  
