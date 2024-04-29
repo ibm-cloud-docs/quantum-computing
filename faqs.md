@@ -113,13 +113,6 @@ You can set up spending notifications to get notified when your account or a par
 
 {{site.data.keyword.qiskit_runtime_notm}} (beta) is unavailable from the following countries (as of April 2022): Armenia, Azerbaijan, Belarus, Cambodia, China (including Hong Kong S.A.R. of the PRC), Cuba, Georgia, Iraq, Iran, Kazakhstan, Kyrgyzstan, Laos, Libya, Macao S.A.R. of the PRC, Moldova, Mongolia, Myanmar (Burma), North Korea, Russia, Sudan, Syria, Tajikistan, Turkmenistan, Ukraine, Uzbekistan, Venezuela, Vietnam, and Yemen.
 
-
-## Currently, two quantum systems are accessible through Qiskit Runtime. Will there be more systems and systems with more qubits available in the future?
-{: #faq-more-systems}
-{: faq}
-
-Yes. We expect to make more systems available through {{site.data.keyword.qiskit_runtime_notm}}, including larger systems when available. The price might vary as larger and more capable systems come online.
-
 ## How are jobs prioritized, as the available quantum systems are shared among all users in the {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #faq-share}
 {: faq}
@@ -130,7 +123,7 @@ Jobs are prioritized through a first in first out method.
 {: #faq-choose-system}
 {: faq}
 
-Yes. {{site.data.keyword.qiskit_runtime_notm}} allows you to specify the system on which your Qiskit program should be run. But it is not necessary to do so. The service uses the least busy system if none is specified.
+Yes. {{site.data.keyword.qiskit_runtime_notm}} allows you to specify the system on which your Qiskit program should be run.
 
 ## Is there support provided for {{site.data.keyword.qiskit_runtime_notm}} and what is the Service Level Objective?
 {: #faq-service}
@@ -155,7 +148,7 @@ The {{site.data.keyword.qiskit_runtime_notm}} beta service is constantly enhance
 {: #faq-more-primitives}
 {: faq}
 
-We continue to evaluate the use of quantum hardware and expand the set of primitives to meet common needs. However, the {{site.data.keyword.qiskit_runtime_notm}} in {{site.data.keyword.cloud}} is meant to serve algorithm or application development. If you require lower-level access, then your needs would be better served by the IBM Quantum channel.
+We continue to evaluate the use of quantum hardware and expand the set of primitives to meet common needs. However, the {{site.data.keyword.qiskit_runtime_notm}} in {{site.data.keyword.cloud}} is meant to serve algorithm or application development. If you require lower-level access, then your needs would be better served by the [IBM Quantum channel](https://quantum.ibm.com/){: external}.
 
 ## Can a {{site.data.keyword.qiskit_runtime_notm}} service instance be shared between users?
 {: #faq-share-instance}
@@ -187,4 +180,4 @@ The Cloud service API is programming language independent. However, Qiskit provi
 {: #faq-custom-pgm}
 {: faq}
 
-Running, adding, or changing custom programs are not supported on IBM Cloud Qiskit Runtime. If you used this function previously, you can instead use code that calls primitives. To get  performance benefits comparable to uploaded programs, you can use use sessions, which are a service aware context manager that minimizes artificial queuing latency inside an iterative workload.
+Running, adding, or changing custom programs are not supported on IBM Cloud Qiskit Runtime. If you used this function previously, you can instead use code that calls primitives. To get  performance benefits comparable to uploaded programs, you can use use [sessions](https://docs.quantum.ibm.com/run/sessions){: external}, which are a service aware context manager that minimizes artificial queuing latency inside an iterative workload.
