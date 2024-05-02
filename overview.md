@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-05-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, primitive programs, Qiskit 1.0
 
@@ -25,7 +25,7 @@ This documentation is based on the current version of [Qiskit Runtime.](https://
 Because this service is in Beta phase, many functions are not yet available and are still under development, including some functions that are outlined in the following diagram.
 {: note}
 
-![The top box represents code, which consists of classical + quantum processes. The user sends the code to the Qiskit Runtime API, which is part of the Qiskit Runtime Service.  Primitive programs are part of the API. The API sends QASM circuits to quantum hardware, which returns the circuits back to the API.  All of this processing is part of the Qiskit Runtime Service.  The API then sends return values back to the user.](images/Qiskit_Runtime_architecture.svg "Qiskit Runtime architecture diagram"){: caption="Figure 1. Diagram of Qiskit Runtime's architecture" caption-side="bottom"}
+![The top box represents code, which consists of classical + quantum processes. The user sends the code to the Qiskit Runtime API, which is part of the Qiskit Runtime Service. Primitive programs are part of the API. The API sends QASM circuits to quantum hardware, which returns the circuits back to the API.  All of this processing is part of the Qiskit Runtime Service. The API then sends return values back to the user.](images/Qiskit_Runtime_architecture.svg "Qiskit Runtime architecture diagram"){: caption="Figure 1. Diagram of Qiskit Runtime's architecture" caption-side="bottom"}
 
 ## Why use Qiskit Runtime?
 {: #why}
@@ -52,7 +52,7 @@ To ensure faster and more efficient results, as of 1 March 2024, circuits and ob
 
 This change has the following important impacts:
 
-*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  The option to use the least busy system that you have access to will not work.  If you don't specify a backend, you will receive an error. 
+*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  The option to use the least busy system that you have access to will not work.  If you don't specify a backend, you will receive an error.
 *  The primitives will no longer perform layout or routing operations. Consequently, transpilation options referring to those tasks will no longer have any effect. By default, all primitives except Sampler V2 still optimize the input circuits. To bypass all optimization, set `optimization_level=0`.
 
 ## Available primitives
@@ -77,7 +77,7 @@ Primitive program interfaces vary based on the type of task that you want to run
 
 This document uses Version 2 primitives (available with qiskit-ibm-runtime 0.21.0).  Version 2 is first the major interface change since the introduction of Qiskit Runtime primitives. Based on user feedback, this version introduces the following major new functions:
 
-Version 2 of the primitives is introduced with a new base class for both Sampler and Estimator ([BaseSamplerV2](https://docs.quantum.ibm.com/api/qiskit/qiskit.primitives.BaseSamplerV2){: external} and [BaseEstimatorV2](https://docs.quantum.ibm.com/api/qiskit/qiskit.primitives.BaseEstimatorV2){: external}), along with new types for their inputs and outputs. 
+Version 2 of the primitives is introduced with a new base class for both Sampler and Estimator ([BaseSamplerV2](https://docs.quantum.ibm.com/api/qiskit/qiskit.primitives.BaseSamplerV2){: external} and [BaseEstimatorV2](https://docs.quantum.ibm.com/api/qiskit/qiskit.primitives.BaseEstimatorV2){: external}), along with new types for their inputs and outputs.
 
 The new interface lets you specify a single circuit and multiple observables (if using Estimator) and parameter value sets for that circuit, so that sweeps over parameter value sets and observables can be efficiently specified. Previously, you had to specify the same circuit multiple times to match the size of the data to be combined.  Also, while you can still use `optimization_level` and `resilience_level` (if using Estimator) as the simple knobs, V2 primitives give you the flexibility to turn on or off individual error mitigation / suppression methods to customize them for your needs.
 
