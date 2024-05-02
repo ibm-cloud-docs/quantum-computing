@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-01-24"
+lastupdated: "2024-05-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, standard plan, pay-as-you-go, lite plan
 
@@ -28,7 +28,7 @@ There are several ways to limit your costs.
 ### Minimize iterations and shots
 {: #min-shots}
 
-The time your job takes (and therefore, its cost) depends on how many iterations you make in a session and how many shots are run in each iteration. Thus, you can manage your cost by running only as many iterations and shots as you need.
+The time your job takes (and therefore, its cost) depends on how many iterations you make in a session and how many shots are run in each iteration. Thus, you can manage your cost by running only as many iterations and shots as you need. Additionally, sessions run in dedicated mode.  That is, your session jobs get exclusive access to the backend and you are charged for the entire time the session is open, starting when the first session job starts being processed. For information, refer to the [Execution modes](https://docs.quantum.ibm.com/run/execution-modes){: external} documentation.
 
 ### Set time limits
 {: #time-limits}
@@ -40,9 +40,9 @@ The maximum execution time for a Qiskit Runtime job is the smallest of these val
 
 For example, if you specify `max_execution_time=5000` (approximately 83 minutes), but the system determines it should not take more than 300 seconds (5 minutes) to execute the job, then the job is cancelled after 5 minutes.
 
-If you are using sessions, you can also set the session's `max_time` parameter (in wall clock time).  However, this does not set a "hard" limit on a job's run time, since any session jobs that are running when the session ends continue to run. 
+If you are using sessions, you can also set the session's `max_time` parameter (in wall clock time).  However, this does not set a "hard" limit on a job's run time, since any session jobs that are running when the session ends continue to run.
 
-For instructions to use these settings, see the [Maximum execution time for a Qiskit Runtime job or session](https://docs.quantum.ibm.com/run/max-execution-time){: external} topic. 
+For instructions to use these settings, see the [Maximum execution time for a Qiskit Runtime job or session](https://docs.quantum.ibm.com/run/max-execution-time){: external} topic.
 
 
 ### Set the cost limit
@@ -63,9 +63,9 @@ An instance administrator can remove the cost limit.  To do so, navigate to the 
 ### What happens when the cost limit is reached
 {: #cost-limit-reached}
 
-When the instance's cost limit is reached, the currently running job is stopped.  Its status is set to `Cancelled` with a reason of `Ran too long`. Any available partial results are kept. 
+When the instance's cost limit is reached, the currently running job is stopped.  Its status is set to `Cancelled` with a reason of `Ran too long`. Any available partial results are kept.
 
-No further jobs can be submitted by using this instance until the cost limit is increased. 
+No further jobs can be submitted by using this instance until the cost limit is increased.
 
 ## How to see what you're being charged
 {: #pricing-bill}

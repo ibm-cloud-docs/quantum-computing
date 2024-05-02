@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-05-02"
 
 keywords: quantum, Qiskit, runtime, near time compute, run qiskit job, qiskit job status
 
@@ -37,7 +37,7 @@ You will use the Qiskit Runtime QiskitRuntimeService.run() method, which takes t
 
 - program_id: ID of the program to run.
 - inputs: Program input parameters. These input values are passed to the runtime program and depend on the parameters that are defined for the program.
-- options: Runtime options. These options control the execution environment. Currently, the only available option is backend_name, which is optional. 
+- options: Runtime options. These options control the execution environment. Currently, the only available option is backend_name, which is optional.
 - result_decoder: Optional class used to decode the job result.
 
 In the following example, we submit a circuit to the Sampler program:
@@ -60,7 +60,7 @@ job = sampler.run([(bell,)])
 result = job.result()
 
 pub_result = result[0]
-# Get counts from the classical register "meas". 
+# Get counts from the classical register "meas".
 print(f" >> Counts for the meas output register: {pub_result.data.meas.get_counts()}")
 ```
 {: codeblock}
@@ -72,6 +72,8 @@ Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create
 
 To ensure fairness, a maximum execution time for each Qiskit Runtime job exists. If a job exceeds this time limit, it is forcibly ended. The maximum execution time is the smaller of 1) the system limit and 2) the `max_execution_time` defined by the program. The system limit is three hours for simulator jobs and eight hours for jobs that are running on a physical system.
 {: note}
+
+The above example submits one simple job, but you can submit multiple jobs as a batch or you can use sessions to submit multiple iterative jobs.  For information, refer to the [Execution modes](https://docs.quantum.ibm.com/run/execution-modes){: external} documentation.
 
 ## (Optional) Return the job status
 {: #return-status}
