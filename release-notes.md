@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2024-05-02"
+lastupdated: "2024-05-14"
 content-type: release-note
 subcollection: quantum-computing
 
@@ -16,6 +16,12 @@ subcollection: quantum-computing
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.qiskit_runtime_notm}}.
 {: shortdesc}
+
+## 8 May 2024
+{: #0.8.0}
+{: release-note}
+
+The Qiskit Runtime CLI and its documentation have been removed.
 
 ## 29 April 2024
 {: #0.8.0}
