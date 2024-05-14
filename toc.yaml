@@ -56,7 +56,6 @@ toc:
       - plans.md
       - considerations-org.md
       - retired.md
-      - include: ../quantum-computing-cli-plugin/quantum-services-cli.md
       - link:
           label: API reference
           href: https://{DomainName}/apidocs/quantum-computing
@@ -65,7 +64,7 @@ toc:
           href: https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/runtime_service
       - link:
           label: Q-CTRL documentation
-          href: https://docs.q-ctrl.com/q-ctrl-embedded   
+          href: https://docs.q-ctrl.com/q-ctrl-embedded
   - navgroup:
       id: help
       topics:
