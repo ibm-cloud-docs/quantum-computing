@@ -54,7 +54,7 @@ To configure a VPE gateway, follow these steps:
 1. List the available services, including {{site.data.keyword.cloud_notm}} infrastructure services available (by default) for all VPC users.
 1. [Create an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway) for Qiskit Runtime that you want to be privately available to the VPC.
 1. [Bind a reserved IP address](/docs/vpc?topic=vpc-bind-unbind-reserved-ip) to the endpoint gateway.
-1. [View the created VPE gateways](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway) associated with Qiskit Runtime. 
+1. [View the created VPE gateways](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway) associated with Qiskit Runtime.
 
 Now your virtual server instances in the VPC can access your Qiskit Runtime instance privately.
 
@@ -66,14 +66,16 @@ After you create an endpoint gateway for Qiskit Runtime, follow these steps:
 ### Use the VPE with `qiskit-ibm-runtime` (Python SDK)
 {: #vpe-sdk}
 {: api}
-  VPE support requires `qiskit-ibm-runtime` 0.24.0 or later.
-  {: note}
+
+VPE support requires `qiskit-ibm-runtime` 0.24.0 or later.
+{: note}
 
 When instantiating `QiskitRuntimeService`, specify `private_endpoint=True`.
 
 ```python
 service = QiskitRuntimeService(token="APIKEY", instance="SERVICE_CRN", channel="ibm_cloud", private_endpoint=True)
 ```
+{: codeblock}
 
 ### Use the VPE with the Qiskit Runtime API
 {: #vpe-api}
