@@ -49,6 +49,7 @@ toc:
             topics:
             - architecture-workload-isolation.md
             - data-security.md
+            - vpe.md
       - at-events.md
   - navgroup:
       id: reference
