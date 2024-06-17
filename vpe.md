@@ -38,7 +38,7 @@ Before you target a VPE for Qiskit Runtime complete the following steps:
 ## Set up a VPE for Qiskit Runtime
 {: #endpoint-setup}
 
-When you create a VPE gateway by using the CLI or API, you must specify the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the region in which you want connect to Qiskit Runtime. Review the following table for the available regions and CRNs.
+There are several ways to create a VPE gateway. If you use the [CLI](https://cloud.ibm.com/docs/vpc?topic=vpc-vpc-reference&interface=cli#vpe-clis) or [API](https://cloud.ibm.com/apidocs/vpc/latest#create-endpoint-gateway), you must specify the [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) of the region in which you want connect to Qiskit Runtime. Review the following table for the available regions and CRNs.
 
 | Region | Plans   | Fully Qualified Domain Name (FDQN) | Cloud Resource Name (CRN) |
 |-----------------|-----------------|-----------------|-----------------|
