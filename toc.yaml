@@ -16,6 +16,7 @@ toc:
       id: learn
       topics:
       - get-started.md
+      - quickstart-partner.md
       - overview.md
       - work-qiskit-runtime.md
       - topic: release-notes.md

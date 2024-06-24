@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2024-05-14"
+lastupdated: "2022-10-14"
 content-type: release-note
 subcollection: quantum-computing
 
