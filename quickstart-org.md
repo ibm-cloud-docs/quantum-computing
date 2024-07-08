@@ -59,9 +59,9 @@ Before you set up Qiskit Runtime for your organization, you need to make these d
    * If the IDP administrator assigns users to projects, you need a string to be used as a key, such as `project` (which this tutorial uses) for project comparisons.
 * What are the projects and which service instances will belong to each? You must plan your project names carefully.
    * Do not make project names substrings of another. For example, if you use `ml` and `chemlab` for project names, then later you set up a project match for `ml`, it triggers on both values, accidentally granting more access than expected. Instead, use unique names such as `ml` and `chem-lab`. Alternatively, use prefix or suffix values to avoid such unintended substring matches.
-   * Using naming conventions, along with prefix or suffix values can help you easily allow access to several projects. 
+   * Using naming conventions, along with prefix or suffix values can help you easily allow access to several projects.
    * Quantum experiments (jobs) belong to service instances, and users that have access to an instance can see its jobs.
-   * Service instances can be based on different plans, allowing access to different backends like real devices or simulators. See [Choose a system or simulator](/docs/quantum-computing?topic=quantum-computing-choose-backend) for details.
+   * Service instances can be based on different plans, allowing access to different backends like real devices or simulators. See [Choose a QPU or simulator](/docs/quantum-computing?topic=quantum-computing-choose-backend) for details.
 * Which users need to access which projects?
 * Should users be able to delete jobs? Keeping jobs in service instances gives more traceability for billing costs. This information combines well with the audit trail of [Activity Tracker](/docs/quantum-computing?topic=quantum-computing-considerations-org), which tracks which user submitted the job.
 * Will you use access groups that directly reference Qiskit Runtime service instances or organize services into resource groups?

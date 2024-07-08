@@ -40,7 +40,7 @@ IBM made quantum computers available through the cloud in 2016. In 2022, IBM int
 {: #faq-runtime-not}
 {: faq}
 
-{{site.data.keyword.qiskit_runtime_notm}} service provides access to IBM Quantum systems. Today’s quantum systems are somewhat constrained in the size of problems that they can address due to available scale and quantum volume. Nonetheless, these systems can already be used to solve small problems and to explore this new and exciting field.
+{{site.data.keyword.qiskit_runtime_notm}} service provides access to IBM QPUs (quantum processing units). Today’s QPUs are somewhat constrained in the size of problems that they can address due to available scale and quantum volume. Nonetheless, these QPUs can already be used to solve small problems and to explore this new and exciting field.
 
 ## What skills are required to use the {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #faq-skills}
@@ -84,20 +84,20 @@ Currently, there are two plans. The Lite plan allows the user to access only qua
 {: #faq-pricing}
 {: faq}
 
-The {{site.data.keyword.qiskit_runtime_notm}} Standard plan is a pay-as-you-go service and costs $1.6 per second when running on physical systems. For more information, see the [Qiskit Runtime Standard plan](/docs/quantum-computing?topic=quantum-computing-cost) topic.
+The {{site.data.keyword.qiskit_runtime_notm}} Standard plan is a pay-as-you-go service and costs $1.6 per second when running on physical QPUs (quantum processing units). For more information, see the [Qiskit Runtime Standard plan](/docs/quantum-computing?topic=quantum-computing-cost) topic.
 
 ##	What is the pricing metric of the {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #faq-pricing-metric}
 {: faq}
 
-For this service, you are charged for job execution time.  Job execution usage is the amount of time that the system is dedicated to processing your job. Queue time is not included. For more information, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
+For this service, you are charged for job execution time.  Job execution usage is the amount of time that the QPU is dedicated to processing your job. Queue time is not included. For more information, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
 
 
 ##	Can I use {{site.data.keyword.qiskit_runtime_notm}} with my {{site.data.keyword.cloud}} lite account?
 {: #faq-Lite}
 {: faq}
 
-Yes, but with the Lite plan you can access only quantum simulators. To use IBM Quantum systems, you need to upgrade to an IBM pay-as-you-go cloud account and use the Standard plan.
+Yes, but with the Lite plan you can access only quantum simulators. To use IBM QPUs, you need to upgrade to an IBM pay-as-you-go cloud account and use the Standard plan.
 
 ##	Do I get a monthly bill and what does it look like for {{site.data.keyword.qiskit_runtime_notm}} with {{site.data.keyword.cloud}}?
 {: #faq-bill}
@@ -113,17 +113,17 @@ You can set up spending notifications to get notified when your account or a par
 
 {{site.data.keyword.qiskit_runtime_notm}} (beta) is unavailable from the following countries (as of April 2022): Armenia, Azerbaijan, Belarus, Cambodia, China (including Hong Kong S.A.R. of the PRC), Cuba, Georgia, Iraq, Iran, Kazakhstan, Kyrgyzstan, Laos, Libya, Macao S.A.R. of the PRC, Moldova, Mongolia, Myanmar (Burma), North Korea, Russia, Sudan, Syria, Tajikistan, Turkmenistan, Ukraine, Uzbekistan, Venezuela, Vietnam, and Yemen.
 
-## How are jobs prioritized, as the available quantum systems are shared among all users in the {{site.data.keyword.qiskit_runtime_notm}} service?
+## How are jobs prioritized, as the available QPUs are shared among all users in the {{site.data.keyword.qiskit_runtime_notm}} service?
 {: #faq-share}
 {: faq}
 
 Jobs are prioritized through a first in first out method.
 
-## Can I choose a specific system from those offered by Qiskit Runtime?
+## Can I choose a specific QPU from those offered by Qiskit Runtime?
 {: #faq-choose-system}
 {: faq}
 
-Yes. {{site.data.keyword.qiskit_runtime_notm}} allows you to specify the system on which your Qiskit program should be run.
+Yes. {{site.data.keyword.qiskit_runtime_notm}} allows you to specify the QPU on which your Qiskit program should be run.
 
 ## Is there support provided for {{site.data.keyword.qiskit_runtime_notm}} and what is the Service Level Objective?
 {: #faq-service}
@@ -144,7 +144,7 @@ For help with Qiskit, access our Slack community: [Qiskit Slack](https://qisk.it
 
 The {{site.data.keyword.qiskit_runtime_notm}} beta service is constantly enhanced with new features and functions based on feedback from our users. Enhancements from quantum hardware and software might also contribute to more features and functions of the service. The integration of the service in {{site.data.keyword.cloud}} creates many possibilities to interact with other services on {{site.data.keyword.cloud}}. At the moment, no specific plan for a general availability exists.
 
-## Today there are two primitive programs available to access IBM Quantum systems. Are there plans to provide more primitives? For instance, for more low-level access to IBM Quantum systems?
+## Today there are two primitive programs available to access IBM QPUs. Are there plans to provide more primitives? For instance, for more low-level access to IBM QPUs?
 {: #faq-more-primitives}
 {: faq}
 
@@ -162,7 +162,7 @@ We continue to evaluate the use of quantum hardware and expand the set of primit
 
 The service can be deployed in about 10 seconds and can be used immediately after it appears in the {{site.data.keyword.cloud}} account resource list.
 
-## How can I access IBM Quantum systems after the Qiskit Runtime service is deployed in IBM Cloud?
+## How can I access IBM QPUs after the Qiskit Runtime service is deployed in IBM Cloud?
 {: #faq-access-systems}
 {: faq}
 

@@ -25,7 +25,7 @@ This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit
 
 - If you are an entity upgrading from an IBM Quantum program who needs to set up Qiskit Runtime, refer to [Upgrade from the Open plan](/docs/quantum-computing?topic=quantum-computing-upgrade-from-open) for instructions to set up a cloud account, a service instance, and work with users.
 - If your organization has a more complex structure, refer to [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org) for more flexible instructions to set up a service instance and work with users.
-- If you are an individual setting up the {{site.data.keyword.qiskit_runtime_notm}} service for the first time or if you have been invited to an instance by an administrator, continue following the steps in this topic. 
+- If you are an individual setting up the {{site.data.keyword.qiskit_runtime_notm}} service for the first time or if you have been invited to an instance by an administrator, continue following the steps in this topic.
 
 ## Create a service instance
 {: #create-configure}
@@ -36,15 +36,15 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, choose the appropriate service plan, depending on what you need access to. For more information about these plans, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
 
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} by following our examples and tutorials for one of the pre-built programs available for running circuits efficiently.
-      - **Standard**: A pay-as-you-go model for accessing IBM Quantum systems and simulators. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware, while maintaining access to all of the simulators available to the Lite plan. This plan includes access to Q-CTRL Automated Error Suppression at no additional cost. 
+      - **Standard**: A pay-as-you-go model for accessing IBM QPUs and simulators. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware, while maintaining access to all of the simulators available to the Lite plan. This plan includes access to Q-CTRL Automated Error Suppression at no additional cost.
 
          Because this is not a free plan, it is important to understand how to best manage your costs. See [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
 
          To learn more about Q-CTRL, refer to the [Q-CTRL documentation.](https://docs.q-ctrl.com/q-ctrl-embedded){: external}.
 
 2. Complete the required information, then click **Create**.
-   
-   To use Q-CTRL Automated Error Suppression, choose it as your **Performance management strategy** on this page. 
+
+   To use Q-CTRL Automated Error Suppression, choose it as your **Performance management strategy** on this page.
    {: note}
 
 ## Install or update Qiskit packages
@@ -105,12 +105,12 @@ from qiskit_ibm_runtime import QiskitRuntimeService
 # Save account to disk and save it as the default.
 QiskitRuntimeService.save_account(channel="ibm_cloud", token="<IBM Cloud API key>", instance="<IBM Cloud CRN>", name="account-name", set_as_default=True)
 
-# Load the saved credentials 
+# Load the saved credentials
 service = QiskitRuntimeService(name="account-name")
 ```
 {: codeblock}
 
-If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials. 
+If you need to update your saved credentials, run `save_account` again, passing in `overwrite=True`  and the updated credentials.
 
 For instructions to use the cloud Quantum Qiskit API, see the [authentication](/apidocs/quantum-computing#authentication){: external} section in the API documentation.
 
@@ -151,9 +151,9 @@ result = job.result()
 
 Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview#primitive-programs) to interface with quantum computers. The following programs are publicly available. To learn more about the changes in the V2 primitives, read [Migrate to the V2 primitives](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
 
-- **Sampler**:  
+- **Sampler**:
        Allows a user to specify a circuit as an input and then return the outputs (bitstrings) from every shot (V2), or quasiprobabilities (V1). This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.
-- **Estimator**:  
+- **Estimator**:
        Allows a user to specify a list of circuits and observables and selectively group between the lists to efficiently evaluate expectation values and variances for a given parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators that are required for many algorithms. 
 
 This example uses the Sampler primitive:
@@ -184,7 +184,7 @@ job = sampler.run([(isa_bell,)])
 result = job.result()
 
 pub_result = result[0]
-# Get counts from the classical register "meas". 
+# Get counts from the classical register "meas".
 print(f" >> Counts for the meas output register: {pub_result.data.meas.get_counts()}")
 ```
 {: codeblock}
@@ -192,14 +192,14 @@ print(f" >> Counts for the meas output register: {pub_result.data.meas.get_count
 ### ISA input
 {: #isa-input}
 
-To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the system (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
+To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the QPU (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
 {: important}
 
 This change has the following important impacts:
 
-*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  If you don't specify a backend, you will receive an error.  
+*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  If you don't specify a backend, you will receive an error.
 
-   Previously, if you did not specify a backend, the least busy system that you have access to was used.  To use the least busy backend now, use code similar to this: `backend = service.least_busy(operational=True, simulator=False)`.
+   Previously, if you did not specify a backend, the least busy QPU that you have access to was used.  To use the least busy QPU now, use code similar to this: `backend = service.least_busy(operational=True, simulator=False)`.
 *  The primitives will no longer perform layout or routing operations. Consequently, transpilation options referring to those tasks will no longer have any effect. Users can still request that the primitives do no optimization of input circuits by using `optimization_level=0`.
 
 Example code for generating ISA circuits and observables:
