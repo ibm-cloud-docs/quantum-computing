@@ -26,7 +26,7 @@ The Qiskit Runtime service offers these plans for running quantum programs:
 ## Lite plans
 {: #lite-plan-details}
 
-A free plan that gives you access to quantum simulators to help you get started with Qiskit Runtime. It does not include access to IBM Quantum systems. The following simulators are included in this plan:
+A free plan that gives you access to quantum simulators to help you get started with Qiskit Runtime. It does not include access to IBM QPUs. The following simulators are included in this plan:
 
 
 - **ibmq_qasm_simulator**: A general-purpose simulator for simulating quantum circuits both ideally and subject to noise modeling. The simulation method is automatically selected based on the input circuits and parameters.
@@ -48,16 +48,16 @@ A free plan that gives you access to quantum simulators to help you get started 
 ## Standard plan
 {: #standard-plan}
 
-A pay-as-you-go plan for accessing IBM Quantum systems and simulators. Build your own programs and access all the benefits of Qiskit Runtime by running on real quantum hardware.
+A pay-as-you-go plan for accessing IBM QPUs and simulators. Build your own programs and access all the benefits of Qiskit Runtime by running on real quantum hardware.
 
 ## Pricing overview
 {: #pricing-overview}
 
-The Lite plan is free. The Standard plan charges you per *Qiskit Runtime second* when running on physical systems. The following diagram illustrates what is included in job execution usage. Any time spent waiting for results or in the queue for the quantum computer are excluded.
+The Lite plan is free. The Standard plan charges you per *Qiskit Runtime second* when running on physical QPUs. The following diagram illustrates what is included in job execution usage. Any time spent waiting for results or in the queue for the quantum computer are excluded.
 
 ![Everything before the program starts (such as queuing) is free. After the job starts, it costs $1.60 per second.](images/Runtime_Accounting_Diagram.svg "Runtime second accounting"){: caption="Figure 1. Runtime second accounting" caption-side="bottom"}
 
-Job execution time is the amount of time that the system is dedicated to processing your job.
+Job execution time is the amount of time that the QPU is dedicated to processing your job.
 
 ## Next steps
 {: #next-steps-plans}

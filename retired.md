@@ -15,24 +15,24 @@ subcollection: quantum-computing
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Retired systems
+# Retired QPUs
 {: #retired}
 
-The following systems have been retired. For the list of currently available systems, see the [Compute resources page.](https://cloud.ibm.com/quantum/resources/systems){: external} 
+The following QPUs have been retired. For the list of currently available QPUs, see the [Compute resources page.](https://cloud.ibm.com/quantum/resources/systems){: external}
 
 
-| System name       | Qubit count | Retirement date (Year - month - day) |
+| QPU name       | Qubit count | Retirement date (Year - month - day) |
 | ----------------- | ----------- | --------------- |
 | ibm_canberra      | **27**      | 2023-08-15      |
 | ibm_nazca         | **127**     | 2023-08-15      |
 | ibm_algiers       | **27**      | 2024-02-20      |
-{: caption="Table: Retired systems" caption-side="bottom"}
+{: caption="Table: Retired QPUs" caption-side="bottom"}
 
 
-## Retrieve a job from a retired system
+## Retrieve a job from a retired QPU
 {: #retired-retrieve}
 
-To retrieve jobs from a retired system, use code similar to this:
+To retrieve jobs from a retired QPU, use code similar to this:
 
 ```python
 from qiskit_ibm_runtime import QiskitRuntimeService

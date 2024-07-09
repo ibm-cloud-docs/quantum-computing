@@ -17,7 +17,7 @@ subcollection: quantum-computing
 # Qiskit Runtime overview
 {: #overview}
 
-Get a glimpse of the quantum computing future with our world-leading {{site.data.keyword.qiskit_runtime_notm}}, a new architecture that delivers significant performance enhancements to program execution. By using our physical systems and simulators (classical emulators of quantum systems), you can experience frictionless quantum computing. That is, the ability to run quantum programs in an environment where the classical computer is physically closer to the quantum computer. Test programs and algorithms, and develop new models with our cloud-based quantum runtime for drastically improved capacity and higher performance.
+Get a glimpse of the quantum computing future with our world-leading {{site.data.keyword.qiskit_runtime_notm}}, a new architecture that delivers significant performance enhancements to program execution. By using our physical QPUs and simulators (classical emulators of QPUs), you can experience frictionless quantum computing. That is, the ability to run quantum programs in an environment where the classical computer is physically closer to the quantum computer. Test programs and algorithms, and develop new models with our cloud-based quantum runtime for drastically improved capacity and higher performance.
 {: shortdesc}
 
 This documentation is based on the current version of [Qiskit Runtime.](https://docs.quantum.ibm.com/api/qiskit-ibm-runtime){: external}
@@ -45,14 +45,14 @@ For example, an algorithm researcher and developer cares about information beyon
 
 Our primitives provide methods that make it easier to build modular algorithms and other higher-order programs. Instead of simply returning counts, they return more immediately meaningful information. Additionally, they provide a seamless way to access the latest optimizations in IBM Quantum hardware and software.
 
-The basic operations that one can do with a probability distribution is to sample from it or to estimate quantities on it. Therefore, these operations form the fundamental building blocks of quantum algorithm development. The Qiskit Runtime primitives (Sampler and Estimator) use these sampling and estimating operations as core interfaces to our quantum systems. Learn more about what you can do with Qiskit Runtime primitive programs in the [IBM Quantum documentation.](https://docs.quantum.ibm.com/run){: external}
+The basic operations that one can do with a probability distribution is to sample from it or to estimate quantities on it. Therefore, these operations form the fundamental building blocks of quantum algorithm development. The Qiskit Runtime primitives (Sampler and Estimator) use these sampling and estimating operations as core interfaces to our QPUs. Learn more about what you can do with Qiskit Runtime primitive programs in the [IBM Quantum documentation.](https://docs.quantum.ibm.com/run){: external}
 
-To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the system (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. *Exception*: This does not apply when using Q-CTRL. See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
+To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the QPU (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. *Exception*: This does not apply when using Q-CTRL. See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
 {: important}
 
 This change has the following important impacts:
 
-*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  The option to use the least busy system that you have access to will not work.  If you don't specify a backend, you will receive an error.
+*  Because transpilation is done to match the circuits available on a specific backend, you **must** specify a backend.  The option to use the least busy QPU that you have access to will not work.  If you don't specify a backend, you will receive an error.
 *  The primitives will no longer perform layout or routing operations. Consequently, transpilation options referring to those tasks will no longer have any effect. By default, all primitives except Sampler V2 still optimize the input circuits. To bypass all optimization, set `optimization_level=0`.
 
 ## Available primitives
@@ -81,7 +81,7 @@ Version 2 of the primitives is introduced with a new base class for both Sampler
 
 The new interface lets you specify a single circuit and multiple observables (if using Estimator) and parameter value sets for that circuit, so that sweeps over parameter value sets and observables can be efficiently specified. Previously, you had to specify the same circuit multiple times to match the size of the data to be combined.  Also, while you can still use `optimization_level` and `resilience_level` (if using Estimator) as the simple knobs, V2 primitives give you the flexibility to turn on or off individual error mitigation / suppression methods to customize them for your needs.
 
-To reduce the total job execution time, V2 primitives only accept circuits and observables that use instructions supported by the target system (referred to as instruction set architecture (ISA) circuits and observables). V2 primitives do not perform layout, routing, and translation operations but continue to optimize the circuits if you specify `optimization_level>0`.  See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
+To reduce the total job execution time, V2 primitives only accept circuits and observables that use instructions supported by the target QPU (referred to as instruction set architecture (ISA) circuits and observables). V2 primitives do not perform layout, routing, and translation operations but continue to optimize the circuits if you specify `optimization_level>0`.  See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
 
 V2 Sampler is simplified to focus on its core task of sampling the output register from execution of quantum circuits. It returns the samples, whose type is defined by the program, without weights. The output data is also separated by the output register names defined by the program. This change enables future support for circuits with classical control flow.
 
