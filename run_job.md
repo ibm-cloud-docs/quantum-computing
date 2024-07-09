@@ -70,7 +70,7 @@ If using an instance with Q-CTRL performance management enabled, there is no nee
 
 Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create-job){: external}; optionally use [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/create_job){: external}. You must specify the program ID and the backend to run on, and can optionally supply parameters. Note the job ID that is returned. You need this information to check the status and view results.
 
-To ensure fairness, a maximum execution time for each Qiskit Runtime job exists. If a job exceeds this time limit, it is forcibly ended. The maximum execution time is the smaller of 1) the system limit and 2) the `max_execution_time` defined by the program. The system limit is three hours for simulator jobs and eight hours for jobs that are running on a physical QPU.
+To ensure fairness, a maximum execution time for each Qiskit Runtime job exists. If a job exceeds this time limit, it is forcibly ended. The maximum execution time is the smaller of 1) the QPU limit and 2) the `max_execution_time` defined by the program. The execution time limit is three hours for simulator jobs and eight hours for jobs that are running on a physical QPU.
 {: note}
 
 The above example submits one simple job, but you can submit multiple jobs as a batch or you can use sessions to submit multiple iterative jobs.  For information, refer to the [Execution modes](https://docs.quantum.ibm.com/run/execution-modes){: external} documentation.
