@@ -19,7 +19,7 @@ content-type: howto
 # Choose a QPU or simulator
 {: #choose-backend}
 
-Before you run a job, you must choose a physical QPU (quantum processing unit) or a simulator to run on. Alternatively, you can use [Qiskit Runtime local testing mode.](https://docs.quantum.ibm.com/verify/local-testing-mode){: external} to run jobs on your local computer.
+Before you run a job, you must choose a physical QPU (quantum processing unit) or a simulator to run on. Alternatively, you can use [Qiskit Runtime local testing mode.](https://docs.quantum.ibm.com/guides/local-testing-mode){: external} to run jobs on your local computer.
 {: shortdesc}
 
 The Standard plan allows access to both physical QPUs and simulators, while the Lite plan allows access only to simulators.
