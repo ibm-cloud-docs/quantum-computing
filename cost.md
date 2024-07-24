@@ -28,7 +28,7 @@ There are several ways to limit your costs.
 ### Minimize iterations and shots
 {: #min-shots}
 
-The time your job takes (and therefore, its cost) depends on how many iterations you make in a session and how many shots are run in each iteration. Thus, you can manage your cost by running only as many iterations and shots as you need. Additionally, sessions run in dedicated mode.  That is, your session jobs get exclusive access to the backend and you are charged for the entire time the session is open, starting when the first session job starts being processed. For information, refer to the [Execution modes](https://docs.quantum.ibm.com/run/execution-modes){: external} documentation.
+The time your job takes (and therefore, its cost) depends on how many iterations you make in a session and how many shots are run in each iteration. Thus, you can manage your cost by running only as many iterations and shots as you need. Additionally, sessions run in dedicated mode.  That is, your session jobs get exclusive access to the backend and you are charged for the entire time the session is open, starting when the first session job starts being processed. For information, refer to the [Execution modes](https://docs.quantum.ibm.com/guides/execution-modes){: external} documentation.
 
 ### Set time limits
 {: #time-limits}
@@ -42,7 +42,7 @@ For example, if you specify `max_execution_time=5000` (approximately 83 minutes)
 
 If you are using sessions, you can also set the session's `max_time` parameter (in wall clock time).  However, this does not set a "hard" limit on a job's run time, since any session jobs that are running when the session ends continue to run.
 
-For instructions to use these settings, see the [Maximum execution time for a Qiskit Runtime job or session](https://docs.quantum.ibm.com/run/max-execution-time){: external} topic.
+For instructions to use these settings, see the [Maximum execution time for a Qiskit Runtime job or session](https://docs.quantum.ibm.com/guides/max-execution-time){: external} topic.
 
 
 ### Set the cost limit

@@ -51,7 +51,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 {: #install-packages}
 {: step}
 
-Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit install and setup topic](https://docs.quantum.ibm.com/start/install){: external}. Periodically check the [Qiskit release notes](https://docs.quantum.ibm.com/api/qiskit/release-notes){: external} (or rerun these commands) so that you always have the latest version.
+Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit install and setup topic](https://docs.quantum.ibm.com/guides/install){: external}. Periodically check the [Qiskit release notes](https://docs.quantum.ibm.com/api/qiskit/release-notes){: external} (or rerun these commands) so that you always have the latest version.
 
 Be sure to run these commands even if you already installed the packages, to ensure that you have the latest versions.
 {: note}
@@ -192,7 +192,7 @@ print(f" >> Counts for the meas output register: {pub_result.data.meas.get_count
 ### ISA input
 {: #isa-input}
 
-To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the QPU (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. See the [transpilation documentation](https://docs.quantum.ibm.com/transpile){: external} for instructions to transform circuits.
+To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the QPU (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. See the [transpilation documentation](https://docs.quantum.ibm.com/guides){: external} for instructions to transform circuits.
 {: important}
 
 This change has the following important impacts:

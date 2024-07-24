@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2023
-lastupdated: "2022-10-14"
+lastupdated: "2024-07-24"
 content-type: release-note
 subcollection: quantum-computing
 
@@ -17,17 +17,29 @@ subcollection: quantum-computing
 Use these release notes to learn about the latest updates to {{site.data.keyword.qiskit_runtime_notm}}.
 {: shortdesc}
 
+## 20 June 2024
+{: #0.11.0}
+{: release-note}
+
+Use the `mode` argument to run in job, batch, or session mode. For information, refer to the [Execution modes](https://docs.quantum.ibm.com/guides/execution-modes){: external} documentation.
+
 ## 8 May 2024
-{: #0.8.0}
+{: #0.10.0}
 {: release-note}
 
 The Qiskit Runtime CLI and its documentation have been removed.
 
 ## 29 April 2024
-{: #0.8.0}
+{: #0.9.0}
 {: release-note}
 
-Sessions run in _dedicated_ mode, which might increase the cost of running a session.  For information, refer to the [Execution modes](https://docs.quantum.ibm.com/run/execution-modes){: external} documentation.
+Sessions run in _dedicated_ mode, which might increase the cost of running a session.  For information, refer to the [Execution modes](https://docs.quantum.ibm.com/guides/execution-modes){: external} documentation.
+
+## 31 March 2024
+{: #.8.0}
+{: release-note}
+
+To use sessions, you must update to `qiskit-ibm-runtime` 0.20.0 or later.
 
 ## 1 March 2024
 {: #0.7.0}

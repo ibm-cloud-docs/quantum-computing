@@ -25,7 +25,7 @@ This tutorial walks you through the steps to use a program to run a job on an IB
 ## Before you begin
 {: #run-program-byb}
 
-You need a circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://docs.quantum.ibm.com/build/circuit-construction){: external}.
+You need a circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://docs.quantum.ibm.com/guides/circuit-construction){: external}.
 
 
 ## Run the job
@@ -73,7 +73,7 @@ Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create
 To ensure fairness, a maximum execution time for each Qiskit Runtime job exists. If a job exceeds this time limit, it is forcibly ended. The maximum execution time is the smaller of 1) the QPU limit and 2) the `max_execution_time` defined by the program. The execution time limit is three hours for simulator jobs and eight hours for jobs that are running on a physical QPU.
 {: note}
 
-The above example submits one simple job, but you can submit multiple jobs as a batch or you can use sessions to submit multiple iterative jobs.  For information, refer to the [Execution modes](https://docs.quantum.ibm.com/run/execution-modes){: external} documentation.
+The above example submits one simple job, but you can submit multiple jobs as a batch or you can use sessions to submit multiple iterative jobs.  For information, refer to the [Execution modes](https://docs.quantum.ibm.com/guides/execution-modes){: external} documentation.
 
 ## (Optional) Return the job status
 {: #return-status}
