@@ -42,6 +42,9 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 
          To learn more about Q-CTRL, refer to the [Q-CTRL documentation.](https://docs.q-ctrl.com/q-ctrl-embedded){: external}.
 
+         Q-CTRL has been deprecated and support will be removed 18 October 2024.
+         {: note}
+
 2. Complete the required information, then click **Create**.
 
    To use Q-CTRL Automated Error Suppression, choose it as your **Performance management strategy** on this page.
@@ -233,4 +236,3 @@ observables = [
 
 - View the [API reference](/apidocs/quantum-computing){: external}.
 - Learn about [IBM Quantum Computing](https://www.ibm.com/quantum/){: external}.
-

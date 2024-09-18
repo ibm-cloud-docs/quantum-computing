@@ -65,7 +65,7 @@ print(f" >> Counts for the meas output register: {pub_result.data.meas.get_count
 ```
 {: codeblock}
 
-If using an instance with Q-CTRL performance management enabled, there is no need to specify `optimization` or `resilience_level`, as the strategy includes automatic presets. Setting `optimization_level` or `resilience_level` to 0 causes an execution error. For more information visit the [Q-CTRL documentation](https://docs.q-ctrl.com/q-ctrl-embedded){: external}.
+If using an instance with Q-CTRL performance management enabled (deprecated), there is no need to specify `optimization` or `resilience_level`, as the strategy includes automatic presets. Setting `optimization_level` or `resilience_level` to 0 causes an execution error. For more information visit the [Q-CTRL documentation](https://docs.q-ctrl.com/q-ctrl-embedded){: external}.
 {: note}
 
 Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create-job){: external}; optionally use [Swagger](https://us-east.quantum-computing.cloud.ibm.com/openapi/#/Jobs/create_job){: external}. You must specify the program ID and the backend to run on, and can optionally supply parameters. Note the job ID that is returned. You need this information to check the status and view results.
