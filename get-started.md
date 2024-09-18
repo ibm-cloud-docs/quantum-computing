@@ -84,9 +84,6 @@ service = QiskitRuntimeService(channel="ibm_cloud", token="<IBM Cloud API key>",
 ```
 {: codeblock}
 
-If you set up your instance to include Q-CTRL performance management, when initializing the `QiskitRuntimeService()`, include the additional argument `channel_strategy="q-ctrl"`. To learn more about Q-CTRL performance management strategy visit the [Q-CTRL documentation](https://docs.q-ctrl.com/q-ctrl-embedded).
-{: note}
-
 ### Find your access credentials
 {: #find-credentials}
 
