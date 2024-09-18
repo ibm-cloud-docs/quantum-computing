@@ -47,7 +47,7 @@ Our primitives provide methods that make it easier to build modular algorithms a
 
 The basic operations that one can do with a probability distribution is to sample from it or to estimate quantities on it. Therefore, these operations form the fundamental building blocks of quantum algorithm development. The Qiskit Runtime primitives (Sampler and Estimator) use these sampling and estimating operations as core interfaces to our QPUs. Learn more about what you can do with Qiskit Runtime primitive programs in the [IBM Quantum documentation.](https://docs.quantum.ibm.com/guides){: external}
 
-To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the QPU (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. *Exception*: This does not apply when using Q-CTRL. See the [transpilation documentation](https://docs.quantum.ibm.com/guides){: external} for instructions to transform circuits.
+To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the QPU (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. *Exception*: This does not apply when using Q-CTRL (deprecated). See the [transpilation documentation](https://docs.quantum.ibm.com/guides){: external} for instructions to transform circuits.
 {: important}
 
 This change has the following important impacts:
