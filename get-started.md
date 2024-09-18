@@ -42,7 +42,7 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 
          To learn more about Q-CTRL, refer to the [Q-CTRL documentation.](https://docs.q-ctrl.com/q-ctrl-embedded){: external}.
 
-         Q-CTRL has been deprecated and support will be removed 18 October 2024.
+         Q-CTRL has been deprecated and support will be removed 18 October 2024. To continue using this service, migrate to [Q-CTRL Fire Opal,](https://q-ctrl.com/fire-opal){: external} the same performance management product accessible directly through Q-CTRL. You can connect your IBM Cloud API key and Qiskit Runtime CRN to Fire Opal. Contact support@qctrl.com if you need help.
          {: note}
 
 2. Complete the required information, then click **Create**.
