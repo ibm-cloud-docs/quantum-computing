@@ -23,9 +23,11 @@ The following QPUs have been retired. For the list of currently available QPUs, 
 
 | QPU name       | Qubit count | Retirement date (Year - month - day) |
 | ----------------- | ----------- | --------------- |
+| ibm_kyoto         | **127**     | 2024-09-05      |
+| ibm_osaka         | **127**     | 2024-08-13      |
+| ibm_algiers       | **27**      | 2024-02-20      |
 | ibm_canberra      | **27**      | 2023-08-15      |
 | ibm_nazca         | **127**     | 2023-08-15      |
-| ibm_algiers       | **27**      | 2024-02-20      |
 {: caption="Table: Retired QPUs" caption-side="bottom"}
 
 
@@ -37,7 +39,7 @@ To retrieve jobs from a retired QPU, use code similar to this:
 ```python
 from qiskit_ibm_runtime import QiskitRuntimeService
 
-# Load your IBM Quantum account. 
+# Load your IBM Quantum account.
 service = QiskitRuntimeService(channel="ibm_cloud", instance="instance_name")
 
 # Retrieve a single job by ID
