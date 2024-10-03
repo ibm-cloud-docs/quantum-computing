@@ -44,7 +44,6 @@ If you are using sessions, you can also set the session's `max_time` parameter (
 
 For instructions to use these settings, see the [Maximum execution time for a Qiskit Runtime job or session](https://docs.quantum.ibm.com/guides/max-execution-time){: external} topic.
 
-
 ### Set the cost limit
 {: #admin-limit-cost}
 
@@ -54,6 +53,9 @@ The instance's cost limit refers to the total cost of all jobs run with this ins
 
 The cost limit is always specified in US dollars (USD), then converted to runtime seconds.  However, for monthly billing purposes, you are charged in your local currency, specified on your IBM Cloud account. Because currency exchange rates can fluctuate, the cost for _X_ runtime seconds might be different when initially calculated in USD than when you're actually charged in your local currency.  As a result, if your local currency is not USD, the total amount charged for the number of seconds specified in this field could vary from the dollar amount you specify.
 {: note}
+
+Workloads sent as sessions or batches do not currently take into account the max cost limit, so the usage can exceed the max cost limit.
+{: important}
 
 ## How to remove a cost limit
 {: #unlimit-cost}
