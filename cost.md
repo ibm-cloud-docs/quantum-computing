@@ -33,16 +33,19 @@ The time your job takes (and therefore, its cost) depends on how many iterations
 ### Set time limits
 {: #time-limits}
 
-The maximum execution time for a Qiskit Runtime job is the smallest of these values:
+The maximum execution time for a Qiskit Runtime workload is the smallest of these values:
 
 * The `max_execution_time` defined on the job's options by using the ``max_execution_time`` parameter. This execution time is the time that the QPU complex (including control software, control electronics, QPU, and so on) is engaged in processing the job.
 * The system-calculated limit - The system calculates an appropriate job timeout value based on the input circuits and options. This timeout is capped at 3 hours to ensure fair device usage.
 
 For example, if you specify `max_execution_time=5000` (approximately 83 minutes), but the system determines it should not take more than 300 seconds (5 minutes) to execute the job, then the job is cancelled after 5 minutes.
 
-If you are using sessions, you can also set the session's `max_time` parameter (in wall clock time).  However, this does not set a "hard" limit on a job's run time, since any session jobs that are running when the session ends continue to run.
+If you are using sessions or batches, you can also set the session's or batch's `max_time` parameter (in wall clock time).  However, this does not set a "hard" limit on a job's run time, since any session jobs that are running when the session ends continue to run.
 
-For instructions to use these settings, see the [Maximum execution time for a Qiskit Runtime job or session](https://docs.quantum.ibm.com/guides/max-execution-time){: external} topic.
+To keep sessions and batches from surpassing the cost limit, the system might override their `max_time` settings.
+{: important}
+
+For instructions to use these settings, see the [Maximum execution time for Qiskit Runtime workloads](https://docs.quantum.ibm.com/guides/max-execution-time){: external} topic.
 
 ### Set the cost limit
 {: #admin-limit-cost}
@@ -53,9 +56,6 @@ The instance's cost limit refers to the total cost of all jobs run with this ins
 
 The cost limit is always specified in US dollars (USD), then converted to runtime seconds.  However, for monthly billing purposes, you are charged in your local currency, specified on your IBM Cloud account. Because currency exchange rates can fluctuate, the cost for _X_ runtime seconds might be different when initially calculated in USD than when you're actually charged in your local currency.  As a result, if your local currency is not USD, the total amount charged for the number of seconds specified in this field could vary from the dollar amount you specify.
 {: note}
-
-Workloads sent as sessions or batches do not currently take into account the max cost limit, so the usage can exceed the max cost limit.
-{: important}
 
 ## How to remove a cost limit
 {: #unlimit-cost}
