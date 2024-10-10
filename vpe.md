@@ -44,7 +44,7 @@ There are several ways to create a VPE gateway. If you use the [CLI](https://clo
 |-----------------|-----------------|-----------------|-----------------|
 | `eu-de` | `Standard` | `private.eu-de.quantum-computing.cloud.ibm.com` | `crn:v1:bluemix:public:quantum-computing:eu-de:::endpoint:qiskit-runtime.private.eu-de.quantum-computing.cloud.ibm.com` |
 |  | `Channel Partner` | `qiskitruntime.private.eu-de.quantum-computing.cloud.ibm.com`, `scheduler.private.eu-de.quantum-computing.cloud.ibm.com` | `crn:v1:bluemix:public:quantum-computing:eu-de:::endpoint:qiskit-runtime.private.eu-de.quantum-computing.cloud.ibm.com` |
-{: caption="Table 1. Region availability, Fully Qualified Domain Names and Cloud Resource Names for connecting Qiskit Runtime over {{site.data.keyword.cloud_notm}} private networks" caption-side="bottom"}
+{: caption="Region availability, Fully Qualified Domain Names and Cloud Resource Names for connecting Qiskit Runtime over {{site.data.keyword.cloud_notm}} private networks" caption-side="bottom"}
 
 ### Configuring an endpoint gateway
 {: #endpoint-gateway-servicename}

@@ -25,7 +25,7 @@ This documentation is based on the current version of [Qiskit Runtime.](https://
 Because this service is in Beta phase, many functions are not yet available and are still under development, including some functions that are outlined in the following diagram.
 {: note}
 
-![The top box represents code, which consists of classical + quantum processes. The user sends the code to the Qiskit Runtime API, which is part of the Qiskit Runtime Service. Primitive programs are part of the API. The API sends QASM circuits to quantum hardware, which returns the circuits back to the API.  All of this processing is part of the Qiskit Runtime Service. The API then sends return values back to the user.](images/Qiskit_Runtime_architecture.svg "Qiskit Runtime architecture diagram"){: caption="Figure 1. Diagram of Qiskit Runtime's architecture" caption-side="bottom"}
+![The top box represents code, which consists of classical + quantum processes. The user sends the code to the Qiskit Runtime API, which is part of the Qiskit Runtime Service. Primitive programs are part of the API. The API sends QASM circuits to quantum hardware, which returns the circuits back to the API.  All of this processing is part of the Qiskit Runtime Service. The API then sends return values back to the user.](images/Qiskit_Runtime_architecture.svg "Qiskit Runtime architecture diagram"){: caption="Diagram of Qiskit Runtime's architecture" caption-side="bottom"}
 
 ## Why use Qiskit Runtime?
 {: #why}
@@ -64,7 +64,7 @@ The following primitive programs are available:
 |---|---|---|
 | Sampler | Allows a user to input a circuit and then return the outputs (bitstrings) from every shot (V2), or quasiprobabilities (V1). This generation enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference. | ![An example of Sampler output is shown.](images/sampler.png) |
 | Estimator | Allows a user to specify a list of circuits and observables and selectively group between the lists to efficiently evaluate expectation values and variances for a parameter input. It is designed to enable users to efficiently calculate and interpret expectation values of quantum operators that are required for many algorithms. | ![An example of Estimator output is shown.](images/estimator.png) |
-{: caption="Table 1. Available primitive programs" caption-side="bottom"}
+{: caption="Available primitive programs" caption-side="bottom"}
 
 ## How to use primitives
 {: #how-to-use-primitives}
