@@ -25,7 +25,7 @@ This tutorial walks you through the steps to use a program to run a job on an IB
 ## Before you begin
 {: #run-program-byb}
 
-You need a circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Circuit basics tutorial](https://docs.quantum.ibm.com/guides/circuit-construction){: external}.
+You need a circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Map problem to quantum circuits and operators guide.](https://docs.quantum.ibm.com/guides/map-problem-to-circuits){: external}
 
 
 ## Run the job
