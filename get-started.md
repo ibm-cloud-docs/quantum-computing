@@ -122,26 +122,21 @@ Run a simple circuit using `Sampler` to ensure that your environment is set up p
 
 ```python
 from qiskit import QuantumCircuit
+from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
 
-qc = QuantumCircuit(2)
-qc.h(0)
-qc.cx(0, 1)
-qc.measure_all()
+# Create empty circuit
+example_circuit = QuantumCircuit(2)
+example_circuit.measure_all()
 
-from qiskit_ibm_runtime import SamplerV2 as Sampler
-from qiskit_ibm_runtime.fake_provider import FakeManilaV2
+# You'll need to specify the credentials when initializing QiskitRuntimeService, if they were not previously saved.
+service = QiskitRuntimeService()
+backend = service.least_busy(operational=True, simulator=False)
 
-# Run the sampler job locally using FakeManilaV2
-backend = FakeManilaV2()
-
-# Get ISA circuit
-from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
-pm = generate_preset_pass_manager(backend=backend, optimization_level=1)
-isa_qc = pm.run(qc)
-
-sampler = Sampler(backend=backend)
-job = sampler.run([(isa_qc,)])
+sampler = Sampler(backend)
+job = sampler.run([example_circuit])
+print(f"job id: {job.job_id()}")
 result = job.result()
+print(result)
 ```
 {: codeblock}
 
