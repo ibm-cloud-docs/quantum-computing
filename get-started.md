@@ -36,19 +36,9 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, choose the appropriate service plan, depending on what you need access to. For more information about these plans, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
 
       - **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} by following our examples and tutorials for one of the pre-built programs available for running circuits efficiently.
-      - **Standard**: A pay-as-you-go model for accessing IBM QPUs and simulators. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware, while maintaining access to all of the simulators available to the Lite plan. This plan includes access to Q-CTRL Automated Error Suppression at no additional cost.
-
-         Because this is not a free plan, it is important to understand how to best manage your costs. See [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost) for tips to limit your cost, how to set up spending notifications, and more.
-
-         To learn more about Q-CTRL, refer to the [Q-CTRL documentation.](https://docs.q-ctrl.com/q-ctrl-embedded){: external}.
-
-         Q-CTRL has been deprecated and support will be removed 18 October 2024. To continue using this service, migrate to [Q-CTRL Fire Opal,](https://q-ctrl.com/fire-opal){: external} the same performance management product accessible directly through Q-CTRL. You can connect your IBM Cloud API key and Qiskit Runtime CRN to Fire Opal. Contact support@qctrl.com if you need help.
-         {: note}
+      - **Standard**: A pay-as-you-go model for accessing IBM QPUs and simulators. Build your own programs and leverage all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware, while maintaining access to all of the simulators available to the Lite plan.
 
 2. Complete the required information, then click **Create**.
-
-   To use Q-CTRL Automated Error Suppression, choose it as your **Performance management strategy** on this page.
-   {: note}
 
 ## Install or update Qiskit packages
 {: #install-packages}
