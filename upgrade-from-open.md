@@ -62,7 +62,6 @@ To create a Qiskit Runtime service instance, complete the following steps:
 1. Complete the following on the creation page:
    - Select **Standard plan** and specify a name for the instance.
    - If you have a promotional code, enter it in **Apply promo code** in the panel on the right and click **Apply**.
-   - The Standard plan includes access to Q-CTRL Automated Error Suppression (deprecated) at no extra cost.  To use automated error suppression, choose it as your **Performance management strategy**. To learn more, see the [Q-CTRL documentation.](https://docs.q-ctrl.com/q-ctrl-embedded){: external}.
    - Accept the terms and click **Create**. You are redirected to the new instance's details page.
 
 ## Set the maximum cost limit
