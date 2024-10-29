@@ -42,6 +42,9 @@ For example, if you specify `max_execution_time=5000` (approximately 83 minutes)
 
 If you are using sessions or batches, you can also set the session's or batch's `max_time` parameter (in wall clock time).  However, this does not set a "hard" limit on a job's run time, since any session jobs that are running when the session ends continue to run.
 
+To keep sessions and batches from surpassing the cost limit, the system might override their `max_time` settings.
+{: important}
+
 For instructions to use these settings, see the [Maximum execution time for Qiskit Runtime workloads](https://docs.quantum.ibm.com/guides/max-execution-time){: external} topic.
 
 ### Set the cost limit
