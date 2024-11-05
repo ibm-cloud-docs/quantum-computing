@@ -34,7 +34,7 @@ These are the fields relevant to cost:
 - **Total usage**: Qiskit Runtime usage by this instance since it was created.
 - **Total cost**: The total cost of running jobs on this instance since it was created. Only administrators can set this value.
 
-You can view your billing cycle on the [IBM Cloud Billing and usage page](https://cloud.ibm.com/billing).
+You can view your billing cycle on the [IBM Cloud Billing and usage page](https://cloud.ibm.com/billing){: external}.
 
 ## View job cost
 {: #view-job-cost}

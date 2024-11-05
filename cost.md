@@ -83,4 +83,4 @@ You can set up spending notifications to get notified when your account or a par
 
 - The notifications trigger only _after_ cost surpasses the specified limit.
 - Cost is submitted to the billing system hourly. Thus, a long delay might occur between the job submission and the spending notification being sent.
-- The billing system can take multiple days to get information to the invoicing system, which might cause further delay in notifications. For more information about how the IBM Cloud billing system works, see [Setting spending notifications](/docs/billing-usage?topic=billing-usage-spending).
+- The billing system can take multiple days to get information to the invoicing system, which might cause further delay in notifications. For more information about how the IBM Cloud billing system works, see [Setting spending notifications](/docs/account?topic=account-spending).
