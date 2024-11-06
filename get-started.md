@@ -46,6 +46,9 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 
 Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit install and setup topic](https://docs.quantum.ibm.com/guides/install){: external}. Periodically check the [Qiskit release notes](https://docs.quantum.ibm.com/api/qiskit/release-notes){: external} (or rerun these commands) so that you always have the latest version.
 
+You cannot use `pip install -U qiskit` to upgrade from any Qiskit 0.x version to 1.0 or later. See the [Qiskit 1.0 migration guide](https://docs.quantum.ibm.com/migration-guides/qiskit-1.0){: external} for details and instructions.
+{: note}
+
 Be sure to run these commands even if you already installed the packages, to ensure that you have the latest versions.
 {: note}
 
