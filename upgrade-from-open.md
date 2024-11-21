@@ -99,9 +99,9 @@ To share a Qiskit Runtime instance with other users, complete the following step
       - For **Value**, select the instance you created. Click **Next**.
    - **Roles and actions** - Select the following values:
       - For **Service access**, select one of the following:
-         - **Reader**, if the user will only see jobs (but not send them).
-         - **Writer**, if the user will send jobs, and update and delete them.
-         - **Manager**, if in addition to Writer and Reader actions, the user will update the instance `max cost limit`.
+         - **Reader**, if the user only needs to view (but not send) jobs.
+         - **Writer**, if the user needs to send, update, and delete jobs.
+         - **Manager**, if in addition to Writer and Reader actions, the user needs to update the instance `max cost limit`.
          - Your own custom role, defined on the [Roles](https://cloud.ibm.com/iam/roles){: external} page.  See [Creating custom roles](https://cloud.ibm.com/docs/account?topic=account-custom-roles&interface=ui){: external} for instructions.
       - For **Platform access**, select **Viewer**.
    - **Conditions (optional)**. Click **Review**.
