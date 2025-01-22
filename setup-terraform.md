@@ -28,7 +28,7 @@ If you use Terraform to manage your infrastructure, the [IBM Cloud provider for 
 
 -	`name` – The name of your service instance.
 -	`service` – Specify `quantum-computing` to provision Qiskit Runtime instances.
--	`plan` – Can be `lite` or `paygo-standard`.
+-	`plan` – Can be `lite` (deprecated) or `paygo-standard`.
 -	`location` – Currently, this must be `us-east`.
 
 Optional parameters include:
@@ -55,7 +55,7 @@ After the job completes, you can view the results.
    {: codeblock}
 
    Change the name of the service instance (parameter “name”) and the plan (parameter “plan”) according to your requirements.
-2. Create a Terraform execution plan. 
+2. Create a Terraform execution plan.
 
    ```terraform
    terraform plan
