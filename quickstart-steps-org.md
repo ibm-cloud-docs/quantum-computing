@@ -49,7 +49,7 @@ If you already created Qiskit Runtime service instances, skip this step.
 * The service instance name, such as `QR-ml`, is needed for access group references.
 
 1. From the [{{site.data.keyword.qiskit_runtime_notm}} Provisioning page](/catalog/services/quantum-computing){: external}, select the Create tab, then choose the appropriate service plan, depending on what you need access to:
-   * **Lite**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} by following our examples and tutorials for one of the pre-built programs available for running circuits efficiently.
+   * **Lite (deprecated)**: Free simulators-only plan to help you get started with {{site.data.keyword.qiskit_runtime_notm}}. Learn to use {{site.data.keyword.qiskit_runtime_notm}} by following our examples and tutorials for one of the pre-built programs available for running circuits efficiently.
    * **Standard**: A pay-as-you-go model for accessing IBM QPUs and simulators. Build your own programs and use all the benefits of {{site.data.keyword.qiskit_runtime_notm}} by running on real quantum hardware, while maintaining access to all of the simulators available on the Lite plan.
 1. Complete the required information, then click **Create**.
 
@@ -63,7 +63,7 @@ Follow these steps to set up an access group:
 
 1. Create a custom role.
    1. From [Manage → IAM → Roles](https://cloud.ibm.com/iam/roles){: external}, click `Create`.
-   2. Enter a name, ID, description, and select `Qiskit Runtime` for the service. 
+   2. Enter a name, ID, description, and select `Qiskit Runtime` for the service.
    3. Select the following roles, then click **Create**.
       * quantum-computing.device.read
       * quantum-computing.job.cancel

@@ -35,7 +35,7 @@ To manage users in a different way, follow the instructions in one of these topi
 1. [Open App ID from the IBM Cloud catalog](https://cloud.ibm.com/catalog/services/app-id){: external} and log in if necessary. Specify the following values:
     * For **Select a location**, it is recommended that you keep it in the same location as the Qiskit Runtime service, which is `Washington DC (us-east)`.
     * **Select a pricing plan**:
-       * The **Lite** plan is free of charge and is enough to get started. If needed, you can seamlessly upgrade to the graduated tier later.
+       * The **Lite** plan (deprecated) is free of charge and is enough to get started. If needed, you can seamlessly upgrade to the graduated tier later.
        * The **Graduated tier** is paid per event and per user beyond the lite tier limits. This tier supports more features such as multi-factor authentication. The Cloud administrator as the owning account of the App ID instance is charged for any fees for the graduated tier instances.
     * Complete the values for **Service name** (the App ID instance name), **Resource group** (if one is being used), and any tags you want.
 2. Read and agree to the terms and click **Create**.

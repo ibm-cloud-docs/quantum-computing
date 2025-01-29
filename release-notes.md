@@ -17,6 +17,12 @@ subcollection: quantum-computing
 Use these release notes to learn about the latest updates to {{site.data.keyword.qiskit_runtime_notm}}.
 {: shortdesc}
 
+## 23 January 2025
+{: #0.12.0}
+{: release-note}
+
+The Lite plan has been deprecated.
+
 ## 20 June 2024
 {: #0.11.0}
 {: release-note}

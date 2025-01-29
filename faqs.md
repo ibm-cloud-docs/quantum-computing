@@ -78,7 +78,7 @@ Whether accessing it through {{site.data.keyword.cloud}} or directly through IBM
 {: #faq-plans}
 {: faq}
 
-Currently, there are two plans. The Lite plan allows the user to access only quantum simulators and is free of charge. Pay-as-you-go access to IBM Quantum hardware and simulators is provided with the Standard plan.  For more information, see [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost).
+Currently, there are two plans. The Lite plan (deprecated) allows the user to access only quantum simulators and is free of charge. Pay-as-you-go access to IBM Quantum hardware and simulators is provided with the Standard plan.  For more information, see [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost).
 
 ##	What is the cost of the {{site.data.keyword.qiskit_runtime_notm}} Standard plan?
 {: #faq-pricing}
@@ -97,7 +97,7 @@ For this service, you are charged for job execution time.  Job execution usage i
 {: #faq-Lite}
 {: faq}
 
-Yes, but with the Lite plan you can access only quantum simulators. To use IBM QPUs, you need to upgrade to an IBM pay-as-you-go cloud account and use the Standard plan.
+Yes, but with the Lite plan (deprecated) you can access only quantum simulators. To use IBM QPUs, you need to upgrade to an IBM pay-as-you-go cloud account and use the Standard plan.
 
 ##	Do I get a monthly bill and what does it look like for {{site.data.keyword.qiskit_runtime_notm}} with {{site.data.keyword.cloud}}?
 {: #faq-bill}
