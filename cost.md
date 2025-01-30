@@ -40,7 +40,7 @@ The maximum execution time for a Qiskit Runtime workload is the smallest of thes
 
 For example, if you specify `max_execution_time=5000` (approximately 83 minutes), but the service determines it should not take more than 300 seconds (5 minutes) to execute the job, then the job is cancelled after 5 minutes.
 
-If you are using sessions or batches, you can also set the session's or batch's `max_time` parameter (in wall clock time).  However, this does not set a "hard" limit on a job's run time, since any session jobs that are running when the session ends continue to run.
+If you are using sessions or batches, you can also set the session's or batch's `max_time` parameter (in wall clock time).
 
 To keep sessions and batches from surpassing the cost limit, the system will override their `max_time` settings if necessary.
 {: important}
