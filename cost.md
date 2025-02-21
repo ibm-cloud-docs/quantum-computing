@@ -4,7 +4,7 @@ copyright:
   years: 2022, 2023
 lastupdated: "2023-01-24"
 
-keywords: quantum, Qiskit, runtime, near time compute, standard plan, pay-as-you-go, lite plan
+keywords: quantum, Qiskit, runtime, near time compute, standard plan, pay-as-you-go
 
 subcollection: quantum-computing
 
@@ -17,7 +17,7 @@ content-type: howto
 # Manage costs
 {: #cost}
 
-The Standard plan is not free. Use the information in this topic to help you understand how much you’re paying and how to limit your costs.  The described fields do not exist for instances in the Lite plan (deprecated).
+The Standard plan is not free. Use the information in this topic to help you understand how much you’re paying and how to limit your costs.
 {: shortdesc}
 
 ## How to limit your cost

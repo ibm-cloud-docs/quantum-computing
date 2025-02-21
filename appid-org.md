@@ -29,6 +29,8 @@ To manage users via IBM Cloud, see one of these topics:
 
 {{appid-cloud-org.md#create-appid-cloud}}
 
+Before you begin, follow the instructions in [Manage ID provider users with IBM Cloud](./manage-appid-cloud#create-appid-cloud) to create an App ID instance.
+
 ## Configure the ID provider
 {: #add-users-appid}
 {: step}

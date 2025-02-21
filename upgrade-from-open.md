@@ -38,14 +38,14 @@ Next, [create a Qiskit Runtime instance](#create-qr-account).
 ### Optional: Upgrade your IBM Cloud account
 {: #update-cloud-account}
 
-Skip this if you already have an IBM Cloud account with a Pay-As-You-Go plan. All new IBM Cloud accounts are set up with a Pay-As-You-Go plan.
+Skip this if you already have an IBM Cloud account with a Pay-As-You-Go plan. All new IBM Cloud accounts are set up with a Pay-As-You-Go account.
 
 You must upgrade your IBM Cloud account in the following circumstances:
 
 - You have a Trial account.
-- You have a Lite account (deprecated) that you created before 25 October 2021.
+- You have a Lite account that you created before 25 October 2021.
 
-After you upgrade, you can continue to use any instances that you created with your Lite account (deprecated). To upgrade to a Pay-As-You-Go account, complete the following steps:
+After you upgrade, you can continue to use any instances that you created with your previous Trial account. To upgrade to a Pay-As-You-Go account, complete the following steps:
 
 1. Go to Manage > [Account](https://cloud.ibm.com/account){: external} in the IBM Cloud console.
 2. Select **Account settings**, and click **Add credit card**.

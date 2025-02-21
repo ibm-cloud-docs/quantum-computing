@@ -74,12 +74,6 @@ Whether accessing it through {{site.data.keyword.cloud}} or directly through IBM
 * **IBM Cloud Quantum API**: ``*.quantum-computing.cloud.ibm.com``
 * **IBM Cloud**: ``*.cloud.ibm.com``
 
-##	What plans are available to use {{site.data.keyword.qiskit_runtime_notm}} with {{site.data.keyword.cloud}}?
-{: #faq-plans}
-{: faq}
-
-Currently, there are two plans. The Lite plan (deprecated) allows the user to access only quantum simulators and is free of charge. Pay-as-you-go access to IBM Quantum hardware and simulators is provided with the Standard plan.  For more information, see [Manage the cost](/docs/quantum-computing?topic=quantum-computing-cost).
-
 ##	What is the cost of the {{site.data.keyword.qiskit_runtime_notm}} Standard plan?
 {: #faq-pricing}
 {: faq}
@@ -92,12 +86,6 @@ The {{site.data.keyword.qiskit_runtime_notm}} Standard plan is a pay-as-you-go s
 
 For this service, you are charged for job execution time.  Job execution usage is the amount of time that the QPU is dedicated to processing your job. Queue time is not included. For more information, see the [Qiskit Runtime plans](/docs/quantum-computing?topic=quantum-computing-plans) topic.
 
-
-##	Can I use {{site.data.keyword.qiskit_runtime_notm}} with my {{site.data.keyword.cloud}} lite account?
-{: #faq-Lite}
-{: faq}
-
-Yes, but with the Lite plan (deprecated) you can access only quantum simulators. To use IBM QPUs, you need to upgrade to an IBM pay-as-you-go cloud account and use the Standard plan.
 
 ##	Do I get a monthly bill and what does it look like for {{site.data.keyword.qiskit_runtime_notm}} with {{site.data.keyword.cloud}}?
 {: #faq-bill}
