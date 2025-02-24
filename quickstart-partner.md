@@ -81,7 +81,7 @@ This service ID is similar to a functional user.
 {: step}
 
 1. Go to the [Create Cloud Object Storage](https://cloud.ibm.com/objectstorage/create){: external} page and click **IBM Cloud**.  Satellite COS instances are not supported.
-2. Give the service instance a name and choose a plan.  The Lite plan is not recommended.
+2. Give the service instance a name and choose a plan.  The Lite plan (deprecated) is not recommended.
 3. Click **Create**.
 
 
