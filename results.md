@@ -18,8 +18,11 @@ content-type: howto
 # View final job results
 {: #results}
 
-This tutorial describes how to review final results after running a job. 
+This tutorial describes how to review final results after running a job.
 {: shortdesc}
+
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
 
 The job's data will be deleted after 30 days.
 {: important}

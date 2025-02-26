@@ -17,6 +17,12 @@ subcollection: quantum-computing
 Use these release notes to learn about the latest updates to {{site.data.keyword.qiskit_runtime_notm}}.
 {: shortdesc}
 
+## 25 February 2025
+{: #0.13.0}
+{: release-note}
+
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with quantum.  The current Qiskit Runtime on Cloud platform will be removed 1 July 2025.
+
 ## 23 January 2025
 {: #0.12.0}
 {: release-note}

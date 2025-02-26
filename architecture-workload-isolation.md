@@ -16,6 +16,9 @@ keywords: public isolation for Qiskit Runtime, compute isolation for Qiskit Runt
 Qiskit Runtime jobs run in individual containers in an internal Kubernetes cluster to isolate jobs from any other activities of other users. Jobs are not shared or visible between service instances. However, all users that can access a service instance can see that instance’s jobs, or submit jobs the account owner might be charged for.
 {: shortdesc}
 
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
+
 ## Restricting Access to service instances
 {: #workload-isolation-runtime}
 

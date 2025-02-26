@@ -20,6 +20,9 @@ content-type: howto
 The Standard plan is not free. Use the information in this topic to help you understand how much you’re paying and how to limit your costs.  The described fields do not exist for instances in the Lite plan (deprecated).
 {: shortdesc}
 
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
+
 ## How to limit your cost
 {: #limit-cost}
 

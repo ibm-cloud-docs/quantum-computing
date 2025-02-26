@@ -21,6 +21,9 @@ content-type: troubleshoot
 You're having trouble running Qiskit commands, for example, from a notebook.
 {: shortdesc}
 
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
+
 You run a Qiskit command but get an error message, starting with an import error. For example: `ImportError: cannot import name 'SymbolicPulse' from 'qiskit.pulse.library'...`.
 {: tsSymptoms}
 
