@@ -22,6 +22,9 @@ completion-time: 30m
 This tutorial is for entities who want to upgrade from the IBM Quantum Open plan to an IBM Cloud Standard (Pay-As-You-Go) plan. For instructions to set up a cloud account, set up a service instance, and work with users, follow these steps.
 {: shortdesc}
 
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
+
 If you are an individual setting up the {{site.data.keyword.qiskit_runtime_notm}} service for the first time or if you have been invited to an instance by an administrator, follow the steps in [Getting started](/docs/quantum-computing?topic=quantum-computing-get-started) instead.
 
 ## Sign up for IBM Cloud

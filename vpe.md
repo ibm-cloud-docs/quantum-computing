@@ -18,6 +18,9 @@ subcollection: quantum-computing
 {{site.data.keyword.cloud}} Virtual Private Endpoints (VPE) for VPC lets you connect to Qiskit Runtime from your VPC network by using IP address that you specify, allocated from a subnet within your VPC.
 {: shortdesc}
 
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
+
 VPEs are virtual IP interfaces that are bound to an endpoint gateway created on a per-service basis. The endpoint gateway is a virtualized function that scales horizontally, is redundant and highly available, and spans all availability zones of your VPC. Endpoint gateways enable communications from virtual server instances within your VPC and {{site.data.keyword.cloud}} service on the private backbone. VPE for VPC lets you control all private addressing within your cloud. For more information, see [About virtual private endpoint gateways](/docs/vpc?topic=vpc-about-vpe).
 
 Within Qiskit Runtime, all customer data is transmitted over the private network regardless of whether it is accessed through a public endpoint or VPE. If you ware using the Bring Your Own Bucket feature (`ibmcloud_cos` remote storage type), Qiskit Runtime uses the [{{site.data.keyword.cloud}} Object Storage private endpoints](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints). Customers for whom data locality is a priority should ensure that they access the Cloud Object Storage buckets through the private endpoints. See [Object Storage documentation](/docs/cloud-object-storage?topic=cloud-object-storage-vpes) for further details.

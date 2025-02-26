@@ -22,6 +22,9 @@ completion-time: 25m
 In an organization where individuals might work on several projects, Qiskit Runtime governance can seem complex. However, access management can be used to easily enable user collaboration and to restrict visibility of users and projects when necessary. Managing access becomes more relevant with Qiskit Runtime resources that are not free: that is, Qiskit Runtime service instances that use the Standard plan (which organizations are charged for).
 {: shortdesc}
 
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
+
 ## Overview
 {: #overview-org}
 
@@ -75,4 +78,4 @@ Before you set up Qiskit Runtime for your organization, you need to make these d
 {: #next-steps-quickstart-org}
 
 * See [Configure Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-steps-org) for the steps to set up Qiskit Runtime.
-* See [Additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information. 
+* See [Additional considerations](/docs/quantum-computing?topic=quantum-computing-considerations-org) for more information.

@@ -31,6 +31,9 @@ subcollection: quantum-computing
 IBM strives to provide products with usable access for everyone, regardless of age or ability.
 {: shortdesc}
 
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
+
 {{site.data.keyword.conversationfull}} uses standard Windows navigation keys.
 
 ## Accessibility features in the product documentation

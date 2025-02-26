@@ -21,6 +21,8 @@ content-type: howto
 This tutorial walks you through the steps to use a program to run a job on an IBM Quantum computer and return the job status.
 {: shortdesc}
 
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
 
 ## Before you begin
 {: #run-program-byb}

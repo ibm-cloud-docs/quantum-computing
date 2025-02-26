@@ -23,6 +23,9 @@ completion-time: 25m
 This tutorial walks you through the steps to set up a {{site.data.keyword.qiskit_runtime_notm}} service instance, log in to your service instance, and run your first job on a quantum computer.
 {: shortdesc}
 
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
+
 - If you are an entity upgrading from an IBM Quantum program who needs to set up Qiskit Runtime, refer to [Upgrade from the Open plan](/docs/quantum-computing?topic=quantum-computing-upgrade-from-open) for instructions to set up a cloud account, a service instance, and work with users.
 - If your organization has a more complex structure, refer to [Plan Qiskit Runtime for an organization](/docs/quantum-computing?topic=quantum-computing-quickstart-org) for more flexible instructions to set up a service instance and work with users.
 - If you are an individual setting up the {{site.data.keyword.qiskit_runtime_notm}} service for the first time or if you have been invited to an instance by an administrator, continue following the steps in this topic.

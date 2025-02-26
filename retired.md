@@ -21,6 +21,10 @@ subcollection: quantum-computing
 The following QPUs have been retired. For the list of currently available QPUs, see the [Compute resources page.](https://cloud.ibm.com/quantum/resources/systems){: external}
 
 
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
+
+
 | QPU name       | Qubit count | Retirement date (Year - month - day) |
 | ----------------- | ----------- | --------------- |
 | ibm_kyoto         | **127**     | 2024-09-05      |

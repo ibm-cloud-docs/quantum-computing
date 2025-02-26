@@ -20,6 +20,9 @@ subcollection: quantum-computing
 Get a glimpse of the quantum computing future with our world-leading {{site.data.keyword.qiskit_runtime_notm}}, a new architecture that delivers significant performance enhancements to program execution. By using our physical QPUs and simulators (classical emulators of QPUs), you can experience frictionless quantum computing. That is, the ability to run quantum programs in an environment where the classical computer is physically closer to the quantum computer. Test programs and algorithms, and develop new models with our cloud-based quantum runtime for drastically improved capacity and higher performance.
 {: shortdesc}
 
+The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
+{: attention}
+
 This documentation is based on the current version of [Qiskit Runtime.](https://docs.quantum.ibm.com/api/qiskit-ibm-runtime){: external}
 
 Because this service is in Beta phase, many functions are not yet available and are still under development, including some functions that are outlined in the following diagram.
