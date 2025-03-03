@@ -48,12 +48,12 @@ If you are using sessions or batches, you can also set the session's or batch's 
 To keep sessions and batches from surpassing the cost limit, the system will override their `max_time` settings if necessary.
 {: important}
 
-For instructions to use these settings, see the [Maximum execution time for Qiskit Runtime workloads](https://docs.quantum.ibm.com/guides/max-execution-time){: external} topic.
+You must use CLI or the API to work with these settings. For instructions, see the [Maximum execution time for Qiskit Runtime workloads](https://quantum.cloud.ibm.com/docs/guides/manage-cost){: external} topic.
 
 ### Set the cost limit
 {: #admin-limit-cost}
 
-An instance administrator can limit how much is spent. To set cost limits, navigate to the [IBM Cloud Instances page](https://cloud.ibm.com/quantum/instances){: external} then click the instance and set the **Cost limit**.
+An instance administrator can limit how much is spent. To set cost limits, you must use CLI or the API. For instructions, see the [Maximum execution time for Qiskit Runtime workloads](https://quantum.cloud.ibm.com/docs/guides/manage-cost){: external} topic.
 
 The instance's cost limit refers to the total cost of all jobs run with this instance since it was created, and it will always be greater than or equal to the Total cost. After the instance reaches the specified limit, no further jobs can be run and no more cost is incurred.
 
@@ -63,7 +63,7 @@ The cost limit is always specified in US dollars (USD), then converted to runtim
 ## How to remove a cost limit
 {: #unlimit-cost}
 
-An instance administrator can remove the cost limit.  To do so, navigate to the [IBM Cloud Instances page](https://cloud.ibm.com/quantum/instances){: external}, then open the instance and click the edit button by the **Cost limit**. Delete the value and click **Save**.
+An instance administrator can remove the cost limit. You must use CLI or the API to work with these settings. For instructions, see the [Maximum execution time for Qiskit Runtime workloads](https://quantum.cloud.ibm.com/docs/guides/manage-cost){: external} topic.
 
 ### What happens when the cost limit is reached
 {: #cost-limit-reached}
