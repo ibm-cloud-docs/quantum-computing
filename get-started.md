@@ -47,9 +47,9 @@ If you already created a {{site.data.keyword.qiskit_runtime_notm}} service insta
 {: #install-packages}
 {: step}
 
-Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit install and setup topic](https://docs.quantum.ibm.com/guides/install){: external}. Periodically check the [Qiskit release notes](https://docs.quantum.ibm.com/api/qiskit/release-notes){: external} (or rerun these commands) so that you always have the latest version.
+Install or update the following packages in your development environment. They let you create circuits and work with primitive programs with {{site.data.keyword.qiskit_runtime_notm}}. For detailed instructions, refer to the [Qiskit install and setup topic](https://quantum.cloud.ibm.com/guides/install){: external}. Periodically check the [Qiskit release notes](https://quantum.cloud.ibm.com/api/qiskit/release-notes){: external} (or rerun these commands) so that you always have the latest version.
 
-You cannot use `pip install -U qiskit` to upgrade from any Qiskit 0.x version to 1.0 or later. See the [Qiskit 1.0 migration guide](https://docs.quantum.ibm.com/migration-guides/qiskit-1.0){: external} for details and instructions.
+You cannot use `pip install -U qiskit` to upgrade from any Qiskit 0.x version to 1.0 or later. See the [Qiskit 1.0 migration guide](https://quantum.cloud.ibm.com/migration-guides/qiskit-1.0){: external} for details and instructions.
 {: note}
 
 Be sure to run these commands even if you already installed the packages, to ensure that you have the latest versions.
@@ -140,7 +140,7 @@ print(result)
 {: #choose-program}
 {: step}
 
-Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview#primitive-programs) to interface with quantum computers. The following programs are publicly available. To learn more about the changes in the V2 primitives, read [Migrate to the V2 primitives](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
+Qiskit Runtime uses [primitive programs](/docs/quantum-computing?topic=quantum-computing-overview#primitive-programs) to interface with quantum computers. The following programs are publicly available. To learn more about the changes in the V2 primitives, read [Migrate to the V2 primitives](https://quantum.cloud.ibm.com/api/migration-guides/v2-primitives){: external}
 
 - **Sampler**:
        Allows a user to specify a circuit as an input and then return the outputs (bitstrings) from every shot (V2), or quasiprobabilities (V1). This enables users to more efficiently evaluate the possibility of multiple relevant data points in the context of destructive interference.
@@ -183,7 +183,7 @@ print(f" >> Counts for the meas output register: {pub_result.data.meas.get_count
 ### ISA input
 {: #isa-input}
 
-To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the QPU (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. See the [transpilation documentation](https://docs.quantum.ibm.com/guides){: external} for instructions to transform circuits.
+To ensure faster and more efficient results, as of 1 March 2024, circuits and observables need to be transformed to only use instructions supported by the QPU (referred to as *instruction set architecture (ISA)* circuits and observables) before being submitted to the Qiskit Runtime primitives. See the [transpilation documentation](https://quantum.cloud.ibm.com/guides){: external} for instructions to transform circuits.
 {: important}
 
 This change has the following important impacts:

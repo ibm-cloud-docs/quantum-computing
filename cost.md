@@ -31,7 +31,7 @@ There are several ways to limit your costs.
 ### Minimize iterations and shots
 {: #min-shots}
 
-The time your job takes (and therefore, its cost) depends on how many iterations you make in a session and how many shots are run in each iteration. Thus, you can manage your cost by running only as many iterations and shots as you need. Additionally, sessions run in dedicated mode.  That is, your session jobs get exclusive access to the backend and you are charged for the entire time the session is open, starting when the first session job starts being processed. For information, refer to the [Execution modes](https://docs.quantum.ibm.com/guides/execution-modes){: external} documentation.
+The time your job takes (and therefore, its cost) depends on how many iterations you make in a session and how many shots are run in each iteration. Thus, you can manage your cost by running only as many iterations and shots as you need. Additionally, sessions run in dedicated mode.  That is, your session jobs get exclusive access to the backend and you are charged for the entire time the session is open, starting when the first session job starts being processed. For information, refer to the [Execution modes](https://quantum.cloud.ibm.com/guides/execution-modes){: external} documentation.
 
 ### Set time limits
 {: #time-limits}

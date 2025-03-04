@@ -23,10 +23,10 @@ Use these topics to learn how to work with Qiskit Runtime.
 The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
 {: attention}
 
-- [Migrate to the Qiskit Runtime V2 primitives](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
-- [Build with Qiskit Runtime](https://docs.quantum.ibm.com/guides){: external}
-- [Run jobs](https://docs.quantum.ibm.com/guides){: external}
-- [Execution modes](https://docs.quantum.ibm.com/guides/execution-modes){: external}
-- [Migrate from using backend.run() to using primitives](https://docs.quantum.ibm.com/api/migration-guides/qiskit-runtime){: external}
-- [Migrate to the Qiskit Runtime V2 primitives](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
+- [Migrate to the Qiskit Runtime V2 primitives](https://quantum.cloud.ibm.com/api/migration-guides/v2-primitives){: external}
+- [Build with Qiskit Runtime](https://quantum.cloud.ibm.com/guides){: external}
+- [Run jobs](https://quantum.cloud.ibm.com/guides){: external}
+- [Execution modes](https://quantum.cloud.ibm.com/guides/execution-modes){: external}
+- [Migrate from using backend.run() to using primitives](https://quantum.cloud.ibm.com/api/migration-guides/qiskit-runtime){: external}
+- [Migrate to the Qiskit Runtime V2 primitives](https://quantum.cloud.ibm.com/api/migration-guides/v2-primitives){: external}
 - [Learn by using tutorials, courses, and tools](https://learning.quantum.ibm.com){: external}

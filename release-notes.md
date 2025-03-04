@@ -33,7 +33,7 @@ The Lite plan has been deprecated.
 {: #0.11.0}
 {: release-note}
 
-Use the `mode` argument to run in job, batch, or session mode. For information, refer to the [Execution modes](https://docs.quantum.ibm.com/guides/execution-modes){: external} documentation.
+Use the `mode` argument to run in job, batch, or session mode. For information, refer to the [Execution modes](https://quantum.cloud.ibm.com/guides/execution-modes){: external} documentation.
 
 ## 8 May 2024
 {: #0.10.0}
@@ -45,7 +45,7 @@ The Qiskit Runtime CLI and its documentation have been removed.
 {: #0.9.0}
 {: release-note}
 
-Sessions run in _dedicated_ mode, which might increase the cost of running a session.  For information, refer to the [Execution modes](https://docs.quantum.ibm.com/guides/execution-modes){: external} documentation.
+Sessions run in _dedicated_ mode, which might increase the cost of running a session.  For information, refer to the [Execution modes](https://quantum.cloud.ibm.com/guides/execution-modes){: external} documentation.
 
 ## 31 March 2024
 {: #.8.0}
@@ -57,7 +57,7 @@ To use sessions, you must update to `qiskit-ibm-runtime` 0.20.0 or later.
 {: #0.7.0}
 {: release-note}
 
-The latest update for Qiskit Runtime includes V2 primitives, which require updated code formatting. For information, refer to [Migrate to the Qiskit Runtime V2 primitives.](https://docs.quantum.ibm.com/api/migration-guides/v2-primitives){: external}
+The latest update for Qiskit Runtime includes V2 primitives, which require updated code formatting. For information, refer to [Migrate to the Qiskit Runtime V2 primitives.](https://quantum.cloud.ibm.com/api/migration-guides/v2-primitives){: external}
 
 ## 15 February 2024
 {: #0.6.0}
