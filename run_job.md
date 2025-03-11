@@ -27,7 +27,7 @@ The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} inter
 ## Before you begin
 {: #run-program-byb}
 
-You need a circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Map problem to quantum circuits and operators guide.](https://docs.quantum.ibm.com/guides/map-problem-to-circuits){: external}
+You need a circuit to submit to the program. To learn how to create circuits by using Qiskit, see the [Map problem to quantum circuits and operators guide.](https://quantum.cloud.ibm.com/guides/map-problem-to-circuits){: external}
 
 
 ## Run the job
@@ -72,13 +72,13 @@ Alternatively, you can use the [Run a job API](/apidocs/quantum-computing#create
 To ensure fairness, a maximum execution time for each Qiskit Runtime job exists. If a job exceeds this time limit, it is forcibly ended. The maximum execution time is the smaller of 1) the QPU limit and 2) the `max_execution_time` defined by the program. The execution time limit is three hours for simulator jobs and eight hours for jobs that are running on a physical QPU.
 {: note}
 
-The above example submits one simple job, but you can submit multiple jobs as a batch or you can use sessions to submit multiple iterative jobs.  For information, refer to the [Execution modes](https://docs.quantum.ibm.com/guides/execution-modes){: external} documentation.
+The above example submits one simple job, but you can submit multiple jobs as a batch or you can use sessions to submit multiple iterative jobs.  For information, refer to the [Execution modes](https://quantum.cloud.ibm.com/guides/execution-modes){: external} documentation.
 
 ## (Optional) Return the job status
 {: #return-status}
 {: step}
 
-Follow up the Qiskit Runtime `QiskitRuntimeService.run()` method by running a `RuntimeJobV2` method. The `run()` method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program. The `RuntimeJobV2` class inherits from `BasePrimitiveJob`. The `status()` method of this class returns a string instead of a JobStatus enum that was previously returned. See the [RuntimeJobV2 API reference](https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/qiskit_ibm_runtime.RuntimeJobV2){: external} for details.
+Follow up the Qiskit Runtime `QiskitRuntimeService.run()` method by running a `RuntimeJobV2` method. The `run()` method returns a RuntimeJob instance, which represents the asynchronous execution instance of the program. The `RuntimeJobV2` class inherits from `BasePrimitiveJob`. The `status()` method of this class returns a string instead of a JobStatus enum that was previously returned. See the [RuntimeJobV2 API reference](https://quantum.cloud.ibm.com/api/qiskit-ibm-runtime/qiskit_ibm_runtime.RuntimeJobV2){: external} for details.
 
 Several RuntimeJob methods exist, including `job.status()`:
 

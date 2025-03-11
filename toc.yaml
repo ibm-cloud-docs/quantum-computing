@@ -63,7 +63,7 @@ toc:
           href: https://{DomainName}/apidocs/quantum-computing
       - link:
           label: Qiskit Runtime API reference
-          href: https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/runtime_service
+          href: https://quantum.cloud.ibm.com/api/qiskit-ibm-runtime/
   - navgroup:
       id: help
       topics:

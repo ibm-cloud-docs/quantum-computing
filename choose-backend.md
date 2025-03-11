@@ -19,7 +19,7 @@ content-type: howto
 # Choose a QPU or simulator
 {: #choose-backend}
 
-Before you run a job, you must choose a physical QPU (quantum processing unit) or a simulator to run on. Alternatively, you can use [Qiskit Runtime local testing mode.](https://docs.quantum.ibm.com/guides/local-testing-mode){: external} to run jobs on your local computer.
+Before you run a job, you must choose a physical QPU (quantum processing unit) or a simulator to run on. Alternatively, you can use [Qiskit Runtime local testing mode.](https://quantum.cloud.ibm.com/guides/local-testing-mode){: external} to run jobs on your local computer.
 {: shortdesc}
 
 The [new IBM Quantum Platform](https://quantum.cloud.ibm.com/){: external} interface has been released in early access mode.  It is recommended that you start using that interface to work with IBM Quantum services. Because it is built on IBM Cloud, migration is straightforward.  See the [migration guide](https://quantum.cloud.ibm.com/docs/migration-guides/classic-iqp-to-cloud-iqp){: external} for details.
