@@ -53,7 +53,7 @@ You must use CLI or the API to work with these settings. For instructions, see t
 ### Set the cost limit
 {: #admin-limit-cost}
 
-An instance administrator can limit how much is spent. To set cost limits, you must use CLI or the API. For instructions, see the [Maximum execution time for Qiskit Runtime workloads](https://quantum.cloud.ibm.com/docs/guides/manage-cost){: external} topic.
+An instance administrator can limit how much is spent. For instructions, see the [Maximum execution time for Qiskit Runtime workloads](https://quantum.cloud.ibm.com/docs/guides/manage-cost){: external} topic.
 
 The instance's cost limit refers to the total cost of all jobs run with this instance since it was created, and it will always be greater than or equal to the Total cost. After the instance reaches the specified limit, no further jobs can be run and no more cost is incurred.
 
@@ -63,7 +63,7 @@ The cost limit is always specified in US dollars (USD), then converted to runtim
 ## How to remove a cost limit
 {: #unlimit-cost}
 
-An instance administrator can remove the cost limit. You must use CLI or the API to work with these settings. For instructions, see the [Maximum execution time for Qiskit Runtime workloads](https://quantum.cloud.ibm.com/docs/guides/manage-cost){: external} topic.
+An instance administrator can remove the cost limit. For instructions, see the [Maximum execution time for Qiskit Runtime workloads](https://quantum.cloud.ibm.com/docs/guides/manage-cost){: external} topic.
 
 ### What happens when the cost limit is reached
 {: #cost-limit-reached}
